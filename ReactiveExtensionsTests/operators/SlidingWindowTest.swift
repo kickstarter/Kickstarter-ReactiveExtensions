@@ -7,7 +7,8 @@ final class SlidingWindowTest : XCTestCase {
   func testSlidingWindowWithMaxLessThanMin() {
     let (signal, observer) = Signal<Int, NoError>.pipe()
     let window = signal.slidingWindow(max: 3, min: 2)
-    let test = window.testObserve()
+    let test = TestObserver<[Int], NoError>()
+    window.observe(test.observer)
 
     observer.sendNext(1)
     XCTAssertEqual(test.nextValues, [])
@@ -24,7 +25,8 @@ final class SlidingWindowTest : XCTestCase {
   func testSlidingWindowWithMinEqualToZero() {
     let (signal, observer) = Signal<Int, NoError>.pipe()
     let window = signal.slidingWindow(max: 2, min: 0)
-    let test = window.testObserve()
+    let test = TestObserver<[Int], NoError>()
+    window.observe(test.observer)
 
     observer.sendNext(1)
     XCTAssertEqual(test.nextValues, [[1]])
@@ -39,7 +41,8 @@ final class SlidingWindowTest : XCTestCase {
   func testSlidingWindowWithMaxEqualToMin() {
     let (signal, observer) = Signal<Int, NoError>.pipe()
     let window = signal.slidingWindow(max: 3, min: 3)
-    let test = window.testObserve()
+    let test = TestObserver<[Int], NoError>()
+    window.observe(test.observer)
 
     observer.sendNext(1)
     XCTAssertEqual(test.nextValues, [])
@@ -52,21 +55,29 @@ final class SlidingWindowTest : XCTestCase {
     observer.sendNext(5)
     XCTAssertEqual(test.nextValues, [[1, 2, 3], [2, 3, 4], [3, 4, 5]])
   }
-
+  
   func testProducer_SlidingWindowWithMaxLessThanMin() {
     let (producer, observer) = SignalProducer<Int, NoError>.buffer(Int.max)
     let window = producer.slidingWindow(max: 3, min: 2)
+    let testObserver = TestObserver<[Int], NoError>()
+    window.start(testObserver.observer)
 
     observer.sendNext(1)
-    XCTAssertEqual(window.allValues(), [])
+    XCTAssertFalse(testObserver.didEmitValue)
+    
     observer.sendNext(2)
-    XCTAssertEqual(window.allValues(), [[1, 2]])
+    XCTAssertEqual(testObserver.nextValues, [[1, 2]])
+    
     observer.sendNext(3)
-    XCTAssertEqual(window.allValues(), [[1, 2], [1, 2, 3]])
+    XCTAssertEqual(testObserver.nextValues, [[1, 2], [1, 2, 3]])
+    
     observer.sendNext(4)
-    XCTAssertEqual(window.allValues(), [[1, 2], [1, 2, 3], [2, 3, 4]])
+    XCTAssertEqual(testObserver.nextValues, [[1, 2], [1, 2, 3], [2, 3, 4]])
+    
     observer.sendNext(5)
-    XCTAssertEqual(window.allValues(), [[1, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5]])
+    XCTAssertEqual(testObserver.nextValues, [[1, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5]])
+    
+    observer.sendCompleted()
+    XCTAssertTrue(testObserver.didComplete)
   }
-
 }

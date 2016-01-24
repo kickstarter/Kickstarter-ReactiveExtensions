@@ -7,37 +7,39 @@ final class TakeWhenTests : XCTestCase {
   func testStandard() {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
-    let takePairWhen = source.takePairWhen(sample).map { [$0.0, $0.1] }
-    let test = takePairWhen.testObserve()
+    let takePairWhen = source.takePairWhen(sample)
+    let test = TestObserver<(Int, Int), NoError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
-    XCTAssertEqual(test.nextValues, [])
+    XCTAssert(test.nextValues == [])
 
     sourceObserver.sendNext(2)
-    XCTAssertEqual(test.nextValues, [])
+    XCTAssert(test.nextValues == [])
 
     sampleObserver.sendNext(3)
-    XCTAssertEqual(test.nextValues, [[2, 3]])
+    XCTAssert(test.nextValues == [(2, 3)])
 
     sampleObserver.sendNext(4)
-    XCTAssertEqual(test.nextValues, [[2, 3], [2, 4]])
+    XCTAssert(test.nextValues == [(2, 3), (2, 4)])
 
     sampleObserver.sendCompleted()
-    XCTAssert(!test.didComplete)
+    XCTAssertFalse(test.didComplete)
 
     sourceObserver.sendCompleted()
-    XCTAssert(test.didComplete)
+    XCTAssertTrue(test.didComplete)
   }
 
   func testWithSourceCompleting() {
     let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
     let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let takePairWhen = source.takePairWhen(sample).map { [$0.0, $0.1] }
-    let test = takePairWhen.testObserve()
+    let takePairWhen = source.takePairWhen(sample)
+    let test = TestObserver<(Int, Int), SomeError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    XCTAssertEqual(test.nextValues, [[1, 3]])
+    XCTAssert(test.nextValues == [(1, 3)])
 
     sourceObserver.sendCompleted()
     XCTAssert(test.didComplete)
@@ -46,12 +48,13 @@ final class TakeWhenTests : XCTestCase {
   func testWithSourceErroring() {
     let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
     let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let takePairWhen = source.takePairWhen(sample).map { [$0.0, $0.1] }
-    let test = takePairWhen.testObserve()
+    let takePairWhen = source.takePairWhen(sample)
+    let test = TestObserver<(Int, Int), SomeError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    XCTAssertEqual(test.nextValues, [[1, 3]])
+    XCTAssert(test.nextValues == [(1, 3)])
 
     sourceObserver.sendFailed(SomeError())
     XCTAssert(test.didFail)
@@ -60,12 +63,13 @@ final class TakeWhenTests : XCTestCase {
   func testWithSourceInterrupted() {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
-    let takePairWhen = source.takePairWhen(sample).map { [$0.0, $0.1] }
-    let test = takePairWhen.testObserve()
+    let takePairWhen = source.takePairWhen(sample)
+    let test = TestObserver<(Int, Int), NoError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    XCTAssertEqual(test.nextValues, [[1, 3]])
+    XCTAssert(test.nextValues == [(1, 3)])
 
     sourceObserver.sendInterrupted()
     XCTAssert(test.didInterrupt)
@@ -74,12 +78,13 @@ final class TakeWhenTests : XCTestCase {
   func testWithSampleErroring() {
     let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
     let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let takePairWhen = source.takePairWhen(sample).map { [$0.0, $0.1] }
-    let test = takePairWhen.testObserve()
+    let takePairWhen = source.takePairWhen(sample)
+    let test = TestObserver<(Int, Int), SomeError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    XCTAssertEqual(test.nextValues, [[1, 3]])
+    XCTAssert(test.nextValues == [(1, 3)])
 
     sampleObserver.sendFailed(SomeError())
     XCTAssert(!test.didFail)
@@ -88,12 +93,13 @@ final class TakeWhenTests : XCTestCase {
   func testWithSampleInterrupted() {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
-    let takePairWhen = source.takePairWhen(sample).map { [$0.0, $0.1] }
-    let test = takePairWhen.testObserve()
+    let takePairWhen = source.takePairWhen(sample)
+    let test = TestObserver<(Int, Int), NoError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    XCTAssertEqual(test.nextValues, [[1, 3]])
+    XCTAssert(test.nextValues == [(1, 3)])
 
     sampleObserver.sendInterrupted()
     XCTAssert(!test.didInterrupt)
@@ -103,7 +109,8 @@ final class TakeWhenTests : XCTestCase {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
     let takeWhen = source.takeWhen(sample)
-    let test = takeWhen.testObserve()
+    let test = TestObserver<Int, NoError>()
+    takeWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     XCTAssertEqual(test.nextValues, [])
@@ -119,7 +126,7 @@ final class TakeWhenTests : XCTestCase {
     XCTAssertEqual(test.nextValues, [2, 4])
 
     sampleObserver.sendCompleted()
-    XCTAssert(!test.didComplete)
+    XCTAssertFalse(test.didComplete)
 
     sourceObserver.sendCompleted()
     XCTAssert(test.didComplete)
