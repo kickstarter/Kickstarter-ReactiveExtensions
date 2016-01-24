@@ -10,7 +10,7 @@ public extension SignalType {
     return self.signal
       .wrapInOptional()
       .combinePrevious(nil)
-      .filter { (old: Value?, new: Value?) -> Bool in old != nil && new != nil }
+      .skip(1)
       .map { (old, new) in (old!, new!) }
   }
 }
