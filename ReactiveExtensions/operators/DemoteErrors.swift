@@ -1,4 +1,5 @@
 import ReactiveCocoa
+import Result
 
 public extension SignalType {
 

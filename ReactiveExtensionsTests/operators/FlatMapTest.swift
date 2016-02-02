@@ -1,5 +1,6 @@
 import XCTest
 import ReactiveCocoa
+import Result
 @testable import ReactiveExtensions
 
 /// Returns `nil` for `x` even and `x` otherwise.

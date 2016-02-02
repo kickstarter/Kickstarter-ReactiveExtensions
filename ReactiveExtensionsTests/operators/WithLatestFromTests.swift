@@ -1,5 +1,6 @@
 import XCTest
 import ReactiveCocoa
+import Result
 @testable import ReactiveExtensions
 
 final class WithLatestFromTests : XCTestCase {
