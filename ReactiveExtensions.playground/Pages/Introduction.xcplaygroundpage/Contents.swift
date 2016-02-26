@@ -1,7 +1,7 @@
 import XCPlayground
-
 import ReactiveExtensions
 import ReactiveCocoa
+import Result
 
 /*:
 # Reactive Extensions
