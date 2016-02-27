@@ -56,6 +56,64 @@
 		A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510691C27380700C59136 /* MergeMap.swift */; };
 		A7C5106C1C27384000C59136 /* FailOnNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5106B1C27384000C59136 /* FailOnNil.swift */; };
 		A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
+		A7FD08841C81ED8300332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FD08851C81ED8300332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08831C81ED8300332CCB /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FD08881C81EDBD00332CCB /* StartAndShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77967991C2B4B9D0002166F /* StartAndShare.swift */; };
+		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
+		A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
+		A7FD088B1C81EDBD00332CCB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B601C2AF8C2003A1ABE /* UITextField.swift */; };
+		A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
+		A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */; };
+		A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510671C2737C500C59136 /* ConcatMap.swift */; };
+		A7FD088F1C81EDBD00332CCB /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104D1C27346B00C59136 /* TakeWhen.swift */; };
+		A7FD08901C81EDBD00332CCB /* AssociationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */; };
+		A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* Debounce.swift */; };
+		A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105F1C2736D400C59136 /* DemoteErrors.swift */; };
+		A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510491C2733F600C59136 /* IgnoreValues.swift */; };
+		A7FD08941C81EDBD00332CCB /* FailOnNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5106B1C27384000C59136 /* FailOnNil.swift */; };
+		A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510471C2721CA00C59136 /* Uncollect.swift */; };
+		A7FD08961C81EDBD00332CCB /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105D1C27364700C59136 /* Debugging.swift */; };
+		A7FD08971C81EDBD00332CCB /* FlatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510651C27378A00C59136 /* FlatMap.swift */; };
+		A7FD08981C81EDBD00332CCB /* LazyAssociatedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B571C2AF232003A1ABE /* LazyAssociatedProperty.swift */; };
+		A7FD08991C81EDBD00332CCB /* AllValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7378CC81C80975700F0A562 /* AllValues.swift */; };
+		A7FD089A1C81EDBD00332CCB /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */; };
+		A7FD089B1C81EDBD00332CCB /* MapConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510551C27358300C59136 /* MapConst.swift */; };
+		A7FD089C1C81EDBD00332CCB /* WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104B1C27343400C59136 /* WithLatestFrom.swift */; };
+		A7FD089D1C81EDBD00332CCB /* MergeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510691C27380700C59136 /* MergeMap.swift */; };
+		A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510451C2720D500C59136 /* Sort.swift */; };
+		A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105B1C27362000C59136 /* WrapInOptional.swift */; };
+		A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B621C2AF8D4003A1ABE /* UIControl.swift */; };
+		A7FD08A11C81EDBD00332CCB /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104F1C2734D100C59136 /* CombinePrevious.swift */; };
+		A7FD08A21C81EDBD00332CCB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5C1C2AF899003A1ABE /* UIView.swift */; };
+		A7FD08A31C81EDBD00332CCB /* BeginsWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510571C2735DD00C59136 /* BeginsWith.swift */; };
+		A7FD08A41C81EDBD00332CCB /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510591C2735F500C59136 /* ObserveForUI.swift */; };
+		A7FD08A51C81EDBD00332CCB /* SwitchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510631C27374E00C59136 /* SwitchMap.swift */; };
+		A7FD08AA1C81EDBD00332CCB /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7FD08B81C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08B61C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM */; };
+		A7FD08B91C81EDDC00332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08B71C81EDDC00332CCB /* Result.framework.dSYM */; };
+		A7FD08BC1C81EDEE00332CCB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FD08BA1C81EDEE00332CCB /* ReactiveCocoa.framework */; };
+		A7FD08BD1C81EDEE00332CCB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FD08BB1C81EDEE00332CCB /* Result.framework */; };
+		A7FD08C21C81EEA100332CCB /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76BD1C554EF4003D0881 /* Tuple.swift */; };
+		A7FD08C31C81EEA100332CCB /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76C11C554F19003D0881 /* SomeError.swift */; };
+		A7FD08C41C81EEA100332CCB /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */; };
+		A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC801C2B863600B6234E /* WithLatestFromTests.swift */; };
+		A7FD08C61C81EEA100332CCB /* StartAndShareTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779679B1C2B4EA60002166F /* StartAndShareTest.swift */; };
+		A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966FC1C2B15260002166F /* CombinePreviousTests.swift */; };
+		A7FD08C81C81EEA100332CCB /* FlatMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7A1C2B5A9C00B6234E /* FlatMapTest.swift */; };
+		A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
+		A7FD08CA1C81EEA100332CCB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76C01C554F19003D0881 /* Event.swift */; };
+		A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966F91C2B15150002166F /* UncollectTests.swift */; };
+		A7FD08CC1C81EEA100332CCB /* BeginsWithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966F81C2B15150002166F /* BeginsWithTests.swift */; };
+		A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7378CCA1C80992C00F0A562 /* AllValuesTests.swift */; };
+		A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779670C1C2B1EB90002166F /* SortTests.swift */; };
+		A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
+		A7FD08D01C81EEA100332CCB /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
+		A7FD08D11C81EEA100332CCB /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76BC1C554EF4003D0881 /* TestObserver.swift */; };
+		A7FD08D31C81EEA100332CCB /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
+		A7FD08D41C81EEA100332CCB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6881BB360B600C180DA /* ReactiveCocoa.framework */; };
+		A7FD08D51C81EEA100332CCB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6891BB360B600C180DA /* Result.framework */; };
+		A7FD08D81C81EEA100332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FD08D91C81EEA100332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08831C81ED8300332CCB /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CA43C6671BB35FCF00C180DA /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA43C68A1BB360B600C180DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6881BB360B600C180DA /* ReactiveCocoa.framework */; };
 		CA43C68B1BB360B600C180DA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6891BB360B600C180DA /* Result.framework */; };
@@ -63,6 +121,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		A7983B8E1C2AFB1D003A1ABE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA43C65A1BB35FCF00C180DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA43C6621BB35FCF00C180DA;
+			remoteInfo = ReactiveExtensions;
+		};
+		A7FD08C01C81EEA100332CCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA43C65A1BB35FCF00C180DA /* Project object */;
 			proxyType = 1;
@@ -78,6 +143,32 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				A7FD08841C81ED8300332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */,
+				A7FD08851C81ED8300332CCB /* Result.framework.dSYM in carthage dsym */,
+			);
+			name = "carthage dsym";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08AC1C81EDBD00332CCB /* carthage dsym */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				A7FD08B81C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */,
+				A7FD08B91C81EDDC00332CCB /* Result.framework.dSYM in carthage dsym */,
+			);
+			name = "carthage dsym";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08D71C81EEA100332CCB /* carthage dsym */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				A7FD08D81C81EEA100332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */,
+				A7FD08D91C81EEA100332CCB /* Result.framework.dSYM in carthage dsym */,
 			);
 			name = "carthage dsym";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +209,7 @@
 		A7983B601C2AF8C2003A1ABE /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A7983B621C2AF8D4003A1ABE /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociationKeys.swift; sourceTree = "<group>"; };
-		A7983B881C2AFB1C003A1ABE /* ReactiveExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BF76BC1C554EF4003D0881 /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
 		A7BF76BD1C554EF4003D0881 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
 		A7BF76C01C554F19003D0881 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -144,6 +235,14 @@
 		A7C510691C27380700C59136 /* MergeMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeMap.swift; sourceTree = "<group>"; };
 		A7C5106B1C27384000C59136 /* FailOnNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailOnNil.swift; sourceTree = "<group>"; };
 		A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterWhenLatestFrom.swift; sourceTree = "<group>"; };
+		A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/tvOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		A7FD08831C81ED8300332CCB /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/tvOS/Result.framework.dSYM; sourceTree = "<group>"; };
+		A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FD08B61C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		A7FD08B71C81EDDC00332CCB /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
+		A7FD08BA1C81EDEE00332CCB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		A7FD08BB1C81EDEE00332CCB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveExtensions.h; sourceTree = "<group>"; };
 		CA43C6681BB35FCF00C180DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +258,25 @@
 				A7983B8D1C2AFB1D003A1ABE /* ReactiveExtensions.framework in Frameworks */,
 				A77966DD1C2AFBB90002166F /* ReactiveCocoa.framework in Frameworks */,
 				A77966DE1C2AFBB90002166F /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08A61C81EDBD00332CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FD08BC1C81EDEE00332CCB /* ReactiveCocoa.framework in Frameworks */,
+				A7FD08BD1C81EDEE00332CCB /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08D21C81EEA100332CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FD08D31C81EEA100332CCB /* ReactiveExtensions.framework in Frameworks */,
+				A7FD08D41C81EEA100332CCB /* ReactiveCocoa.framework in Frameworks */,
+				A7FD08D51C81EEA100332CCB /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,15 +388,45 @@
 			path = operators;
 			sourceTree = "<group>";
 		};
+		A7FD087F1C81ED5D00332CCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD08801C81ED6300332CCB /* iOS */,
+				A7FD08811C81ED6600332CCB /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7FD08801C81ED6300332CCB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD08B61C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM */,
+				A7FD08B71C81EDDC00332CCB /* Result.framework.dSYM */,
+				A7FD08BA1C81EDEE00332CCB /* ReactiveCocoa.framework */,
+				A7FD08BB1C81EDEE00332CCB /* Result.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A7FD08811C81ED6600332CCB /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */,
+				A7FD08831C81ED8300332CCB /* Result.framework.dSYM */,
+				CA43C6881BB360B600C180DA /* ReactiveCocoa.framework */,
+				CA43C6891BB360B600C180DA /* Result.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
 		CA43C6591BB35FCF00C180DA = {
 			isa = PBXGroup;
 			children = (
 				A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */,
-				CA43C6881BB360B600C180DA /* ReactiveCocoa.framework */,
-				CA43C6891BB360B600C180DA /* Result.framework */,
+				A7FD087F1C81ED5D00332CCB /* Frameworks */,
+				CA43C6641BB35FCF00C180DA /* Products */,
 				CA43C6651BB35FCF00C180DA /* ReactiveExtensions */,
 				A77966E81C2B018F0002166F /* ReactiveExtensionsTests */,
-				CA43C6641BB35FCF00C180DA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,7 +434,9 @@
 			isa = PBXGroup;
 			children = (
 				CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */,
-				A7983B881C2AFB1C003A1ABE /* ReactiveExtensionsTests.xctest */,
+				A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */,
+				A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */,
+				A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,6 +459,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A7FD08A91C81EDBD00332CCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FD08AA1C81EDBD00332CCB /* ReactiveExtensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA43C6601BB35FCF00C180DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,29 +478,69 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A7983B871C2AFB1C003A1ABE /* ReactiveExtensionsTests */ = {
+		A7983B871C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7983B951C2AFB1D003A1ABE /* Build configuration list for PBXNativeTarget "ReactiveExtensionsTests" */;
+			buildConfigurationList = A7983B951C2AFB1D003A1ABE /* Build configuration list for PBXNativeTarget "ReactiveExtensions-tvOSTests" */;
 			buildPhases = (
 				A7983B841C2AFB1C003A1ABE /* Sources */,
 				A7983B851C2AFB1C003A1ABE /* Frameworks */,
 				A7983B861C2AFB1C003A1ABE /* Resources */,
-				A77966E21C2AFC980002166F /* carthage copy-frameworks */,
 				A7E19CDB1C5320B900E09C5D /* carthage dsym */,
+				A77966E21C2AFC980002166F /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				A7983B8F1C2AFB1D003A1ABE /* PBXTargetDependency */,
 			);
-			name = ReactiveExtensionsTests;
+			name = "ReactiveExtensions-tvOSTests";
 			productName = "ReactiveExtensions-tvOSTests";
-			productReference = A7983B881C2AFB1C003A1ABE /* ReactiveExtensionsTests.xctest */;
+			productReference = A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CA43C6621BB35FCF00C180DA /* ReactiveExtensions */ = {
+		A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA43C6771BB35FCF00C180DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions" */;
+			buildConfigurationList = A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions-iOS" */;
+			buildPhases = (
+				A7FD08871C81EDBD00332CCB /* Sources */,
+				A7FD08A61C81EDBD00332CCB /* Frameworks */,
+				A7FD08A91C81EDBD00332CCB /* Headers */,
+				A7FD08AB1C81EDBD00332CCB /* Resources */,
+				A7FD08AC1C81EDBD00332CCB /* carthage dsym */,
+				A7FD08AD1C81EDBD00332CCB /* carthage copy-frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReactiveExtensions-iOS";
+			productName = ReactiveExtensions;
+			productReference = A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A7FD08BE1C81EEA100332CCB /* ReactiveExtensions-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FD08DB1C81EEA100332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions-iOSTests" */;
+			buildPhases = (
+				A7FD08C11C81EEA100332CCB /* Sources */,
+				A7FD08D21C81EEA100332CCB /* Frameworks */,
+				A7FD08D61C81EEA100332CCB /* Resources */,
+				A7FD08D71C81EEA100332CCB /* carthage dsym */,
+				A7FD08DA1C81EEA100332CCB /* carthage copy-frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7FD08BF1C81EEA100332CCB /* PBXTargetDependency */,
+			);
+			name = "ReactiveExtensions-iOSTests";
+			productName = "ReactiveExtensions-tvOSTests";
+			productReference = A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA43C6771BB35FCF00C180DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-tvOS" */;
 			buildPhases = (
 				CA43C65E1BB35FCF00C180DA /* Sources */,
 				CA43C65F1BB35FCF00C180DA /* Frameworks */,
@@ -355,7 +553,7 @@
 			);
 			dependencies = (
 			);
-			name = ReactiveExtensions;
+			name = "ReactiveExtensions-tvOS";
 			productName = ReactiveExtensions;
 			productReference = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */;
 			productType = "com.apple.product-type.framework";
@@ -390,14 +588,30 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA43C6621BB35FCF00C180DA /* ReactiveExtensions */,
-				A7983B871C2AFB1C003A1ABE /* ReactiveExtensionsTests */,
+				A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */,
+				A7FD08BE1C81EEA100332CCB /* ReactiveExtensions-iOSTests */,
+				CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */,
+				A7983B871C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A7983B861C2AFB1C003A1ABE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08AB1C81EDBD00332CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08D61C81EEA100332CCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,6 +629,38 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		A77966E21C2AFC980002166F /* carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
+			);
+			name = "carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A7FD08AD1C81EDBD00332CCB /* carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A7FD08DA1C81EEA100332CCB /* carthage copy-frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,6 +718,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7FD08871C81EDBD00332CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FD08881C81EDBD00332CCB /* StartAndShare.swift in Sources */,
+				A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */,
+				A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */,
+				A7FD088B1C81EDBD00332CCB /* UITextField.swift in Sources */,
+				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
+				A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */,
+				A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */,
+				A7FD088F1C81EDBD00332CCB /* TakeWhen.swift in Sources */,
+				A7FD08901C81EDBD00332CCB /* AssociationKeys.swift in Sources */,
+				A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */,
+				A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */,
+				A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */,
+				A7FD08941C81EDBD00332CCB /* FailOnNil.swift in Sources */,
+				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
+				A7FD08961C81EDBD00332CCB /* Debugging.swift in Sources */,
+				A7FD08971C81EDBD00332CCB /* FlatMap.swift in Sources */,
+				A7FD08981C81EDBD00332CCB /* LazyAssociatedProperty.swift in Sources */,
+				A7FD08991C81EDBD00332CCB /* AllValues.swift in Sources */,
+				A7FD089A1C81EDBD00332CCB /* UILabel.swift in Sources */,
+				A7FD089B1C81EDBD00332CCB /* MapConst.swift in Sources */,
+				A7FD089C1C81EDBD00332CCB /* WithLatestFrom.swift in Sources */,
+				A7FD089D1C81EDBD00332CCB /* MergeMap.swift in Sources */,
+				A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */,
+				A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */,
+				A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */,
+				A7FD08A11C81EDBD00332CCB /* CombinePrevious.swift in Sources */,
+				A7FD08A21C81EDBD00332CCB /* UIView.swift in Sources */,
+				A7FD08A31C81EDBD00332CCB /* BeginsWith.swift in Sources */,
+				A7FD08A41C81EDBD00332CCB /* ObserveForUI.swift in Sources */,
+				A7FD08A51C81EDBD00332CCB /* SwitchMap.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FD08C11C81EEA100332CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FD08C21C81EEA100332CCB /* Tuple.swift in Sources */,
+				A7FD08C31C81EEA100332CCB /* SomeError.swift in Sources */,
+				A7FD08C41C81EEA100332CCB /* SlidingWindowTest.swift in Sources */,
+				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
+				A7FD08C61C81EEA100332CCB /* StartAndShareTest.swift in Sources */,
+				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
+				A7FD08C81C81EEA100332CCB /* FlatMapTest.swift in Sources */,
+				A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */,
+				A7FD08CA1C81EEA100332CCB /* Event.swift in Sources */,
+				A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */,
+				A7FD08CC1C81EEA100332CCB /* BeginsWithTests.swift in Sources */,
+				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,
+				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
+				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
+				A7FD08D01C81EEA100332CCB /* DebounceTests.swift in Sources */,
+				A7FD08D11C81EEA100332CCB /* TestObserver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA43C65E1BB35FCF00C180DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,8 +820,13 @@
 /* Begin PBXTargetDependency section */
 		A7983B8F1C2AFB1D003A1ABE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CA43C6621BB35FCF00C180DA /* ReactiveExtensions */;
+			target = CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */;
 			targetProxy = A7983B8E1C2AFB1D003A1ABE /* PBXContainerItemProxy */;
+		};
+		A7FD08BF1C81EEA100332CCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */;
+			targetProxy = A7FD08C01C81EEA100332CCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -597,6 +908,215 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+			};
+			name = Release;
+		};
+		A7FD08AF1C81EDBD00332CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Debug;
+		};
+		A7FD08B01C81EDBD00332CCB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Development;
+		};
+		A7FD08B11C81EDBD00332CCB /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Beta;
+		};
+		A7FD08B21C81EDBD00332CCB /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Alpha;
+		};
+		A7FD08B31C81EDBD00332CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Release;
+		};
+		A7FD08DC1C81EEA100332CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Debug;
+		};
+		A7FD08DD1C81EEA100332CCB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Development;
+		};
+		A7FD08DE1C81EEA100332CCB /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Beta;
+		};
+		A7FD08DF1C81EEA100332CCB /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = "";
+			};
+			name = Alpha;
+		};
+		A7FD08E01C81EEA100332CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ReactiveExtensionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = "";
 			};
 			name = Release;
 		};
@@ -960,7 +1480,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A7983B951C2AFB1D003A1ABE /* Build configuration list for PBXNativeTarget "ReactiveExtensionsTests" */ = {
+		A7983B951C2AFB1D003A1ABE /* Build configuration list for PBXNativeTarget "ReactiveExtensions-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7983B901C2AFB1D003A1ABE /* Debug */,
@@ -968,6 +1488,30 @@
 				A7983B921C2AFB1D003A1ABE /* Beta */,
 				A7983B931C2AFB1D003A1ABE /* Alpha */,
 				A7983B941C2AFB1D003A1ABE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FD08AF1C81EDBD00332CCB /* Debug */,
+				A7FD08B01C81EDBD00332CCB /* Development */,
+				A7FD08B11C81EDBD00332CCB /* Beta */,
+				A7FD08B21C81EDBD00332CCB /* Alpha */,
+				A7FD08B31C81EDBD00332CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7FD08DB1C81EEA100332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FD08DC1C81EEA100332CCB /* Debug */,
+				A7FD08DD1C81EEA100332CCB /* Development */,
+				A7FD08DE1C81EEA100332CCB /* Beta */,
+				A7FD08DF1C81EEA100332CCB /* Alpha */,
+				A7FD08E01C81EEA100332CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -984,7 +1528,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA43C6771BB35FCF00C180DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions" */ = {
+		CA43C6771BB35FCF00C180DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA43C6781BB35FCF00C180DA /* Debug */,
