@@ -4,4 +4,5 @@ cd $(dirname $0)
 cd ./../
 
 carthage bootstrap --platform tvos
+carthage bootstrap --platform ios
 cp Cartfile.resolved Carthage
