@@ -461,6 +461,7 @@
 				A7983B841C2AFB1C003A1ABE /* Sources */,
 				A7983B851C2AFB1C003A1ABE /* Frameworks */,
 				A7983B861C2AFB1C003A1ABE /* Resources */,
+				A7FD09DD1C84933800332CCB /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -499,6 +500,7 @@
 				A7FD08C11C81EEA100332CCB /* Sources */,
 				A7FD08D21C81EEA100332CCB /* Frameworks */,
 				A7FD08D61C81EEA100332CCB /* Resources */,
+				A7FD09DC1C84931100332CCB /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -601,6 +603,38 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		A7FD08AD1C81EDBD00332CCB /* carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A7FD09DC1C84931100332CCB /* carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A7FD09DD1C84933800332CCB /* carthage copy-frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
