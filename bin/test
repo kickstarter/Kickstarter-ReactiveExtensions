@@ -3,15 +3,15 @@
 set -o pipefail
 
 xcodebuild \
-  -destination 'platform=tvOS Simulator,OS=9.1,name=Apple TV 1080p' \
-  -scheme ReactiveExtensions-tvOS \
+  -destination 'platform=iOS Simulator,OS=9.2,name=iPhone 6' \
+  -scheme ReactiveExtensions-iOS \
   clean build test \
   | tee $CIRCLE_ARTIFACTS/xcode_raw.log \
   | xcpretty
 
 xcodebuild \
-  -destination 'platform=iOS Simulator,OS=9.2,name=iPhone 6' \
-  -scheme ReactiveExtensions-iOS \
+  -destination 'platform=tvOS Simulator,OS=9.1,name=Apple TV 1080p' \
+  -scheme ReactiveExtensions-tvOS \
   clean build test \
   | tee $CIRCLE_ARTIFACTS/xcode_raw.log \
   | xcpretty
