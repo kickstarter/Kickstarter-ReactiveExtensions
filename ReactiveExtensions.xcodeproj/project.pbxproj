@@ -123,12 +123,12 @@
 			remoteGlobalIDString = CA43C6621BB35FCF00C180DA;
 			remoteInfo = ReactiveExtensions;
 		};
-		A7FD08C01C81EEA100332CCB /* PBXContainerItemProxy */ = {
+		A7FD09DA1C84902100332CCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA43C65A1BB35FCF00C180DA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CA43C6621BB35FCF00C180DA;
-			remoteInfo = ReactiveExtensions;
+			remoteGlobalIDString = A7FD08861C81EDBD00332CCB;
+			remoteInfo = "ReactiveExtensions-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -503,7 +503,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A7FD08BF1C81EEA100332CCB /* PBXTargetDependency */,
+				A7FD09DB1C84902100332CCB /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-iOSTests";
 			productName = "ReactiveExtensions-tvOSTests";
@@ -763,10 +763,10 @@
 			target = CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */;
 			targetProxy = A7983B8E1C2AFB1D003A1ABE /* PBXContainerItemProxy */;
 		};
-		A7FD08BF1C81EEA100332CCB /* PBXTargetDependency */ = {
+		A7FD09DB1C84902100332CCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */;
-			targetProxy = A7FD08C01C81EEA100332CCB /* PBXContainerItemProxy */;
+			target = A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */;
+			targetProxy = A7FD09DA1C84902100332CCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
