@@ -56,8 +56,6 @@
 		A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510691C27380700C59136 /* MergeMap.swift */; };
 		A7C5106C1C27384000C59136 /* FailOnNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5106B1C27384000C59136 /* FailOnNil.swift */; };
 		A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
-		A7FD08841C81ED8300332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A7FD08851C81ED8300332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08831C81ED8300332CCB /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A7FD08881C81EDBD00332CCB /* StartAndShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77967991C2B4B9D0002166F /* StartAndShare.swift */; };
 		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
 		A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
@@ -112,8 +110,6 @@
 		A7FD08D31C81EEA100332CCB /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
 		A7FD08D41C81EEA100332CCB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6881BB360B600C180DA /* ReactiveCocoa.framework */; };
 		A7FD08D51C81EEA100332CCB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6891BB360B600C180DA /* Result.framework */; };
-		A7FD08D81C81EEA100332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A7FD08D91C81EEA100332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08831C81ED8300332CCB /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CA43C6671BB35FCF00C180DA /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA43C68A1BB360B600C180DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6881BB360B600C180DA /* ReactiveCocoa.framework */; };
 		CA43C68B1BB360B600C180DA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6891BB360B600C180DA /* Result.framework */; };
@@ -137,18 +133,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A7E19CDB1C5320B900E09C5D /* carthage dsym */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				A7FD08841C81ED8300332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */,
-				A7FD08851C81ED8300332CCB /* Result.framework.dSYM in carthage dsym */,
-			);
-			name = "carthage dsym";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A7FD08AC1C81EDBD00332CCB /* carthage dsym */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,18 +141,6 @@
 			files = (
 				A7FD08B81C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */,
 				A7FD08B91C81EDDC00332CCB /* Result.framework.dSYM in carthage dsym */,
-			);
-			name = "carthage dsym";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7FD08D71C81EEA100332CCB /* carthage dsym */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				A7FD08D81C81EEA100332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */,
-				A7FD08D91C81EEA100332CCB /* Result.framework.dSYM in carthage dsym */,
 			);
 			name = "carthage dsym";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +215,8 @@
 		A7FD08BA1C81EDEE00332CCB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		A7FD08BB1C81EDEE00332CCB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FD09481C83D3E500332CCB /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		A7FD09491C83D3E500332CCB /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveExtensions.h; sourceTree = "<group>"; };
 		CA43C6681BB35FCF00C180DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -422,6 +396,8 @@
 		CA43C6591BB35FCF00C180DA = {
 			isa = PBXGroup;
 			children = (
+				A7FD09481C83D3E500332CCB /* ReactiveCocoa.framework.dSYM */,
+				A7FD09491C83D3E500332CCB /* Result.framework.dSYM */,
 				A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */,
 				A7FD087F1C81ED5D00332CCB /* Frameworks */,
 				CA43C6641BB35FCF00C180DA /* Products */,
@@ -485,8 +461,6 @@
 				A7983B841C2AFB1C003A1ABE /* Sources */,
 				A7983B851C2AFB1C003A1ABE /* Frameworks */,
 				A7983B861C2AFB1C003A1ABE /* Resources */,
-				A7E19CDB1C5320B900E09C5D /* carthage dsym */,
-				A77966E21C2AFC980002166F /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -525,8 +499,6 @@
 				A7FD08C11C81EEA100332CCB /* Sources */,
 				A7FD08D21C81EEA100332CCB /* Frameworks */,
 				A7FD08D61C81EEA100332CCB /* Resources */,
-				A7FD08D71C81EEA100332CCB /* carthage dsym */,
-				A7FD08DA1C81EEA100332CCB /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -628,22 +600,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A77966E21C2AFC980002166F /* carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
-			);
-			name = "carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		A7FD08AD1C81EDBD00332CCB /* carthage copy-frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,22 +608,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-			);
-			name = "carthage copy-frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		A7FD08DA1C81EEA100332CCB /* carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
 			);
 			name = "carthage copy-frameworks";
 			outputPaths = (
