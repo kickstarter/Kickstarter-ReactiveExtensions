@@ -215,8 +215,6 @@
 		A7FD08BA1C81EDEE00332CCB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		A7FD08BB1C81EDEE00332CCB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7FD09481C83D3E500332CCB /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
-		A7FD09491C83D3E500332CCB /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveExtensions.h; sourceTree = "<group>"; };
 		CA43C6681BB35FCF00C180DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -396,8 +394,6 @@
 		CA43C6591BB35FCF00C180DA = {
 			isa = PBXGroup;
 			children = (
-				A7FD09481C83D3E500332CCB /* ReactiveCocoa.framework.dSYM */,
-				A7FD09491C83D3E500332CCB /* Result.framework.dSYM */,
 				A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */,
 				A7FD087F1C81ED5D00332CCB /* Frameworks */,
 				CA43C6641BB35FCF00C180DA /* Products */,
