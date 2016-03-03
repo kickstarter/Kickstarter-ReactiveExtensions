@@ -56,6 +56,8 @@
 		A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510691C27380700C59136 /* MergeMap.swift */; };
 		A7C5106C1C27384000C59136 /* FailOnNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5106B1C27384000C59136 /* FailOnNil.swift */; };
 		A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
+		A7E3157E1C88828A000DD85A /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08821C81ED8300332CCB /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7E3157F1C88828A000DD85A /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08831C81ED8300332CCB /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A7FD08881C81EDBD00332CCB /* StartAndShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77967991C2B4B9D0002166F /* StartAndShare.swift */; };
 		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
 		A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
@@ -87,8 +89,8 @@
 		A7FD08A41C81EDBD00332CCB /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510591C2735F500C59136 /* ObserveForUI.swift */; };
 		A7FD08A51C81EDBD00332CCB /* SwitchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510631C27374E00C59136 /* SwitchMap.swift */; };
 		A7FD08AA1C81EDBD00332CCB /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7FD08B81C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08B61C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM */; };
-		A7FD08B91C81EDDC00332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08B71C81EDDC00332CCB /* Result.framework.dSYM */; };
+		A7FD08B81C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08B61C81EDDC00332CCB /* ReactiveCocoa.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A7FD08B91C81EDDC00332CCB /* Result.framework.dSYM in carthage dsym */ = {isa = PBXBuildFile; fileRef = A7FD08B71C81EDDC00332CCB /* Result.framework.dSYM */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A7FD08BC1C81EDEE00332CCB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FD08BA1C81EDEE00332CCB /* ReactiveCocoa.framework */; };
 		A7FD08BD1C81EDEE00332CCB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FD08BB1C81EDEE00332CCB /* Result.framework */; };
 		A7FD08C21C81EEA100332CCB /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76BD1C554EF4003D0881 /* Tuple.swift */; };
@@ -151,6 +153,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				A7E3157E1C88828A000DD85A /* ReactiveCocoa.framework.dSYM in carthage dsym */,
+				A7E3157F1C88828A000DD85A /* Result.framework.dSYM in carthage dsym */,
 			);
 			name = "carthage dsym";
 			runOnlyForDeploymentPostprocessing = 0;
