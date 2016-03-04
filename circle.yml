@@ -3,9 +3,8 @@ machine:
     version: 7.2
 dependencies:
   override:
-    - bin/carthage-bootstrap-if-needed
-  cache_directories:
-    - Carthage
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
 test:
   override:
     - bin/test iOS

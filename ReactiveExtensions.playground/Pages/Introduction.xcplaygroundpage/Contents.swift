@@ -13,7 +13,7 @@ A collection of tools for use with Reactive Cocoa.
 ## Getting started
 
 * Open `ReactiveExtensions.xcworkspace` instead of the playground file directly.
-* Build the `ReactiveExtensions` framework (`cmd+B`).
+* Build the `ReactiveExtensions-iOS` framework (⌘B).
 * Render the markdown by going to Editor > Show Rendered Markup.
 
 ---
@@ -54,11 +54,11 @@ there are many times that we perform a `map` operator that can result in a strea
 optional values, and then immediately follow it with an `ignoreNil` in order to filter out
 all `nil` values:
 
-`user.map { u in u.location }.ignoreNil()`
+    user.map { u in u.location }.ignoreNil()
 
 We decided to make these two chained operators into a single one, simply called `flatMap`:
 
-`user.flatMap { u in u.location }`
+    user.flatMap { u in u.location }
 
 Now the resulting stream of locations can be used without worrying about optionals.
 
