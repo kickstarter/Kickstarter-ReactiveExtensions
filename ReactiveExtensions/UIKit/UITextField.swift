@@ -4,7 +4,7 @@ import UIKit
 extension UITextField {
   /// Turns `field.text` into a `MutableProperty`.
   public var rac_text: MutableProperty<String?> {
-    self.addTarget(self, action: "rac_text_changed", forControlEvents: UIControlEvents.EditingChanged)
+    self.addTarget(self, action: #selector(UITextField.rac_text_changed), forControlEvents: .EditingChanged)
 
     return lazyAssociatedProperty(self, key: &AssociationKey.text) {
       let property = MutableProperty(self.text)
@@ -15,7 +15,7 @@ extension UITextField {
     }
   }
 
-  internal func rac_text_changed() {
+  @objc internal func rac_text_changed() {
     rac_text.value = self.text
   }
 }

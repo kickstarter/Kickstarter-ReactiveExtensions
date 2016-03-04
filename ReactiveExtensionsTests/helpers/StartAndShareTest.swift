@@ -9,7 +9,7 @@ final class StartAndShareTest : XCTestCase {
     // A producer that has a side effect so we can track how many times it was executed.
     var sideEffect = 0
     let producer = SignalProducer<Int, NoError>(values: [1, 2, 3, 4])
-      .on(started: { sideEffect++ })
+      .on(started: { sideEffect += 1 })
 
     let sharedProducer = producer.startAndShare()
     let test = TestObserver<Int, NoError>()
@@ -31,7 +31,7 @@ final class StartAndShareTest : XCTestCase {
     // A producer that has a side effect so we can track how many times it was executed.
     var sideEffect = 0
     let producer = SignalProducer<Int, NoError>(values: [1, 2, 3, 4])
-      .on(started: { sideEffect++ })
+      .on(started: { sideEffect += 1 })
 
     let sharedProducer = producer.startAndShare(replayCount: 4)
     let test = TestObserver<Int, NoError>()
