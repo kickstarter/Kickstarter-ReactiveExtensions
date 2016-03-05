@@ -10,7 +10,6 @@
 		807571471C88B20300E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8075714A1C88B20F00E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571291C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */; };
-		A713EC7B1C2B5A9C00B6234E /* FlatMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7A1C2B5A9C00B6234E /* FlatMapTest.swift */; };
 		A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
 		A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
 		A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC801C2B863600B6234E /* WithLatestFromTests.swift */; };
@@ -93,7 +92,6 @@
 		A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC801C2B863600B6234E /* WithLatestFromTests.swift */; };
 		A7FD08C61C81EEA100332CCB /* StartAndShareTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779679B1C2B4EA60002166F /* StartAndShareTest.swift */; };
 		A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966FC1C2B15260002166F /* CombinePreviousTests.swift */; };
-		A7FD08C81C81EEA100332CCB /* FlatMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7A1C2B5A9C00B6234E /* FlatMapTest.swift */; };
 		A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
 		A7FD08CA1C81EEA100332CCB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76C01C554F19003D0881 /* Event.swift */; };
 		A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966F91C2B15150002166F /* UncollectTests.swift */; };
@@ -240,7 +238,6 @@
 		807571151C88B1C500E7DA8A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Frameworks/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		8075712A1C88B1E000E7DA8A /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Frameworks/ReactiveCocoa/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingWindowTest.swift; sourceTree = "<group>"; };
-		A713EC7A1C2B5A9C00B6234E /* FlatMapTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatMapTest.swift; sourceTree = "<group>"; };
 		A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConstTests.swift; sourceTree = "<group>"; };
 		A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebounceTests.swift; sourceTree = "<group>"; };
 		A713EC801C2B863600B6234E /* WithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithLatestFromTests.swift; sourceTree = "<group>"; };
@@ -393,7 +390,6 @@
 				A77966F81C2B15150002166F /* BeginsWithTests.swift */,
 				A77966FC1C2B15260002166F /* CombinePreviousTests.swift */,
 				A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */,
-				A713EC7A1C2B5A9C00B6234E /* FlatMapTest.swift */,
 				A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */,
 				A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */,
 				A779670C1C2B1EB90002166F /* SortTests.swift */,
@@ -788,7 +784,6 @@
 				A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */,
 				A779679C1C2B4EA60002166F /* StartAndShareTest.swift in Sources */,
 				A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */,
-				A713EC7B1C2B5A9C00B6234E /* FlatMapTest.swift in Sources */,
 				A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */,
 				A7BF76C21C554F19003D0881 /* Event.swift in Sources */,
 				A77966FB1C2B15150002166F /* UncollectTests.swift in Sources */,
@@ -848,7 +843,6 @@
 				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
 				A7FD08C61C81EEA100332CCB /* StartAndShareTest.swift in Sources */,
 				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
-				A7FD08C81C81EEA100332CCB /* FlatMapTest.swift in Sources */,
 				A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */,
 				A7FD08CA1C81EEA100332CCB /* Event.swift in Sources */,
 				A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */,
