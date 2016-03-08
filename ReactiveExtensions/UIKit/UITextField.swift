@@ -15,7 +15,7 @@ extension UITextField {
     }
   }
 
-  private func rac_text_changed() {
+  internal func rac_text_changed() {
     rac_text.value = self.text
   }
 }
