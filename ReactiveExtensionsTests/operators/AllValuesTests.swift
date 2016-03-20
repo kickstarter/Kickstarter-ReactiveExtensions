@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 final class AllValuesTests: XCTestCase {
 

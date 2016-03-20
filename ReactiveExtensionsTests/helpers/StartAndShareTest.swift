@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 final class StartAndShareTest : XCTestCase {
 
@@ -24,7 +25,7 @@ final class StartAndShareTest : XCTestCase {
     XCTAssertEqual(sideEffect, 1)
 
     // With no `replayCount` specified we should miss out on the initial values.
-    XCTAssertEqual(test.nextValues, [])
+    XCTAssertEqual(test.values, [])
   }
 
   func testStartAndShareWithReply() {
@@ -46,6 +47,6 @@ final class StartAndShareTest : XCTestCase {
     XCTAssertEqual(sideEffect, 1)
 
     // With `replayCount` specified we should get the initial values emitted.
-    XCTAssertEqual(test.nextValues, [1, 2, 3, 4])
+    XCTAssertEqual(test.values, [1, 2, 3, 4])
   }
 }

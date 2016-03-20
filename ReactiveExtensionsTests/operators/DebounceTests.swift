@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 final class DebounceTests : XCTestCase {
 
@@ -9,28 +10,28 @@ final class DebounceTests : XCTestCase {
     let scheduler = TestScheduler()
     let (signal, observer) = Signal<Int, NoError>.pipe()
     let debounced = signal.debounce(0.5, onScheduler: scheduler)
-    let testObserver = TestObserver<Int, NoError>()
-    debounced.observe(testObserver.observer)
+    let test = TestObserver<Int, NoError>()
+    debounced.observe(test.observer)
 
     observer.sendNext(1)
-    XCTAssertFalse(testObserver.didEmitValue)
+    test.assertDidNotEmitValue()
 
     observer.sendNext(2)
-    XCTAssertFalse(testObserver.didEmitValue)
+    test.assertDidNotEmitValue()
 
     scheduler.advanceByInterval(0.3)
-    XCTAssertFalse(testObserver.didEmitValue)
+    test.assertDidNotEmitValue()
 
     observer.sendNext(3)
-    XCTAssertFalse(testObserver.didEmitValue)
+    test.assertDidNotEmitValue()
 
     scheduler.advanceByInterval(0.8)
-    XCTAssertEqual(testObserver.nextValues, [3])
+    test.assertValues([3])
 
     observer.sendNext(4)
-    XCTAssertEqual(testObserver.nextValues, [3])
+    test.assertValues([3])
 
     scheduler.advanceByInterval(0.6)
-    XCTAssertEqual(testObserver.nextValues, [3, 4])
+    test.assertValues([3, 4])
   }
 }

@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 final class MapConstTests : XCTestCase {
 
@@ -12,16 +13,16 @@ final class MapConstTests : XCTestCase {
     const.observe(test.observer)
 
     observer.sendNext(1)
-    XCTAssertEqual(test.nextValues, [5])
+    test.assertValues([5])
     
     observer.sendNext(2)
-    XCTAssertEqual(test.nextValues, [5, 5])
+    test.assertValues([5, 5])
     
     observer.sendNext(3)
-    XCTAssertEqual(test.nextValues, [5, 5, 5])
+    test.assertValues([5, 5, 5])
     
     observer.sendNext(4)
-    XCTAssertEqual(test.nextValues, [5, 5, 5, 5])
+    test.assertValues([5, 5, 5, 5])
   }
 
   func testSignalProducerMapConst() {
@@ -30,6 +31,6 @@ final class MapConstTests : XCTestCase {
     let test = TestObserver<Int, NoError>()
     producer.start(test.observer)
 
-    XCTAssertEqual(test.nextValues, [5, 5, 5, 5])
+    test.assertValues([5, 5, 5, 5])
   }
 }
