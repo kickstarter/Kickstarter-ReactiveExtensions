@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 class BeginsWithTests : XCTestCase {
 
@@ -11,7 +12,7 @@ class BeginsWithTests : XCTestCase {
     let test = TestObserver<Int, NoError>()
     beginsWith0.start(test.observer)
 
-    XCTAssertEqual(test.nextValues, [0, 1, 2, 3])
+    test.assertValues([0, 1, 2, 3])
   }
 
   func testBeingsWithValues() {
@@ -20,6 +21,6 @@ class BeginsWithTests : XCTestCase {
     let test = TestObserver<Int, NoError>()
     beginsWith01.start(test.observer)
 
-    XCTAssertEqual(test.nextValues, [0, 1, 2, 3])
+    test.assertValues([0, 1, 2, 3])
   }
 }

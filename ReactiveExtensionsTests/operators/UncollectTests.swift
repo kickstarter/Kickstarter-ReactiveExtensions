@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 class UncollectTests : XCTestCase {
 
@@ -13,11 +14,11 @@ class UncollectTests : XCTestCase {
 
     observer.sendNext([1, 2, 3])
 
-    XCTAssertEqual(test.nextValues, [1, 2, 3])
-    XCTAssertFalse(test.didComplete)
+    test.assertValues([1, 2, 3])
+    test.assertDidNotComplete()
 
     observer.sendCompleted()
-    XCTAssert(test.didComplete)
+    test.assertDidComplete()
   }
 
   func testSignalUncollectFailure() {
@@ -29,8 +30,8 @@ class UncollectTests : XCTestCase {
     observer.sendNext([1, 2, 3])
     observer.sendFailed(SomeError())
     
-    XCTAssertEqual(test.nextValues, [1, 2, 3])
-    XCTAssertTrue(test.didFail)
+    test.assertValues([1, 2, 3])
+    test.assertDidFail()
   }
 
   func testSignalUncollectInterruption() {
@@ -42,8 +43,8 @@ class UncollectTests : XCTestCase {
     observer.sendNext([1, 2, 3])
     observer.sendInterrupted()
     
-    XCTAssertEqual(test.nextValues, [1, 2, 3])
-    XCTAssertTrue(test.didInterrupt)
+    test.assertValues([1, 2, 3])
+    test.assertDidInterrupt()
   }
 
   func testSignalProducerUncollect() {
@@ -52,6 +53,6 @@ class UncollectTests : XCTestCase {
     let test = TestObserver<Int, NoError>()
     uncollected.start(test.observer)
 
-    XCTAssertEqual(test.nextValues, [1, 2, 3])
+    test.assertValues([1, 2, 3])
   }
 }

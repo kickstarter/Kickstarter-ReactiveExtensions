@@ -2,6 +2,7 @@ import XCTest
 import ReactiveCocoa
 import Result
 @testable import ReactiveExtensions
+@testable import ReactiveExtensions_TestHelpers
 
 final class SortTests : XCTestCase {
 
@@ -15,7 +16,7 @@ final class SortTests : XCTestCase {
     observer.sendNext([3, 2, 1])
     observer.sendNext([1, 2, 3])
 
-    XCTAssertEqual(test.nextValues, [[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+    test.assertValues([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
   }
 
   func testSignalSortWithComparator() {
@@ -28,7 +29,7 @@ final class SortTests : XCTestCase {
     observer.sendNext([3, 2, 1])
     observer.sendNext([1, 2, 3])
 
-    XCTAssertEqual(test.nextValues, [[3, 2, 1], [3, 2, 1], [3, 2, 1]])
+    test.assertValues([[3, 2, 1], [3, 2, 1], [3, 2, 1]])
   }
 
   func testSignalProducerSort() {
@@ -37,7 +38,7 @@ final class SortTests : XCTestCase {
     let test = TestObserver<[Int], NoError>()
     sort.start(test.observer)
 
-    XCTAssertEqual(test.nextValues, [[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+    test.assertValues([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
   }
 
   func testSignalProducerSortWithComparator() {
@@ -46,6 +47,6 @@ final class SortTests : XCTestCase {
     let test = TestObserver<[Int], NoError>()
     sort.start(test.observer)
 
-    XCTAssertEqual(test.nextValues, [[3, 2, 1], [3, 2, 1], [3, 2, 1]])
+    test.assertValues([[3, 2, 1], [3, 2, 1], [3, 2, 1]])
   }
 }
