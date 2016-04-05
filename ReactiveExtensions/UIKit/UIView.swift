@@ -8,8 +8,11 @@ extension UIView {
     return lazyMutableProperty(
       self,
       key: &AssociationKey.hidden,
-      setter: { self.hidden = $0 },
-      getter: { self.hidden }
-    )
+      setter: {
+        self.hidden = $0
+      },
+      getter: {
+        self.hidden
+    })
   }
 }

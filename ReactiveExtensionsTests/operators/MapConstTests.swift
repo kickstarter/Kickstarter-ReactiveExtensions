@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-final class MapConstTests : XCTestCase {
+final class MapConstTests: XCTestCase {
 
   func testSignalMapConst() {
     let (signal, observer) = Signal<Int, NoError>.pipe()
@@ -14,13 +14,13 @@ final class MapConstTests : XCTestCase {
 
     observer.sendNext(1)
     test.assertValues([5])
-    
+
     observer.sendNext(2)
     test.assertValues([5, 5])
-    
+
     observer.sendNext(3)
     test.assertValues([5, 5, 5])
-    
+
     observer.sendNext(4)
     test.assertValues([5, 5, 5, 5])
   }

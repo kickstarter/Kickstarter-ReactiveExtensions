@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-final class SortTests : XCTestCase {
+final class SortTests: XCTestCase {
 
   func testSignalSort() {
     let (signal, observer) = Signal<[Int], NoError>.pipe()

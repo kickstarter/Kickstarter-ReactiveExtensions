@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-class UncollectTests : XCTestCase {
+class UncollectTests: XCTestCase {
 
   func testSignalUncollect() {
     let (signal, observer) = Signal<[Int], NoError>.pipe()
@@ -29,7 +29,7 @@ class UncollectTests : XCTestCase {
 
     observer.sendNext([1, 2, 3])
     observer.sendFailed(SomeError())
-    
+
     test.assertValues([1, 2, 3])
     test.assertDidFail()
   }
@@ -42,7 +42,7 @@ class UncollectTests : XCTestCase {
 
     observer.sendNext([1, 2, 3])
     observer.sendInterrupted()
-    
+
     test.assertValues([1, 2, 3])
     test.assertDidInterrupt()
   }
