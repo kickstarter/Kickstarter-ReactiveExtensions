@@ -11,7 +11,8 @@ public extension SignalType {
    - returns: A new signal.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func withLatestFrom <U, OtherError: ErrorType> (other: Signal<U, OtherError>) -> Signal<(Value, U), OtherError> {
+  public func withLatestFrom <U, OtherError: ErrorType> (other: Signal<U, OtherError>) ->
+    Signal<(Value, U), OtherError> {
 
     return Signal { observer in
       let lock = NSLock()
@@ -45,7 +46,7 @@ public extension SignalType {
           lock.unlock()
         case .Failed, .Completed, .Interrupted:
           // don't fail, complete or interrupt when the other does
-          break;
+          break
         }
       }
 
@@ -62,7 +63,8 @@ public extension SignalType {
    - returns: A new signal.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func withLatestFrom <U, OtherError: ErrorType> (other: SignalProducer<U, OtherError>) -> Signal<(Value, U), OtherError> {
+  public func withLatestFrom <U, OtherError: ErrorType> (other: SignalProducer<U, OtherError>) ->
+    Signal<(Value, U), OtherError> {
 
     return Signal { observer in
       let lock = NSLock()
@@ -96,7 +98,7 @@ public extension SignalType {
           lock.unlock()
         case .Failed, .Completed, .Interrupted:
           // don't fail, complete or interrupt when the other does
-          break;
+          break
         }
       }
 

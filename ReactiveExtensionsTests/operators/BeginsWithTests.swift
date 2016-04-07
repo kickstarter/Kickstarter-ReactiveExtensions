@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-class BeginsWithTests : XCTestCase {
+class BeginsWithTests: XCTestCase {
 
   func testBeingsWithValue() {
     let producer = SignalProducer<Int, NoError>(values: [1, 2, 3])

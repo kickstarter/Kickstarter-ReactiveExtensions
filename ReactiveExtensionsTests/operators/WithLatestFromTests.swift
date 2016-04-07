@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-final class WithLatestFromTests : XCTestCase {
+final class WithLatestFromTests: XCTestCase {
 
   func testWithLatestFromSignal() {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()

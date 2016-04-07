@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-final class TakeWhenTests : XCTestCase {
+final class TakeWhenTests: XCTestCase {
 
   func testStandard() {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()

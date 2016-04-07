@@ -3,9 +3,9 @@ import Result
 
 public extension SignalType {
   /**
-   Demotes the `Error` of this signal to `NoError`, thus preventing it from ever erroring. Essentially the 
+   Demotes the `Error` of this signal to `NoError`, thus preventing it from ever erroring. Essentially the
    inverse of `promoteErrors`.
-   
+
    - parameter value:  An optional value that will be played in place of the error.
    - parameter errors: An optional observer to send errors to.
 

@@ -4,14 +4,14 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-final class CombinePreviousTests : XCTestCase {
+final class CombinePreviousTests: XCTestCase {
 
   func testCombinePrevious() {
     let (signal, observer) = Signal<Int, NoError>.pipe()
     let combinePrevious = signal.combinePrevious()
     let test = TestObserver<[Int], NoError>()
     combinePrevious.map { [$0, $1] }.observe(test.observer)
-    
+
     observer.sendNext(1)
     XCTAssertFalse(test.didEmitValue)
 

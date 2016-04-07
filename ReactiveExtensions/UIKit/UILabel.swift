@@ -8,8 +8,11 @@ extension UILabel {
     return lazyMutableProperty(
       self,
       key: &AssociationKey.text,
-      setter: { self.text = $0 },
-      getter: { self.text }
-    )
+      setter: {
+        self.text = $0
+      },
+      getter: {
+        self.text
+    })
   }
 }

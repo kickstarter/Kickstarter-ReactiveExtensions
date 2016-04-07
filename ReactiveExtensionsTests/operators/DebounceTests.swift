@@ -4,7 +4,7 @@ import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
-final class DebounceTests : XCTestCase {
+final class DebounceTests: XCTestCase {
 
   func testDebounce() {
     let scheduler = TestScheduler()

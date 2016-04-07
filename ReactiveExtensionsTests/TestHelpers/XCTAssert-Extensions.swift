@@ -1,7 +1,7 @@
 import XCTest
 
 // Assert equality between two doubly nested arrays of equatables.
-internal func XCTAssertEqual<T : Equatable>(@autoclosure expression1: () -> [[T]],
+internal func XCTAssertEqual<T: Equatable>(@autoclosure expression1: () -> [[T]],
   @autoclosure _ expression2: () -> [[T]], _ message: String = "",
                  file: StaticString = #file, line: UInt = #line) {
 
