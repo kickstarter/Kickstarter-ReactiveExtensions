@@ -8,7 +8,8 @@ extension UIControl {
       self,
       key: &AssociationKey.enabled,
       setter: {
-        self.enabled = $0 },
+        self.enabled = $0
+      },
       getter: {
         self.enabled
     })
