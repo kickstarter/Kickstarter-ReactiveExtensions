@@ -6,9 +6,10 @@ import Result
 
 final class DemoteErrorTests: XCTestCase {
 
-  func testSignal_DemoteErrorsWithDefaultArgs() {
+  func testDemoteErrors_Signal_WithDefaultArguements() {
     let (signal, observer) = Signal<Int, SomeError>.pipe()
     let testSignal = signal.demoteErrors()
+
     let test = TestObserver<Int, NoError>()
     testSignal.observe(test.observer)
 
@@ -22,16 +23,16 @@ final class DemoteErrorTests: XCTestCase {
     test.assertDidComplete()
   }
 
-  func testSignal_DemoteErrorsWithArgs() {
+  func testDemoteErrors_Signal_WithArguements() {
     let (signal, observer) = Signal<Int, SomeError>.pipe()
-    let (errors, errorObserver) = Signal<SomeError, NoError>.pipe()
-    let testSignal = signal.demoteErrors(replaceErrorWith: 99, pipeErrorsTo: errorObserver)
+    let errors = MutableProperty<SomeError?>(nil)
+    let testSignal = signal.demoteErrors(replaceErrorWith: 99, pipeErrorsTo: errors)
 
     let test = TestObserver<Int, NoError>()
     testSignal.observe(test.observer)
 
-    let errorTest = TestObserver<SomeError, NoError>()
-    errors.observe(errorTest.observer)
+    let errorTest = TestObserver<SomeError?, NoError>()
+    errors.signal.observe(errorTest.observer)
 
     observer.sendNext(1)
     observer.sendNext(2)
@@ -47,9 +48,10 @@ final class DemoteErrorTests: XCTestCase {
     errorTest.assertDidNotFail()
   }
 
-  func testProducer_DemoteErrorsWithDefaultArgs() {
+  func testDemoteErrors_Producer_WithDefaultArguements() {
     let (producer, observer) = SignalProducer<Int, SomeError>.buffer(0)
     let testSignal = producer.demoteErrors()
+
     let test = TestObserver<Int, NoError>()
     testSignal.start(test.observer)
 
@@ -63,16 +65,16 @@ final class DemoteErrorTests: XCTestCase {
     test.assertDidComplete()
   }
 
-  func testProducer_DemoteErrorsWithArgs() {
+  func testDemoteErrors_Producer_WithArguements() {
     let (producer, observer) = SignalProducer<Int, SomeError>.buffer(0)
-    let (errors, errorObserver) = Signal<SomeError, NoError>.pipe()
-    let testSignal = producer.demoteErrors(replaceErrorWith: 99, pipeErrorsTo: errorObserver)
+    let errors = MutableProperty<SomeError?>(nil)
+    let testSignal = producer.demoteErrors(replaceErrorWith: 99, pipeErrorsTo: errors)
 
     let test = TestObserver<Int, NoError>()
     testSignal.start(test.observer)
 
-    let errorTest = TestObserver<SomeError, NoError>()
-    errors.observe(errorTest.observer)
+    let errorTest = TestObserver<SomeError?, NoError>()
+    errors.signal.observe(errorTest.observer)
 
     observer.sendNext(1)
     observer.sendNext(2)

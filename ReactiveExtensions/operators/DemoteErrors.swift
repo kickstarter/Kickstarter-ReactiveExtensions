@@ -7,19 +7,19 @@ public extension SignalType {
    inverse of `promoteErrors`.
 
    - parameter value:  An optional value that will be played in place of the error.
-   - parameter errors: An optional observer to send errors to.
+   - parameter errors: An optional property to send errors to.
 
    - returns: A new signal that will never error.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   public func demoteErrors(
     replaceErrorWith value: Value? = nil,
-                     pipeErrorsTo errors: Observer<Error, NoError>? = nil) -> Signal<Value, NoError> {
+                     pipeErrorsTo errors: MutableProperty<Error?>? = nil) -> Signal<Value, NoError> {
 
     return self.signal
       .on(failed: { error in
         if let errors = errors {
-          errors.sendNext(error)
+          errors.value = error
         }
       })
       .flatMapError { error in
@@ -37,14 +37,14 @@ public extension SignalProducerType {
    inverse of `promoteErrors`.
 
    - parameter value:  An optional value that will be played in place of the error.
-   - parameter errors: An optional observer to send errors to.
+   - parameter errors: An optional property to send errors to.
 
    - returns: A new producer that will never error.
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public func demoteErrors(
     replaceErrorWith value: Value? = nil,
-                     pipeErrorsTo errors: Observer<Error, NoError>? = nil) -> SignalProducer<Value, NoError> {
+                     pipeErrorsTo errors: MutableProperty<Error?>? = nil) -> SignalProducer<Value, NoError> {
 
     return self.lift { $0.demoteErrors(replaceErrorWith: value, pipeErrorsTo: errors) }
   }

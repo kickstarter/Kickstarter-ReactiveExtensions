@@ -7,8 +7,10 @@ extension UIControl {
     return lazyMutableProperty(
       self,
       key: &AssociationKey.enabled,
-      setter: { self.enabled = $0 },
-      getter: { self.enabled }
-    )
+      setter: {
+        self.enabled = $0 },
+      getter: {
+        self.enabled
+    })
   }
 }
