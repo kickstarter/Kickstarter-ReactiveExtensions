@@ -11,7 +11,10 @@ public extension SignalProducerType {
    - returns: A new producer that immediately emits a specific value when it is started.
    */
   public func beginsWith (value value: Value) -> SignalProducer<Value, Error> {
-    return SignalProducer<Value, Error>(value: value).mergeWith(self.producer)
+    return SignalProducer.merge(
+      SignalProducer<Value, Error>(value: value),
+      self.producer
+    )
   }
 
   /**
@@ -23,6 +26,9 @@ public extension SignalProducerType {
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public func beginsWith (values values: [Value]) -> SignalProducer<Value, Error> {
-    return SignalProducer<Value, Error>(values: values).mergeWith(self.producer)
+    return SignalProducer.merge(
+      SignalProducer<Value, Error>(values: values),
+      self.producer
+    )
   }
 }
