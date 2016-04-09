@@ -3,6 +3,14 @@ import Result
 
 public extension SignalType {
 
+  /**
+   Demotes the `Error` of this signal to `NoError`, thus preventing it from ever erroring. Essentially the
+   inverse of `promoteErrors`.
+
+   - parameter value:  An optional value that will be played in place of the error.
+
+   - returns: A new signal that will never error.
+   */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, NoError> {
 
