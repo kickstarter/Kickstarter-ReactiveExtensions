@@ -10,7 +10,6 @@ public extension SignalType {
    - returns: A merged signal.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  @available(*, deprecated=1.0, message="Use the static method Signal.merge")
   public func mergeWith (other: Signal<Value, Error>) -> Signal<Value, Error> {
     return Signal.merge([self.signal, other])
   }
@@ -47,7 +46,6 @@ public extension SignalProducerType {
    - returns: A merged producer.
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  @available(*, deprecated=1.0, message="Use the static method SignalProducer.merge")
   public func mergeWith (other: SignalProducer<Value, Error>) -> SignalProducer<Value, Error> {
     return SignalProducer<SignalProducer<Value, Error>, Error>(values: [self.producer, other]).flatten(.Merge)
   }
