@@ -14,25 +14,28 @@ public extension SignalType {
     return Signal.merge([self.signal, other])
   }
 
-  public static func merge(p1: Signal<Value, Error>,
-                           _ p2: Signal<Value, Error>) -> Signal<Value, Error> {
+  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  public static func merge(s1: Signal<Value, Error>,
+                           _ s2: Signal<Value, Error>) -> Signal<Value, Error> {
 
-    return Signal.merge([p1, p2])
+    return Signal.merge([s1, s2])
   }
 
-  public static func merge(p1: Signal<Value, Error>,
-                           _ p2: Signal<Value, Error>,
-                           _ p3: Signal<Value, Error>) -> Signal<Value, Error> {
+  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  public static func merge(s1: Signal<Value, Error>,
+                           _ s2: Signal<Value, Error>,
+                           _ s3: Signal<Value, Error>) -> Signal<Value, Error> {
 
-    return Signal.merge([p1, p2, p3])
+    return Signal.merge([s1, s2, s3])
   }
 
-  public static func merge(p1: Signal<Value, Error>,
-                           _ p2: Signal<Value, Error>,
-                           _ p3: Signal<Value, Error>,
-                           _ p4: Signal<Value, Error>) -> Signal<Value, Error> {
+  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  public static func merge(s1: Signal<Value, Error>,
+                           _ s2: Signal<Value, Error>,
+                           _ s3: Signal<Value, Error>,
+                           _ s4: Signal<Value, Error>) -> Signal<Value, Error> {
 
-    return Signal.merge([p1, p2, p3, p4])
+    return Signal.merge([s1, s2, s3, s4])
   }
 }
 
@@ -50,18 +53,21 @@ public extension SignalProducerType {
     return SignalProducer<SignalProducer<Value, Error>, Error>(values: [self.producer, other]).flatten(.Merge)
   }
 
+  @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public static func merge <S: SequenceType where S.Generator.Element == SignalProducer<Value, Error>>
     (s: S) -> SignalProducer<Value, Error> {
 
     return SignalProducer(values: s).flatten(.Merge)
   }
 
+  @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public static func merge(p1: SignalProducer<Value, Error>,
                            _ p2: SignalProducer<Value, Error>) -> SignalProducer<Value, Error> {
 
     return SignalProducer(values: [p1, p2]).flatten(.Merge)
   }
 
+  @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public static func merge(p1: SignalProducer<Value, Error>,
                            _ p2: SignalProducer<Value, Error>,
                            _ p3: SignalProducer<Value, Error>) -> SignalProducer<Value, Error> {
@@ -69,6 +75,7 @@ public extension SignalProducerType {
     return SignalProducer(values: [p1, p2, p3]).flatten(.Merge)
   }
 
+  @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public static func merge(p1: SignalProducer<Value, Error>,
                            _ p2: SignalProducer<Value, Error>,
                            _ p3: SignalProducer<Value, Error>,
