@@ -12,7 +12,6 @@ public extension SignalType {
    - returns: A new signal that will never error.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  @available(*, deprecated, message="Use the `values` and `errors` operators on a materialized signal.")
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, NoError> {
 
     return self.signal
@@ -64,7 +63,6 @@ public extension SignalProducerType {
    - returns: A new producer that will never error.
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  @available(*, deprecated, message="Use the `values` and `errors` operators on a materialized producer.")
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> SignalProducer<Value, NoError> {
     return self.lift { $0.demoteErrors(replaceErrorWith: value) }
   }
