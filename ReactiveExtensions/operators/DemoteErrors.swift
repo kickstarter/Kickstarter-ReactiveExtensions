@@ -33,6 +33,7 @@ public extension SignalType {
    - returns: A new signal that will never error.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  @available(*, deprecated, message="Use the `values` and `errors` operators on a materialized signal.")
   public func demoteErrors <MP: MutablePropertyType where MP.Value == Error?> (
     replaceErrorWith value: Value? = nil,
     pipeErrorsTo errors: MP?) -> Signal<Value, NoError> {
@@ -76,6 +77,7 @@ public extension SignalProducerType {
    - returns: A new producer that will never error.
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
+  @available(*, deprecated, message="Use the `values` and `errors` operators on a materialized producer.")
   public func demoteErrors <MP: MutablePropertyType where MP.Value == Error?> (
     replaceErrorWith value: Value? = nil,
     pipeErrorsTo errors: MP?) -> SignalProducer<Value, NoError> {
