@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		807571471C88B20300E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8075714A1C88B20F00E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571291C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
+		8096F28C1CC91C1500231D91 /* Rac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F28B1CC91C1500231D91 /* Rac.swift */; };
+		8096F2991CC92A4D00231D91 /* Rac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F28B1CC91C1500231D91 /* Rac.swift */; };
+		8096F29F1CC92AA700231D91 /* UIControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F29E1CC92AA700231D91 /* UIControlTests.swift */; };
+		8096F2A01CC92AA700231D91 /* UIControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F29E1CC92AA700231D91 /* UIControlTests.swift */; };
+		8096F2A21CC92AAF00231D91 /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A11CC92AAF00231D91 /* UILabelTests.swift */; };
+		8096F2A31CC92AAF00231D91 /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A11CC92AAF00231D91 /* UILabelTests.swift */; };
+		8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
+		8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
 		A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */; };
 		A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
 		A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
@@ -34,7 +42,6 @@
 		A7983B5A1C2AF7E8003A1ABE /* LazyMutableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */; };
 		A7983B5D1C2AF899003A1ABE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5C1C2AF899003A1ABE /* UIView.swift */; };
 		A7983B5F1C2AF8B0003A1ABE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */; };
-		A7983B611C2AF8C2003A1ABE /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B601C2AF8C2003A1ABE /* UITextField.swift */; };
 		A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B621C2AF8D4003A1ABE /* UIControl.swift */; };
 		A7983B651C2AF8EB003A1ABE /* AssociationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */; };
 		A7983B8D1C2AFB1D003A1ABE /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
@@ -74,7 +81,6 @@
 		A7DB1D641C9F5135008244DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
 		A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
-		A7FD088B1C81EDBD00332CCB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B601C2AF8C2003A1ABE /* UITextField.swift */; };
 		A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
 		A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */; };
 		A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510671C2737C500C59136 /* ConcatMap.swift */; };
@@ -277,6 +283,10 @@
 /* Begin PBXFileReference section */
 		807571151C88B1C500E7DA8A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Frameworks/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		8075712A1C88B1E000E7DA8A /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Frameworks/ReactiveCocoa/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
+		8096F28B1CC91C1500231D91 /* Rac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rac.swift; sourceTree = "<group>"; };
+		8096F29E1CC92AA700231D91 /* UIControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlTests.swift; sourceTree = "<group>"; };
+		8096F2A11CC92AAF00231D91 /* UILabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTests.swift; sourceTree = "<group>"; };
+		8096F2A41CC92AB600231D91 /* UIViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
 		A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SlidingWindowTest.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MapConstTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DebounceTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -299,7 +309,6 @@
 		A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyMutableProperty.swift; sourceTree = "<group>"; };
 		A7983B5C1C2AF899003A1ABE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		A7983B601C2AF8C2003A1ABE /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A7983B621C2AF8D4003A1ABE /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociationKeys.swift; sourceTree = "<group>"; };
 		A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,12 +429,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8096F29A1CC92A6300231D91 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8096F29E1CC92AA700231D91 /* UIControlTests.swift */,
+				8096F2A11CC92AAF00231D91 /* UILabelTests.swift */,
+				8096F2A41CC92AB600231D91 /* UIViewTests.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		A77966E81C2B018F0002166F /* ReactiveExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
 				A77966EA1C2B018F0002166F /* Info.plist */,
 				A7BF76BB1C554EF4003D0881 /* lib */,
 				A77966F71C2B15140002166F /* operators */,
+				8096F29A1CC92A6300231D91 /* UIKit */,
 				A7DB1D301C9F30AE008244DA /* TestHelpers */,
 			);
 			path = ReactiveExtensionsTests;
@@ -454,9 +474,9 @@
 		A7983B5B1C2AF88A003A1ABE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8096F28B1CC91C1500231D91 /* Rac.swift */,
 				A7983B621C2AF8D4003A1ABE /* UIControl.swift */,
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
-				A7983B601C2AF8C2003A1ABE /* UITextField.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
 			);
 			path = UIKit;
@@ -946,6 +966,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8096F2A31CC92AAF00231D91 /* UILabelTests.swift in Sources */,
 				A775B5121CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */,
 				A7BF76BF1C554EF4003D0881 /* Tuple.swift in Sources */,
 				A7BF76C31C554F19003D0881 /* SomeError.swift in Sources */,
@@ -955,11 +976,13 @@
 				A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */,
 				A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */,
 				A77966FB1C2B15150002166F /* UncollectTests.swift in Sources */,
+				8096F2A01CC92AA700231D91 /* UIControlTests.swift in Sources */,
 				A77966FA1C2B15150002166F /* BeginsWithTests.swift in Sources */,
 				A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */,
 				A779670D1C2B1EB90002166F /* SortTests.swift in Sources */,
 				A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */,
+				8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */,
 				A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -990,7 +1013,6 @@
 			files = (
 				A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */,
 				A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */,
-				A7FD088B1C81EDBD00332CCB /* UITextField.swift in Sources */,
 				A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
 				A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */,
@@ -1014,6 +1036,7 @@
 				A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */,
 				A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */,
 				A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */,
+				8096F28C1CC91C1500231D91 /* Rac.swift in Sources */,
 				A7FD08A11C81EDBD00332CCB /* CombinePrevious.swift in Sources */,
 				A7FD08A21C81EDBD00332CCB /* UIView.swift in Sources */,
 				A7FD08A31C81EDBD00332CCB /* BeginsWith.swift in Sources */,
@@ -1026,6 +1049,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8096F2A21CC92AAF00231D91 /* UILabelTests.swift in Sources */,
 				A775B5111CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */,
 				A7FD08C21C81EEA100332CCB /* Tuple.swift in Sources */,
 				A7FD08C31C81EEA100332CCB /* SomeError.swift in Sources */,
@@ -1035,11 +1059,13 @@
 				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
 				A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */,
 				A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */,
+				8096F29F1CC92AA700231D91 /* UIControlTests.swift in Sources */,
 				A7FD08CC1C81EEA100332CCB /* BeginsWithTests.swift in Sources */,
 				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,
 				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
 				A72E753A1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
+				8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */,
 				A7FD08D01C81EEA100332CCB /* DebounceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1050,7 +1076,6 @@
 			files = (
 				A7C510621C27371E00C59136 /* MergeWith.swift in Sources */,
 				A7C510521C2734F100C59136 /* SlidingWindow.swift in Sources */,
-				A7983B611C2AF8C2003A1ABE /* UITextField.swift in Sources */,
 				A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */,
 				A7983B5A1C2AF7E8003A1ABE /* LazyMutableProperty.swift in Sources */,
@@ -1072,6 +1097,7 @@
 				A7C5104C1C27343400C59136 /* WithLatestFrom.swift in Sources */,
 				A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */,
 				A7C510461C2720D500C59136 /* Sort.swift in Sources */,
+				8096F2991CC92A4D00231D91 /* Rac.swift in Sources */,
 				A7C5105C1C27362000C59136 /* WrapInOptional.swift in Sources */,
 				A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */,
 				A7C510501C2734D100C59136 /* CombinePrevious.swift in Sources */,
