@@ -1,18 +1,19 @@
 import ReactiveCocoa
+import Result
 import UIKit
 
-extension UILabel {
+public extension Rac where View: UILabel {
+  public var text: Signal<String, NoError> {
+    nonmutating set {
+      let prop: MutableProperty<String> = lazyMutableProperty(view, key: &AssociationKey.text,
+        setter: { [weak view] in view?.text = $0 ?? "" },
+        getter: { [weak view] in view?.text ?? "" })
 
-  /// Turns `label.text` into a `MutableProperty`.
-  public var rac_text: MutableProperty<String?> {
-    return lazyMutableProperty(
-      self,
-      key: &AssociationKey.text,
-      setter: {
-        self.text = $0
-      },
-      getter: {
-        self.text
-    })
+      prop <~ newValue.observeForUI()
+    }
+
+    get {
+      return .empty
+    }
   }
 }

@@ -11,7 +11,7 @@ import ReactiveCocoa
 
  - returns:
  */
-internal func lazyMutableProperty<T>(host: AnyObject, key: UnsafePointer<Void>, setter: T -> (),
+public func lazyMutableProperty<T>(host: AnyObject, key: UnsafePointer<Void>, setter: T -> (),
                                   getter: () -> T) -> MutableProperty<T> {
   return lazyAssociatedProperty(host, key: key) {
     let property = MutableProperty<T>(getter())

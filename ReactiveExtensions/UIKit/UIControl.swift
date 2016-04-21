@@ -1,17 +1,19 @@
 import ReactiveCocoa
+import Result
 import UIKit
 
-extension UIControl {
-  /// Turns `control.enabled` into a `MutableProperty`.
-  public var rac_enabled: MutableProperty<Bool> {
-    return lazyMutableProperty(
-      self,
-      key: &AssociationKey.enabled,
-      setter: {
-        self.enabled = $0
-      },
-      getter: {
-        self.enabled
-    })
+public extension Rac where View: UIControl {
+  public var enabled: Signal<Bool, NoError> {
+    nonmutating set {
+      let prop: MutableProperty<Bool> = lazyMutableProperty(view, key: &AssociationKey.enabled,
+        setter: { [weak view] in view?.enabled = $0 ?? true },
+        getter: { [weak view] in view?.enabled ?? true })
+
+      prop <~ newValue.observeForUI()
+    }
+
+    get {
+      return .empty
+    }
   }
 }
