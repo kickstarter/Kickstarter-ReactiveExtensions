@@ -43,7 +43,6 @@
 		A7983B5D1C2AF899003A1ABE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5C1C2AF899003A1ABE /* UIView.swift */; };
 		A7983B5F1C2AF8B0003A1ABE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */; };
 		A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B621C2AF8D4003A1ABE /* UIControl.swift */; };
-		A7983B651C2AF8EB003A1ABE /* AssociationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */; };
 		A7983B8D1C2AFB1D003A1ABE /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
 		A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A015D61CBDA99100C4B821 /* TakeUntil.swift */; };
 		A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A015D61CBDA99100C4B821 /* TakeUntil.swift */; };
@@ -85,7 +84,6 @@
 		A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */; };
 		A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510671C2737C500C59136 /* ConcatMap.swift */; };
 		A7FD088F1C81EDBD00332CCB /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104D1C27346B00C59136 /* TakeWhen.swift */; };
-		A7FD08901C81EDBD00332CCB /* AssociationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */; };
 		A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* Debounce.swift */; };
 		A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105F1C2736D400C59136 /* DemoteErrors.swift */; };
 		A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510491C2733F600C59136 /* IgnoreValues.swift */; };
@@ -310,7 +308,6 @@
 		A7983B5C1C2AF899003A1ABE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		A7983B621C2AF8D4003A1ABE /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
-		A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociationKeys.swift; sourceTree = "<group>"; };
 		A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A015D61CBDA99100C4B821 /* TakeUntil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntil.swift; sourceTree = "<group>"; };
 		A7BF76BD1C554EF4003D0881 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
@@ -570,7 +567,6 @@
 			children = (
 				CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */,
 				CA43C6681BB35FCF00C180DA /* Info.plist */,
-				A7983B641C2AF8EB003A1ABE /* AssociationKeys.swift */,
 				A7983B571C2AF232003A1ABE /* LazyAssociatedProperty.swift */,
 				A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */,
 				A7C510441C2720C900C59136 /* operators */,
@@ -1019,7 +1015,6 @@
 				A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */,
 				A72E75281CC1849100983066 /* Values.swift in Sources */,
 				A7FD088F1C81EDBD00332CCB /* TakeWhen.swift in Sources */,
-				A7FD08901C81EDBD00332CCB /* AssociationKeys.swift in Sources */,
 				A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */,
 				A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */,
 				A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */,
@@ -1082,7 +1077,6 @@
 				A7C510681C2737C500C59136 /* ConcatMap.swift in Sources */,
 				A72E75291CC1849100983066 /* Values.swift in Sources */,
 				A7C5104E1C27346B00C59136 /* TakeWhen.swift in Sources */,
-				A7983B651C2AF8EB003A1ABE /* AssociationKeys.swift in Sources */,
 				A7C510541C27351F00C59136 /* Debounce.swift in Sources */,
 				A7C510601C2736D400C59136 /* DemoteErrors.swift in Sources */,
 				A7C5104A1C2733F600C59136 /* IgnoreValues.swift in Sources */,
