@@ -8,7 +8,7 @@ final class DistinctTests: XCTestCase {
 
   func testSignalDistincts() {
     let (s, o) = Signal<Int, NoError>.pipe()
-    let distincts = s.distincts()
+    let distincts = s.distincts { String($0) }
 
     let test = TestObserver<Int, NoError>()
     distincts.observe(test.observer)
@@ -29,7 +29,7 @@ final class DistinctTests: XCTestCase {
 
   func testSignalDistinctsFailed() {
     let (s, o) = Signal<Int, SomeError>.pipe()
-    let distincts = s.distincts()
+    let distincts = s.distincts { String($0) }
 
     let test = TestObserver<Int, SomeError>()
     distincts.observe(test.observer)
@@ -50,7 +50,7 @@ final class DistinctTests: XCTestCase {
 
   func testSignalDistinctsInterrupted() {
     let (s, o) = Signal<Int, NoError>.pipe()
-    let distincts = s.distincts()
+    let distincts = s.distincts { String($0) }
 
     let test = TestObserver<Int, NoError>()
     distincts.observe(test.observer)

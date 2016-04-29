@@ -1,18 +1,12 @@
 import ReactiveCocoa
 
-extension SignalType where Value: Hashable {
-
-  /**
-   - returns: A signal that emits only distinct values.
-   */
-  public func distincts() -> Signal<Value, Error> {
-    return self.distincts { $0 }
-  }
-}
-
 extension SignalType {
 
   /**
+   Constructs a signal that emits only new, unique values. In order to do this we store an internal set of
+   values so that we know when a new value is being emitted. This can inadvertently lead to unbounded
+   memory consumption, and so it should be used with signals that do not emit many values.
+
    - parameter keySelector: A function to convert values into `Hashable` values.
 
    - returns: A signal that emits only distinct values.
@@ -41,22 +35,16 @@ extension SignalType {
   }
 }
 
-extension SignalProducerType where Value: Hashable {
-
-  /**
-   - returns: A signal producer that emits only distinct values.
-   */
-  public func distincts() -> SignalProducer<Value, Error> {
-    return self.lift { $0.distincts() }
-  }
-}
-
 extension SignalProducerType {
 
   /**
+   Constructs a producer that emits only new, unique values. In order to do this we store an internal set of
+   values so that we know when a new value is being emitted. This can inadvertently lead to unbounded
+   memory consumption, and so it should be used with producers that do not emit many values.
+
    - parameter keySelector: A function to convert values into `Hashable` values.
 
-   - returns: A signal producer that emits only distinct values.
+   - returns: A producer that emits only distinct values.
    */
   public func distincts <Key: Hashable> (keySelector: Value -> Key) -> SignalProducer<Value, Error> {
     return self.lift { $0.distincts(keySelector) }
