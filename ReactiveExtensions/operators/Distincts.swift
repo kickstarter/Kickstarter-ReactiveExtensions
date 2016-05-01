@@ -13,22 +13,25 @@ extension SignalType {
    */
   public func distincts <Key: Hashable> (keySelector: Value -> Key) -> Signal<Value, Error> {
     return Signal { observer in
-      var keys: Set<Key> = []
+      let seen: Atomic<Set<Key>> = Atomic([])
 
       return self.observe { event in
         switch event {
         case let .Next(value):
           let key = keySelector(value)
-          if !keys.contains(key) {
-            keys.insert(key)
-            observer.sendNext(value)
+
+          if seen.withValue({ !$0.contains(key)}) {
+            seen.modify { set in
+              var mutable = set
+              mutable.insert(key)
+              return mutable
+            }
+
+            fallthrough
           }
-        case .Completed:
-          observer.sendCompleted()
-        case let .Failed(error):
-          observer.sendFailed(error)
-        case .Interrupted:
-          observer.sendInterrupted()
+
+        default:
+          observer.action(event)
         }
       }
     }

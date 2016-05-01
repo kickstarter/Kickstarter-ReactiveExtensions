@@ -82,8 +82,8 @@
 		A7DB1D5E1C9F500D008244DA /* ReactiveExtensions_TestHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DB1D5A1C9F4FD7008244DA /* ReactiveExtensions_TestHelpers.framework */; };
 		A7DB1D611C9F5125008244DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571291C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		A7DB1D641C9F5135008244DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
-		A7E8FA781CD3D64700DBF142 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA771CD3D64700DBF142 /* Distinct.swift */; };
-		A7E8FA791CD3D64700DBF142 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA771CD3D64700DBF142 /* Distinct.swift */; };
+		A7E8FA781CD3D64700DBF142 /* Distincts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA771CD3D64700DBF142 /* Distincts.swift */; };
+		A7E8FA791CD3D64700DBF142 /* Distincts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA771CD3D64700DBF142 /* Distincts.swift */; };
 		A7E8FA871CD3DD5400DBF142 /* DistinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */; };
 		A7E8FA881CD3DD5400DBF142 /* DistinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */; };
 		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
@@ -347,7 +347,7 @@
 		A7DB1D3A1C9F355E008244DA /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions_TestHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DB1D4A1C9F4EE9008244DA /* XCTAssert-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "XCTAssert-Extensions.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7DB1D5A1C9F4FD7008244DA /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions_TestHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7E8FA771CD3D64700DBF142 /* Distinct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distinct.swift; sourceTree = "<group>"; };
+		A7E8FA771CD3D64700DBF142 /* Distincts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distincts.swift; sourceTree = "<group>"; };
 		A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistinctTests.swift; sourceTree = "<group>"; };
 		A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -513,7 +513,7 @@
 				A7C510531C27351F00C59136 /* Debounce.swift */,
 				A7C5105D1C27364700C59136 /* Debugging.swift */,
 				A7C5105F1C2736D400C59136 /* DemoteErrors.swift */,
-				A7E8FA771CD3D64700DBF142 /* Distinct.swift */,
+				A7E8FA771CD3D64700DBF142 /* Distincts.swift */,
 				A72E75361CC1849B00983066 /* Errors.swift */,
 				A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */,
 				A7C510651C27378A00C59136 /* FlatMap.swift */,
@@ -1036,7 +1036,7 @@
 				A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */,
 				A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */,
 				A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */,
-				A7E8FA781CD3D64700DBF142 /* Distinct.swift in Sources */,
+				A7E8FA781CD3D64700DBF142 /* Distincts.swift in Sources */,
 				A72E75371CC1849B00983066 /* Errors.swift in Sources */,
 				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
 				A7FD08961C81EDBD00332CCB /* Debugging.swift in Sources */,
@@ -1102,7 +1102,7 @@
 				A7C510541C27351F00C59136 /* Debounce.swift in Sources */,
 				A7C510601C2736D400C59136 /* DemoteErrors.swift in Sources */,
 				A7C5104A1C2733F600C59136 /* IgnoreValues.swift in Sources */,
-				A7E8FA791CD3D64700DBF142 /* Distinct.swift in Sources */,
+				A7E8FA791CD3D64700DBF142 /* Distincts.swift in Sources */,
 				A72E75381CC1849B00983066 /* Errors.swift in Sources */,
 				A7C510481C2721CA00C59136 /* Uncollect.swift in Sources */,
 				A7C5105E1C27364700C59136 /* Debugging.swift in Sources */,
