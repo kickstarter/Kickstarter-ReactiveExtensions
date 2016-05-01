@@ -14,16 +14,30 @@ final class DistinctTests: XCTestCase {
     distincts.observe(test.observer)
 
     o.sendNext(1)
-    o.sendNext(2)
-    o.sendNext(1)
-    o.sendNext(3)
-    o.sendNext(2)
-    o.sendNext(4)
-    o.sendNext(3)
-    o.sendNext(5)
-    o.sendCompleted()
+    test.assertValues([1])
 
+    o.sendNext(2)
+    test.assertValues([1, 2])
+
+    o.sendNext(1)
+    test.assertValues([1, 2])
+
+    o.sendNext(3)
+    test.assertValues([1, 2, 3])
+
+    o.sendNext(2)
+    test.assertValues([1, 2, 3])
+
+    o.sendNext(4)
+    test.assertValues([1, 2, 3, 4])
+
+    o.sendNext(3)
+    test.assertValues([1, 2, 3, 4])
+
+    o.sendNext(5)
     test.assertValues([1, 2, 3, 4, 5])
+
+    o.sendCompleted()
     test.assertDidComplete()
   }
 
@@ -34,17 +48,7 @@ final class DistinctTests: XCTestCase {
     let test = TestObserver<Int, SomeError>()
     distincts.observe(test.observer)
 
-    o.sendNext(1)
-    o.sendNext(2)
-    o.sendNext(1)
-    o.sendNext(3)
-    o.sendNext(2)
-    o.sendNext(4)
-    o.sendNext(3)
-    o.sendNext(5)
     o.sendFailed(SomeError())
-
-    test.assertValues([1, 2, 3, 4, 5])
     test.assertFailed(SomeError())
   }
 
@@ -55,17 +59,7 @@ final class DistinctTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     distincts.observe(test.observer)
 
-    o.sendNext(1)
-    o.sendNext(2)
-    o.sendNext(1)
-    o.sendNext(3)
-    o.sendNext(2)
-    o.sendNext(4)
-    o.sendNext(3)
-    o.sendNext(5)
     o.sendInterrupted()
-
-    test.assertValues([1, 2, 3, 4, 5])
     test.assertDidInterrupt()
   }
 
@@ -77,16 +71,65 @@ final class DistinctTests: XCTestCase {
     distincts.observe(test.observer)
 
     o.sendNext(1)
-    o.sendNext(2)
-    o.sendNext(1)
-    o.sendNext(3)
-    o.sendNext(2)
-    o.sendNext(4)
-    o.sendNext(3)
-    o.sendNext(5)
-    o.sendCompleted()
+    test.assertValues([1])
 
+    o.sendNext(2)
+    test.assertValues([1, 2])
+
+    o.sendNext(1)
+    test.assertValues([1, 2])
+
+    o.sendNext(3)
+    test.assertValues([1, 2, 3])
+
+    o.sendNext(2)
+    test.assertValues([1, 2, 3])
+
+    o.sendNext(4)
+    test.assertValues([1, 2, 3, 4])
+
+    o.sendNext(3)
+    test.assertValues([1, 2, 3, 4])
+
+    o.sendNext(5)
     test.assertValues([1, 2, 3, 4, 5])
+
+    o.sendCompleted()
+    test.assertDidComplete()
+  }
+
+  func testProducerDistincts() {
+    let (s, o) = SignalProducer<Int, NoError>.buffer(0)
+    let distincts = s.distincts { String($0) }
+
+    let test = TestObserver<Int, NoError>()
+    distincts.start(test.observer)
+
+    o.sendNext(1)
+    test.assertValues([1])
+
+    o.sendNext(2)
+    test.assertValues([1, 2])
+
+    o.sendNext(1)
+    test.assertValues([1, 2])
+
+    o.sendNext(3)
+    test.assertValues([1, 2, 3])
+
+    o.sendNext(2)
+    test.assertValues([1, 2, 3])
+
+    o.sendNext(4)
+    test.assertValues([1, 2, 3, 4])
+
+    o.sendNext(3)
+    test.assertValues([1, 2, 3, 4])
+
+    o.sendNext(5)
+    test.assertValues([1, 2, 3, 4, 5])
+
+    o.sendCompleted()
     test.assertDidComplete()
   }
 }
