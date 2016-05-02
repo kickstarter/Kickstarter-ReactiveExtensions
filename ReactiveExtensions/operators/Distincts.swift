@@ -19,14 +19,18 @@ extension SignalType {
         switch event {
         case let .Next(value):
           let key = keySelector(value)
+          var isNewKey = false
 
-          if seen.withValue({ !$0.contains(key)}) {
-            seen.modify { set in
-              var mutable = set
+          seen.modify { set in
+            isNewKey = !set.contains(key)
+            var mutable = set
+            if isNewKey {
               mutable.insert(key)
-              return mutable
             }
+            return mutable
+          }
 
+          if isNewKey {
             fallthrough
           }
 
