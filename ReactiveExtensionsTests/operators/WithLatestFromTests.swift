@@ -94,7 +94,7 @@ final class WithLatestFromTests: XCTestCase {
     sampleObserver.sendInterrupted()
     test.assertDidInterrupt()
   }
-  
+
   func testProducer() {
     let (source, sourceObserver) = SignalProducer<Int, NoError>.buffer(0)
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
