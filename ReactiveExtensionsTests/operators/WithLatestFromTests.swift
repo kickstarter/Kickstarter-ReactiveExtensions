@@ -25,41 +25,11 @@ final class WithLatestFromTests: XCTestCase {
     sampleObserver.sendNext(4)
     test.assertValues([[3, 2], [4, 2]])
 
-    sampleObserver.sendCompleted()
+    sourceObserver.sendCompleted()
     test.assertDidNotComplete()
 
-    sourceObserver.sendCompleted()
+    sampleObserver.sendCompleted()
     test.assertDidComplete()
-  }
-
-  func testWithLatestFromSignal_SourceCompleting() {
-    let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], SomeError>()
-    withLatestFrom.map { [$0, $1] }.observe(test.observer)
-
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
-    test.assertValues([[3, 1]])
-
-    sourceObserver.sendCompleted()
-    XCTAssert(test.didComplete)
-  }
-
-  func testWithLatestFromSignal_SourceErroring() {
-    let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], SomeError>()
-    withLatestFrom.map { [$0, $1] }.observe(test.observer)
-
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
-    test.assertValues([[3, 1]])
-
-    sourceObserver.sendFailed(SomeError())
-    XCTAssert(test.didFail)
   }
 
   func testWithLatestFromSignal_SourceInterrupted() {
@@ -77,21 +47,6 @@ final class WithLatestFromTests: XCTestCase {
     test.assertDidInterrupt()
   }
 
-  func testWithLatestFromSignal_SampleErroring() {
-    let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], SomeError>()
-    withLatestFrom.map { [$0, $1] }.observe(test.observer)
-
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
-    test.assertValues([[3, 1]])
-
-    sampleObserver.sendFailed(SomeError())
-    test.assertDidNotFail()
-  }
-
   func testWithLatestFromSignal_SampleInterrupted() {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
@@ -104,7 +59,7 @@ final class WithLatestFromTests: XCTestCase {
     test.assertValues([[3, 1]])
 
     sampleObserver.sendInterrupted()
-    test.assertDidNotInterrupt()
+    test.assertDidInterrupt()
   }
 
   func testWithLatestFromProducer() {
@@ -126,41 +81,11 @@ final class WithLatestFromTests: XCTestCase {
     sampleObserver.sendNext(4)
     test.assertValues([[3, 2], [4, 2]])
 
-    sampleObserver.sendCompleted()
+    sourceObserver.sendCompleted()
     test.assertDidNotComplete()
 
-    sourceObserver.sendCompleted()
+    sampleObserver.sendCompleted()
     test.assertDidComplete()
-  }
-
-  func testWithLatestFromProducer_SourceCompleting() {
-    let (source, sourceObserver) = SignalProducer<Int, NoError>.buffer(0)
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
-    let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], NoError>()
-    withLatestFrom.map { [$0, $1] }.observe(test.observer)
-
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
-    test.assertValues([[3, 1]])
-
-    sourceObserver.sendCompleted()
-    XCTAssert(test.didComplete)
-  }
-
-  func testWithLatestFromProducer_SourceErroring() {
-    let (source, sourceObserver) = SignalProducer<Int, SomeError>.buffer(0)
-    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], SomeError>()
-    withLatestFrom.map { [$0, $1] }.observe(test.observer)
-
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
-    test.assertValues([[3, 1]])
-
-    sourceObserver.sendFailed(SomeError())
-    XCTAssert(test.didFail)
   }
 
   func testWithLatestFromProducer_SourceInterrupted() {
@@ -178,21 +103,6 @@ final class WithLatestFromTests: XCTestCase {
     test.assertDidInterrupt()
   }
 
-  func testWithLatestFromProducer_SampleErroring() {
-    let (source, sourceObserver) = SignalProducer<Int, SomeError>.buffer(0)
-    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
-    let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], SomeError>()
-    withLatestFrom.map { [$0, $1] }.observe(test.observer)
-
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
-    test.assertValues([[3, 1]])
-
-    sampleObserver.sendFailed(SomeError())
-    test.assertDidNotFail()
-  }
-
   func testWithLatestFromProducer_SampleInterrupted() {
     let (source, sourceObserver) = SignalProducer<Int, NoError>.buffer(0)
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
@@ -205,7 +115,7 @@ final class WithLatestFromTests: XCTestCase {
     test.assertValues([[3, 1]])
 
     sampleObserver.sendInterrupted()
-    test.assertDidNotInterrupt()
+    test.assertDidInterrupt()
   }
 
 }

@@ -1,6 +1,7 @@
 import ReactiveCocoa
+import Result
 
-public extension SignalType {
+public extension SignalType where Error == NoError {
 
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
@@ -11,26 +12,22 @@ public extension SignalType {
    - returns: A new signal.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func withLatestFrom <U, OtherError: ErrorType> (other: Signal<U, OtherError>) ->
-    Signal<(Value, U), OtherError> {
+  public func withLatestFrom <U> (other: Signal<U, NoError>) -> Signal<(Value, U), NoError> {
 
     return Signal { observer in
-      let lock = NSLock()
-      lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
-
       let disposable = CompositeDisposable()
-      var latestValue: U? = nil
+      let lastOtherValue: Atomic<U?> = Atomic(nil)
 
       disposable += other.observe { event in
         switch event {
         case let .Next(value):
-          lock.lock()
-          latestValue = value
-          lock.unlock()
-        case let .Failed(error):
-          observer.sendFailed(error)
+          lastOtherValue.swap(value)
         case .Completed:
-          observer.sendCompleted()
+          // `other` completing does not complete the whole signal.
+          break
+        case .Failed:
+          // Failure is not possible
+          break
         case .Interrupted:
           observer.sendInterrupted()
         }
@@ -39,14 +36,18 @@ public extension SignalType {
       disposable += self.signal.observe { event in
         switch event {
         case let .Next(value):
-          lock.lock()
-          if let latestValue = latestValue {
-            observer.sendNext((value, latestValue))
+          lastOtherValue.withValue { otherValue in
+            if let otherValue = otherValue {
+              observer.sendNext((value, otherValue))
+            }
           }
-          lock.unlock()
-        case .Failed, .Completed, .Interrupted:
-          // don't fail, complete or interrupt when the other does
+        case .Completed:
+          observer.sendCompleted()
+        case .Failed:
+          // Failure is not possible
           break
+        case .Interrupted:
+          observer.sendInterrupted()
         }
       }
 
@@ -63,26 +64,22 @@ public extension SignalType {
    - returns: A new signal.
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func withLatestFrom <U, OtherError: ErrorType> (other: SignalProducer<U, OtherError>) ->
-    Signal<(Value, U), OtherError> {
+  public func withLatestFrom <U> (other: SignalProducer<U, NoError>) -> Signal<(Value, U), NoError> {
 
     return Signal { observer in
-      let lock = NSLock()
-      lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
-
       let disposable = CompositeDisposable()
-      var latestValue: U? = nil
+      let lastOtherValue: Atomic<U?> = Atomic(nil)
 
       disposable += other.start { event in
         switch event {
         case let .Next(value):
-          lock.lock()
-          latestValue = value
-          lock.unlock()
-        case let .Failed(error):
-          observer.sendFailed(error)
+          lastOtherValue.swap(value)
         case .Completed:
-          observer.sendCompleted()
+          // `other` completing does not complete the whole signal.
+          break
+        case .Failed:
+          // Failure is not possible
+          break
         case .Interrupted:
           observer.sendInterrupted()
         }
@@ -91,14 +88,18 @@ public extension SignalType {
       disposable += self.signal.observe { event in
         switch event {
         case let .Next(value):
-          lock.lock()
-          if let latestValue = latestValue {
-            observer.sendNext((value, latestValue))
+          lastOtherValue.withValue { otherValue in
+            if let otherValue = otherValue {
+              observer.sendNext((value, otherValue))
+            }
           }
-          lock.unlock()
-        case .Failed, .Completed, .Interrupted:
-          // don't fail, complete or interrupt when the other does
+        case .Completed:
+          observer.sendCompleted()
+        case .Failed:
+          // Failure is not possible
           break
+        case .Interrupted:
+          observer.sendInterrupted()
         }
       }
 

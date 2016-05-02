@@ -1,6 +1,7 @@
 import ReactiveCocoa
+import Result
 
-public extension SignalType {
+public extension SignalType where Error == NoError {
 
   /**
    Filters a signal by using a predicate on the latest emitted value from another signal.
