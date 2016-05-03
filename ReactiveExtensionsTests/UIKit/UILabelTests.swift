@@ -19,4 +19,22 @@ final class UILabelTests: XCTestCase {
     observer.sendNext("")
     XCTAssertEqual("", label.text)
   }
+
+  func testFont() {
+    let (signal, observer) = Signal<UIFont, NoError>.pipe()
+    label.rac.font = signal
+
+    let font = UIFont.systemFontOfSize(16.0)
+    observer.sendNext(font)
+    XCTAssertEqual(font, label.font)
+  }
+
+  func testTextColor() {
+    let (signal, observer) = Signal<UIColor, NoError>.pipe()
+    label.rac.textColor = signal
+
+    let color = UIColor.redColor()
+    observer.sendNext(color)
+    XCTAssertEqual(color, label.textColor)
+  }
 }
