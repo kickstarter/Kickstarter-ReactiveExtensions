@@ -4,6 +4,8 @@ import UIKit
 
 private enum Associations {
   private static var text = 0
+  private static var font = 1
+  private static var textColor = 2
 }
 
 public extension Rac where View: UILabel {
@@ -27,7 +29,7 @@ public extension Rac where View: UILabel {
     nonmutating set {
       let prop: MutableProperty<UIFont> = lazyMutableProperty(
         view,
-        key: &Associations.text,
+        key: &Associations.font,
         setter: { [weak view] in view?.font = $0 },
         getter: { [weak view] in view?.font ?? .systemFontOfSize(12.0) })
 
@@ -43,7 +45,7 @@ public extension Rac where View: UILabel {
     nonmutating set {
       let prop: MutableProperty<UIColor> = lazyMutableProperty(
         view,
-        key: &Associations.text,
+        key: &Associations.textColor,
         setter: { [weak view] in view?.textColor = $0 },
         getter: { [weak view] in view?.textColor ?? .blackColor() })
 
