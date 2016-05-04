@@ -25,6 +25,8 @@
 		A7180BDB1CCFB0BE001711CA /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BD91CCFB0BE001711CA /* Concat.swift */; };
 		A7180BE91CCFB1B2001711CA /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BE81CCFB1B2001711CA /* ConcatTests.swift */; };
 		A7180BEA1CCFB1B2001711CA /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BE81CCFB1B2001711CA /* ConcatTests.swift */; };
+		A71C4F431CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */; };
+		A71C4F441CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */; };
 		A72E75281CC1849100983066 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75271CC1849100983066 /* Values.swift */; };
 		A72E75291CC1849100983066 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75271CC1849100983066 /* Values.swift */; };
 		A72E75371CC1849B00983066 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75361CC1849B00983066 /* Errors.swift */; };
@@ -299,6 +301,7 @@
 		A713EC801C2B863600B6234E /* WithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = WithLatestFromTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A7180BD91CCFB0BE001711CA /* Concat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
 		A7180BE81CCFB1B2001711CA /* ConcatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
+		A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntilTests.swift; sourceTree = "<group>"; };
 		A72E75271CC1849100983066 /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		A72E75361CC1849B00983066 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		A72E75391CC1858500983066 /* ValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesTests.swift; sourceTree = "<group>"; };
@@ -469,15 +472,16 @@
 				A7180BE81CCFB1B2001711CA /* ConcatTests.swift */,
 				A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */,
 				A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */,
+				A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */,
 				A72E753C1CC1859000983066 /* ErrorsTests.swift */,
 				A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */,
 				A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */,
 				A779670C1C2B1EB90002166F /* SortTests.swift */,
+				A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */,
 				A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */,
 				A77966F91C2B15150002166F /* UncollectTests.swift */,
 				A72E75391CC1858500983066 /* ValuesTests.swift */,
 				A713EC801C2B863600B6234E /* WithLatestFromTests.swift */,
-				A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */,
 			);
 			path = operators;
 			sourceTree = "<group>";
@@ -983,6 +987,7 @@
 				A7BF76BF1C554EF4003D0881 /* Tuple.swift in Sources */,
 				A7BF76C31C554F19003D0881 /* SomeError.swift in Sources */,
 				A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */,
+				A71C4F441CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */,
 				A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */,
 				A72E753E1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */,
@@ -1069,6 +1074,7 @@
 				A7FD08C21C81EEA100332CCB /* Tuple.swift in Sources */,
 				A7FD08C31C81EEA100332CCB /* SomeError.swift in Sources */,
 				A7FD08C41C81EEA100332CCB /* SlidingWindowTest.swift in Sources */,
+				A71C4F431CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */,
 				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
 				A72E753D1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
