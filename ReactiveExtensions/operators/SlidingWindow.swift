@@ -16,7 +16,7 @@ public extension SignalType {
       .scan([Value]()) { window, value in
 
         if window.count >= max {
-          return Array(window[1..<window.count]) + [value]
+          return Array<Value>(window[1..<window.count]) + [value]
         }
         return window + [value]
 
