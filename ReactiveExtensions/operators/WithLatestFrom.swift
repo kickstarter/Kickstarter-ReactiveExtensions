@@ -2,6 +2,7 @@ import ReactiveCocoa
 
 public extension SignalType {
 
+  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
    emits.
@@ -10,7 +11,6 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   public func withLatestFrom <U, OtherError: ErrorType> (other: Signal<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
@@ -54,6 +54,7 @@ public extension SignalType {
     }
   }
 
+  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
    emits.
@@ -62,7 +63,6 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   public func withLatestFrom <U, OtherError: ErrorType> (other: SignalProducer<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
