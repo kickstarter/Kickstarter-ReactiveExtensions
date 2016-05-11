@@ -13,12 +13,12 @@ final class UIBarButtonItemTests: XCTestCase {
     barButtonItem.rac.enabled = signal
 
     observer.sendNext(true)
-    XCTAssertTrue(barButtonItem.enabled)
+    eventually(XCTAssertTrue(self.barButtonItem.enabled))
 
     observer.sendNext(false)
-    XCTAssertFalse(barButtonItem.enabled)
+    eventually(XCTAssertFalse(self.barButtonItem.enabled))
 
     observer.sendNext(true)
-    XCTAssertTrue(barButtonItem.enabled)
+    eventually(XCTAssertTrue(self.barButtonItem.enabled))
   }
 }

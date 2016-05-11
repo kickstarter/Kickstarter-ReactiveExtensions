@@ -13,9 +13,9 @@ final class UITextViewTests: XCTestCase {
     textView.rac.text = signal
 
     observer.sendNext("The future")
-    XCTAssertEqual("The future", textView.text)
+    eventually(XCTAssertEqual("The future", self.textView.text))
 
     observer.sendNext("")
-    XCTAssertEqual("", textView.text)
+    eventually(XCTAssertEqual("", self.textView.text))
   }
 }
