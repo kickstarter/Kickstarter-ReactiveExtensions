@@ -8,6 +8,8 @@ public extension SignalProducerType {
 
    Warning: This should be used only when you know that the signal will complete, otherwise this will
    hang indefinitely.
+
+   - returns: All values emitted by the signal producer.
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public func allValues() -> [Value] {
