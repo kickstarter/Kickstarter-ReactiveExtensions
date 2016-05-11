@@ -6,14 +6,14 @@ private enum Associations {
   private static var text = 0
 }
 
-public extension Rac where View: UITextView {
+public extension Rac where Object: UITextView {
   public var text: Signal<String, NoError> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
-        view,
+        object,
         key: &Associations.text,
-        setter: { [weak view] in view?.text = $0 },
-        getter: { [weak view] in view?.text ?? "" })
+        setter: { [weak object] in object?.text = $0 },
+        getter: { [weak object] in object?.text ?? "" })
 
       prop <~ newValue.observeForUI()
     }

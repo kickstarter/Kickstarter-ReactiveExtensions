@@ -43,6 +43,10 @@
 		A74FFDDE1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */; };
 		A74FFDEC1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */; };
 		A74FFDED1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */; };
+		A74FFDF51CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */; };
+		A74FFDF61CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */; };
+		A74FFDF81CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */; };
+		A74FFDF91CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */; };
 		A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
 		A775B5111CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
 		A775B5121CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
@@ -318,6 +322,8 @@
 		A7378CCA1C80992C00F0A562 /* AllValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllValuesTests.swift; sourceTree = "<group>"; };
 		A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewTests.swift; sourceTree = "<group>"; };
+		A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTests.swift; sourceTree = "<group>"; };
 		A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TakeWhenTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoteErrorsTests.swift; sourceTree = "<group>"; };
 		A77966EA1C2B018F0002166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -457,6 +463,7 @@
 				8096F2A11CC92AAF00231D91 /* UILabelTests.swift */,
 				A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */,
 				8096F2A41CC92AB600231D91 /* UIViewTests.swift */,
+				A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -500,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				8096F28B1CC91C1500231D91 /* Rac.swift */,
+				A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */,
 				A7983B621C2AF8D4003A1ABE /* UIControl.swift */,
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
@@ -1004,6 +1012,7 @@
 				A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */,
 				A72E753E1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */,
+				A74FFDF91CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift in Sources */,
 				A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */,
 				A7180BEA1CCFB1B2001711CA /* ConcatTests.swift in Sources */,
 				A77966FB1C2B15150002166F /* UncollectTests.swift in Sources */,
@@ -1049,6 +1058,7 @@
 				A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */,
 				A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
+				A74FFDF51CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
 				A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */,
 				A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */,
 				A72E75281CC1849100983066 /* Values.swift in Sources */,
@@ -1095,6 +1105,7 @@
 				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
 				A72E753D1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
+				A74FFDF81CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift in Sources */,
 				A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */,
 				A7180BE91CCFB1B2001711CA /* ConcatTests.swift in Sources */,
 				A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */,
@@ -1118,6 +1129,7 @@
 				A7C510521C2734F100C59136 /* SlidingWindow.swift in Sources */,
 				A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */,
+				A74FFDF61CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
 				A7983B5A1C2AF7E8003A1ABE /* LazyMutableProperty.swift in Sources */,
 				A7C510681C2737C500C59136 /* ConcatMap.swift in Sources */,
 				A72E75291CC1849100983066 /* Values.swift in Sources */,
