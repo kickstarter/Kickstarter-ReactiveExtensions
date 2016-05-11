@@ -10,4 +10,11 @@ extension XCTestCase {
     }
     waitForExpectationsWithTimeout(timeout, handler: nil)
   }
+
+  internal func eventually(@autoclosure(escaping) assertion: () -> Void) {
+    async { done in
+      assertion()
+      done()
+    }
+  }
 }
