@@ -14,10 +14,16 @@ final class UILabelTests: XCTestCase {
     label.rac.text = signal
 
     observer.sendNext("The future")
-    XCTAssertEqual("The future", label.text)
+    async { done in
+      XCTAssertEqual("The future", self.label.text)
+      done()
+    }
 
     observer.sendNext("")
-    XCTAssertEqual("", label.text)
+    async { done in
+      XCTAssertEqual("", self.label.text)
+      done()
+    }
   }
 
   func testFont() {
@@ -25,8 +31,12 @@ final class UILabelTests: XCTestCase {
     label.rac.font = signal
 
     let font = UIFont.systemFontOfSize(16.0)
+
     observer.sendNext(font)
-    XCTAssertEqual(font, label.font)
+    async { done in
+      XCTAssertEqual(font, self.label.font)
+      done()
+    }
   }
 
   func testTextColor() {
@@ -34,7 +44,11 @@ final class UILabelTests: XCTestCase {
     label.rac.textColor = signal
 
     let color = UIColor.redColor()
+
     observer.sendNext(color)
-    XCTAssertEqual(color, label.textColor)
+    async { done in
+      XCTAssertEqual(color, self.label.textColor)
+      done()
+    }
   }
 }

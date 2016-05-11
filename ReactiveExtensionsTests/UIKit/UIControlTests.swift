@@ -14,12 +14,21 @@ final class UIControlTests: XCTestCase {
     control.rac.enabled = signal
 
     observer.sendNext(true)
-    XCTAssertTrue(control.enabled)
+    async { done in
+      XCTAssertTrue(self.control.enabled)
+      done()
+    }
 
     observer.sendNext(false)
-    XCTAssertFalse(control.enabled)
+    async { done in
+      XCTAssertFalse(self.control.enabled)
+      done()
+    }
 
     observer.sendNext(true)
-    XCTAssertTrue(control.enabled)
+    async { done in
+      XCTAssertTrue(self.control.enabled)
+      done()
+    }
   }
 }

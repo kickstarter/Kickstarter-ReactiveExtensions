@@ -14,10 +14,16 @@ final class UIViewTests: XCTestCase {
     view.rac.alpha = signal
 
     observer.sendNext(0.0)
-    XCTAssertEqual(0.0, view.alpha)
+    async { done in
+      XCTAssertEqual(0.0, self.view.alpha)
+      done()
+    }
 
     observer.sendNext(0.5)
-    XCTAssertEqual(0.5, view.alpha)
+    async { done in
+      XCTAssertEqual(0.5, self.view.alpha)
+      done()
+    }
   }
 
   func testBackgroundColor() {
@@ -25,10 +31,16 @@ final class UIViewTests: XCTestCase {
     view.rac.backgroundColor = signal
 
     observer.sendNext(.redColor())
-    XCTAssertEqual(.redColor(), view.backgroundColor)
+    async { done in
+      XCTAssertEqual(.redColor(), self.view.backgroundColor)
+      done()
+    }
 
     observer.sendNext(.greenColor())
-    XCTAssertEqual(.greenColor(), view.backgroundColor)
+    async { done in
+      XCTAssertEqual(.greenColor(), self.view.backgroundColor)
+      done()
+    }
   }
 
   func testHidden() {
@@ -36,13 +48,22 @@ final class UIViewTests: XCTestCase {
     view.rac.hidden = signal
 
     observer.sendNext(true)
-    XCTAssertTrue(view.hidden)
+    async { done in
+      XCTAssertTrue(self.view.hidden)
+      done()
+    }
 
     observer.sendNext(false)
-    XCTAssertFalse(view.hidden)
+    async { done in
+      XCTAssertFalse(self.view.hidden)
+      done()
+    }
 
     observer.sendNext(true)
-    XCTAssertTrue(view.hidden)
+    async { done in
+      XCTAssertTrue(self.view.hidden)
+      done()
+    }
   }
 
   private final class MockView: UIView {
