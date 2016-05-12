@@ -51,6 +51,8 @@
 		A74FFEB51CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEB31CE4EB7500C7BCB9 /* NSLayoutConstraint.swift */; };
 		A74FFEC31CE4ECC900C7BCB9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */; };
 		A74FFEC41CE4ECC900C7BCB9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */; };
+		A74FFECC1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */; };
+		A74FFECD1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */; };
 		A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
 		A775B5111CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
 		A775B5121CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
@@ -330,6 +332,7 @@
 		A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTests.swift; sourceTree = "<group>"; };
 		A74FFEB31CE4EB7500C7BCB9 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
+		A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicator.swift; sourceTree = "<group>"; };
 		A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TakeWhenTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoteErrorsTests.swift; sourceTree = "<group>"; };
 		A77966EA1C2B018F0002166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -520,6 +523,7 @@
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
+				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1084,6 +1088,7 @@
 				A7FD08991C81EDBD00332CCB /* AllValues.swift in Sources */,
 				A7FD089A1C81EDBD00332CCB /* UILabel.swift in Sources */,
 				A7FD089B1C81EDBD00332CCB /* MapConst.swift in Sources */,
+				A74FFECC1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */,
 				A7FD089C1C81EDBD00332CCB /* WithLatestFrom.swift in Sources */,
 				A7FD089D1C81EDBD00332CCB /* MergeMap.swift in Sources */,
 				A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */,
@@ -1157,6 +1162,7 @@
 				A7378CC91C80975700F0A562 /* AllValues.swift in Sources */,
 				A7983B5F1C2AF8B0003A1ABE /* UILabel.swift in Sources */,
 				A7C510561C27358300C59136 /* MapConst.swift in Sources */,
+				A74FFECD1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */,
 				A7C5104C1C27343400C59136 /* WithLatestFrom.swift in Sources */,
 				A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */,
 				A7C510461C2720D500C59136 /* Sort.swift in Sources */,
