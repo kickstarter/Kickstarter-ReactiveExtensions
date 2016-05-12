@@ -53,6 +53,8 @@
 		A74FFEC41CE4ECC900C7BCB9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */; };
 		A74FFECC1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */; };
 		A74FFECD1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */; };
+		A74FFEDB1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */; };
+		A74FFEDC1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */; };
 		A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
 		A775B5111CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
 		A775B5121CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
@@ -333,6 +335,7 @@
 		A74FFEB31CE4EB7500C7BCB9 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicator.swift; sourceTree = "<group>"; };
+		A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
 		A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TakeWhenTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoteErrorsTests.swift; sourceTree = "<group>"; };
 		A77966EA1C2B018F0002166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -524,6 +527,7 @@
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
 				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
+				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1067,6 +1071,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */,
+				A74FFEDB1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */,
 				A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */,
 				A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
@@ -1141,6 +1146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7C510621C27371E00C59136 /* MergeWith.swift in Sources */,
+				A74FFEDC1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */,
 				A7C510521C2734F100C59136 /* SlidingWindow.swift in Sources */,
 				A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */,
