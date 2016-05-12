@@ -520,14 +520,14 @@
 			children = (
 				A74FFEB31CE4EB7500C7BCB9 /* NSLayoutConstraint.swift */,
 				8096F28B1CC91C1500231D91 /* Rac.swift */,
+				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
 				A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */,
 				A7983B621C2AF8D4003A1ABE /* UIControl.swift */,
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
+				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
-				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
-				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
