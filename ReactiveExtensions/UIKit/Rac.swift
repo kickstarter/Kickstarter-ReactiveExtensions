@@ -4,25 +4,25 @@ import UIKit
  A type meant to be extended to provide a collection of reactive bindings for
  UIKit views and their subclasses.
  */
-public struct Rac<View: RacView> {
-  internal let view: View
+public struct Rac<Object: RacObject> {
+  internal let object: Object
 }
 
 /**
  UIView conforms to this protocol to expose (by extension) a `rac` signal
  namespace scoped by dynamic subclass.
  */
-public protocol RacView {}
+public protocol RacObject {}
 
-public extension RacView {
-  typealias View = Self
+public extension RacObject {
+  typealias Object = Self
 
   /**
    A collection of reactive bindings.
   */
-  public var rac: Rac<View> {
-    return Rac(view: self)
+  public var rac: Rac<Object> {
+    return Rac(object: self)
   }
 }
 
-extension UIView: RacView {}
+extension NSObject: RacObject {}

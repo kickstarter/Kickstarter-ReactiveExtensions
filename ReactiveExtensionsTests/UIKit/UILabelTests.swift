@@ -6,7 +6,6 @@ import UIKit
 @testable import ReactiveExtensions_TestHelpers
 
 final class UILabelTests: XCTestCase {
-
   let label = UILabel()
 
   func testText() {
