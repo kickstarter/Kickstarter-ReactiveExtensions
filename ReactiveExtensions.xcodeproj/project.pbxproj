@@ -55,6 +55,14 @@
 		A74FFECD1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */; };
 		A74FFEDB1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */; };
 		A74FFEDC1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */; };
+		A74FFEE61CE5798700C7BCB9 /* NSLayoutConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEE51CE5798700C7BCB9 /* NSLayoutConstraintTests.swift */; };
+		A74FFEE71CE5798700C7BCB9 /* NSLayoutConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEE51CE5798700C7BCB9 /* NSLayoutConstraintTests.swift */; };
+		A74FFEF51CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEF41CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift */; };
+		A74FFEF61CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEF41CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift */; };
+		A74FFEF81CE579D800C7BCB9 /* UIRefreshControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */; };
+		A74FFEF91CE579D800C7BCB9 /* UIRefreshControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */; };
+		A74FFEFB1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */; };
+		A74FFEFC1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */; };
 		A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
 		A775B5111CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
 		A775B5121CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
@@ -336,6 +344,10 @@
 		A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicator.swift; sourceTree = "<group>"; };
 		A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControl.swift; sourceTree = "<group>"; };
+		A74FFEE51CE5798700C7BCB9 /* NSLayoutConstraintTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintTests.swift; sourceTree = "<group>"; };
+		A74FFEF41CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorTests.swift; sourceTree = "<group>"; };
+		A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControlTests.swift; sourceTree = "<group>"; };
+		A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderTests.swift; sourceTree = "<group>"; };
 		A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TakeWhenTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoteErrorsTests.swift; sourceTree = "<group>"; };
 		A77966EA1C2B018F0002166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -471,11 +483,15 @@
 		8096F29A1CC92A6300231D91 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A74FFEE51CE5798700C7BCB9 /* NSLayoutConstraintTests.swift */,
+				A74FFEF41CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift */,
+				A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */,
 				8096F29E1CC92AA700231D91 /* UIControlTests.swift */,
 				8096F2A11CC92AAF00231D91 /* UILabelTests.swift */,
+				A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */,
+				A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */,
 				A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */,
 				8096F2A41CC92AB600231D91 /* UIViewTests.swift */,
-				A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1023,8 +1039,11 @@
 				A7BF76BF1C554EF4003D0881 /* Tuple.swift in Sources */,
 				A7BF76C31C554F19003D0881 /* SomeError.swift in Sources */,
 				A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */,
+				A74FFEF91CE579D800C7BCB9 /* UIRefreshControlTests.swift in Sources */,
 				A74FFDED1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */,
 				A71C4F441CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */,
+				A74FFEFC1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */,
+				A74FFEF61CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */,
 				A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */,
 				A72E753E1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */,
@@ -1033,6 +1052,7 @@
 				A7180BEA1CCFB1B2001711CA /* ConcatTests.swift in Sources */,
 				A77966FB1C2B15150002166F /* UncollectTests.swift in Sources */,
 				A7E8FA881CD3DD5400DBF142 /* DistinctTests.swift in Sources */,
+				A74FFEE71CE5798700C7BCB9 /* NSLayoutConstraintTests.swift in Sources */,
 				8096F2A01CC92AA700231D91 /* UIControlTests.swift in Sources */,
 				A77966FA1C2B15150002166F /* BeginsWithTests.swift in Sources */,
 				A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */,
@@ -1120,8 +1140,11 @@
 				A7FD08C21C81EEA100332CCB /* Tuple.swift in Sources */,
 				A7FD08C31C81EEA100332CCB /* SomeError.swift in Sources */,
 				A7FD08C41C81EEA100332CCB /* SlidingWindowTest.swift in Sources */,
+				A74FFEF81CE579D800C7BCB9 /* UIRefreshControlTests.swift in Sources */,
 				A74FFDEC1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */,
 				A71C4F431CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */,
+				A74FFEFB1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */,
+				A74FFEF51CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */,
 				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
 				A72E753D1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
@@ -1130,6 +1153,7 @@
 				A7180BE91CCFB1B2001711CA /* ConcatTests.swift in Sources */,
 				A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */,
 				A7E8FA871CD3DD5400DBF142 /* DistinctTests.swift in Sources */,
+				A74FFEE61CE5798700C7BCB9 /* NSLayoutConstraintTests.swift in Sources */,
 				8096F29F1CC92AA700231D91 /* UIControlTests.swift in Sources */,
 				A7FD08CC1C81EEA100332CCB /* BeginsWithTests.swift in Sources */,
 				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,

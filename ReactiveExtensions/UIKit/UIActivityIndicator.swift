@@ -7,7 +7,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIActivityIndicatorView {
-  public var isAnimating: Signal<Bool, NoError> {
+  public var animating: Signal<Bool, NoError> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,
