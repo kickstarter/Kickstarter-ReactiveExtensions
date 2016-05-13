@@ -7,7 +7,11 @@ import UIKit
 
 final class UIResponderTests: XCTestCase {
   let window = UIWindow()
+  #if os(iOS)
   let responder = UITextView()
+  #else
+  let responder = UIButton()
+  #endif
 
   override func setUp() {
     super.setUp()
