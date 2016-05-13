@@ -9,7 +9,7 @@ public extension SignalType {
    */
   @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   public func observeForUI() -> Signal<Value, Error> {
-    return self.signal.observeOn(QueueScheduler.mainQueueScheduler)
+    return self.signal.observeOn(UIScheduler())
   }
 }
 
@@ -22,6 +22,6 @@ public extension SignalProducerType {
    */
   @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public func observeForUI() -> SignalProducer<Value, Error> {
-    return self.producer.observeOn(QueueScheduler.mainQueueScheduler)
+    return self.producer.observeOn(UIScheduler())
   }
 }
