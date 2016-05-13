@@ -1,3 +1,4 @@
+#if os(iOS)
 import XCTest
 import ReactiveCocoa
 import Result
@@ -22,3 +23,4 @@ final class UIRefreshControlTests: XCTestCase {
     eventually(XCTAssertTrue(self.control.refreshing))
   }
 }
+#endif
