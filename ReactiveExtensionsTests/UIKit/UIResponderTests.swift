@@ -18,10 +18,22 @@ final class UIResponderTests: XCTestCase {
     self.window.addSubview(self.responder)
   }
 
+  func testBecomeFirstResponder() {
+    let (signal, observer) = Signal<(), NoError>.pipe()
+    responder.rac.becomeFirstResponder = signal
+
+    eventually(XCTAssertFalse(self.responder.isFirstResponder()))
+
+    observer.sendNext()
+    eventually(XCTAssertTrue(self.responder.isFirstResponder()))
+  }
+
   func testIsFirstResponder() {
 
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     responder.rac.isFirstResponder = signal
+
+    eventually(XCTAssertFalse(self.responder.isFirstResponder()))
 
     observer.sendNext(true)
     eventually(XCTAssertTrue(self.responder.isFirstResponder()))
