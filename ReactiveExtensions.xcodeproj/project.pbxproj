@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
+		59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
 		807571471C88B20300E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8075714A1C88B20F00E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571291C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8096F28C1CC91C1500231D91 /* Rac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F28B1CC91C1500231D91 /* Rac.swift */; };
@@ -315,6 +317,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
 		807571151C88B1C500E7DA8A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Frameworks/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		8075712A1C88B1E000E7DA8A /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Frameworks/ReactiveCocoa/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		8096F28B1CC91C1500231D91 /* Rac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rac.swift; sourceTree = "<group>"; };
@@ -544,6 +547,7 @@
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
+				59866A471CFE10000053E4C9 /* UISwitch.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1117,6 +1121,7 @@
 				A7FD089C1C81EDBD00332CCB /* WithLatestFrom.swift in Sources */,
 				A7FD089D1C81EDBD00332CCB /* MergeMap.swift in Sources */,
 				A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */,
+				59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */,
 				A74FFEB41CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */,
 				A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */,
 				A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */,
@@ -1196,6 +1201,7 @@
 				A7C5104C1C27343400C59136 /* WithLatestFrom.swift in Sources */,
 				A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */,
 				A7C510461C2720D500C59136 /* Sort.swift in Sources */,
+				59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */,
 				A74FFEB51CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */,
 				8096F2991CC92A4D00231D91 /* Rac.swift in Sources */,
 				A7C5105C1C27362000C59136 /* WrapInOptional.swift in Sources */,
