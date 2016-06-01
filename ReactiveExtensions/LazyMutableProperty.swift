@@ -15,7 +15,7 @@ public func lazyMutableProperty<T>(host: AnyObject, key: UnsafePointer<Void>, se
                                   getter: () -> T) -> MutableProperty<T> {
   return lazyAssociatedProperty(host, key: key) {
     let property = MutableProperty<T>(getter())
-    property.producer.startWithNext { value in
+    property.producer.skip(1).startWithNext { value in
       setter(value)
     }
     return property
