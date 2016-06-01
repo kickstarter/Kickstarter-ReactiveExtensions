@@ -21,6 +21,8 @@
 		A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
 		A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
 		A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC801C2B863600B6234E /* WithLatestFromTests.swift */; };
+		A7141E891CFCE1BB00F1A9BE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7141E881CFCE1BB00F1A9BE /* UIButton.swift */; };
+		A7141E8A1CFCE1BB00F1A9BE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7141E881CFCE1BB00F1A9BE /* UIButton.swift */; };
 		A7180BDA1CCFB0BE001711CA /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BD91CCFB0BE001711CA /* Concat.swift */; };
 		A7180BDB1CCFB0BE001711CA /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BD91CCFB0BE001711CA /* Concat.swift */; };
 		A7180BE91CCFB1B2001711CA /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BE81CCFB1B2001711CA /* ConcatTests.swift */; };
@@ -114,6 +116,8 @@
 		A7E8FA791CD3D64700DBF142 /* Distincts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA771CD3D64700DBF142 /* Distincts.swift */; };
 		A7E8FA871CD3DD5400DBF142 /* DistinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */; };
 		A7E8FA881CD3DD5400DBF142 /* DistinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */; };
+		A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */; };
+		A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */; };
 		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
 		A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
 		A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
@@ -325,6 +329,7 @@
 		A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MapConstTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DebounceTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A713EC801C2B863600B6234E /* WithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = WithLatestFromTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A7141E881CFCE1BB00F1A9BE /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		A7180BD91CCFB0BE001711CA /* Concat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
 		A7180BE81CCFB1B2001711CA /* ConcatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
 		A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntilTests.swift; sourceTree = "<group>"; };
@@ -391,6 +396,7 @@
 		A7DB1D5A1C9F4FD7008244DA /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions_TestHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E8FA771CD3D64700DBF142 /* Distincts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distincts.swift; sourceTree = "<group>"; };
 		A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistinctTests.swift; sourceTree = "<group>"; };
+		A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonTests.swift; sourceTree = "<group>"; };
 		A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +492,7 @@
 				A74FFEE51CE5798700C7BCB9 /* NSLayoutConstraintTests.swift */,
 				A74FFEF41CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift */,
 				A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */,
+				A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */,
 				8096F29E1CC92AA700231D91 /* UIControlTests.swift */,
 				8096F2A11CC92AAF00231D91 /* UILabelTests.swift */,
 				A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */,
@@ -538,6 +545,7 @@
 				8096F28B1CC91C1500231D91 /* Rac.swift */,
 				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
 				A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */,
+				A7141E881CFCE1BB00F1A9BE /* UIButton.swift */,
 				A7983B621C2AF8D4003A1ABE /* UIControl.swift */,
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
 				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
@@ -1057,6 +1065,7 @@
 				A77966FA1C2B15150002166F /* BeginsWithTests.swift in Sources */,
 				A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */,
 				A779670D1C2B1EB90002166F /* SortTests.swift in Sources */,
+				A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
 				A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */,
 				8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */,
@@ -1104,6 +1113,7 @@
 				A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */,
 				A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */,
 				A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */,
+				A7141E891CFCE1BB00F1A9BE /* UIButton.swift in Sources */,
 				A7E8FA781CD3D64700DBF142 /* Distincts.swift in Sources */,
 				A72E75371CC1849B00983066 /* Errors.swift in Sources */,
 				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
@@ -1158,6 +1168,7 @@
 				A7FD08CC1C81EEA100332CCB /* BeginsWithTests.swift in Sources */,
 				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,
 				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
+				A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
 				A72E753A1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
 				8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */,
@@ -1183,6 +1194,7 @@
 				A7C510541C27351F00C59136 /* Debounce.swift in Sources */,
 				A7C510601C2736D400C59136 /* DemoteErrors.swift in Sources */,
 				A7C5104A1C2733F600C59136 /* IgnoreValues.swift in Sources */,
+				A7141E8A1CFCE1BB00F1A9BE /* UIButton.swift in Sources */,
 				A7E8FA791CD3D64700DBF142 /* Distincts.swift in Sources */,
 				A72E75381CC1849B00983066 /* Errors.swift in Sources */,
 				A7C510481C2721CA00C59136 /* Uncollect.swift in Sources */,
