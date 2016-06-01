@@ -116,6 +116,8 @@
 		A7E8FA791CD3D64700DBF142 /* Distincts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA771CD3D64700DBF142 /* Distincts.swift */; };
 		A7E8FA871CD3DD5400DBF142 /* DistinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */; };
 		A7E8FA881CD3DD5400DBF142 /* DistinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */; };
+		A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */; };
+		A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */; };
 		A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510611C27371E00C59136 /* MergeWith.swift */; };
 		A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
 		A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */; };
@@ -394,6 +396,7 @@
 		A7DB1D5A1C9F4FD7008244DA /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions_TestHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E8FA771CD3D64700DBF142 /* Distincts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distincts.swift; sourceTree = "<group>"; };
 		A7E8FA861CD3DD5400DBF142 /* DistinctTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistinctTests.swift; sourceTree = "<group>"; };
+		A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonTests.swift; sourceTree = "<group>"; };
 		A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FD08E11C81EEA100332CCB /* ReactiveExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -489,6 +492,7 @@
 				A74FFEE51CE5798700C7BCB9 /* NSLayoutConstraintTests.swift */,
 				A74FFEF41CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift */,
 				A74FFDF71CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift */,
+				A7F3C6631CFF4DBA005DBE95 /* UIButtonTests.swift */,
 				8096F29E1CC92AA700231D91 /* UIControlTests.swift */,
 				8096F2A11CC92AAF00231D91 /* UILabelTests.swift */,
 				A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */,
@@ -1061,6 +1065,7 @@
 				A77966FA1C2B15150002166F /* BeginsWithTests.swift in Sources */,
 				A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */,
 				A779670D1C2B1EB90002166F /* SortTests.swift in Sources */,
+				A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
 				A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */,
 				8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */,
@@ -1163,6 +1168,7 @@
 				A7FD08CC1C81EEA100332CCB /* BeginsWithTests.swift in Sources */,
 				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,
 				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
+				A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
 				A72E753A1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
 				8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */,
