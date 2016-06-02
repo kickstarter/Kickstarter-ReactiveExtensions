@@ -29,6 +29,8 @@
 		A7180BEA1CCFB1B2001711CA /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BE81CCFB1B2001711CA /* ConcatTests.swift */; };
 		A71C4F431CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */; };
 		A71C4F441CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */; };
+		A72A50651D00A91100894A36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713A1C88B1E100E7DA8A /* Result.framework */; };
+		A72A508F1D00B0FA00894A36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713E1C88B1E100E7DA8A /* Result.framework */; };
 		A72E75281CC1849100983066 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75271CC1849100983066 /* Values.swift */; };
 		A72E75291CC1849100983066 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75271CC1849100983066 /* Values.swift */; };
 		A72E75371CC1849B00983066 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75361CC1849B00983066 /* Errors.swift */; };
@@ -274,6 +276,20 @@
 			remoteGlobalIDString = 57A4D1AF1BA13D7A00F7D4B1;
 			remoteInfo = "ReactiveCocoa-tvOS";
 		};
+		A72A50571D00A90900894A36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8075712A1C88B1E000E7DA8A /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D454807C1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		A72A508D1D00B0F300894A36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8075712A1C88B1E000E7DA8A /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 57FCDE3C1BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
 		A7983B8E1C2AFB1D003A1ABE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA43C65A1BB35FCF00C180DA /* Project object */;
@@ -435,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				807571471C88B20300E7DA8A /* ReactiveCocoa.framework in Frameworks */,
+				A72A50651D00A91100894A36 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8075714A1C88B20F00E7DA8A /* ReactiveCocoa.framework in Frameworks */,
+				A72A508F1D00B0FA00894A36 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +780,7 @@
 			);
 			dependencies = (
 				807571461C88B1FC00E7DA8A /* PBXTargetDependency */,
+				A72A50581D00A90900894A36 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-iOS";
 			productName = ReactiveExtensions;
@@ -801,6 +820,7 @@
 			);
 			dependencies = (
 				807571491C88B20C00E7DA8A /* PBXTargetDependency */,
+				A72A508E1D00B0F300894A36 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-tvOS";
 			productName = ReactiveExtensions;
@@ -1234,6 +1254,16 @@
 			isa = PBXTargetDependency;
 			name = "ReactiveCocoa-tvOS";
 			targetProxy = 807571481C88B20C00E7DA8A /* PBXContainerItemProxy */;
+		};
+		A72A50581D00A90900894A36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-iOS";
+			targetProxy = A72A50571D00A90900894A36 /* PBXContainerItemProxy */;
+		};
+		A72A508E1D00B0F300894A36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-tvOS";
+			targetProxy = A72A508D1D00B0F300894A36 /* PBXContainerItemProxy */;
 		};
 		A7983B8F1C2AFB1D003A1ABE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
