@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
 		59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
+		59DB70561D00DC9B00BCE6A9 /* UISwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */; };
+		59DB70571D00DC9B00BCE6A9 /* UISwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */; };
 		807571471C88B20300E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8075714A1C88B20F00E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571291C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8096F28C1CC91C1500231D91 /* Rac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F28B1CC91C1500231D91 /* Rac.swift */; };
@@ -318,6 +320,7 @@
 
 /* Begin PBXFileReference section */
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
+		59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchTests.swift; sourceTree = "<group>"; };
 		807571151C88B1C500E7DA8A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Frameworks/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		8075712A1C88B1E000E7DA8A /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Frameworks/ReactiveCocoa/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		8096F28B1CC91C1500231D91 /* Rac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rac.swift; sourceTree = "<group>"; };
@@ -495,6 +498,7 @@
 				A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */,
 				A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */,
 				8096F2A41CC92AB600231D91 /* UIViewTests.swift */,
+				59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1055,6 +1059,7 @@
 				A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */,
 				A7180BEA1CCFB1B2001711CA /* ConcatTests.swift in Sources */,
 				A77966FB1C2B15150002166F /* UncollectTests.swift in Sources */,
+				59DB70571D00DC9B00BCE6A9 /* UISwitchTests.swift in Sources */,
 				A7E8FA881CD3DD5400DBF142 /* DistinctTests.swift in Sources */,
 				A74FFEE71CE5798700C7BCB9 /* NSLayoutConstraintTests.swift in Sources */,
 				8096F2A01CC92AA700231D91 /* UIControlTests.swift in Sources */,
@@ -1157,6 +1162,7 @@
 				A7FD08C91C81EEA100332CCB /* TakeWhenTests.swift in Sources */,
 				A7180BE91CCFB1B2001711CA /* ConcatTests.swift in Sources */,
 				A7FD08CB1C81EEA100332CCB /* UncollectTests.swift in Sources */,
+				59DB70561D00DC9B00BCE6A9 /* UISwitchTests.swift in Sources */,
 				A7E8FA871CD3DD5400DBF142 /* DistinctTests.swift in Sources */,
 				A74FFEE61CE5798700C7BCB9 /* NSLayoutConstraintTests.swift in Sources */,
 				8096F29F1CC92AA700231D91 /* UIControlTests.swift in Sources */,

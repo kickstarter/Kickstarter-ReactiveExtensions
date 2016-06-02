@@ -1,3 +1,4 @@
+#if os(iOS)
 import ReactiveCocoa
 import Result
 import UIKit
@@ -21,3 +22,4 @@ public extension Rac where Object: UISwitch {
     }
   }
 }
+#endif
