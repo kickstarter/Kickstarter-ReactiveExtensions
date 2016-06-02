@@ -13,10 +13,9 @@ public extension Rac where Object: UISwitch {
         object, key: &Associations.on,
         setter: { [weak object] in object?.on = $0 },
         getter: { [weak object] in object?.on ?? false })
-      
+
       prop <~ newValue.observeForUI()
     }
-    
     get {
       return .empty
     }
