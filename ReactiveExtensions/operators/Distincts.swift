@@ -11,6 +11,7 @@ extension SignalType {
 
    - returns: A signal that emits only distinct values.
    */
+  @available(*, deprecated=1.0, message="Use uniqueValues() instead")
   public func distincts <Key: Hashable> (keySelector: Value -> Key) -> Signal<Value, Error> {
     return Signal { observer in
       let seen: Atomic<Set<Key>> = Atomic([])
@@ -53,6 +54,7 @@ extension SignalProducerType {
 
    - returns: A producer that emits only distinct values.
    */
+  @available(*, deprecated=1.0, message="Use uniqueValues() instead")
   public func distincts <Key: Hashable> (keySelector: Value -> Key) -> SignalProducer<Value, Error> {
     return self.lift { $0.distincts(keySelector) }
   }
