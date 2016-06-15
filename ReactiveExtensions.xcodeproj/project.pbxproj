@@ -11,6 +11,10 @@
 		59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
 		59DB70561D00DC9B00BCE6A9 /* UISwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */; };
 		59DB70571D00DC9B00BCE6A9 /* UISwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */; };
+		803BDFA81D11B364004A785A /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BDFA71D11B364004A785A /* UITextField.swift */; };
+		803BDFA91D11B364004A785A /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BDFA71D11B364004A785A /* UITextField.swift */; };
+		803BDFB61D11B391004A785A /* UITextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BDFB51D11B391004A785A /* UITextFieldTests.swift */; };
+		803BDFB71D11B391004A785A /* UITextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BDFB51D11B391004A785A /* UITextFieldTests.swift */; };
 		807571471C88B20300E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571231C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8075714A1C88B20F00E7DA8A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807571291C88B1C500E7DA8A /* ReactiveCocoa.framework */; };
 		8096F28C1CC91C1500231D91 /* Rac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F28B1CC91C1500231D91 /* Rac.swift */; };
@@ -338,6 +342,8 @@
 /* Begin PBXFileReference section */
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
 		59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchTests.swift; sourceTree = "<group>"; };
+		803BDFA71D11B364004A785A /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		803BDFB51D11B391004A785A /* UITextFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldTests.swift; sourceTree = "<group>"; };
 		807571151C88B1C500E7DA8A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Frameworks/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		8075712A1C88B1E000E7DA8A /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Frameworks/ReactiveCocoa/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		8096F28B1CC91C1500231D91 /* Rac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rac.swift; sourceTree = "<group>"; };
@@ -515,6 +521,7 @@
 				A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */,
 				A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */,
 				A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */,
+				803BDFB51D11B391004A785A /* UITextFieldTests.swift */,
 				8096F2A41CC92AB600231D91 /* UIViewTests.swift */,
 				59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */,
 			);
@@ -566,6 +573,7 @@
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
 				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
+				803BDFA71D11B364004A785A /* UITextField.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
 				59866A471CFE10000053E4C9 /* UISwitch.swift */,
@@ -1076,6 +1084,7 @@
 				A74FFEFC1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */,
 				A74FFEF61CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */,
 				A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */,
+				803BDFB71D11B391004A785A /* UITextFieldTests.swift in Sources */,
 				A72E753E1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */,
 				A74FFDF91CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift in Sources */,
@@ -1150,6 +1159,7 @@
 				59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */,
 				A74FFEB41CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */,
 				A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */,
+				803BDFA81D11B364004A785A /* UITextField.swift in Sources */,
 				A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */,
 				A74FFDDD1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */,
 				8096F28C1CC91C1500231D91 /* Rac.swift in Sources */,
@@ -1176,6 +1186,7 @@
 				A74FFEFB1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */,
 				A74FFEF51CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */,
 				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
+				803BDFB61D11B391004A785A /* UITextFieldTests.swift in Sources */,
 				A72E753D1CC1859000983066 /* ErrorsTests.swift in Sources */,
 				A7FD08C71C81EEA100332CCB /* CombinePreviousTests.swift in Sources */,
 				A74FFDF81CE3ED1200C7BCB9 /* UIBarButtonItemTests.swift in Sources */,
@@ -1228,6 +1239,7 @@
 				59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */,
 				A74FFEB51CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */,
 				8096F2991CC92A4D00231D91 /* Rac.swift in Sources */,
+				803BDFA91D11B364004A785A /* UITextField.swift in Sources */,
 				A7C5105C1C27362000C59136 /* WrapInOptional.swift in Sources */,
 				A74FFDDE1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */,
 				A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */,
