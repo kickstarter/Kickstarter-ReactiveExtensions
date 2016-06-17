@@ -25,6 +25,7 @@
 		8096F2A31CC92AAF00231D91 /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A11CC92AAF00231D91 /* UILabelTests.swift */; };
 		8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
 		8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
+		A709699E1D146B0500DB39D3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713A1C88B1E100E7DA8A /* Result.framework */; };
 		A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */; };
 		A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
 		A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
@@ -274,6 +275,13 @@
 			remoteGlobalIDString = 57A4D1AF1BA13D7A00F7D4B1;
 			remoteInfo = "ReactiveCocoa-tvOS";
 		};
+		A70969911D146AFC00DB39D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8075712A1C88B1E000E7DA8A /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D454807C1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
 		A72A50571D00A90900894A36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8075712A1C88B1E000E7DA8A /* Result.xcodeproj */;
@@ -438,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A709699E1D146B0500DB39D3 /* Result.framework in Frameworks */,
 				A7DB1D641C9F5135008244DA /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,6 +753,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A70969921D146AFC00DB39D3 /* PBXTargetDependency */,
 				A7DB1D631C9F512B008244DA /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-TestHelpers-iOS";
@@ -1263,6 +1273,11 @@
 			isa = PBXTargetDependency;
 			name = "ReactiveCocoa-tvOS";
 			targetProxy = 807571481C88B20C00E7DA8A /* PBXContainerItemProxy */;
+		};
+		A70969921D146AFC00DB39D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-iOS";
+			targetProxy = A70969911D146AFC00DB39D3 /* PBXContainerItemProxy */;
 		};
 		A72A50581D00A90900894A36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
