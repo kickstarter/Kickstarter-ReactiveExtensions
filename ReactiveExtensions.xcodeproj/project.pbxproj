@@ -26,6 +26,7 @@
 		8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
 		8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
 		A709699E1D146B0500DB39D3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713A1C88B1E100E7DA8A /* Result.framework */; };
+		A70969B81D147BA000DB39D3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713E1C88B1E100E7DA8A /* Result.framework */; };
 		A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */; };
 		A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
 		A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
@@ -282,6 +283,13 @@
 			remoteGlobalIDString = D454807C1A957361009D7229;
 			remoteInfo = "Result-iOS";
 		};
+		A70969B61D147B9A00DB39D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8075712A1C88B1E000E7DA8A /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 57FCDE3C1BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
 		A72A50571D00A90900894A36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8075712A1C88B1E000E7DA8A /* Result.xcodeproj */;
@@ -446,8 +454,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A709699E1D146B0500DB39D3 /* Result.framework in Frameworks */,
 				A7DB1D641C9F5135008244DA /* ReactiveCocoa.framework in Frameworks */,
+				A709699E1D146B0500DB39D3 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7DB1D611C9F5125008244DA /* ReactiveCocoa.framework in Frameworks */,
+				A70969B81D147BA000DB39D3 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,8 +762,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				A70969921D146AFC00DB39D3 /* PBXTargetDependency */,
 				A7DB1D631C9F512B008244DA /* PBXTargetDependency */,
+				A70969921D146AFC00DB39D3 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-TestHelpers-iOS";
 			productName = ReactiveExtensions_TestHelpers;
@@ -774,6 +783,7 @@
 			);
 			dependencies = (
 				A7DB1D601C9F511D008244DA /* PBXTargetDependency */,
+				A70969B71D147B9A00DB39D3 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-TestHelpers-tvOS";
 			productName = ReactiveExtensions_TestHelpers;
@@ -1278,6 +1288,11 @@
 			isa = PBXTargetDependency;
 			name = "Result-iOS";
 			targetProxy = A70969911D146AFC00DB39D3 /* PBXContainerItemProxy */;
+		};
+		A70969B71D147B9A00DB39D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-tvOS";
+			targetProxy = A70969B61D147B9A00DB39D3 /* PBXContainerItemProxy */;
 		};
 		A72A50581D00A90900894A36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
