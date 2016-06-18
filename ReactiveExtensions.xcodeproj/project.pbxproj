@@ -667,7 +667,10 @@
 				CA43C6651BB35FCF00C180DA /* ReactiveExtensions */,
 				A77966E81C2B018F0002166F /* ReactiveExtensionsTests */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
 		};
 		CA43C6641BB35FCF00C180DA /* Products */ = {
 			isa = PBXGroup;
