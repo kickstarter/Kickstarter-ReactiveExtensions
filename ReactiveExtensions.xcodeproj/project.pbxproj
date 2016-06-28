@@ -49,6 +49,8 @@
 		A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75391CC1858500983066 /* ValuesTests.swift */; };
 		A72E753D1CC1859000983066 /* ErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E753C1CC1859000983066 /* ErrorsTests.swift */; };
 		A72E753E1CC1859000983066 /* ErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E753C1CC1859000983066 /* ErrorsTests.swift */; };
+		A734A2231D217D180080BBD5 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734A2221D217D180080BBD5 /* UINavigationItem.swift */; };
+		A734A2241D217D180080BBD5 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734A2221D217D180080BBD5 /* UINavigationItem.swift */; };
 		A7376AB01CE3986A003B50E3 /* XCTestCase+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7376AAF1CE3986A003B50E3 /* XCTestCase+Async.swift */; };
 		A7376AB11CE3986A003B50E3 /* XCTestCase+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7376AAF1CE3986A003B50E3 /* XCTestCase+Async.swift */; };
 		A7378CC91C80975700F0A562 /* AllValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7378CC81C80975700F0A562 /* AllValues.swift */; };
@@ -378,6 +380,7 @@
 		A72E75361CC1849B00983066 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		A72E75391CC1858500983066 /* ValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesTests.swift; sourceTree = "<group>"; };
 		A72E753C1CC1859000983066 /* ErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsTests.swift; sourceTree = "<group>"; };
+		A734A2221D217D180080BBD5 /* UINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		A7376AAF1CE3986A003B50E3 /* XCTestCase+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Async.swift"; sourceTree = "<group>"; };
 		A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReactiveExtensions.playground; sourceTree = "<group>"; };
 		A7378CC81C80975700F0A562 /* AllValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllValues.swift; sourceTree = "<group>"; };
@@ -589,12 +592,13 @@
 				A7141E881CFCE1BB00F1A9BE /* UIButton.swift */,
 				A7983B621C2AF8D4003A1ABE /* UIControl.swift */,
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
+				A734A2221D217D180080BBD5 /* UINavigationItem.swift */,
 				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
+				59866A471CFE10000053E4C9 /* UISwitch.swift */,
 				803BDFA71D11B364004A785A /* UITextField.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
-				59866A471CFE10000053E4C9 /* UISwitch.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1150,6 +1154,7 @@
 				A74FFEB41CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */,
 				A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */,
 				803BDFA81D11B364004A785A /* UITextField.swift in Sources */,
+				A734A2231D217D180080BBD5 /* UINavigationItem.swift in Sources */,
 				A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */,
 				A74FFDDD1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */,
 				8096F28C1CC91C1500231D91 /* Rac.swift in Sources */,
@@ -1230,6 +1235,7 @@
 				A74FFEB51CE4EB7500C7BCB9 /* NSLayoutConstraint.swift in Sources */,
 				8096F2991CC92A4D00231D91 /* Rac.swift in Sources */,
 				803BDFA91D11B364004A785A /* UITextField.swift in Sources */,
+				A734A2241D217D180080BBD5 /* UINavigationItem.swift in Sources */,
 				A7C5105C1C27362000C59136 /* WrapInOptional.swift in Sources */,
 				A74FFDDE1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */,
 				A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */,
