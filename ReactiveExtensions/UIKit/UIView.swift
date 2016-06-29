@@ -5,6 +5,7 @@ import UIKit
 private enum Associations {
   private static var alpha = 0
   private static var backgroundColor = 0
+  private static var endEditing = 0
   private static var hidden = 0
 }
 
@@ -29,6 +30,20 @@ public extension Rac where Object: UIView {
       let prop: MutableProperty<UIColor> = lazyMutableProperty(object, key: &Associations.backgroundColor,
         setter: { [weak object] in object?.backgroundColor = $0 },
         getter: { [weak object] in object?.backgroundColor ?? .clearColor() })
+
+      prop <~ newValue.observeForUI()
+    }
+
+    get {
+      return .empty
+    }
+  }
+
+  public var endEditing: Signal<(), NoError> {
+    nonmutating set {
+      let prop: MutableProperty = lazyMutableProperty(object, key: &Associations.endEditing,
+        setter: { [weak object] in object?.endEditing(true) },
+        getter: {})
 
       prop <~ newValue.observeForUI()
     }
