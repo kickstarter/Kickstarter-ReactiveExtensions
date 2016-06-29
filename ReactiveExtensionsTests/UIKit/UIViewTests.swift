@@ -31,6 +31,26 @@ final class UIViewTests: XCTestCase {
     eventually(XCTAssertEqual(.greenColor(), self.view.backgroundColor))
   }
 
+  func testEndEditing() {
+    let (signal, observer) = Signal<(), NoError>.pipe()
+    #if os(iOS)
+    let view = UITextView()
+    #else
+    let view = UIButton()
+    #endif
+
+    let window = UIWindow()
+    window.addSubview(view)
+    view.becomeFirstResponder()
+
+    view.rac.endEditing = signal
+
+    eventually(XCTAssertTrue(view.isFirstResponder()))
+
+    observer.sendNext()
+    eventually(XCTAssertFalse(view.isFirstResponder()))
+  }
+
   func testHidden() {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     view.rac.hidden = signal
