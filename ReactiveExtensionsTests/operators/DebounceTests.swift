@@ -9,7 +9,7 @@ final class DebounceTests: XCTestCase {
   func testDebounce() {
     let scheduler = TestScheduler()
     let (signal, observer) = Signal<Int, NoError>.pipe()
-    let debounced = signal.debounce(0.5, onScheduler: scheduler)
+    let debounced = signal.ksr_debounce(0.5, onScheduler: scheduler)
     let test = TestObserver<Int, NoError>()
     debounced.observe(test.observer)
 
