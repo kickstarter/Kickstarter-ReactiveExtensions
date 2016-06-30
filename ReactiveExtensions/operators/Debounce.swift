@@ -17,7 +17,9 @@ public extension SignalType {
     @autoclosure(escaping) onScheduler scheduler: () -> DateSchedulerType) ->
     Signal<Value, Error> {
 
-      return self.debounce(interval(), onScheduler: scheduler())
+      return self.flatMap(.Latest) { next in
+        SignalProducer(value: next).delay(interval(), onScheduler: scheduler())
+      }
   }
 }
 
@@ -38,6 +40,6 @@ public extension SignalProducerType {
     @autoclosure(escaping) onScheduler scheduler: () -> DateSchedulerType) ->
     SignalProducer<Value, Error> {
 
-      return lift { $0.debounce(interval(), onScheduler: scheduler()) }
+      return lift { $0.ksr_debounce(interval(), onScheduler: scheduler()) }
   }
 }
