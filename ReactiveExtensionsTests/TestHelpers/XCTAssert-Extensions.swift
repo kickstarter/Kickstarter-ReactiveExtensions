@@ -1,9 +1,6 @@
 import XCTest
 import ReactiveCocoa
 
-/**
- Assert equality between two values where an equality operator is provided.
- */
 internal func XCTAssertEqual <A> (
   @autoclosure expression1: () -> A,
                _ equality: (A, A) -> Bool,
@@ -21,9 +18,6 @@ internal func XCTAssertEqual <A> (
                 line: line)
 }
 
-/**
- Assert equality between two arrays of values where an equality operator for the values is provided.
- */
 internal func XCTAssertEqual <A> (
   @autoclosure expression1: () -> [A],
                _ equality: (A, A) -> Bool,
