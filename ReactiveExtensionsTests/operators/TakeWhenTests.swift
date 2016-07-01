@@ -10,20 +10,20 @@ final class TakeWhenTests: XCTestCase {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], NoError>()
-    takePairWhen.map { [$0, $1] }.observe(test.observer)
+    let test = TestObserver<(Int, Int), NoError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
-    test.assertValues([])
+    test.assertValues(==, [])
 
     sourceObserver.sendNext(2)
-    test.assertValues([])
+    test.assertValues(==, [])
 
     sampleObserver.sendNext(3)
-    test.assertValues([[2, 3]])
+    test.assertValues(==, [(2, 3)])
 
     sampleObserver.sendNext(4)
-    test.assertValues([[2, 3], [2, 4]])
+    test.assertValues(==, [(2, 3), (2, 4)])
 
     sampleObserver.sendCompleted()
     XCTAssertFalse(test.didComplete)
@@ -36,12 +36,12 @@ final class TakeWhenTests: XCTestCase {
     let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
     let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], SomeError>()
-    takePairWhen.map { [$0, $1] }.observe(test.observer)
+    let test = TestObserver<(Int, Int), SomeError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    test.assertValues([[1, 3]])
+    test.assertValues(==, [(1, 3)])
 
     sourceObserver.sendCompleted()
     test.assertDidComplete()
@@ -51,12 +51,12 @@ final class TakeWhenTests: XCTestCase {
     let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
     let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], SomeError>()
-    takePairWhen.map { [$0, $1] }.observe(test.observer)
+    let test = TestObserver<(Int, Int), SomeError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    test.assertValues([[1, 3]])
+    test.assertValues(==, [(1, 3)])
 
     sourceObserver.sendFailed(SomeError())
     test.assertDidFail()
@@ -66,12 +66,12 @@ final class TakeWhenTests: XCTestCase {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], NoError>()
-    takePairWhen.map { [$0, $1] }.observe(test.observer)
+    let test = TestObserver<(Int, Int), NoError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    test.assertValues([[1, 3]])
+    test.assertValues(==, [(1, 3)])
 
     sourceObserver.sendInterrupted()
     test.assertDidInterrupt()
@@ -81,12 +81,12 @@ final class TakeWhenTests: XCTestCase {
     let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
     let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], SomeError>()
-    takePairWhen.map { [$0, $1] }.observe(test.observer)
+    let test = TestObserver<(Int, Int), SomeError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    test.assertValues([[1, 3]])
+    test.assertValues(==, [(1, 3)])
 
     sampleObserver.sendFailed(SomeError())
     test.assertDidNotFail()
@@ -96,12 +96,12 @@ final class TakeWhenTests: XCTestCase {
     let (source, sourceObserver) = Signal<Int, NoError>.pipe()
     let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], NoError>()
-    takePairWhen.map { [$0, $1] }.observe(test.observer)
+    let test = TestObserver<(Int, Int), NoError>()
+    takePairWhen.observe(test.observer)
 
     sourceObserver.sendNext(1)
     sampleObserver.sendNext(3)
-    test.assertValues([[1, 3]])
+    test.assertValues(==, [(1, 3)])
 
     sampleObserver.sendInterrupted()
     test.assertDidNotInterrupt()

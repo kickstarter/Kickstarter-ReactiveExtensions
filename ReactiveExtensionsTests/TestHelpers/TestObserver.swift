@@ -121,6 +121,15 @@ internal final class TestObserver <Value, Error: ErrorType> {
       XCTAssertEqual(count, self.values.count, message ?? "Should have emitted \(count) values",
         file: file, line: line)
   }
+
+  internal func assertValues(equality: (Value, Value) -> Bool,
+                             _ values: [Value],
+                               _ message: String = "",
+                                 file: StaticString = #file,
+                                 line: UInt = #line) {
+
+    XCTAssertEqual(values, equality, self.values, message, file: file, line: line)
+  }
 }
 
 extension TestObserver where Value: Equatable {
@@ -162,7 +171,7 @@ extension TestObserver where Value: ReactiveCocoa.OptionalType, Value.Wrapped: E
 
   internal func assertValues(values: [Value], _ message: String = "",
                              file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(values, self.values, message, file: file, line: line)
+    XCTAssertEqual(values, ==, self.values, message, file: file, line: line)
   }
 }
 
@@ -185,7 +194,7 @@ extension TestObserver where Value: SequenceType, Value.Generator.Element: Equat
 
   internal func assertValues(values: [[Value.Generator.Element]], _ message: String = "",
     file: StaticString = #file, line: UInt = #line) {
-      XCTAssertEqual(Array(values), Array(self.values.map(Array.init)), message, file: file, line: line)
+      XCTAssertEqual(Array(values), ==, Array(self.values.map(Array.init)), message, file: file, line: line)
   }
 
 }
