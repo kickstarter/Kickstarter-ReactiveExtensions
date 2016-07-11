@@ -5,7 +5,7 @@ import UIKit
  UIKit views and their subclasses.
  */
 public struct Rac<Object: RacObject> {
-  internal let object: Object
+  public let object: Object
 }
 
 /**
