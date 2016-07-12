@@ -7,10 +7,11 @@ private enum Associations {
   private static var accessibilityHint = 1
   private static var accessibilityLabel = 2
   private static var accessibilityValue = 3
+  private static var isAccessibilityElement = 4
 }
 
 public extension Rac where Object: NSObject {
-  public var accessibilityElementHidden: Signal<Bool, NoError> {
+  public var accessibilityElementsHidden: Signal<Bool, NoError> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,
@@ -65,6 +66,22 @@ public extension Rac where Object: NSObject {
         key: &Associations.accessibilityValue,
         setter: { [weak object] in object?.accessibilityValue = $0 },
         getter: { [weak object] in object?.accessibilityValue ?? "" })
+
+      prop <~ newValue.observeForUI()
+    }
+
+    get {
+      return .empty
+    }
+  }
+
+  public var isAccessibilityElement: Signal<Bool, NoError> {
+    nonmutating set {
+      let prop: MutableProperty<Bool> = lazyMutableProperty(
+        object,
+        key: &Associations.isAccessibilityElement,
+        setter: { [weak object] in object?.isAccessibilityElement = $0 },
+        getter: { [weak object] in object?.isAccessibilityElement ?? false })
 
       prop <~ newValue.observeForUI()
     }
