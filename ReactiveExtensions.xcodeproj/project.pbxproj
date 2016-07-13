@@ -55,6 +55,8 @@
 		A7376AB11CE3986A003B50E3 /* XCTestCase+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7376AAF1CE3986A003B50E3 /* XCTestCase+Async.swift */; };
 		A7378CC91C80975700F0A562 /* AllValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7378CC81C80975700F0A562 /* AllValues.swift */; };
 		A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7378CCA1C80992C00F0A562 /* AllValuesTests.swift */; };
+		A743813D1D33D6D200040A95 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743813C1D33D6D200040A95 /* NSObject.swift */; };
+		A743813E1D33D6D200040A95 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A743813C1D33D6D200040A95 /* NSObject.swift */; };
 		A74FFDDD1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */; };
 		A74FFDDE1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */; };
 		A74FFDEC1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */; };
@@ -385,6 +387,7 @@
 		A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReactiveExtensions.playground; sourceTree = "<group>"; };
 		A7378CC81C80975700F0A562 /* AllValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllValues.swift; sourceTree = "<group>"; };
 		A7378CCA1C80992C00F0A562 /* AllValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllValuesTests.swift; sourceTree = "<group>"; };
+		A743813C1D33D6D200040A95 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		A74FFDEB1CE3DD5400C7BCB9 /* UITextViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewTests.swift; sourceTree = "<group>"; };
 		A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
@@ -586,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				A74FFEB31CE4EB7500C7BCB9 /* NSLayoutConstraint.swift */,
+				A743813C1D33D6D200040A95 /* NSObject.swift */,
 				8096F28B1CC91C1500231D91 /* Rac.swift */,
 				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
 				A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */,
@@ -1141,6 +1145,7 @@
 				A7141E891CFCE1BB00F1A9BE /* UIButton.swift in Sources */,
 				A72E75371CC1849B00983066 /* Errors.swift in Sources */,
 				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
+				A743813D1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7FD08971C81EDBD00332CCB /* FlatMap.swift in Sources */,
 				A7FD08981C81EDBD00332CCB /* LazyAssociatedProperty.swift in Sources */,
 				A7FD08991C81EDBD00332CCB /* AllValues.swift in Sources */,
@@ -1222,6 +1227,7 @@
 				A7141E8A1CFCE1BB00F1A9BE /* UIButton.swift in Sources */,
 				A72E75381CC1849B00983066 /* Errors.swift in Sources */,
 				A7C510481C2721CA00C59136 /* Uncollect.swift in Sources */,
+				A743813E1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7C510661C27378A00C59136 /* FlatMap.swift in Sources */,
 				A7983B581C2AF232003A1ABE /* LazyAssociatedProperty.swift in Sources */,
 				A7378CC91C80975700F0A562 /* AllValues.swift in Sources */,
