@@ -2,11 +2,17 @@ machine:
   xcode:
     version: 7.3
 dependencies:
+  pre:
+    - brew update || brew update
+    - brew install swiftlint
   override:
     - git submodule sync --recursive
     - git submodule update --init --recursive
 test:
   override:
+    - set -o pipefail &&
+      swiftlint lint --strict --reporter json |
+      tee $CIRCLE_ARTIFACTS/swiftlint-report.json
     - bin/test iOS
 experimental:
   notify:
