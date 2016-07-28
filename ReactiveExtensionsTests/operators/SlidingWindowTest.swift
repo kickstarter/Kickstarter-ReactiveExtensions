@@ -70,27 +70,27 @@ final class SlidingWindowTest: XCTestCase {
   }
 
   func testProducer_SlidingWindowWithMaxLessThanMin() {
-    let (producer, observer) = SignalProducer<Int, NoError>.buffer(Int.max)
-    let window = producer.slidingWindow(max: 3, min: 2)
+    let property = MutableProperty<Int>(0)
+    let window = property.producer.skip(1).slidingWindow(max: 3, min: 2)
     let test = TestObserver<[Int], NoError>()
     window.start(test.observer)
 
-    observer.sendNext(1)
+    property.value = 1
     test.assertDidNotEmitValue()
 
-    observer.sendNext(2)
+    property.value = 2
     test.assertValues([[1, 2]])
 
-    observer.sendNext(3)
+    property.value = 3
     test.assertValues([[1, 2], [1, 2, 3]])
 
-    observer.sendNext(4)
+    property.value = 4
     test.assertValues([[1, 2], [1, 2, 3], [2, 3, 4]])
 
-    observer.sendNext(5)
+    property.value = 5
     test.assertValues([[1, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5]])
 
-    observer.sendCompleted()
+    test.observer.sendCompleted()
     test.assertDidComplete()
   }
 }
