@@ -91,7 +91,7 @@ final class SlidingWindowTest: XCTestCase {
     observer.sendNext(5)
     test.assertValues([[1, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5]])
 
-    test.observer.sendCompleted()
+    observer.sendCompleted()
     test.assertDidComplete()
   }
 }
