@@ -108,110 +108,114 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromProducer() {
-    let sourceProperty = MutableProperty<Int>(0)
-    let sampleProperty = MutableProperty<Int>(0)
-    let withLatestFrom = sampleProperty.signal.withLatestFrom(sourceProperty.producer)
+    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
+    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let sourceProducer = SignalProducer(signal: source)
+    let withLatestFrom = sample.withLatestFrom(sourceProducer)
     let test = TestObserver<[Int], NoError>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
-    sourceProperty.value = 1
+    sourceObserver.sendNext(1)
     test.assertValues([])
 
-    sourceProperty.value = 2
+    sourceObserver.sendNext(2)
     test.assertValues([])
 
-    sampleProperty.value = 3
+    sampleObserver.sendNext(3)
     test.assertValues([[3, 2]])
 
-    sampleProperty.value = 4
+    sampleObserver.sendNext(4)
     test.assertValues([[3, 2], [4, 2]])
 
-    sampleProperty.producer.startWithCompleted {
-      test.assertDidNotComplete()
-    }
+    sampleObserver.sendCompleted()
 
-    sourceProperty.producer.startWithCompleted {
-      test.assertDidComplete()
-    }
+    test.assertDidNotComplete()
+
+    sourceObserver.sendCompleted()
+
+    test.assertDidComplete()
   }
 
   func testWithLatestFromProducer_SourceCompleting() {
-    let sourceProperty = MutableProperty<Int>(0)
-    let sampleProperty = MutableProperty<Int>(0)
-    let withLatestFrom = sampleProperty.signal.withLatestFrom(sourceProperty.producer)
+    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
+    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let sourceProducer = SignalProducer(signal: source)
+    let withLatestFrom = sample.withLatestFrom(sourceProducer)
     let test = TestObserver<[Int], NoError>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
-    sourceProperty.value = 1
-    sampleProperty.value = 3
+    sourceObserver.sendNext(1)
+    sampleObserver.sendNext(3)
     test.assertValues([[3, 1]])
 
-    sourceProperty.producer.startWithCompleted {
-      XCTAssert(test.didComplete)
-    }
+    sourceObserver.sendCompleted()
+
+    XCTAssert(test.didComplete)
   }
 
   func testWithLatestFromProducer_SourceErroring() {
-    let sourceProperty = MutableProperty<Int>(0)
-    let sampleProperty = MutableProperty<Int>(0)
-    let withLatestFrom = sampleProperty.signal.withLatestFrom(sourceProperty.producer)
-    let test = TestObserver<[Int], NoError>()
+    let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
+    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
+    let sourceProducer = SignalProducer(signal: source)
+    let withLatestFrom = sample.withLatestFrom(sourceProducer)
+    let test = TestObserver<[Int], SomeError>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
-    sourceProperty.value = 1
-    sampleProperty.value = 3
+    sourceObserver.sendNext(1)
+    sampleObserver.sendNext(3)
     test.assertValues([[3, 1]])
 
-    sourceProperty.producer.startWithFailed { _ in
-      XCTAssert(test.didFail)
-    }
+    sourceObserver.sendFailed(SomeError())
+    XCTAssert(test.didFail)
   }
 
   func testWithLatestFromProducer_SourceInterrupted() {
-    let sourceProperty = MutableProperty<Int>(0)
-    let sampleProperty = MutableProperty<Int>(0)
-    let withLatestFrom = sampleProperty.signal.withLatestFrom(sourceProperty.producer)
+    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
+    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let sourceProducer = SignalProducer(signal: source)
+    let withLatestFrom = sample.withLatestFrom(sourceProducer)
     let test = TestObserver<[Int], NoError>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
-    sourceProperty.value = 1
-    sampleProperty.value = 3
+    sourceObserver.sendNext(1)
+    sampleObserver.sendNext(3)
     test.assertValues([[3, 1]])
 
-    sourceProperty.producer.startWithInterrupted {
-      test.assertDidInterrupt()
-    }
+    sourceObserver.sendInterrupted()
+    test.assertDidInterrupt()
   }
 
   func testWithLatestFromProducer_SampleErroring() {
-    let sourceProperty = MutableProperty<Int>(0)
-    let sampleProperty = MutableProperty<Int>(0)
-    let withLatestFrom = sampleProperty.signal.withLatestFrom(sourceProperty.producer)
-    let test = TestObserver<[Int], NoError>()
+    let (source, sourceObserver) = Signal<Int, SomeError>.pipe()
+    let (sample, sampleObserver) = Signal<Int, SomeError>.pipe()
+    let sourceProducer = SignalProducer(signal: source)
+    let withLatestFrom = sample.withLatestFrom(sourceProducer)
+    let test = TestObserver<[Int], SomeError>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
-    sourceProperty.value = 1
-    sampleProperty.value = 3
+    sourceObserver.sendNext(1)
+    sampleObserver.sendNext(3)
     test.assertValues([[3, 1]])
 
-    sampleProperty.producer.startWithFailed { _ in
-      test.assertDidNotFail()
-    }
+    sampleObserver.sendFailed(SomeError())
+
+    test.assertDidNotFail()
   }
 
   func testWithLatestFromProducer_SampleInterrupted() {
-    let sourceProperty = MutableProperty<Int>(0)
-    let sampleProperty = MutableProperty<Int>(0)
-    let withLatestFrom = sampleProperty.signal.withLatestFrom(sourceProperty.producer)
+    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
+    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let sourceProducer = SignalProducer(signal: source)
+    let withLatestFrom = sample.withLatestFrom(sourceProducer)
     let test = TestObserver<[Int], NoError>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
-    sourceProperty.value = 1
-    sampleProperty.value = 3
+    sourceObserver.sendNext(1)
+    sampleObserver.sendNext(3)
     test.assertValues([[3, 1]])
 
-    sampleProperty.producer.startWithInterrupted {
-      test.assertDidNotInterrupt()
-    }
+    sampleObserver.sendInterrupted()
+
+    test.assertDidNotInterrupt()
   }
 }

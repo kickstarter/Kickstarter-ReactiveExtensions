@@ -29,19 +29,21 @@ final class ValuesTests: XCTestCase {
   }
 
   func testProducerValues() {
-    let property = MutableProperty<Int>(0)
+    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let producer = SignalProducer(signal: signal)
     let test = TestObserver<Int, NoError>()
-    property.producer
+    producer
       .flatMap { idx in failOnEvens(idx).materialize() }
       .values()
       .start(test.observer)
 
-    property.value = 1
-    property.value = 2
-    property.value = 3
-    property.value = 4
-    property.producer.startWithCompleted {
-      test.assertValues([1, 3])
-    }
+    observer.sendNext(0)
+    observer.sendNext(1)
+    observer.sendNext(2)
+    observer.sendNext(3)
+    observer.sendNext(4)
+    observer.sendCompleted()
+
+    test.assertValues([1, 3])
   }
 }

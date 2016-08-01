@@ -25,22 +25,23 @@ final class ConcatTests: XCTestCase {
   }
 
   func testProducer_Concat() {
-    let property1 = MutableProperty<Int>(0)
-    let property2 = MutableProperty<Int>(0)
+    let (s1, o1) = Signal<Int, NoError>.pipe()
+    let (s2, o2) = Signal<Int, NoError>.pipe()
+    let p1 = SignalProducer(signal: s1)
+    let p2 = SignalProducer(signal: s2)
 
-    let concat = SignalProducer.concat(property1.producer.skip(1), property2.producer.skip(1))
+    let concat = SignalProducer.concat(p1, p2)
 
     let test = TestObserver<Int, NoError>()
     concat.start(test.observer)
 
-    property1.value = 1
-    property1.value = 2
-    property1.producer.startWithCompleted {
-      property2.value = 3
-      property2.value = 4
-    }
-    property2.producer.startWithCompleted {
-      test.assertValues([1, 2, 3, 4])
-    }
+    o1.sendNext(1)
+    o1.sendNext(2)
+    o1.sendCompleted()
+    o2.sendNext(3)
+    o2.sendNext(4)
+    o2.sendCompleted()
+
+    test.assertValues([1, 2, 3, 4])
   }
 }

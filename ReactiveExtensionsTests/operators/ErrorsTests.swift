@@ -29,19 +29,21 @@ final class ErrorsTests: XCTestCase {
   }
 
   func testProducerValues() {
-    let property = MutableProperty<Int>(0)
+    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let producer = SignalProducer(signal: signal)
     let test = TestObserver<SomeError, NoError>()
-    property.producer
+    producer
       .flatMap { idx in failOnEvens(idx).materialize() }
       .errors()
       .start(test.observer)
 
-    property.value = 1
-    property.value = 2
-    property.value = 3
-    property.value = 4
-    property.producer.startWithCompleted {
-      test.assertValueCount(3)
-    }
+    observer.sendNext(0)
+    observer.sendNext(1)
+    observer.sendNext(2)
+    observer.sendNext(3)
+    observer.sendNext(4)
+    observer.sendCompleted()
+
+    test.assertValueCount(3)
   }
 }
