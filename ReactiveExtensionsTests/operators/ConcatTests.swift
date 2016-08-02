@@ -25,8 +25,11 @@ final class ConcatTests: XCTestCase {
   }
 
   func testProducer_Concat() {
-    let (p1, o1) = SignalProducer<Int, NoError>.buffer(0)
-    let (p2, o2) = SignalProducer<Int, NoError>.buffer(0)
+    let (s1, o1) = Signal<Int, NoError>.pipe()
+    let (s2, o2) = Signal<Int, NoError>.pipe()
+    let p1 = SignalProducer(signal: s1)
+    let p2 = SignalProducer(signal: s2)
+
     let concat = SignalProducer.concat(p1, p2)
 
     let test = TestObserver<Int, NoError>()

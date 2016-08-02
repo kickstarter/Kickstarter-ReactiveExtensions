@@ -70,7 +70,8 @@ final class SlidingWindowTest: XCTestCase {
   }
 
   func testProducer_SlidingWindowWithMaxLessThanMin() {
-    let (producer, observer) = SignalProducer<Int, NoError>.buffer(Int.max)
+    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let producer = SignalProducer(signal: signal)
     let window = producer.slidingWindow(max: 3, min: 2)
     let test = TestObserver<[Int], NoError>()
     window.start(test.observer)

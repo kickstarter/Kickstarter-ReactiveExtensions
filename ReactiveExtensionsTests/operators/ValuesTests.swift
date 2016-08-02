@@ -29,7 +29,8 @@ final class ValuesTests: XCTestCase {
   }
 
   func testProducerValues() {
-    let (producer, observer) = SignalProducer<Int, NoError>.buffer(0)
+    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let producer = SignalProducer(signal: signal)
     let test = TestObserver<Int, NoError>()
     producer
       .flatMap { idx in failOnEvens(idx).materialize() }
