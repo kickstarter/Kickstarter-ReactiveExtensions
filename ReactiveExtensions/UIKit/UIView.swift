@@ -7,6 +7,7 @@ private enum Associations {
   private static var backgroundColor = 0
   private static var endEditing = 0
   private static var hidden = 0
+  private static var tintColor = 0
 }
 
 public extension Rac where Object: UIView {
@@ -58,6 +59,22 @@ public extension Rac where Object: UIView {
       let prop: MutableProperty<Bool> = lazyMutableProperty(object, key: &Associations.hidden,
         setter: { [weak object] in object?.hidden = $0 },
         getter: { [weak object] in object?.hidden ?? false })
+
+      prop <~ newValue.observeForUI()
+    }
+
+    get {
+      return .empty
+    }
+  }
+
+  public var tintColor: Signal<UIColor, NoError> {
+    nonmutating set {
+      let prop: MutableProperty<UIColor> = lazyMutableProperty(
+        object,
+        key: &Associations.tintColor,
+        setter: { [weak object] in object?.tintColor = $0 },
+        getter: { [weak object] in object?.tintColor ?? .clearColor() })
 
       prop <~ newValue.observeForUI()
     }
