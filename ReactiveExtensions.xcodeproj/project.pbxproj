@@ -97,6 +97,10 @@
 		A7983B8D1C2AFB1D003A1ABE /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
 		A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A015D61CBDA99100C4B821 /* TakeUntil.swift */; };
 		A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A015D61CBDA99100C4B821 /* TakeUntil.swift */; };
+		A7B11A561D78A43D00A5036E /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B11A551D78A43D00A5036E /* Scan.swift */; };
+		A7B11A571D78A43D00A5036E /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B11A551D78A43D00A5036E /* Scan.swift */; };
+		A7B11A641D78A4C100A5036E /* ScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B11A631D78A4C100A5036E /* ScanTests.swift */; };
+		A7B11A651D78A4C100A5036E /* ScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B11A631D78A4C100A5036E /* ScanTests.swift */; };
 		A7BF76BF1C554EF4003D0881 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76BD1C554EF4003D0881 /* Tuple.swift */; };
 		A7BF76C31C554F19003D0881 /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF76C11C554F19003D0881 /* SomeError.swift */; };
 		A7C510461C2720D500C59136 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510451C2720D500C59136 /* Sort.swift */; };
@@ -416,6 +420,8 @@
 		A7983B621C2AF8D4003A1ABE /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A015D61CBDA99100C4B821 /* TakeUntil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntil.swift; sourceTree = "<group>"; };
+		A7B11A551D78A43D00A5036E /* Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
+		A7B11A631D78A4C100A5036E /* ScanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTests.swift; sourceTree = "<group>"; };
 		A7BF76BD1C554EF4003D0881 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
 		A7BF76C11C554F19003D0881 /* SomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeError.swift; sourceTree = "<group>"; };
 		A7C510451C2720D500C59136 /* Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Sort.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -584,6 +590,7 @@
 				A77966F91C2B15150002166F /* UncollectTests.swift */,
 				A72E75391CC1858500983066 /* ValuesTests.swift */,
 				A713EC801C2B863600B6234E /* WithLatestFromTests.swift */,
+				A7B11A631D78A4C100A5036E /* ScanTests.swift */,
 			);
 			path = operators;
 			sourceTree = "<group>";
@@ -637,6 +644,7 @@
 				A7C510691C27380700C59136 /* MergeMap.swift */,
 				A7C510611C27371E00C59136 /* MergeWith.swift */,
 				A7C510591C2735F500C59136 /* ObserveForUI.swift */,
+				A7B11A551D78A43D00A5036E /* Scan.swift */,
 				A7C510511C2734F100C59136 /* SlidingWindow.swift */,
 				A7C510451C2720D500C59136 /* Sort.swift */,
 				A7C510631C27374E00C59136 /* SwitchMap.swift */,
@@ -1083,6 +1091,7 @@
 				A74FFEF91CE579D800C7BCB9 /* UIRefreshControlTests.swift in Sources */,
 				A74FFDED1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */,
 				A71C4F441CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */,
+				A7B11A651D78A4C100A5036E /* ScanTests.swift in Sources */,
 				A74FFEFC1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */,
 				A74FFEF61CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */,
 				A713EC811C2B863600B6234E /* WithLatestFromTests.swift in Sources */,
@@ -1158,6 +1167,7 @@
 				A7FD089B1C81EDBD00332CCB /* MapConst.swift in Sources */,
 				A74FFECC1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */,
 				A7FD089C1C81EDBD00332CCB /* WithLatestFrom.swift in Sources */,
+				A7B11A561D78A43D00A5036E /* Scan.swift in Sources */,
 				A7FD089D1C81EDBD00332CCB /* MergeMap.swift in Sources */,
 				A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */,
 				59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */,
@@ -1188,6 +1198,7 @@
 				A74FFEF81CE579D800C7BCB9 /* UIRefreshControlTests.swift in Sources */,
 				A74FFDEC1CE3DD5400C7BCB9 /* UITextViewTests.swift in Sources */,
 				A71C4F431CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */,
+				A7B11A641D78A4C100A5036E /* ScanTests.swift in Sources */,
 				A74FFEFB1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */,
 				A74FFEF51CE579CC00C7BCB9 /* UIActivityIndicatorTests.swift in Sources */,
 				A7FD08C51C81EEA100332CCB /* WithLatestFromTests.swift in Sources */,
@@ -1241,6 +1252,7 @@
 				A7C510561C27358300C59136 /* MapConst.swift in Sources */,
 				A74FFECD1CE4FFD100C7BCB9 /* UIActivityIndicator.swift in Sources */,
 				A7C5104C1C27343400C59136 /* WithLatestFrom.swift in Sources */,
+				A7B11A571D78A43D00A5036E /* Scan.swift in Sources */,
 				A7C5106A1C27380700C59136 /* MergeMap.swift in Sources */,
 				A7C510461C2720D500C59136 /* Sort.swift in Sources */,
 				59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */,
