@@ -884,12 +884,24 @@
 				TargetAttributes = {
 					A7983B871C2AFB1C003A1ABE = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					A7DB1D391C9F355E008244DA = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
+					};
+					A7DB1D4C1C9F4FD7008244DA = {
+						LastSwiftMigration = 0800;
+					};
+					A7FD08861C81EDBD00332CCB = {
+						LastSwiftMigration = 0800;
+					};
+					A7FD08BE1C81EEA100332CCB = {
+						LastSwiftMigration = 0800;
 					};
 					CA43C6621BB35FCF00C180DA = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -1347,6 +1359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1360,6 +1373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -1389,6 +1403,7 @@
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1419,6 +1434,7 @@
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1449,6 +1465,7 @@
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1479,6 +1496,7 @@
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1498,6 +1516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1517,6 +1536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1531,6 +1551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1544,6 +1565,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -1659,6 +1681,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1676,6 +1699,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
