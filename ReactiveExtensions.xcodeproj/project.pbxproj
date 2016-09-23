@@ -171,6 +171,10 @@
 		A7FD08D01C81EEA100332CCB /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
 		A7FD08D31C81EEA100332CCB /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
 		CA43C6671BB35FCF00C180DA /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0E8039E1D9521CD0086555E /* ObserveForBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8039D1D9521CD0086555E /* ObserveForBackground.swift */; };
+		D0E8039F1D9521CD0086555E /* ObserveForBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8039D1D9521CD0086555E /* ObserveForBackground.swift */; };
+		D0EE16731D951ED600F778F8 /* ObserveForBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EE16721D951ED600F778F8 /* ObserveForBackground.swift */; };
+		D0EE16741D951ED600F778F8 /* ObserveForBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EE16721D951ED600F778F8 /* ObserveForBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -453,6 +457,8 @@
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveExtensions.h; sourceTree = "<group>"; };
 		CA43C6681BB35FCF00C180DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E8039D1D9521CD0086555E /* ObserveForBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserveForBackground.swift; sourceTree = "<group>"; };
+		D0EE16721D951ED600F778F8 /* ObserveForBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserveForBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,6 +589,8 @@
 				A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */,
 				A72E753C1CC1859000983066 /* ErrorsTests.swift */,
 				A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */,
+				D0E8039D1D9521CD0086555E /* ObserveForBackground.swift */,
+				A7B11A631D78A4C100A5036E /* ScanTests.swift */,
 				A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */,
 				A779670C1C2B1EB90002166F /* SortTests.swift */,
 				A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */,
@@ -590,7 +598,6 @@
 				A77966F91C2B15150002166F /* UncollectTests.swift */,
 				A72E75391CC1858500983066 /* ValuesTests.swift */,
 				A713EC801C2B863600B6234E /* WithLatestFromTests.swift */,
-				A7B11A631D78A4C100A5036E /* ScanTests.swift */,
 			);
 			path = operators;
 			sourceTree = "<group>";
@@ -643,6 +650,7 @@
 				A7C510551C27358300C59136 /* MapConst.swift */,
 				A7C510691C27380700C59136 /* MergeMap.swift */,
 				A7C510611C27371E00C59136 /* MergeWith.swift */,
+				D0EE16721D951ED600F778F8 /* ObserveForBackground.swift */,
 				A7C510591C2735F500C59136 /* ObserveForUI.swift */,
 				A7B11A551D78A43D00A5036E /* Scan.swift */,
 				A7C510511C2734F100C59136 /* SlidingWindow.swift */,
@@ -1121,6 +1129,7 @@
 				A779670D1C2B1EB90002166F /* SortTests.swift in Sources */,
 				A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
 				A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */,
+				D0E8039F1D9521CD0086555E /* ObserveForBackground.swift in Sources */,
 				A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */,
 				8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */,
 				A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */,
@@ -1160,6 +1169,7 @@
 				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
 				A74FFEC31CE4ECC900C7BCB9 /* UIResponder.swift in Sources */,
 				A74FFDF51CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
+				D0EE16731D951ED600F778F8 /* ObserveForBackground.swift in Sources */,
 				A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */,
 				A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */,
 				A72E75281CC1849100983066 /* Values.swift in Sources */,
@@ -1228,6 +1238,7 @@
 				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
 				A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
 				A72E753A1CC1858500983066 /* ValuesTests.swift in Sources */,
+				D0E8039E1D9521CD0086555E /* ObserveForBackground.swift in Sources */,
 				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
 				8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */,
 				A7FD08D01C81EEA100332CCB /* DebounceTests.swift in Sources */,
@@ -1245,6 +1256,7 @@
 				A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */,
 				A74FFEC41CE4ECC900C7BCB9 /* UIResponder.swift in Sources */,
 				A74FFDF61CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
+				D0EE16741D951ED600F778F8 /* ObserveForBackground.swift in Sources */,
 				A7983B5A1C2AF7E8003A1ABE /* LazyMutableProperty.swift in Sources */,
 				A7C510681C2737C500C59136 /* ConcatMap.swift in Sources */,
 				A72E75291CC1849100983066 /* Values.swift in Sources */,
