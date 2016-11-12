@@ -127,13 +127,13 @@ extension TestObserver where Value: Equatable {
   internal func assertValue(value: Value, _ message: String? = nil,
                             file: StaticString = #file, line: UInt = #line) {
     XCTAssertEqual(1, self.values.count, "A single item should have been emitted.", file: file, line: line)
-    XCTAssertEqual(value, self.lastValue!, message ?? "A single value of \(value) should have been emitted",
+    XCTAssertEqual(value, self.lastValue, message ?? "A single value of \(value) should have been emitted",
                    file: file, line: line)
   }
 
   internal func assertLastValue(value: Value, _ message: String? = nil,
                             file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(value, self.lastValue!, message ?? "Last emitted value is equal to \(value).",
+    XCTAssertEqual(value, self.lastValue, message ?? "Last emitted value is equal to \(value).",
                    file: file, line: line)
   }
 
@@ -148,14 +148,14 @@ extension TestObserver where Value: ReactiveCocoa.OptionalType, Value.Wrapped: E
   internal func assertValue(value: Value, _ message: String? = nil,
                             file: StaticString = #file, line: UInt = #line) {
     XCTAssertEqual(1, self.values.count, "A single item should have been emitted.", file: file, line: line)
-    XCTAssertEqual(value.optional, self.lastValue!.optional,
+    XCTAssertEqual(value.optional, self.lastValue?.optional,
                    message ?? "A single value of \(value) should have been emitted",
                    file: file, line: line)
   }
 
   internal func assertLastValue(value: Value, _ message: String? = nil,
                                 file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(value.optional, self.lastValue!.optional,
+    XCTAssertEqual(value.optional, self.lastValue?.optional,
                    message ?? "Last emitted value is equal to \(value).",
                    file: file, line: line)
   }
@@ -171,14 +171,14 @@ extension TestObserver where Value: SequenceType, Value.Generator.Element: Equat
   internal func assertValue(value: Value, _ message: String? = nil,
                             file: StaticString = #file, line: UInt = #line) {
     XCTAssertEqual(1, self.values.count, "A single item should have been emitted.", file: file, line: line)
-    XCTAssertEqual(Array(value), Array(self.lastValue!),
+    XCTAssertEqual(Array(value), self.lastValue.map(Array.init) ?? [],
                    message ?? "A single value of \(value) should have been emitted",
                    file: file, line: line)
   }
 
   internal func assertLastValue(value: Value, _ message: String? = nil,
                             file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(Array(value), Array(self.lastValue!),
+    XCTAssertEqual(Array(value), self.lastValue.map(Array.init) ?? [],
                    message ?? "Last emitted value is equal to \(value).",
                    file: file, line: line)
   }
