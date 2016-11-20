@@ -39,6 +39,10 @@
 		A7180BEA1CCFB1B2001711CA /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7180BE81CCFB1B2001711CA /* ConcatTests.swift */; };
 		A71C4F431CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */; };
 		A71C4F441CDA3D9600B5B51E /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */; };
+		A72942A81DE2459000BB3455 /* Enumerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72942A71DE2459000BB3455 /* Enumerated.swift */; };
+		A72942A91DE2459000BB3455 /* Enumerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72942A71DE2459000BB3455 /* Enumerated.swift */; };
+		A72942B61DE2463400BB3455 /* EnumeratedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72942B51DE2463400BB3455 /* EnumeratedTests.swift */; };
+		A72942B71DE2463400BB3455 /* EnumeratedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72942B51DE2463400BB3455 /* EnumeratedTests.swift */; };
 		A72A50651D00A91100894A36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713A1C88B1E100E7DA8A /* Result.framework */; };
 		A72A508F1D00B0FA00894A36 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075713E1C88B1E100E7DA8A /* Result.framework */; };
 		A72E75281CC1849100983066 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E75271CC1849100983066 /* Values.swift */; };
@@ -384,6 +388,8 @@
 		A7180BD91CCFB0BE001711CA /* Concat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
 		A7180BE81CCFB1B2001711CA /* ConcatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
 		A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntilTests.swift; sourceTree = "<group>"; };
+		A72942A71DE2459000BB3455 /* Enumerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerated.swift; sourceTree = "<group>"; };
+		A72942B51DE2463400BB3455 /* EnumeratedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumeratedTests.swift; sourceTree = "<group>"; };
 		A72E75271CC1849100983066 /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		A72E75361CC1849B00983066 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		A72E75391CC1858500983066 /* ValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesTests.swift; sourceTree = "<group>"; };
@@ -581,8 +587,10 @@
 				A7180BE81CCFB1B2001711CA /* ConcatTests.swift */,
 				A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */,
 				A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */,
+				A72942B51DE2463400BB3455 /* EnumeratedTests.swift */,
 				A72E753C1CC1859000983066 /* ErrorsTests.swift */,
 				A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */,
+				A7B11A631D78A4C100A5036E /* ScanTests.swift */,
 				A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */,
 				A779670C1C2B1EB90002166F /* SortTests.swift */,
 				A71C4F421CDA3D9600B5B51E /* TakeUntilTests.swift */,
@@ -590,7 +598,6 @@
 				A77966F91C2B15150002166F /* UncollectTests.swift */,
 				A72E75391CC1858500983066 /* ValuesTests.swift */,
 				A713EC801C2B863600B6234E /* WithLatestFromTests.swift */,
-				A7B11A631D78A4C100A5036E /* ScanTests.swift */,
 			);
 			path = operators;
 			sourceTree = "<group>";
@@ -636,6 +643,7 @@
 				A7C510671C2737C500C59136 /* ConcatMap.swift */,
 				A7C510531C27351F00C59136 /* Debounce.swift */,
 				A7C5105F1C2736D400C59136 /* DemoteErrors.swift */,
+				A72942A71DE2459000BB3455 /* Enumerated.swift */,
 				A72E75361CC1849B00983066 /* Errors.swift */,
 				A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */,
 				A7C510651C27378A00C59136 /* FlatMap.swift */,
@@ -1120,6 +1128,7 @@
 				A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */,
 				A779670D1C2B1EB90002166F /* SortTests.swift in Sources */,
 				A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
+				A72942B71DE2463400BB3455 /* EnumeratedTests.swift in Sources */,
 				A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */,
 				8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */,
@@ -1173,6 +1182,7 @@
 				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
 				A743813D1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7FD08971C81EDBD00332CCB /* FlatMap.swift in Sources */,
+				A72942A81DE2459000BB3455 /* Enumerated.swift in Sources */,
 				A7FD08981C81EDBD00332CCB /* LazyAssociatedProperty.swift in Sources */,
 				A7FD08991C81EDBD00332CCB /* AllValues.swift in Sources */,
 				A7FD089A1C81EDBD00332CCB /* UILabel.swift in Sources */,
@@ -1227,6 +1237,7 @@
 				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,
 				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
 				A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
+				A72942B61DE2463400BB3455 /* EnumeratedTests.swift in Sources */,
 				A72E753A1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
 				8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */,
@@ -1258,6 +1269,7 @@
 				A7C510481C2721CA00C59136 /* Uncollect.swift in Sources */,
 				A743813E1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7C510661C27378A00C59136 /* FlatMap.swift in Sources */,
+				A72942A91DE2459000BB3455 /* Enumerated.swift in Sources */,
 				A7983B581C2AF232003A1ABE /* LazyAssociatedProperty.swift in Sources */,
 				A7378CC91C80975700F0A562 /* AllValues.swift in Sources */,
 				A7983B5F1C2AF8B0003A1ABE /* UILabel.swift in Sources */,
