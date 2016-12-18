@@ -24,7 +24,6 @@ extension SignalProtocol {
     return result
   }
 
-  
   public static func concat<S: SignalProtocol>
     (_ signals: S...) -> Signal<Value, Error> where S.Value == Value, S.Error == Error {
 
@@ -40,7 +39,7 @@ extension SignalProducerProtocol {
 
    - returns: A concatenated producer.
    */
-  
+
   public static func concat
     <Seq: Sequence, S: SignalProducerProtocol>
     (_ producers: Seq) -> SignalProducer<Value, Error> where S.Value == Value, S.Error == Error, Seq.Iterator.Element == S {
@@ -48,7 +47,6 @@ extension SignalProducerProtocol {
     return SignalProducer(producers).flatten(.concat)
   }
 
-  
   public static func concat<S: SignalProducerProtocol>
     (_ producers: S...) -> SignalProducer<Value, Error> where S.Value == Value, S.Error == Error {
 

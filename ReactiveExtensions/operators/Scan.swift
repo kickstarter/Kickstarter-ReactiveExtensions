@@ -2,7 +2,6 @@ import ReactiveSwift
 
 public extension SignalProtocol {
 
-  
   /**
    Scans a signal without providing an initial value. The first emission of `self` will be emitted
    immediately, and subsequent emissions will be processed by the `combine` function.

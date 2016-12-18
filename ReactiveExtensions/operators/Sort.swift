@@ -8,7 +8,6 @@ public extension SignalProtocol where Value: Sequence, Value.Iterator.Element: C
 
    - returns: The sorted signal.
    */
-  
   func sort() -> Signal<[Value.Iterator.Element], Error> {
     return self.signal.map { x in x.sorted() }
   }
@@ -38,7 +37,6 @@ public extension SignalProducerProtocol where Value: Sequence, Value.Iterator.El
 
    - returns: The sorted producer.
    */
-  
   func sort() -> SignalProducer<[Value.Iterator.Element], Error> {
     return lift { $0.sort() }
   }

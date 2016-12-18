@@ -13,7 +13,6 @@ public extension SignalProtocol {
     return other.withLatestFrom(self.signal).map { tuple in tuple.1 }
   }
 
-  
   /**
    Emits the most recent value of `self` and `other` when `other` emits.
 
@@ -39,7 +38,6 @@ public extension SignalProducerProtocol {
     return other.withLatestFrom(self.producer).map { $0.1 }
   }
 
-  
   /**
    Emits the most recent value of `self` and `other` when `other` emits.
 

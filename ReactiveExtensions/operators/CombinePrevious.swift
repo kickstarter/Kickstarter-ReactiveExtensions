@@ -2,7 +2,6 @@ import ReactiveSwift
 
 public extension SignalProtocol {
 
-  
   /**
    Returns a signal of pairs: the previously emitted value and the currently emitted value. The first
    emission is skipped, so non-optional `Value`s are returned.
@@ -21,7 +20,6 @@ public extension SignalProtocol {
 
 public extension SignalProducerProtocol {
 
-  
   /**
    Returns a producer of pairs: the previously emitted value and the currently emitted value. The first
    emission is skipped, so non-optional `Value`s are returned.
