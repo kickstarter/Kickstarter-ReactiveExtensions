@@ -11,7 +11,6 @@ public extension SignalProducerProtocol {
 
    - returns: All values emitted by the signal producer.
    */
-  
   public func allValues() -> [Value] {
     return self.producer.collect().last()?.value ?? []
   }

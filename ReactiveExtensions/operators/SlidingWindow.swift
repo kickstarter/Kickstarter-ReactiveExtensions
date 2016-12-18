@@ -10,7 +10,6 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  
   public func slidingWindow (max: Int, min: Int) -> Signal<[Value], Error> {
     return signal
       .scan([Value]()) { window, value in
@@ -36,7 +35,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer.
    */
-  
   public func slidingWindow (max: Int, min: Int) -> SignalProducer<[Value], Error> {
     return lift { $0.slidingWindow(max: max, min: min) }
   }

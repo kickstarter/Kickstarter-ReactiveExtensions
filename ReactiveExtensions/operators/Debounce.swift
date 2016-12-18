@@ -11,7 +11,6 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  
   public func ksr_debounce(
     _ interval: @autoclosure @escaping () -> TimeInterval,
     onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> Signal<Value, Error> {
@@ -33,7 +32,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer.
    */
-  
   public func ksr_debounce(
     _ interval: @autoclosure @escaping () -> TimeInterval,
     onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> SignalProducer<Value, Error> {

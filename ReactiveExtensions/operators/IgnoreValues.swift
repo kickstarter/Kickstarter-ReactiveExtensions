@@ -7,7 +7,6 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  
   public func ignoreValues() -> Signal<Void, Error> {
     return signal.map { _ in () }
   }
@@ -20,7 +19,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer.
    */
-  
   public func ignoreValues() -> SignalProducer<Void, Error> {
     return lift { $0.ignoreValues() }
   }

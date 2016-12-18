@@ -8,7 +8,6 @@ extension SignalProtocol {
    - returns: A signal that emits values up to, and including, when `predicate` returns true. Once
               `predicate` returns false the signal is completed.
    */
-  
   public func takeUntil(_ predicate: @escaping (Value) -> Bool) -> Signal<Value, Error> {
     return Signal { observer in
       return self.observe { event in
@@ -31,7 +30,6 @@ extension SignalProducerProtocol {
    - returns: A signal that emits values up to, and including, when `predicate` returns false. Once
               `predicate` returns false the signal is completed.
    */
-  
   public func takeUntil(_ predicate: @escaping (Value) -> Bool) -> SignalProducer<Value, Error> {
     return lift { $0.takeUntil(predicate) }
   }

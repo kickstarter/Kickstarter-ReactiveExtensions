@@ -9,7 +9,6 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  
   public func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
     return other.withLatestFrom(self.signal).map { tuple in tuple.1 }
   }
@@ -36,7 +35,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer.
    */
-  
   public func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
     return other.withLatestFrom(self.producer).map { $0.1 }
   }

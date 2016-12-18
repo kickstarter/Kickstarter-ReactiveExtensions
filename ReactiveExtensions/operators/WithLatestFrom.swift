@@ -54,7 +54,6 @@ public extension SignalProtocol {
     }
   }
 
-  
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
    emits.

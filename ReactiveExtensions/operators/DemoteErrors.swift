@@ -11,7 +11,6 @@ public extension SignalProtocol {
 
    - returns: A new signal that will never error.
    */
-  
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, NoError> {
 
     return self.signal
@@ -33,7 +32,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer that will never error.
    */
-  
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> SignalProducer<Value, NoError> {
     return self.lift { $0.demoteErrors(replaceErrorWith: value) }
   }

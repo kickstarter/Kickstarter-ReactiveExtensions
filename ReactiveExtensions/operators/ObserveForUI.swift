@@ -7,7 +7,6 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  
   public func observeForUI() -> Signal<Value, Error> {
     return self.signal.observe(on: UIScheduler())
   }
@@ -19,7 +18,6 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  
   public func observeForControllerAction() -> Signal<Value, Error> {
     return self.signal.observe(on: QueueScheduler.main)
   }
@@ -32,7 +30,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer.
    */
-  
   public func observeForUI() -> SignalProducer<Value, Error> {
     return self.producer.observe(on: UIScheduler())
   }
