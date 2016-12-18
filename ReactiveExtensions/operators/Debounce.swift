@@ -34,7 +34,8 @@ public extension SignalProducerProtocol {
    */
   public func ksr_debounce(
     _ interval: @autoclosure @escaping () -> TimeInterval,
-    onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> SignalProducer<Value, Error> {
+    onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol)
+    -> SignalProducer<Value, Error> {
 
       return lift { $0.ksr_debounce(interval(), onScheduler: scheduler()) }
   }
