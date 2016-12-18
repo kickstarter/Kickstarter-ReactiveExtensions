@@ -18,14 +18,14 @@ import ReactiveSwift
  */
 internal final class TestObserver <Value, Error: Swift.Error> {
 
-  internal fileprivate(set) var events: [Event<Value, Error>] = []
-  internal fileprivate(set) var observer: Observer<Value, Error>!
+  internal private(set) var events: [Event<Value, Error>] = []
+  internal private(set) var observer: Observer<Value, Error>!
 
   internal init() {
     self.observer = Observer<Value, Error>(action)
   }
 
-  fileprivate func action(_ event: Event<Value, Error>) -> () {
+  private func action(_ event: Event<Value, Error>) -> () {
     self.events.append(event)
   }
 

@@ -65,7 +65,7 @@ final class UIViewTests: XCTestCase {
     eventually(XCTAssertTrue(self.view.isHidden))
   }
 
-  fileprivate final class MockView: UIView {
+  private final class MockView: UIView {
     var callback: () -> Void = {}
 
     override var alpha: CGFloat {

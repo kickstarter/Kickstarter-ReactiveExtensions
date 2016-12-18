@@ -6,7 +6,7 @@ import UIKit
 @testable import ReactiveExtensions_TestHelpers
 
 internal final class UIButtonTests: XCTestCase {
-  fileprivate let button = UIButton()
+  private let button = UIButton()
 
   func testTitle() {
     let (signal, observer) = Signal<String, NoError>.pipe()
