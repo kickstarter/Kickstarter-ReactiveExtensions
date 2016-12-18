@@ -1,13 +1,13 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var alpha = 0
-  private static var backgroundColor = 0
-  private static var endEditing = 0
-  private static var hidden = 0
-  private static var tintColor = 0
+  fileprivate static var alpha = 0
+  fileprivate static var backgroundColor = 0
+  fileprivate static var endEditing = 0
+  fileprivate static var hidden = 0
+  fileprivate static var tintColor = 0
 }
 
 public extension Rac where Object: UIView {
@@ -30,7 +30,7 @@ public extension Rac where Object: UIView {
     nonmutating set {
       let prop: MutableProperty<UIColor> = lazyMutableProperty(object, key: &Associations.backgroundColor,
         setter: { [weak object] in object?.backgroundColor = $0 },
-        getter: { [weak object] in object?.backgroundColor ?? .clearColor() })
+        getter: { [weak object] in object?.backgroundColor ?? .clear })
 
       prop <~ newValue.observeForUI()
     }
@@ -57,8 +57,8 @@ public extension Rac where Object: UIView {
   public var hidden: Signal<Bool, NoError> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(object, key: &Associations.hidden,
-        setter: { [weak object] in object?.hidden = $0 },
-        getter: { [weak object] in object?.hidden ?? false })
+        setter: { [weak object] in object?.isHidden = $0 },
+        getter: { [weak object] in object?.isHidden ?? false })
 
       prop <~ newValue.observeForUI()
     }
@@ -74,7 +74,7 @@ public extension Rac where Object: UIView {
         object,
         key: &Associations.tintColor,
         setter: { [weak object] in object?.tintColor = $0 },
-        getter: { [weak object] in object?.tintColor ?? .clearColor() })
+        getter: { [weak object] in object?.tintColor ?? .clear })
 
       prop <~ newValue.observeForUI()
     }

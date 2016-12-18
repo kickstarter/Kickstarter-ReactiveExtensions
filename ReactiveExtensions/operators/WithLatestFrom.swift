@@ -1,8 +1,8 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
    emits.
@@ -11,7 +11,7 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  public func withLatestFrom <U, OtherError: ErrorType> (other: Signal<U, OtherError>) ->
+  public func withLatestFrom <U, OtherError: Swift.Error> (_ other: Signal<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
     return Signal { observer in
@@ -23,28 +23,28 @@ public extension SignalType {
 
       disposable += other.observe { event in
         switch event {
-        case let .Next(value):
+        case let .value(value):
           lock.lock()
           latestValue = value
           lock.unlock()
-        case let .Failed(error):
-          observer.sendFailed(error)
-        case .Completed:
+        case let .failed(error):
+          observer.send(error: error)
+        case .completed:
           observer.sendCompleted()
-        case .Interrupted:
+        case .interrupted:
           observer.sendInterrupted()
         }
       }
 
       disposable += self.signal.observe { event in
         switch event {
-        case let .Next(value):
+        case let .value(value):
           lock.lock()
           if let latestValue = latestValue {
-            observer.sendNext((value, latestValue))
+            observer.send(value: (value, latestValue))
           }
           lock.unlock()
-        case .Failed, .Completed, .Interrupted:
+        case .failed, .completed, .interrupted:
           // don't fail, complete or interrupt when the other does
           break
         }
@@ -54,7 +54,7 @@ public extension SignalType {
     }
   }
 
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
    emits.
@@ -63,7 +63,7 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  public func withLatestFrom <U, OtherError: ErrorType> (other: SignalProducer<U, OtherError>) ->
+  public func withLatestFrom <U, OtherError: Swift.Error> (_ other: SignalProducer<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
     return Signal { observer in
@@ -75,28 +75,28 @@ public extension SignalType {
 
       disposable += other.start { event in
         switch event {
-        case let .Next(value):
+        case let .value(value):
           lock.lock()
           latestValue = value
           lock.unlock()
-        case let .Failed(error):
-          observer.sendFailed(error)
-        case .Completed:
+        case let .failed(error):
+          observer.send(error: error)
+        case .completed:
           observer.sendCompleted()
-        case .Interrupted:
+        case .interrupted:
           observer.sendInterrupted()
         }
       }
 
       disposable += self.signal.observe { event in
         switch event {
-        case let .Next(value):
+        case let .value(value):
           lock.lock()
           if let latestValue = latestValue {
-            observer.sendNext((value, latestValue))
+            observer.send(value: (value, latestValue))
           }
           lock.unlock()
-        case .Failed, .Completed, .Interrupted:
+        case .failed, .completed, .interrupted:
           // don't fail, complete or interrupt when the other does
           break
         }

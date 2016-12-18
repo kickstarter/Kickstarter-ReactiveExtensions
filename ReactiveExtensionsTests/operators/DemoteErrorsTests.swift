@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -13,10 +13,10 @@ final class DemoteErrorTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     testSignal.observe(test.observer)
 
-    observer.sendNext(1)
-    observer.sendNext(2)
-    observer.sendNext(3)
-    observer.sendFailed(SomeError())
+    observer.send(value: 1)
+    observer.send(value: 2)
+    observer.send(value: 3)
+    observer.send(error: SomeError())
 
     test.assertValues([1, 2, 3])
     test.assertDidNotFail()
@@ -30,10 +30,10 @@ final class DemoteErrorTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     testSignal.observe(test.observer)
 
-    observer.sendNext(1)
-    observer.sendNext(2)
-    observer.sendNext(3)
-    observer.sendFailed(SomeError())
+    observer.send(value: 1)
+    observer.send(value: 2)
+    observer.send(value: 3)
+    observer.send(error: SomeError())
 
     test.assertValues([1, 2, 3, 99])
     test.assertDidNotFail()
@@ -42,16 +42,16 @@ final class DemoteErrorTests: XCTestCase {
 
   func testDemoteErrors_Producer_WithDefaultArguments() {
     let (signal, observer) = Signal<Int, SomeError>.pipe()
-    let producer = SignalProducer(signal: signal)
+    let producer = SignalProducer(signal)
     let testSignal = producer.demoteErrors()
 
     let test = TestObserver<Int, NoError>()
     testSignal.start(test.observer)
 
-    observer.sendNext(1)
-    observer.sendNext(2)
-    observer.sendNext(3)
-    observer.sendFailed(SomeError())
+    observer.send(value: 1)
+    observer.send(value: 2)
+    observer.send(value: 3)
+    observer.send(error: SomeError())
 
     test.assertValues([1, 2, 3])
     test.assertDidNotFail()
@@ -60,16 +60,16 @@ final class DemoteErrorTests: XCTestCase {
 
   func testDemoteErrors_Producer_WithReplacementValue() {
     let (signal, observer) = Signal<Int, SomeError>.pipe()
-    let producer = SignalProducer(signal: signal)
+    let producer = SignalProducer(signal)
     let testSignal = producer.demoteErrors(replaceErrorWith: 99)
 
     let test = TestObserver<Int, NoError>()
     testSignal.start(test.observer)
 
-    observer.sendNext(1)
-    observer.sendNext(2)
-    observer.sendNext(3)
-    observer.sendFailed(SomeError())
+    observer.send(value: 1)
+    observer.send(value: 2)
+    observer.send(value: 3)
+    observer.send(error: SomeError())
 
     test.assertValues([1, 2, 3, 99])
     test.assertDidNotFail()

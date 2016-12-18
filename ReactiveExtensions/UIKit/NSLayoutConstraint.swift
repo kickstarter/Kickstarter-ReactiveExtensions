@@ -1,9 +1,9 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var constant = 0
+  fileprivate static var constant = 0
 }
 
 public extension Rac where Object: NSLayoutConstraint {

@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -12,7 +12,7 @@ class UncollectTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     uncollected.observe(test.observer)
 
-    observer.sendNext([1, 2, 3])
+    observer.send(value: [1, 2, 3])
 
     test.assertValues([1, 2, 3])
     test.assertDidNotComplete()
@@ -27,8 +27,8 @@ class UncollectTests: XCTestCase {
     let test = TestObserver<Int, SomeError>()
     uncollected.observe(test.observer)
 
-    observer.sendNext([1, 2, 3])
-    observer.sendFailed(SomeError())
+    observer.send(value: [1, 2, 3])
+    observer.send(error: SomeError())
 
     test.assertValues([1, 2, 3])
     test.assertDidFail()
@@ -40,7 +40,7 @@ class UncollectTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     uncollected.observe(test.observer)
 
-    observer.sendNext([1, 2, 3])
+    observer.send(value: [1, 2, 3])
     observer.sendInterrupted()
 
     test.assertValues([1, 2, 3])

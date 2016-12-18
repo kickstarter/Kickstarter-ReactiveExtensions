@@ -1,8 +1,8 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  
   /**
    Scans a signal without providing an initial value. The first emission of `self` will be emitted
    immediately, and subsequent emissions will be processed by the `combine` function.
@@ -11,7 +11,7 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  public func scan(combine: (Value, Value) -> Value) -> Signal<Value, Error> {
+  public func scan(_ combine: @escaping (Value, Value) -> Value) -> Signal<Value, Error> {
     return Signal { observer in
       var accumulated: Value? = nil
 

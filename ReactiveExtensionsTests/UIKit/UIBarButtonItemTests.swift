@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -12,13 +12,13 @@ final class UIBarButtonItemTests: XCTestCase {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     barButtonItem.rac.enabled = signal
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.barButtonItem.enabled))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.barButtonItem.isEnabled))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.barButtonItem.enabled))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.barButtonItem.isEnabled))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.barButtonItem.enabled))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.barButtonItem.isEnabled))
   }
 }

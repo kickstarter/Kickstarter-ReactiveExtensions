@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
   /**
    Debounces a signal by a time interval. The resulting signal emits a value only when `interval` seconds
@@ -11,18 +11,18 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  
   public func ksr_debounce(
-    @autoclosure(escaping) interval: () -> NSTimeInterval,
-    @autoclosure(escaping) onScheduler scheduler: () -> DateSchedulerType) -> Signal<Value, Error> {
+    _ interval: @autoclosure @escaping () -> TimeInterval,
+    onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> Signal<Value, Error> {
 
-      return self.flatMap(.Latest) { next in
-        SignalProducer(value: next).delay(interval(), onScheduler: scheduler())
+      return self.flatMap(.latest) { next in
+        SignalProducer(value: next).delay(interval(), on: scheduler())
       }
   }
 }
 
-public extension SignalProducerType {
+public extension SignalProducerProtocol {
 
   /**
    Debounces a producer by a time interval. The resulting producer emits a value only when `interval` seconds
@@ -33,10 +33,10 @@ public extension SignalProducerType {
 
    - returns: A new producer.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
+  
   public func ksr_debounce(
-    @autoclosure(escaping) interval: () -> NSTimeInterval,
-    @autoclosure(escaping) onScheduler scheduler: () -> DateSchedulerType) -> SignalProducer<Value, Error> {
+    _ interval: @autoclosure @escaping () -> TimeInterval,
+    onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> SignalProducer<Value, Error> {
 
       return lift { $0.ksr_debounce(interval(), onScheduler: scheduler()) }
   }

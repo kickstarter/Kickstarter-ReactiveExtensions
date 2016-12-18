@@ -1,9 +1,9 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var enabled = 0
+  fileprivate static var enabled = 0
 }
 
 public extension Rac where Object: UIBarButtonItem {
@@ -12,8 +12,8 @@ public extension Rac where Object: UIBarButtonItem {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,
         key: &Associations.enabled,
-        setter: { [weak object] in object?.enabled = $0 ?? true },
-        getter: { [weak object] in object?.enabled ?? true })
+        setter: { [weak object] in object?.isEnabled = $0 },
+        getter: { [weak object] in object?.isEnabled ?? true })
 
       prop <~ newValue.observeForUI()
     }

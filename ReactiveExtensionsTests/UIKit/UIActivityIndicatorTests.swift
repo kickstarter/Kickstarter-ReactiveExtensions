@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -12,13 +12,13 @@ final class UIActivityIndicatorTests: XCTestCase {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     indicator.rac.animating = signal
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.indicator.isAnimating()))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.indicator.isAnimating))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.indicator.isAnimating()))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.indicator.isAnimating))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.indicator.isAnimating()))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.indicator.isAnimating))
   }
 }

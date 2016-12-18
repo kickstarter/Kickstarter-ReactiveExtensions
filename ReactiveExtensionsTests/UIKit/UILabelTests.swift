@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -12,10 +12,10 @@ final class UILabelTests: XCTestCase {
     let (signal, observer) = Signal<String, NoError>.pipe()
     label.rac.text = signal
 
-    observer.sendNext("The future")
+    observer.send(value: "The future")
     eventually(XCTAssertEqual("The future", self.label.text))
 
-    observer.sendNext("")
+    observer.send(value: "")
     eventually(XCTAssertEqual("", self.label.text))
   }
 
@@ -23,9 +23,9 @@ final class UILabelTests: XCTestCase {
     let (signal, observer) = Signal<UIFont, NoError>.pipe()
     label.rac.font = signal
 
-    let font = UIFont.systemFontOfSize(16.0)
+    let font = UIFont.systemFont(ofSize: 16.0)
 
-    observer.sendNext(font)
+    observer.send(value: font)
     eventually(XCTAssertEqual(font, self.label.font))
   }
 
@@ -33,9 +33,9 @@ final class UILabelTests: XCTestCase {
     let (signal, observer) = Signal<UIColor, NoError>.pipe()
     label.rac.textColor = signal
 
-    let color = UIColor.redColor()
+    let color = UIColor.red
 
-    observer.sendNext(color)
+    observer.send(value: color)
     eventually(XCTAssertEqual(color, self.label.textColor))
   }
 }

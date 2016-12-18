@@ -1,18 +1,18 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var enabled = 0
-  private static var selected = 1
+  fileprivate static var enabled = 0
+  fileprivate static var selected = 1
 }
 
 public extension Rac where Object: UIControl {
   public var enabled: Signal<Bool, NoError> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(object, key: &Associations.enabled,
-        setter: { [weak object] in object?.enabled = $0 },
-        getter: { [weak object] in object?.enabled ?? true })
+        setter: { [weak object] in object?.isEnabled = $0 },
+        getter: { [weak object] in object?.isEnabled ?? true })
 
       prop <~ newValue.observeForUI()
     }
@@ -26,8 +26,8 @@ public extension Rac where Object: UIControl {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object, key: &Associations.selected,
-        setter: { [weak object] in object?.selected = $0 },
-        getter: { [weak object] in object?.selected ?? false })
+        setter: { [weak object] in object?.isSelected = $0 },
+        getter: { [weak object] in object?.isSelected ?? false })
 
       prop <~ newValue.observeForUI()
     }

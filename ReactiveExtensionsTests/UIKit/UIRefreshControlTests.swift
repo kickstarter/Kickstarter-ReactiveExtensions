@@ -1,6 +1,6 @@
 #if os(iOS)
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -13,14 +13,14 @@ final class UIRefreshControlTests: XCTestCase {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     control.rac.refreshing = signal
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.control.refreshing))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.control.isRefreshing))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.control.refreshing))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.control.isRefreshing))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.control.refreshing))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.control.isRefreshing))
   }
 }
 #endif

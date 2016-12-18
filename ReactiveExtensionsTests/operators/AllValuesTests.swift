@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -7,7 +7,7 @@ import Result
 final class AllValuesTests: XCTestCase {
 
   func testAllValues() {
-    let producer = SignalProducer<Int, NoError>(values: [1, 2, 3, 4])
+    let producer = SignalProducer<Int, NoError>([1, 2, 3, 4])
     XCTAssertEqual([1, 2, 3, 4], producer.allValues())
   }
 }

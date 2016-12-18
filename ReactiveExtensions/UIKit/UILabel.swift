@@ -1,12 +1,12 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var attributedText = 0
-  private static var font = 1
-  private static var text = 2
-  private static var textColor = 3
+  fileprivate static var attributedText = 0
+  fileprivate static var font = 1
+  fileprivate static var text = 2
+  fileprivate static var textColor = 3
 }
 
 public extension Rac where Object: UILabel {
@@ -48,7 +48,7 @@ public extension Rac where Object: UILabel {
         object,
         key: &Associations.font,
         setter: { [weak object] in object?.font = $0 },
-        getter: { [weak object] in object?.font ?? .systemFontOfSize(12.0) })
+        getter: { [weak object] in object?.font ?? .systemFont(ofSize: 12.0) })
 
       prop <~ newValue.observeForUI()
     }
@@ -64,7 +64,7 @@ public extension Rac where Object: UILabel {
         object,
         key: &Associations.textColor,
         setter: { [weak object] in object?.textColor = $0 },
-        getter: { [weak object] in object?.textColor ?? .blackColor() })
+        getter: { [weak object] in object?.textColor ?? .black })
 
       prop <~ newValue.observeForUI()
     }

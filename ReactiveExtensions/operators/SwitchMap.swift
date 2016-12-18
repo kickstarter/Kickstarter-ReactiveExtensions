@@ -1,27 +1,27 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func switchMap <U> (f: Value -> SignalProducer<U, Error>) -> Signal<U, Error> {
-    return self.signal.flatMap(.Latest, transform: f)
+  
+  public func switchMap <U> (_ f: @escaping (Value) -> SignalProducer<U, Error>) -> Signal<U, Error> {
+    return self.signal.flatMap(.latest, transform: f)
   }
 
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func switchMap <U> (f: Value -> Signal<U, Error>) -> Signal<U, Error> {
-    return self.signal.flatMap(.Latest, transform: f)
+  
+  public func switchMap <U> (_ f: @escaping (Value) -> Signal<U, Error>) -> Signal<U, Error> {
+    return self.signal.flatMap(.latest, transform: f)
   }
 }
 
-public extension SignalProducerType {
+public extension SignalProducerProtocol {
 
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func switchMap <U> (f: Value -> SignalProducer<U, Error>) -> SignalProducer<U, Error> {
-    return self.producer.flatMap(.Latest, transform: f)
+  
+  public func switchMap <U> (_ f: @escaping (Value) -> SignalProducer<U, Error>) -> SignalProducer<U, Error> {
+    return self.producer.flatMap(.latest, transform: f)
   }
 
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func switchMap <U> (f: Value -> Signal<U, Error>) -> SignalProducer<U, Error> {
-    return self.producer.flatMap(.Latest, transform: f)
+  
+  public func switchMap <U> (_ f: @escaping (Value) -> Signal<U, Error>) -> SignalProducer<U, Error> {
+    return self.producer.flatMap(.latest, transform: f)
   }
 }

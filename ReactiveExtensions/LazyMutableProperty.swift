@@ -1,4 +1,4 @@
-import ReactiveCocoa
+import ReactiveSwift
 
 /**
  Associates a key/`MutableProperty` pair to a host object.
@@ -11,11 +11,11 @@ import ReactiveCocoa
 
  - returns:
  */
-public func lazyMutableProperty<T>(host: AnyObject, key: UnsafePointer<Void>, setter: T -> (),
-                                  getter: () -> T) -> MutableProperty<T> {
+public func lazyMutableProperty<T>(_ host: AnyObject, key: UnsafeRawPointer, setter: @escaping (T) -> (),
+                                  getter: @escaping () -> T) -> MutableProperty<T> {
   return lazyAssociatedProperty(host, key: key) {
     let property = MutableProperty<T>(getter())
-    property.producer.skip(1).startWithNext { value in
+    property.producer.skip(first: 1).startWithValues { value in
       setter(value)
     }
     return property

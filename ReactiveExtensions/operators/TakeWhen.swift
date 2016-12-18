@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
   /**
    Emits the most recent value of `self` when `other` emits.
@@ -9,12 +9,12 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func takeWhen <U> (other: Signal<U, Error>) -> Signal<Value, Error> {
+  
+  public func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
     return other.withLatestFrom(self.signal).map { tuple in tuple.1 }
   }
 
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
+  
   /**
    Emits the most recent value of `self` and `other` when `other` emits.
 
@@ -22,12 +22,12 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  public func takePairWhen <U> (other: Signal<U, Error>) -> Signal<(Value, U), Error> {
+  public func takePairWhen <U> (_ other: Signal<U, Error>) -> Signal<(Value, U), Error> {
     return other.withLatestFrom(self.signal).map { ($0.1, $0.0) }
   }
 }
 
-public extension SignalProducerType {
+public extension SignalProducerProtocol {
 
   /**
    Emits the most recent value of `self` when `other` emits.
@@ -36,12 +36,12 @@ public extension SignalProducerType {
 
    - returns: A new producer.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func takeWhen <U> (other: Signal<U, Error>) -> Signal<Value, Error> {
+  
+  public func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
     return other.withLatestFrom(self.producer).map { $0.1 }
   }
 
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
+  
   /**
    Emits the most recent value of `self` and `other` when `other` emits.
 
@@ -49,7 +49,7 @@ public extension SignalProducerType {
 
    - returns: A new producer.
    */
-  public func takePairWhen <U> (other: Signal<U, Error>) -> Signal<(Value, U), Error> {
+  public func takePairWhen <U> (_ other: Signal<U, Error>) -> Signal<(Value, U), Error> {
     return other.withLatestFrom(self.producer).map { ($0.1, $0.0) }
   }
 }

@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -12,13 +12,13 @@ final class NSLayoutConstraintTests: XCTestCase {
     let (signal, observer) = Signal<CGFloat, NoError>.pipe()
     constraint.rac.constant = signal
 
-    observer.sendNext(1.0)
+    observer.send(value: 1.0)
     eventually(XCTAssertEqual(1.0, self.constraint.constant))
 
-    observer.sendNext(0.0)
+    observer.send(value: 0.0)
     eventually(XCTAssertEqual(0.0, self.constraint.constant))
 
-    observer.sendNext(-1.0)
+    observer.send(value: -1.0)
     eventually(XCTAssertEqual(-1.0, self.constraint.constant))
   }
 }

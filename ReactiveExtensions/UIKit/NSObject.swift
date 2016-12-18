@@ -1,14 +1,14 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var accessibilityElementsHidden = 0
-  private static var accessibilityHint = 1
-  private static var accessibilityLabel = 2
-  private static var accessibilityTraits = 3
-  private static var accessibilityValue = 4
-  private static var isAccessibilityElement = 5
+  fileprivate static var accessibilityElementsHidden = 0
+  fileprivate static var accessibilityHint = 1
+  fileprivate static var accessibilityLabel = 2
+  fileprivate static var accessibilityTraits = 3
+  fileprivate static var accessibilityValue = 4
+  fileprivate static var isAccessibilityElement = 5
 }
 
 public extension Rac where Object: NSObject {

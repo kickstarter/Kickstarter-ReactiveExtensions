@@ -1,9 +1,9 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 
 // Assert equality between two doubly nested arrays of equatables.
-internal func XCTAssertEqual<T: Equatable>(@autoclosure expression1: () -> [[T]],
-  @autoclosure _ expression2: () -> [[T]], _ message: String = "",
+internal func XCTAssertEqual<T: Equatable>(_ expression1: @autoclosure () -> [[T]],
+  _ expression2: @autoclosure () -> [[T]], _ message: String = "",
                  file: StaticString = #file, line: UInt = #line) {
 
     let lhs = expression1()
@@ -17,9 +17,9 @@ internal func XCTAssertEqual<T: Equatable>(@autoclosure expression1: () -> [[T]]
 }
 
 // Assert equality between arrays of optionals of equatables.
-internal func XCTAssertEqual <T: ReactiveCocoa.OptionalType where T.Wrapped: Equatable>
-  (expression1: [T], _ expression2: [T], _ message: String = "",
-   file: StaticString = #file, line: UInt = #line) {
+internal func XCTAssertEqual <T: ReactiveSwift.OptionalProtocol>
+  (_ expression1: [T], _ expression2: [T], _ message: String = "",
+   file: StaticString = #file, line: UInt = #line) where T.Wrapped: Equatable {
 
   XCTAssertEqual(
     expression1.count, expression2.count,

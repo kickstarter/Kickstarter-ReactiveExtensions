@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -14,11 +14,11 @@ final class ConcatTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     concat.observe(test.observer)
 
-    o1.sendNext(1)
-    o1.sendNext(2)
+    o1.send(value: 1)
+    o1.send(value: 2)
     o1.sendCompleted()
-    o2.sendNext(3)
-    o2.sendNext(4)
+    o2.send(value: 3)
+    o2.send(value: 4)
     o2.sendCompleted()
 
     test.assertValues([1, 2, 3, 4])
@@ -27,19 +27,19 @@ final class ConcatTests: XCTestCase {
   func testProducer_Concat() {
     let (s1, o1) = Signal<Int, NoError>.pipe()
     let (s2, o2) = Signal<Int, NoError>.pipe()
-    let p1 = SignalProducer(signal: s1)
-    let p2 = SignalProducer(signal: s2)
+    let p1 = SignalProducer(s1)
+    let p2 = SignalProducer(s2)
 
     let concat = SignalProducer.concat(p1, p2)
 
     let test = TestObserver<Int, NoError>()
     concat.start(test.observer)
 
-    o1.sendNext(1)
-    o1.sendNext(2)
+    o1.send(value: 1)
+    o1.send(value: 2)
     o1.sendCompleted()
-    o2.sendNext(3)
-    o2.sendNext(4)
+    o2.send(value: 3)
+    o2.send(value: 4)
     o2.sendCompleted()
 
     test.assertValues([1, 2, 3, 4])

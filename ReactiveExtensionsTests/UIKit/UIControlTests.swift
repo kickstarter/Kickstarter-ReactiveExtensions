@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -13,27 +13,27 @@ final class UIControlTests: XCTestCase {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     control.rac.enabled = signal
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.control.enabled))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.control.isEnabled))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.control.enabled))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.control.isEnabled))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.control.enabled))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.control.isEnabled))
   }
 
   func testSelected() {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     control.rac.selected = signal
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.control.selected))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.control.isSelected))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.control.selected))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.control.isSelected))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.control.selected))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.control.isSelected))
   }
 }

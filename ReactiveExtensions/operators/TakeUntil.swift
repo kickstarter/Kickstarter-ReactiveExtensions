@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-extension SignalType {
+extension SignalProtocol {
 
   /**
    - parameter predicate: A function that determines when to terminate the signal.
@@ -8,12 +8,12 @@ extension SignalType {
    - returns: A signal that emits values up to, and including, when `predicate` returns true. Once
               `predicate` returns false the signal is completed.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func takeUntil(predicate: Value -> Bool) -> Signal<Value, Error> {
+  
+  public func takeUntil(_ predicate: @escaping (Value) -> Bool) -> Signal<Value, Error> {
     return Signal { observer in
       return self.observe { event in
-        if case let .Next(value) = event where predicate(value) {
-          observer.sendNext(value)
+        if case let .value(value) = event, predicate(value) {
+          observer.send(value: value)
           observer.sendCompleted()
         } else {
           observer.action(event)
@@ -23,7 +23,7 @@ extension SignalType {
   }
 }
 
-extension SignalProducerType {
+extension SignalProducerProtocol {
 
   /**
    - parameter predicate: A function that determines when to terminate the signal.
@@ -31,8 +31,8 @@ extension SignalProducerType {
    - returns: A signal that emits values up to, and including, when `predicate` returns false. Once
               `predicate` returns false the signal is completed.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func takeUntil(predicate: Value -> Bool) -> SignalProducer<Value, Error> {
+  
+  public func takeUntil(_ predicate: @escaping (Value) -> Bool) -> SignalProducer<Value, Error> {
     return lift { $0.takeUntil(predicate) }
   }
 }

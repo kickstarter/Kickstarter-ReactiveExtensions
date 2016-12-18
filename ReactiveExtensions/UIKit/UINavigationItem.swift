@@ -1,9 +1,9 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var title = 0
+  fileprivate static var title = 0
 }
 
 public extension Rac where Object: UINavigationItem {

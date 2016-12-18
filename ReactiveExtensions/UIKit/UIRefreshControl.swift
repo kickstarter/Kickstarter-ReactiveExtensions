@@ -1,10 +1,10 @@
 #if os(iOS)
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var isRefreshing = 0
+  fileprivate static var isRefreshing = 0
 }
 
 public extension Rac where Object: UIRefreshControl {
@@ -14,7 +14,7 @@ public extension Rac where Object: UIRefreshControl {
         object,
         key: &Associations.isRefreshing,
         setter: { [weak object] in $0 ? object?.beginRefreshing() : object?.endRefreshing() },
-        getter: { [weak object] in object?.refreshing ?? false })
+        getter: { [weak object] in object?.isRefreshing ?? false })
 
       prop <~ newValue.observeForUI()
     }

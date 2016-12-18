@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -13,25 +13,25 @@ final class DebounceTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     debounced.observe(test.observer)
 
-    observer.sendNext(1)
+    observer.send(value: 1)
     test.assertDidNotEmitValue()
 
-    observer.sendNext(2)
+    observer.send(value: 2)
     test.assertDidNotEmitValue()
 
-    scheduler.advanceByInterval(0.3)
+    scheduler.advance(by: .milliseconds(300))
     test.assertDidNotEmitValue()
 
-    observer.sendNext(3)
+    observer.send(value: 3)
     test.assertDidNotEmitValue()
 
-    scheduler.advanceByInterval(0.8)
+    scheduler.advance(by: .milliseconds(800))
     test.assertValues([3])
 
-    observer.sendNext(4)
+    observer.send(value: 4)
     test.assertValues([3])
 
-    scheduler.advanceByInterval(0.6)
+    scheduler.advance(by: .milliseconds(600))
     test.assertValues([3, 4])
   }
 }

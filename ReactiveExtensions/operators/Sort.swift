@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType where Value: SequenceType, Value.Generator.Element: Comparable {
+public extension SignalProtocol where Value: Sequence, Value.Iterator.Element: Comparable {
 
   /**
    Transforms a signal of sequences into a signal of ordered arrays by using the sequence element's
@@ -8,13 +8,13 @@ public extension SignalType where Value: SequenceType, Value.Generator.Element: 
 
    - returns: The sorted signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  func sort() -> Signal<[Value.Generator.Element], Error> {
-    return self.signal.map { x in x.sort() }
+  
+  func sort() -> Signal<[Value.Iterator.Element], Error> {
+    return self.signal.map { x in x.sorted() }
   }
 }
 
-public extension SignalType where Value: SequenceType {
+public extension SignalProtocol where Value: Sequence {
 
   /**
    Transforms a signal of sequences into a signal of ordered arrays by using the function passed in.
@@ -23,15 +23,15 @@ public extension SignalType where Value: SequenceType {
 
    - returns: The sorted signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func sort(isOrderedBefore: (Value.Generator.Element, Value.Generator.Element) -> Bool) ->
-    Signal<[Value.Generator.Element], Error> {
+  
+  public func sort(_ isOrderedBefore: @escaping (Value.Iterator.Element, Value.Iterator.Element) -> Bool) ->
+    Signal<[Value.Iterator.Element], Error> {
 
-    return self.signal.map { (x: Value) in x.sort(isOrderedBefore) }
+    return self.signal.map { (x: Value) in x.sorted(by: isOrderedBefore) }
   }
 }
 
-public extension SignalProducerType where Value: SequenceType, Value.Generator.Element: Comparable {
+public extension SignalProducerProtocol where Value: Sequence, Value.Iterator.Element: Comparable {
 
   /**
    Transforms a producer of sequences into a producer of ordered arrays by using the sequence element's
@@ -39,13 +39,13 @@ public extension SignalProducerType where Value: SequenceType, Value.Generator.E
 
    - returns: The sorted producer.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  func sort() -> SignalProducer<[Value.Generator.Element], Error> {
+  
+  func sort() -> SignalProducer<[Value.Iterator.Element], Error> {
     return lift { $0.sort() }
   }
 }
 
-public extension SignalProducerType where Value: SequenceType {
+public extension SignalProducerProtocol where Value: Sequence {
 
   /**
    Transforms a producer of sequences into a producer of ordered arrays by using the function passed in.
@@ -54,9 +54,9 @@ public extension SignalProducerType where Value: SequenceType {
 
    - returns: The sorted producer.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func sort(isOrderedBefore: (Value.Generator.Element, Value.Generator.Element) -> Bool) ->
-    SignalProducer<[Value.Generator.Element], Error> {
+  
+  public func sort(_ isOrderedBefore: @escaping (Value.Iterator.Element, Value.Iterator.Element) -> Bool) ->
+    SignalProducer<[Value.Iterator.Element], Error> {
 
     return lift { $0.sort(isOrderedBefore) }
   }
