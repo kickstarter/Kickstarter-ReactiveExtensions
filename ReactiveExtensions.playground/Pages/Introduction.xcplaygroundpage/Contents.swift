@@ -54,7 +54,7 @@ import Result
  optional values, and then immediately follow it with an `ignoreNil` in order to filter out
  all `nil` values:
 
- user.map { u in u.location }.ignoreNil()
+ user.map { u in u.location }.skipNil()
 
  We decided to make these two chained operators into a single one, simply called `flatMap`:
 
