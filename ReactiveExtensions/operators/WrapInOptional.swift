@@ -19,7 +19,6 @@ public extension SignalProducerProtocol {
 
    - returns: A new producer.
    */
-  @available(*, deprecated, message: "Use ReactiveSwift’s `optionalize` instead.")
   public func wrapInOptional() -> SignalProducer<Value?, Error> {
     return lift { $0.wrapInOptional() }
   }
