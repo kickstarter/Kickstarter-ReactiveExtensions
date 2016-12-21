@@ -13,7 +13,7 @@ public extension SignalProtocol {
    */
   public func ksr_debounce(
     _ interval: @autoclosure @escaping () -> TimeInterval,
-    onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> Signal<Value, Error> {
+    on scheduler: @autoclosure @escaping () -> DateSchedulerProtocol) -> Signal<Value, Error> {
 
       return self.flatMap(.latest) { next in
         SignalProducer(value: next).delay(interval(), on: scheduler())
@@ -34,9 +34,9 @@ public extension SignalProducerProtocol {
    */
   public func ksr_debounce(
     _ interval: @autoclosure @escaping () -> TimeInterval,
-    onScheduler scheduler: @autoclosure @escaping () -> DateSchedulerProtocol)
+    on scheduler: @autoclosure @escaping () -> DateSchedulerProtocol)
     -> SignalProducer<Value, Error> {
 
-      return lift { $0.ksr_debounce(interval(), onScheduler: scheduler()) }
+      return lift { $0.ksr_debounce(interval(), on: scheduler()) }
   }
 }
