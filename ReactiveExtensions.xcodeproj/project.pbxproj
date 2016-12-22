@@ -23,6 +23,10 @@
 		8096F2A31CC92AAF00231D91 /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A11CC92AAF00231D91 /* UILabelTests.swift */; };
 		8096F2A51CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
 		8096F2A61CC92AB600231D91 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096F2A41CC92AB600231D91 /* UIViewTests.swift */; };
+		A712EBA01E0C469D00614340 /* DispatchTimeInterval-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712EB9F1E0C469D00614340 /* DispatchTimeInterval-Extensions.swift */; };
+		A712EBA11E0C469D00614340 /* DispatchTimeInterval-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712EB9F1E0C469D00614340 /* DispatchTimeInterval-Extensions.swift */; };
+		A712EBA31E0C579700614340 /* KsrDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712EBA21E0C579700614340 /* KsrDelay.swift */; };
+		A712EBA41E0C579700614340 /* KsrDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712EBA21E0C579700614340 /* KsrDelay.swift */; };
 		A713EC791C2B55EB00B6234E /* SlidingWindowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */; };
 		A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */; };
 		A713EC7F1C2B83FF00B6234E /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */; };
@@ -116,7 +120,7 @@
 		A7C5104E1C27346B00C59136 /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104D1C27346B00C59136 /* TakeWhen.swift */; };
 		A7C510501C2734D100C59136 /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104F1C2734D100C59136 /* CombinePrevious.swift */; };
 		A7C510521C2734F100C59136 /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
-		A7C510541C27351F00C59136 /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* Debounce.swift */; };
+		A7C510541C27351F00C59136 /* KsrDebounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* KsrDebounce.swift */; };
 		A7C510561C27358300C59136 /* MapConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510551C27358300C59136 /* MapConst.swift */; };
 		A7C5105A1C2735F500C59136 /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510591C2735F500C59136 /* ObserveForUI.swift */; };
 		A7C5105C1C27362000C59136 /* WrapInOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105B1C27362000C59136 /* WrapInOptional.swift */; };
@@ -143,7 +147,7 @@
 		A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */; };
 		A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510671C2737C500C59136 /* ConcatMap.swift */; };
 		A7FD088F1C81EDBD00332CCB /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104D1C27346B00C59136 /* TakeWhen.swift */; };
-		A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* Debounce.swift */; };
+		A7FD08911C81EDBD00332CCB /* KsrDebounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* KsrDebounce.swift */; };
 		A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105F1C2736D400C59136 /* DemoteErrors.swift */; };
 		A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510491C2733F600C59136 /* IgnoreValues.swift */; };
 		A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510471C2721CA00C59136 /* Uncollect.swift */; };
@@ -378,6 +382,8 @@
 		8096F29E1CC92AA700231D91 /* UIControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlTests.swift; sourceTree = "<group>"; };
 		8096F2A11CC92AAF00231D91 /* UILabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTests.swift; sourceTree = "<group>"; };
 		8096F2A41CC92AB600231D91 /* UIViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
+		A712EB9F1E0C469D00614340 /* DispatchTimeInterval-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchTimeInterval-Extensions.swift"; sourceTree = "<group>"; };
+		A712EBA21E0C579700614340 /* KsrDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KsrDelay.swift; sourceTree = "<group>"; };
 		A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SlidingWindowTest.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MapConstTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A713EC7E1C2B83FF00B6234E /* DebounceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DebounceTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -437,7 +443,7 @@
 		A7C5104D1C27346B00C59136 /* TakeWhen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeWhen.swift; sourceTree = "<group>"; };
 		A7C5104F1C2734D100C59136 /* CombinePrevious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinePrevious.swift; sourceTree = "<group>"; };
 		A7C510511C2734F100C59136 /* SlidingWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingWindow.swift; sourceTree = "<group>"; };
-		A7C510531C27351F00C59136 /* Debounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
+		A7C510531C27351F00C59136 /* KsrDebounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KsrDebounce.swift; sourceTree = "<group>"; };
 		A7C510551C27358300C59136 /* MapConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConst.swift; sourceTree = "<group>"; };
 		A7C510591C2735F500C59136 /* ObserveForUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserveForUI.swift; sourceTree = "<group>"; };
 		A7C5105B1C27362000C59136 /* WrapInOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapInOptional.swift; sourceTree = "<group>"; };
@@ -536,6 +542,14 @@
 				59DB70551D00DC9B00BCE6A9 /* UISwitchTests.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A712EB931E0C468A00614340 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A712EB9F1E0C469D00614340 /* DispatchTimeInterval-Extensions.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		A77966E81C2B018F0002166F /* ReactiveExtensionsTests */ = {
@@ -641,13 +655,14 @@
 				A7C5104F1C2734D100C59136 /* CombinePrevious.swift */,
 				A7180BD91CCFB0BE001711CA /* Concat.swift */,
 				A7C510671C2737C500C59136 /* ConcatMap.swift */,
-				A7C510531C27351F00C59136 /* Debounce.swift */,
 				A7C5105F1C2736D400C59136 /* DemoteErrors.swift */,
 				A72942A71DE2459000BB3455 /* Enumerated.swift */,
 				A72E75361CC1849B00983066 /* Errors.swift */,
 				A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */,
 				A7C510651C27378A00C59136 /* FlatMap.swift */,
 				A7C510491C2733F600C59136 /* IgnoreValues.swift */,
+				A7C510531C27351F00C59136 /* KsrDebounce.swift */,
+				A712EBA21E0C579700614340 /* KsrDelay.swift */,
 				A7C510551C27358300C59136 /* MapConst.swift */,
 				A7C510691C27380700C59136 /* MergeMap.swift */,
 				A7C510611C27371E00C59136 /* MergeWith.swift */,
@@ -720,6 +735,7 @@
 				CA43C6681BB35FCF00C180DA /* Info.plist */,
 				A7983B571C2AF232003A1ABE /* LazyAssociatedProperty.swift */,
 				A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */,
+				A712EB931E0C468A00614340 /* helpers */,
 				A7C510441C2720C900C59136 /* operators */,
 				A7983B5B1C2AF88A003A1ABE /* UIKit */,
 			);
@@ -1167,18 +1183,20 @@
 				A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */,
 				A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
+				A712EBA31E0C579700614340 /* KsrDelay.swift in Sources */,
 				A74FFEC31CE4ECC900C7BCB9 /* UIResponder.swift in Sources */,
 				A74FFDF51CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
 				A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */,
 				A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */,
 				A72E75281CC1849100983066 /* Values.swift in Sources */,
 				A7FD088F1C81EDBD00332CCB /* TakeWhen.swift in Sources */,
-				A7FD08911C81EDBD00332CCB /* Debounce.swift in Sources */,
+				A7FD08911C81EDBD00332CCB /* KsrDebounce.swift in Sources */,
 				A7FD08921C81EDBD00332CCB /* DemoteErrors.swift in Sources */,
 				A7FD08931C81EDBD00332CCB /* IgnoreValues.swift in Sources */,
 				A7141E891CFCE1BB00F1A9BE /* UIButton.swift in Sources */,
 				A72E75371CC1849B00983066 /* Errors.swift in Sources */,
 				A747A8201D455E1700AF199A /* UIStackView.swift in Sources */,
+				A712EBA01E0C469D00614340 /* DispatchTimeInterval-Extensions.swift in Sources */,
 				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
 				A743813D1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7FD08971C81EDBD00332CCB /* FlatMap.swift in Sources */,
@@ -1254,18 +1272,20 @@
 				A7C510521C2734F100C59136 /* SlidingWindow.swift in Sources */,
 				A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7CDB0C61C2758D80013A8F3 /* FilterWhenLatestFrom.swift in Sources */,
+				A712EBA41E0C579700614340 /* KsrDelay.swift in Sources */,
 				A74FFEC41CE4ECC900C7BCB9 /* UIResponder.swift in Sources */,
 				A74FFDF61CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
 				A7983B5A1C2AF7E8003A1ABE /* LazyMutableProperty.swift in Sources */,
 				A7C510681C2737C500C59136 /* ConcatMap.swift in Sources */,
 				A72E75291CC1849100983066 /* Values.swift in Sources */,
 				A7C5104E1C27346B00C59136 /* TakeWhen.swift in Sources */,
-				A7C510541C27351F00C59136 /* Debounce.swift in Sources */,
+				A7C510541C27351F00C59136 /* KsrDebounce.swift in Sources */,
 				A7C510601C2736D400C59136 /* DemoteErrors.swift in Sources */,
 				A7C5104A1C2733F600C59136 /* IgnoreValues.swift in Sources */,
 				A7141E8A1CFCE1BB00F1A9BE /* UIButton.swift in Sources */,
 				A72E75381CC1849B00983066 /* Errors.swift in Sources */,
 				A747A8211D455E1700AF199A /* UIStackView.swift in Sources */,
+				A712EBA11E0C469D00614340 /* DispatchTimeInterval-Extensions.swift in Sources */,
 				A7C510481C2721CA00C59136 /* Uncollect.swift in Sources */,
 				A743813E1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7C510661C27378A00C59136 /* FlatMap.swift in Sources */,
