@@ -25,7 +25,7 @@ internal final class TestObserver <Value, Error: Swift.Error> {
     self.observer = Observer<Value, Error>(action)
   }
 
-  private func action(_ event: Event<Value, Error>) -> () {
+  private func action(_ event: Event<Value, Error>) -> Void {
     self.events.append(event)
   }
 

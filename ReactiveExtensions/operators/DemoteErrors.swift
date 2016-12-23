@@ -14,7 +14,7 @@ public extension SignalProtocol {
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, NoError> {
 
     return self.signal
-      .flatMapError { error in
+      .flatMapError { _ in
         if let value = value {
           return SignalProducer(value: value)
         }

@@ -11,7 +11,7 @@ import ReactiveSwift
 
  - returns:
  */
-public func lazyMutableProperty<T>(_ host: AnyObject, key: UnsafeRawPointer, setter: @escaping (T) -> (),
+public func lazyMutableProperty<T>(_ host: AnyObject, key: UnsafeRawPointer, setter: @escaping (T) -> Void,
                                   getter: @escaping () -> T) -> MutableProperty<T> {
   return lazyAssociatedProperty(host, key: key) {
     let property = MutableProperty<T>(getter())
