@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -12,13 +12,13 @@ internal final class UIButtonTests: XCTestCase {
     let (signal, observer) = Signal<String, NoError>.pipe()
     button.rac.title = signal
 
-    observer.sendNext("Hello")
-    eventually(XCTAssertEqual("Hello", self.button.titleForState(.Normal)))
+    observer.send(value: "Hello")
+    eventually(XCTAssertEqual("Hello", self.button.title(for: .normal)))
 
-    observer.sendNext("Hello World")
-    eventually(XCTAssertEqual("Hello World", self.button.titleForState(.Normal)))
+    observer.send(value: "Hello World")
+    eventually(XCTAssertEqual("Hello World", self.button.title(for: .normal)))
 
-    observer.sendNext("")
-    eventually(XCTAssertEqual("", self.button.titleForState(.Normal)))
+    observer.send(value: "")
+    eventually(XCTAssertEqual("", self.button.title(for: .normal)))
   }
 }

@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -16,17 +16,17 @@ final class EnumeratedTests: XCTestCase {
     testIdx.assertValues([])
     testValue.assertValues([])
 
-    observer.sendNext("hello")
+    observer.send(value: "hello")
 
     testIdx.assertValues([0])
     testValue.assertValues(["hello"])
 
-    observer.sendNext("world")
+    observer.send(value: "world")
 
     testIdx.assertValues([0, 1])
     testValue.assertValues(["hello", "world"])
 
-    observer.sendNext("goodbye")
+    observer.send(value: "goodbye")
 
     testIdx.assertValues([0, 1, 2])
     testValue.assertValues(["hello", "world", "goodbye"])

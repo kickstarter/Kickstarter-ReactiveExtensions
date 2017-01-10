@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -12,10 +12,10 @@ final class ScanTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     scan.observe(test.observer)
 
-    observer.sendNext(1)
-    observer.sendNext(2)
-    observer.sendNext(3)
-    observer.sendNext(4)
+    observer.send(value: 1)
+    observer.send(value: 2)
+    observer.send(value: 3)
+    observer.send(value: 4)
 
     test.assertValues([1, 3, 6, 10])
 

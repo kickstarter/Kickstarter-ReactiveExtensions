@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-extension SignalType {
+extension SignalProtocol {
   /**
    Transforms a signal into one that also emits the index count of the emission, i.e. a signal with emissions
 

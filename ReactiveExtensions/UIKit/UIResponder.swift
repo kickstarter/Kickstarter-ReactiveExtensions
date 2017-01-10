@@ -1,10 +1,10 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var becomeFirstResponder = 0
-  private static var firstResponder = 1
+  fileprivate static var becomeFirstResponder = 0
+  fileprivate static var firstResponder = 1
 }
 
 public extension Rac where Object: UIResponder {
@@ -31,8 +31,10 @@ public extension Rac where Object: UIResponder {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,
         key: &Associations.firstResponder,
-        setter: { [weak object] in $0 ? object?.becomeFirstResponder() : object?.resignFirstResponder() },
-        getter: { [weak object] in object?.isFirstResponder() ?? false })
+        setter: { [weak object] in
+          _ = $0 ? object?.becomeFirstResponder() : object?.resignFirstResponder()
+        },
+        getter: { [weak object] in object?.isFirstResponder ?? false })
 
       prop <~ newValue.observeForUI()
     }

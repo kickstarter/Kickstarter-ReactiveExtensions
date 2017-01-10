@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
   /**
    Transform a signal into a window of previous values.
@@ -10,8 +10,7 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func slidingWindow (max max: Int, min: Int) -> Signal<[Value], Error> {
+  public func slidingWindow (max: Int, min: Int) -> Signal<[Value], Error> {
     return signal
       .scan([Value]()) { window, value in
 
@@ -26,7 +25,7 @@ public extension SignalType {
   }
 }
 
-public extension SignalProducerType {
+public extension SignalProducerProtocol {
 
   /**
    Transform a producer into a window of previous values.
@@ -36,8 +35,7 @@ public extension SignalProducerType {
 
    - returns: A new producer.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func slidingWindow (max max: Int, min: Int) -> SignalProducer<[Value], Error> {
+  public func slidingWindow (max: Int, min: Int) -> SignalProducer<[Value], Error> {
     return lift { $0.slidingWindow(max: max, min: min) }
   }
 }

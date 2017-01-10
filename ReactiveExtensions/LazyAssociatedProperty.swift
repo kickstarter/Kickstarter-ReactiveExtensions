@@ -17,8 +17,8 @@ import Foundation
  - returns: If an object is already associated to the host with the give key that object will be returned.
  Otherwise the `factory` closure is invoked and that value is returned.
  */
-internal func lazyAssociatedProperty <T: AnyObject> (host: AnyObject, key: UnsafePointer<Void>,
-                                      factory: Void -> T) -> T {
+internal func lazyAssociatedProperty <T: AnyObject> (_ host: AnyObject, key: UnsafeRawPointer,
+                                      factory: (Void) -> T) -> T {
 
   if let value = objc_getAssociatedObject(host, key) as? T {
     return value

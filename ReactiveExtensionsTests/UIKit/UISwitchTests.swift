@@ -1,6 +1,6 @@
 #if os(iOS)
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -13,14 +13,14 @@ internal final class UISwitchTests: XCTestCase {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     uiSwitch.rac.on = signal
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.uiSwitch.on))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.uiSwitch.isOn))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.uiSwitch.on))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.uiSwitch.isOn))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.uiSwitch.on))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.uiSwitch.isOn))
   }
 }
 #endif

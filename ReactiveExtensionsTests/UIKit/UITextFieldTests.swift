@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -12,10 +12,10 @@ final class UITextFieldTests: XCTestCase {
     let (signal, observer) = Signal<String, NoError>.pipe()
     textField.rac.text = signal
 
-    observer.sendNext("The future")
+    observer.send(value: "The future")
     eventually(XCTAssertEqual("The future", self.textField.text))
 
-    observer.sendNext("")
+    observer.send(value: "")
     eventually(XCTAssertEqual("", self.textField.text))
   }
 }

@@ -1,9 +1,9 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var animating = 0
+  fileprivate static var animating = 0
 }
 
 public extension Rac where Object: UIActivityIndicatorView {
@@ -13,7 +13,7 @@ public extension Rac where Object: UIActivityIndicatorView {
         object,
         key: &Associations.animating,
         setter: { [weak object] in $0 ? object?.startAnimating() : object?.stopAnimating() },
-        getter: { [weak object] in object?.isAnimating() ?? false })
+        getter: { [weak object] in object?.isAnimating ?? false })
 
       prop <~ newValue.observeForUI()
     }

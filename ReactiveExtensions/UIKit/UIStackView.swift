@@ -1,10 +1,10 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var alignment = 0
-  private static var axis = 1
+  fileprivate static var alignment = 0
+  fileprivate static var axis = 1
 }
 
 public extension Rac where Object: UIStackView {
@@ -13,7 +13,7 @@ public extension Rac where Object: UIStackView {
       let prop: MutableProperty<UILayoutConstraintAxis> = lazyMutableProperty(
         object, key: &Associations.axis,
         setter: { [weak object] in object?.axis = $0 },
-        getter: { [weak object] in object?.axis ?? .Horizontal })
+        getter: { [weak object] in object?.axis ?? .horizontal })
 
       prop <~ newValue.observeForUI()
     }
@@ -27,7 +27,7 @@ public extension Rac where Object: UIStackView {
       let prop: MutableProperty<UIStackViewAlignment> = lazyMutableProperty(
         object, key: &Associations.alignment,
         setter: { [weak object] in object?.alignment = $0 },
-        getter: { [weak object] in object?.alignment ?? .Fill })
+        getter: { [weak object] in object?.alignment ?? .fill })
 
       prop <~ newValue.observeForUI()
     }

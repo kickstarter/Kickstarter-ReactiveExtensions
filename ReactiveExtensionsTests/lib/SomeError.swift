@@ -1,4 +1,4 @@
-internal struct SomeError: ErrorType {
+internal struct SomeError: Error {
 }
 
 extension SomeError: Equatable {}

@@ -1,29 +1,24 @@
-import ReactiveCocoa
+import ReactiveSwift
 
 internal extension Event {
-  internal var isNext: Bool {
-    if case .Next = self {
-      return true
-    }
-    return false
-  }
 
-  internal var isCompleted: Bool {
-    if case .Completed = self {
+  @available(*, deprecated, message: "Rename this to `isValue`.")
+  internal var isNext: Bool {
+    if case .value = self {
       return true
     }
     return false
   }
 
   internal var isFailed: Bool {
-    if case .Failed = self {
+    if case .failed = self {
       return true
     }
     return false
   }
 
   internal var isInterrupted: Bool {
-    if case .Interrupted = self {
+    if case .interrupted = self {
       return true
     }
     return false

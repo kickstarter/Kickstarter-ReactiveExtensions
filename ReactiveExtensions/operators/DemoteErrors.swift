@@ -1,7 +1,7 @@
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 
-public extension SignalType {
+public extension SignalProtocol {
 
   /**
    Demotes the `Error` of this signal to `NoError`, thus preventing it from ever erroring. Essentially the
@@ -11,11 +11,10 @@ public extension SignalType {
 
    - returns: A new signal that will never error.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, NoError> {
 
     return self.signal
-      .flatMapError { error in
+      .flatMapError { _ in
         if let value = value {
           return SignalProducer(value: value)
         }
@@ -24,7 +23,7 @@ public extension SignalType {
   }
 }
 
-public extension SignalProducerType {
+public extension SignalProducerProtocol {
   /**
    Demotes the `Error` of the producer to `NoError`, thus preventing it from ever erroring. Essentially the
    inverse of `promoteErrors`.
@@ -33,7 +32,6 @@ public extension SignalProducerType {
 
    - returns: A new producer that will never error.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
   public func demoteErrors(replaceErrorWith value: Value? = nil) -> SignalProducer<Value, NoError> {
     return self.lift { $0.demoteErrors(replaceErrorWith: value) }
   }

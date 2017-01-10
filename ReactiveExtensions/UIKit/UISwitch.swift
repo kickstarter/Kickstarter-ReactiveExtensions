@@ -1,10 +1,10 @@
 #if os(iOS)
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import UIKit
 
 private enum Associations {
-  private static var on = 0
+  fileprivate static var on = 0
 }
 
 public extension Rac where Object: UISwitch {
@@ -12,8 +12,8 @@ public extension Rac where Object: UISwitch {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object, key: &Associations.on,
-        setter: { [weak object] in object?.on = $0 },
-        getter: { [weak object] in object?.on ?? false })
+        setter: { [weak object] in object?.isOn = $0 },
+        getter: { [weak object] in object?.isOn ?? false })
 
       prop <~ newValue.observeForUI()
     }

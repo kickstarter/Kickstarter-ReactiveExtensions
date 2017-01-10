@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 import ReactiveExtensions
 import UIKit
@@ -22,10 +22,10 @@ final class UIResponderTests: XCTestCase {
     let (signal, observer) = Signal<(), NoError>.pipe()
     responder.rac.becomeFirstResponder = signal
 
-    eventually(XCTAssertFalse(self.responder.isFirstResponder()))
+    eventually(XCTAssertFalse(self.responder.isFirstResponder))
 
-    observer.sendNext()
-    eventually(XCTAssertTrue(self.responder.isFirstResponder()))
+    observer.send(value: ())
+    eventually(XCTAssertTrue(self.responder.isFirstResponder))
   }
 
   func testIsFirstResponder() {
@@ -33,15 +33,15 @@ final class UIResponderTests: XCTestCase {
     let (signal, observer) = Signal<Bool, NoError>.pipe()
     responder.rac.isFirstResponder = signal
 
-    eventually(XCTAssertFalse(self.responder.isFirstResponder()))
+    eventually(XCTAssertFalse(self.responder.isFirstResponder))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.responder.isFirstResponder()))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.responder.isFirstResponder))
 
-    observer.sendNext(false)
-    eventually(XCTAssertFalse(self.responder.isFirstResponder()))
+    observer.send(value: false)
+    eventually(XCTAssertFalse(self.responder.isFirstResponder))
 
-    observer.sendNext(true)
-    eventually(XCTAssertTrue(self.responder.isFirstResponder()))
+    observer.send(value: true)
+    eventually(XCTAssertTrue(self.responder.isFirstResponder))
   }
 }

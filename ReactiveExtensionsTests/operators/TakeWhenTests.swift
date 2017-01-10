@@ -1,5 +1,5 @@
 import XCTest
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
@@ -13,16 +13,16 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<[Int], NoError>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
-    sourceObserver.sendNext(1)
+    sourceObserver.send(value: 1)
     test.assertValues([])
 
-    sourceObserver.sendNext(2)
+    sourceObserver.send(value: 2)
     test.assertValues([])
 
-    sampleObserver.sendNext(3)
+    sampleObserver.send(value: 3)
     test.assertValues([[2, 3]])
 
-    sampleObserver.sendNext(4)
+    sampleObserver.send(value: 4)
     test.assertValues([[2, 3], [2, 4]])
 
     sampleObserver.sendCompleted()
@@ -39,8 +39,8 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<[Int], SomeError>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
+    sourceObserver.send(value: 1)
+    sampleObserver.send(value: 3)
     test.assertValues([[1, 3]])
 
     sourceObserver.sendCompleted()
@@ -54,11 +54,11 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<[Int], SomeError>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
+    sourceObserver.send(value: 1)
+    sampleObserver.send(value: 3)
     test.assertValues([[1, 3]])
 
-    sourceObserver.sendFailed(SomeError())
+    sourceObserver.send(error: SomeError())
     test.assertDidFail()
   }
 
@@ -69,8 +69,8 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<[Int], NoError>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
+    sourceObserver.send(value: 1)
+    sampleObserver.send(value: 3)
     test.assertValues([[1, 3]])
 
     sourceObserver.sendInterrupted()
@@ -84,11 +84,11 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<[Int], SomeError>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
+    sourceObserver.send(value: 1)
+    sampleObserver.send(value: 3)
     test.assertValues([[1, 3]])
 
-    sampleObserver.sendFailed(SomeError())
+    sampleObserver.send(error: SomeError())
     test.assertDidNotFail()
   }
 
@@ -99,8 +99,8 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<[Int], NoError>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
-    sourceObserver.sendNext(1)
-    sampleObserver.sendNext(3)
+    sourceObserver.send(value: 1)
+    sampleObserver.send(value: 3)
     test.assertValues([[1, 3]])
 
     sampleObserver.sendInterrupted()
@@ -114,17 +114,17 @@ final class TakeWhenTests: XCTestCase {
     let test = TestObserver<Int, NoError>()
     takeWhen.observe(test.observer)
 
-    sourceObserver.sendNext(1)
+    sourceObserver.send(value: 1)
     test.assertValues([])
 
-    sourceObserver.sendNext(2)
+    sourceObserver.send(value: 2)
     test.assertValues([])
 
-    sampleObserver.sendNext(3)
+    sampleObserver.send(value: 3)
     test.assertValues([2])
 
-    sourceObserver.sendNext(4)
-    sampleObserver.sendNext(5)
+    sourceObserver.send(value: 4)
+    sampleObserver.send(value: 5)
     test.assertValues([2, 4])
 
     sampleObserver.sendCompleted()

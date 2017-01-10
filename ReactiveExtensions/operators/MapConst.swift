@@ -1,6 +1,6 @@
-import ReactiveCocoa
+import ReactiveSwift
 
-public extension SignalType {
+public extension SignalProtocol {
 
   /**
    Maps a signal to a const.
@@ -9,13 +9,12 @@ public extension SignalType {
 
    - returns: A new signal.
    */
-  @warn_unused_result(message="Did you forget to call `observe` on the signal?")
-  public func mapConst <U> (value: U) -> Signal<U, Error> {
+  public func mapConst <U> (_ value: U) -> Signal<U, Error> {
     return self.signal.map { _ in value }
   }
 }
 
-public extension SignalProducerType {
+public extension SignalProducerProtocol {
 
   /**
    Maps a producer to a const.
@@ -24,8 +23,7 @@ public extension SignalProducerType {
 
    - returns: A new producer.
    */
-  @warn_unused_result(message="Did you forget to call `start` on the producer?")
-  public func mapConst <U> (value: U) -> SignalProducer<U, Error> {
+  public func mapConst <U> (_ value: U) -> SignalProducer<U, Error> {
     return lift { $0.mapConst(value) }
   }
 }
