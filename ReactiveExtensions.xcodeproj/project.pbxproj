@@ -86,8 +86,12 @@
 		A74FFEFB1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */; };
 		A74FFEFC1CE579E500C7BCB9 /* UIResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */; };
 		A753B55B1C2EE64800FDB616 /* TakeWhenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */; };
+		A76B711A1E320A4400DDFD2B /* KsrTimeoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B71191E320A4400DDFD2B /* KsrTimeoutTests.swift */; };
+		A76B711B1E320A4400DDFD2B /* KsrTimeoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B71191E320A4400DDFD2B /* KsrTimeoutTests.swift */; };
 		A775B5111CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
 		A775B5121CA8608700BBB587 /* DemoteErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */; };
+		A7792C721E320669002BAD63 /* KsrTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7792C711E320669002BAD63 /* KsrTimeout.swift */; };
+		A7792C731E320669002BAD63 /* KsrTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7792C711E320669002BAD63 /* KsrTimeout.swift */; };
 		A77966FB1C2B15150002166F /* UncollectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966F91C2B15150002166F /* UncollectTests.swift */; };
 		A77966FD1C2B15260002166F /* CombinePreviousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77966FC1C2B15260002166F /* CombinePreviousTests.swift */; };
 		A779670D1C2B1EB90002166F /* SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779670C1C2B1EB90002166F /* SortTests.swift */; };
@@ -418,7 +422,9 @@
 		A74FFEF71CE579D800C7BCB9 /* UIRefreshControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControlTests.swift; sourceTree = "<group>"; };
 		A74FFEFA1CE579E500C7BCB9 /* UIResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderTests.swift; sourceTree = "<group>"; };
 		A753B55A1C2EE64800FDB616 /* TakeWhenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TakeWhenTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A76B71191E320A4400DDFD2B /* KsrTimeoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KsrTimeoutTests.swift; sourceTree = "<group>"; };
 		A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoteErrorsTests.swift; sourceTree = "<group>"; };
+		A7792C711E320669002BAD63 /* KsrTimeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KsrTimeout.swift; sourceTree = "<group>"; };
 		A77966EA1C2B018F0002166F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A77966F91C2B15150002166F /* UncollectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = UncollectTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A77966FC1C2B15260002166F /* CombinePreviousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CombinePreviousTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -574,6 +580,7 @@
 				A775B5101CA8608700BBB587 /* DemoteErrorsTests.swift */,
 				A72942B51DE2463400BB3455 /* EnumeratedTests.swift */,
 				A72E753C1CC1859000983066 /* ErrorsTests.swift */,
+				A76B71191E320A4400DDFD2B /* KsrTimeoutTests.swift */,
 				A713EC7C1C2B82FF00B6234E /* MapConstTests.swift */,
 				A7B11A631D78A4C100A5036E /* ScanTests.swift */,
 				A713EC781C2B55EB00B6234E /* SlidingWindowTest.swift */,
@@ -663,6 +670,7 @@
 				A7C510491C2733F600C59136 /* IgnoreValues.swift */,
 				A7C510531C27351F00C59136 /* KsrDebounce.swift */,
 				A712EBA21E0C579700614340 /* KsrDelay.swift */,
+				A7792C711E320669002BAD63 /* KsrTimeout.swift */,
 				A7C510551C27358300C59136 /* MapConst.swift */,
 				A7C510691C27380700C59136 /* MergeMap.swift */,
 				A7C510611C27371E00C59136 /* MergeWith.swift */,
@@ -1144,6 +1152,7 @@
 				A7378CCB1C80992C00F0A562 /* AllValuesTests.swift in Sources */,
 				A779670D1C2B1EB90002166F /* SortTests.swift in Sources */,
 				A7F3C6651CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
+				A76B711B1E320A4400DDFD2B /* KsrTimeoutTests.swift in Sources */,
 				A72942B71DE2463400BB3455 /* EnumeratedTests.swift in Sources */,
 				A72E753B1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A713EC7D1C2B82FF00B6234E /* MapConstTests.swift in Sources */,
@@ -1186,6 +1195,7 @@
 				A712EBA31E0C579700614340 /* KsrDelay.swift in Sources */,
 				A74FFEC31CE4ECC900C7BCB9 /* UIResponder.swift in Sources */,
 				A74FFDF51CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
+				A7792C721E320669002BAD63 /* KsrTimeout.swift in Sources */,
 				A7FD088D1C81EDBD00332CCB /* LazyMutableProperty.swift in Sources */,
 				A7FD088E1C81EDBD00332CCB /* ConcatMap.swift in Sources */,
 				A72E75281CC1849100983066 /* Values.swift in Sources */,
@@ -1255,6 +1265,7 @@
 				A7FD08CD1C81EEA100332CCB /* AllValuesTests.swift in Sources */,
 				A7FD08CE1C81EEA100332CCB /* SortTests.swift in Sources */,
 				A7F3C6641CFF4DBA005DBE95 /* UIButtonTests.swift in Sources */,
+				A76B711A1E320A4400DDFD2B /* KsrTimeoutTests.swift in Sources */,
 				A72942B61DE2463400BB3455 /* EnumeratedTests.swift in Sources */,
 				A72E753A1CC1858500983066 /* ValuesTests.swift in Sources */,
 				A7FD08CF1C81EEA100332CCB /* MapConstTests.swift in Sources */,
@@ -1275,6 +1286,7 @@
 				A712EBA41E0C579700614340 /* KsrDelay.swift in Sources */,
 				A74FFEC41CE4ECC900C7BCB9 /* UIResponder.swift in Sources */,
 				A74FFDF61CE3ECBF00C7BCB9 /* UIBarButtonItem.swift in Sources */,
+				A7792C731E320669002BAD63 /* KsrTimeout.swift in Sources */,
 				A7983B5A1C2AF7E8003A1ABE /* LazyMutableProperty.swift in Sources */,
 				A7C510681C2737C500C59136 /* ConcatMap.swift in Sources */,
 				A72E75291CC1849100983066 /* Values.swift in Sources */,
