@@ -2,8 +2,8 @@ import XCTest
 
 extension XCTestCase {
   internal func async(expect description: String = "async",
-                             timeout: Double = 5,
-                             block: @escaping (() -> Void) -> Void) {
+                      timeout: Double = 5,
+                      block: @escaping (() -> Void) -> Void) {
     let expectation = self.expectation(description: description)
     DispatchQueue.main.async {
       block(expectation.fulfill)
