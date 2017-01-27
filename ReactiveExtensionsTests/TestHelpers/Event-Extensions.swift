@@ -3,7 +3,7 @@ import ReactiveSwift
 internal extension Event {
 
   @available(*, deprecated, message: "Rename this to `isValue`.")
-  internal var isNext: Bool {
+  internal var isValue: Bool {
     if case .value = self {
       return true
     }

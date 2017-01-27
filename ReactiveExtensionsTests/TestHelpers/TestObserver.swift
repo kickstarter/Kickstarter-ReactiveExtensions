@@ -31,7 +31,7 @@ internal final class TestObserver <Value, Error: Swift.Error> {
 
   /// Get all of the next values emitted by the signal.
   internal var values: [Value] {
-    return self.events.filter { $0.isNext }.map { $0.value! }
+    return self.events.filter { $0.isValue }.map { $0.value! }
   }
 
   /// Get the last value emitted by the signal.
