@@ -3,8 +3,8 @@ import ReactiveSwift
 
 // Assert equality between two doubly nested arrays of equatables.
 internal func XCTAssertEqual<T: Equatable>(_ expression1: @autoclosure () -> [[T]],
-  _ expression2: @autoclosure () -> [[T]], _ message: String = "",
-                 file: StaticString = #file, line: UInt = #line) {
+                                           _ expression2: @autoclosure () -> [[T]], _ message: String = "",
+                                           file: StaticString = #file, line: UInt = #line) {
 
     let lhs = expression1()
     let rhs = expression2()
