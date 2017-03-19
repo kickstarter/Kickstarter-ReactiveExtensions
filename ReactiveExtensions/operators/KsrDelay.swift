@@ -12,7 +12,7 @@ public extension SignalProtocol {
    - returns: A new signal.
    */
   public func ksr_delay(_ interval: @autoclosure @escaping () -> DispatchTimeInterval,
-                        on scheduler: @autoclosure @escaping () -> DateSchedulerProtocol)
+                        on scheduler: @autoclosure @escaping () -> DateScheduler)
     -> Signal<Value, Error> {
 
       return self.delay(interval().timeInterval, on: scheduler())
@@ -31,7 +31,7 @@ public extension SignalProducerProtocol {
    - returns: A new producer.
    */
   public func ksr_delay(_ interval: @autoclosure @escaping () -> DispatchTimeInterval,
-                        on scheduler: @autoclosure @escaping () -> DateSchedulerProtocol)
+                        on scheduler: @autoclosure @escaping () -> DateScheduler)
     -> SignalProducer<Value, Error> {
 
       return self.delay(interval().timeInterval, on: scheduler())
