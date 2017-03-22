@@ -528,6 +528,8 @@
 			isa = PBXGroup;
 			children = (
 				A712EB9F1E0C469D00614340 /* DispatchTimeInterval-Extensions.swift */,
+				A7983B571C2AF232003A1ABE /* LazyAssociatedProperty.swift */,
+				A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -698,11 +700,9 @@
 			children = (
 				CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */,
 				CA43C6681BB35FCF00C180DA /* Info.plist */,
-				A7983B571C2AF232003A1ABE /* LazyAssociatedProperty.swift */,
-				A7983B591C2AF7E8003A1ABE /* LazyMutableProperty.swift */,
-				A7C5B9341E7F485D001F9E62 /* test-helpers */,
 				A712EB931E0C468A00614340 /* helpers */,
 				A7C510441C2720C900C59136 /* operators */,
+				A7C5B9341E7F485D001F9E62 /* test-helpers */,
 				A7983B5B1C2AF88A003A1ABE /* UIKit */,
 			);
 			path = ReactiveExtensions;
