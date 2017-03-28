@@ -89,7 +89,7 @@ final class UIViewTests: XCTestCase {
     DispatchQueue.global(qos: .background).async {
       observer.send(value: 0.5)
     }
-    waitForExpectations(timeout: 0.1, handler: nil)
+    waitForExpectations(timeout: 1, handler: nil)
     XCTAssertEqual(0.5, view.alpha)
   }
 }
