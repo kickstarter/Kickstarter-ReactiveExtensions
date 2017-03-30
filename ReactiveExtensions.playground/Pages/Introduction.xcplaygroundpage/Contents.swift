@@ -170,11 +170,7 @@ response
  by .01 seconds.
  */
 
-let scheduler = QueueScheduler(
-  qos: DispatchQoS.background,
-  name: "bg",
-  targeting: DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
-)
+let scheduler = QueueScheduler(qos: .background, name: "bg", targeting: .global(qos: .background))
 
 // Returns a signal that emits `x` three times, but each staggered by .01 seconds.
 func staggeredTriple(x: Int) -> SignalProducer<Int, NoError> {
