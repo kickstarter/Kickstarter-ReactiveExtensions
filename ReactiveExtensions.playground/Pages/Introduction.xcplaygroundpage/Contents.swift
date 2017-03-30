@@ -1,6 +1,6 @@
-import XCPlayground
+import PlaygroundSupport
 import ReactiveExtensions
-import ReactiveCocoa
+import ReactiveSwift
 import Result
 
 /*:
@@ -73,7 +73,7 @@ import Result
  useful for transforming user input into a stream of actions, e.g.:
  */
 
-let incrementClicks = SignalProducer<(), NoError>(values: [(), (), (), ()])
+let incrementClicks = SignalProducer<(), NoError>([(), (), (), ()])
 incrementClicks
   .mapConst(1)
   .allValues()
@@ -82,7 +82,7 @@ incrementClicks
  This stream could be merged with a corresponding decrementing stream:
  */
 
-let decrementClicks = SignalProducer<(), NoError>(values: [(), (), ()])
+let decrementClicks = SignalProducer<(), NoError>([(), (), ()])
 incrementClicks.mapConst(1)
   .mergeWith(decrementClicks.mapConst(-1))
   .allValues()
@@ -114,7 +114,7 @@ clicksTotal.allValues()
  */
 
 // Returns a signal of `x` when `x` is odd, and errors otherwise.
-func fetchDataThatCouldError(x: Int) -> SignalProducer<Int, NSError> {
+func fetchDataThatCouldError(_ x: Int) -> SignalProducer<Int, NSError> {
   if (x % 2 == 1) {
     return SignalProducer(value: x)
   }
@@ -170,21 +170,21 @@ response
  by .01 seconds.
  */
 
-let scheduler = QueueScheduler(queue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0))
+let scheduler = QueueScheduler(qos: .background, name: "bg", targeting: .global(qos: .background))
 
 // Returns a signal that emits `x` three times, but each staggered by .01 seconds.
 func staggeredTriple(x: Int) -> SignalProducer<Int, NoError> {
-  return SignalProducer(value: x).delay(0.01, onScheduler: scheduler)
-    .mergeWith(SignalProducer(value: x).delay(0.02, onScheduler: scheduler))
-    .mergeWith(SignalProducer(value: x).delay(0.03, onScheduler: scheduler))
+  return SignalProducer(value: x).delay(0.01, on: scheduler)
+    .mergeWith(SignalProducer(value: x).delay(0.02, on: scheduler))
+    .mergeWith(SignalProducer(value: x).delay(0.03, on: scheduler))
 }
 
 /*:
  With this function we can describe each of the `flatMap` operations. The first is the simplest:
  */
 
-SignalProducer<Int, NoError>(values: [1, 2, 3])
-  .flatMap(.Concat, transform: staggeredTriple)
+SignalProducer<Int, NoError>([1, 2, 3])
+  .flatMap(.concat, transform: staggeredTriple)
   .allValues()
 
 /*:
@@ -195,8 +195,8 @@ SignalProducer<Int, NoError>(values: [1, 2, 3])
  The next simplest is `flatMap(.Merge)`:
  */
 
-SignalProducer<Int, NoError>(values: [1, 2, 3])
-  .flatMap(.Merge, transform: staggeredTriple)
+SignalProducer<Int, NoError>([1, 2, 3])
+  .flatMap(.merge, transform: staggeredTriple)
   .allValues()
 
 /*:
@@ -207,8 +207,8 @@ SignalProducer<Int, NoError>(values: [1, 2, 3])
  Finally, perhaps the most complicated, but also most useful, is `flatMap(.Latest)`:
  */
 
-SignalProducer<Int, NoError>(values: [1, 2, 3])
-  .flatMap(.Latest, transform: staggeredTriple)
+SignalProducer<Int, NoError>([1, 2, 3])
+  .flatMap(.latest, transform: staggeredTriple)
   .allValues()
 
 /*:
@@ -222,15 +222,15 @@ SignalProducer<Int, NoError>(values: [1, 2, 3])
  more descriptive names:
  */
 
-SignalProducer<Int, NoError>(values: [1, 2, 3])
+SignalProducer<Int, NoError>([1, 2, 3])
   .mergeMap(staggeredTriple)
   .allValues()
 
-SignalProducer<Int, NoError>(values: [1, 2, 3])
+SignalProducer<Int, NoError>([1, 2, 3])
   .concatMap(staggeredTriple)
   .allValues()
 
-SignalProducer<Int, NoError>(values: [1, 2, 3])
+SignalProducer<Int, NoError>([1, 2, 3])
   .switchMap(staggeredTriple)
   .allValues()
 
@@ -239,4 +239,4 @@ SignalProducer<Int, NoError>(values: [1, 2, 3])
 
 
 // Playground configuration
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
