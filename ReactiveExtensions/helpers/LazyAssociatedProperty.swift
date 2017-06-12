@@ -18,7 +18,7 @@ import Foundation
  Otherwise the `factory` closure is invoked and that value is returned.
  */
 internal func lazyAssociatedProperty <T: AnyObject> (_ host: AnyObject, key: UnsafeRawPointer,
-                                                     factory: (Void) -> T) -> T {
+                                                     factory: () -> T) -> T {
 
   if let value = objc_getAssociatedObject(host, key) as? T {
     return value
