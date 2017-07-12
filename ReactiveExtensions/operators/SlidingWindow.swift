@@ -10,15 +10,11 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  public func slidingWindow (max: Int, min: Int) -> Signal<[Value], Error> {
+  public func slidingWindow(max: Int, min: Int) -> Signal<[Value], Error> {
     return signal
-      .scan([Value]()) { window, value in
-
-        if window.count >= max {
-          return [Value](window[1..<window.count]) + [value]
-        }
-        return window + [value]
-
+      .scan([Value]()) { (window: [Value], value: Value) -> [Value] in
+        let scope = window.count >= max ? Array(window[1..<window.count]) : window
+        return scope + [value]
       }.filter { window in
         return window.count >= min
       }
