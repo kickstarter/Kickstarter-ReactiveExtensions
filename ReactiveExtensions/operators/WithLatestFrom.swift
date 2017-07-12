@@ -10,7 +10,7 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  public func withLatestFrom <U, OtherError: Swift.Error> (_ other: Signal<U, OtherError>) ->
+  public func withLatestFrom <U, OtherError> (_ other: Signal<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
     return Signal { observer in
@@ -61,7 +61,7 @@ public extension SignalProtocol {
 
    - returns: A new signal.
    */
-  public func withLatestFrom <U, OtherError: Swift.Error> (_ other: SignalProducer<U, OtherError>) ->
+  public func withLatestFrom <U, OtherError> (_ other: SignalProducer<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
     return Signal { observer in
