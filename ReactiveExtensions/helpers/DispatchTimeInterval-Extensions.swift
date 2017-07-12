@@ -2,15 +2,30 @@ import Foundation
 
 extension DispatchTimeInterval {
   internal var timeInterval: TimeInterval {
-    switch self {
-    case let .seconds(interval):
-      return TimeInterval(interval)
-    case let .milliseconds(interval):
-      return TimeInterval(interval) / 1_000
-    case let .microseconds(interval):
-      return TimeInterval(interval) / 1_000_000
-    case let .nanoseconds(interval):
-      return TimeInterval(interval) / 1_000_000_000
-    }
+    #if swift(>=3.2)
+      switch self {
+      case let .seconds(s):
+        return TimeInterval(s)
+      case let .milliseconds(ms):
+        return TimeInterval(TimeInterval(ms) / 1000.0)
+      case let .microseconds(us):
+        return TimeInterval(Int64(us) * Int64(NSEC_PER_USEC)) / TimeInterval(NSEC_PER_SEC)
+      case let .nanoseconds(ns):
+        return TimeInterval(ns) / TimeInterval(NSEC_PER_SEC)
+      case .never:
+        return .infinity
+      }
+    #else
+      switch self {
+      case let .seconds(s):
+        return TimeInterval(s)
+      case let .milliseconds(ms):
+        return TimeInterval(TimeInterval(ms) / 1000.0)
+      case let .microseconds(us):
+        return TimeInterval(Int64(us) * Int64(NSEC_PER_USEC)) / TimeInterval(NSEC_PER_SEC)
+      case let .nanoseconds(ns):
+        return TimeInterval(ns) / TimeInterval(NSEC_PER_SEC)
+      }
+    #endif
   }
 }
