@@ -15,15 +15,14 @@ dependencies:
     - git submodule update --init --recursive
 test:
   pre:
-    - xcrun instruments -w '547B1B63-3F66-4E5B-8001-F78F2F1CDEA7' || true
+    - xcrun instruments -w 'iPhone 7 (10.2)' || true
     - sleep 15
   override:
     - set -o pipefail &&
       swiftlint lint --strict --reporter json |
       tee $CIRCLE_ARTIFACTS/swiftlint-report.json
-    - bin/test iOS 9.3
     - bin/test iOS 10.2
-    - bin/test tvOS 10.0
+    - bin/test iOS 11.0
 experimental:
   notify:
     branches:
