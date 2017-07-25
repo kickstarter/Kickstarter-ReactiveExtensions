@@ -123,6 +123,7 @@ internal final class TestObserver <Value, Error: Swift.Error> {
   }
 }
 
+#if swift(>=3.2)
 extension TestObserver where Value: StringProtocol {
   internal func assertValue(_ value: Value, _ message: String? = nil,
                             file: StaticString = #file, line: UInt = #line) {
@@ -142,6 +143,7 @@ extension TestObserver where Value: StringProtocol {
     XCTAssertEqual(values, self.values, message, file: file, line: line)
   }
 }
+#endif
 
 extension TestObserver where Value: Equatable {
   internal func assertValue(_ value: Value, _ message: String? = nil,
