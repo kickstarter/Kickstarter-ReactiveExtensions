@@ -192,15 +192,13 @@ extension TestObserver where Value: Sequence, Value.Iterator.Element == Characte
                             file: StaticString = #file, line: UInt = #line) {
     XCTAssertEqual(1, self.values.count, "A single item should have been emitted.", file: file, line: line)
     XCTAssertEqual(Array(value), self.lastValue.map(Array.init) ?? [],
-                   message ?? "A single value of \(value) should have been emitted",
-      file: file, line: line)
+                   message ?? "A single value of \(value) should have been emitted", file: file, line: line)
   }
 
   internal func assertLastValue(_ value: Value, _ message: String? = nil,
                                 file: StaticString = #file, line: UInt = #line) {
     XCTAssertEqual(Array(value), self.lastValue.map(Array.init) ?? [],
-                   message ?? "Last emitted value is equal to \(value).",
-      file: file, line: line)
+                   message ?? "Last emitted value is equal to \(value).", file: file, line: line)
   }
 
   internal func assertValues(_ values: [[Value.Iterator.Element]], _ message: String = "",
@@ -230,7 +228,6 @@ extension TestObserver where Value: Sequence, Value.Iterator.Element: Equatable 
                              file: StaticString = #file, line: UInt = #line) {
       XCTAssertEqual(Array(values), Array(self.values.map(Array.init)), message, file: file, line: line)
   }
-
 }
 
 extension TestObserver where Error: Equatable {
