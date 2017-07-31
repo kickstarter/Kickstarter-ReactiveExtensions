@@ -187,7 +187,6 @@ extension TestObserver where Value: Sequence, Value.Iterator.Element: Equatable 
                              file: StaticString = #file, line: UInt = #line) {
       XCTAssertEqual(Array(values), Array(self.values.map(Array.init)), message, file: file, line: line)
   }
-
 }
 
 extension TestObserver where Error: Equatable {
