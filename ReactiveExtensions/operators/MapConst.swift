@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Maps a signal to a const.
@@ -14,7 +14,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Maps a producer to a const.

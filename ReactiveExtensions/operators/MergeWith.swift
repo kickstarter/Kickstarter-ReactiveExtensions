@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Merges `self` with another signal.
@@ -14,7 +14,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Merges `self` with another producer.

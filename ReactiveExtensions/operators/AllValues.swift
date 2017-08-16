@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Starts the producer, collects all the values emitted until it completes, and returns an array of all

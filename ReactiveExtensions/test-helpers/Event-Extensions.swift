@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-internal extension Event {
+internal extension Signal.Event {
   internal var isValue: Bool {
     if case .value = self {
       return true

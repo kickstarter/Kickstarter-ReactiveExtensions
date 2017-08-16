@@ -1,7 +1,7 @@
 import ReactiveSwift
 import Result
 
-extension SignalProtocol where Value: EventProtocol, Error == NoError {
+extension Signal where Value: EventProtocol, Error == NoError {
   /**
    - returns: A signal of errors of `Error` events from a materialized signal.
    */
@@ -10,7 +10,7 @@ extension SignalProtocol where Value: EventProtocol, Error == NoError {
   }
 }
 
-extension SignalProducerProtocol where Value: EventProtocol, Error == NoError {
+extension SignalProducer where Value: EventProtocol, Error == NoError {
   /**
    - returns: A producer of errors of `Error` events from a materialized signal.
    */

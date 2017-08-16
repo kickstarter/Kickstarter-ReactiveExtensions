@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Debounces a signal by a time interval. The resulting signal emits a value only when `interval` seconds
@@ -21,7 +21,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Debounces a producer by a time interval. The resulting producer emits a value only when `interval` seconds

@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol where Value: Sequence, Value.Iterator.Element: Comparable {
+public extension Signal where Value: Sequence, Value.Iterator.Element: Comparable {
 
   /**
    Transforms a signal of sequences into a signal of ordered arrays by using the sequence element's
@@ -13,7 +13,7 @@ public extension SignalProtocol where Value: Sequence, Value.Iterator.Element: C
   }
 }
 
-public extension SignalProtocol where Value: Sequence {
+public extension Signal where Value: Sequence {
 
   /**
    Transforms a signal of sequences into a signal of ordered arrays by using the function passed in.
@@ -29,7 +29,7 @@ public extension SignalProtocol where Value: Sequence {
   }
 }
 
-public extension SignalProducerProtocol where Value: Sequence, Value.Iterator.Element: Comparable {
+public extension SignalProducer where Value: Sequence, Value.Iterator.Element: Comparable {
 
   /**
    Transforms a producer of sequences into a producer of ordered arrays by using the sequence element's
@@ -37,7 +37,7 @@ public extension SignalProducerProtocol where Value: Sequence, Value.Iterator.El
 
    - returns: The sorted producer.
    */
-  func sort() -> SignalProducer<[Value.Iterator.Element], Error> {
+  func sort() -> Signal<[Value.Iterator.Element], Error> {
     return lift { $0.sort() }
   }
 }

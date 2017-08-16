@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol where Value: Sequence {
+public extension Signal where Value: Sequence {
   /**
    Transforms a signal of sequences into a signal of elements by emitting all elements of each sequence.
 
@@ -24,7 +24,7 @@ public extension SignalProtocol where Value: Sequence {
   }
 }
 
-public extension SignalProducerProtocol where Value: Sequence {
+public extension SignalProducer where Value: Sequence {
   /**
    Transforms a producer of sequences into a producer of elements by emitting all elements of each sequence.
 

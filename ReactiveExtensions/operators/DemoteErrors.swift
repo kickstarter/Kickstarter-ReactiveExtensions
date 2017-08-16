@@ -1,7 +1,7 @@
 import ReactiveSwift
 import Result
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Demotes the `Error` of this signal to `NoError`, thus preventing it from ever erroring. Essentially the
@@ -23,7 +23,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
   /**
    Demotes the `Error` of the producer to `NoError`, thus preventing it from ever erroring. Essentially the
    inverse of `promoteErrors`.

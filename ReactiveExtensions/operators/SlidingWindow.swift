@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Transform a signal into a window of previous values.
@@ -12,7 +12,7 @@ public extension SignalProtocol {
    */
   public func slidingWindow(max: Int, min: Int) -> Signal<[Value], Error> {
     return signal
-      .scan([Value]()) { (window: [Value], value: Value) -> [Value] in
+      .scan([]) { (window: [Value], value: Value) -> [Value] in
         let scope = window.count >= max ? Array(window[1..<window.count]) : window
         return scope + [value]
       }.filter { window in
@@ -21,7 +21,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Transform a producer into a window of previous values.

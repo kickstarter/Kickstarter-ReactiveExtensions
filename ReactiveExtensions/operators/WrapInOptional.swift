@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Transforms a signal of `Value`s into a signal of `Optional<Value>`s by simply wrapping each emission.
@@ -12,7 +12,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Transforms a producer of `Value`s into a producer of `Optional<Value>`s by simply wrapping each emission.

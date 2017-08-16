@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Scans a signal without providing an initial value. The first emission of `self` will be emitted

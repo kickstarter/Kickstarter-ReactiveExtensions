@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-extension SignalProtocol {
+extension Signal {
   /**
    Transforms a signal into one that also emits the index count of the emission, i.e. a signal with emissions
 

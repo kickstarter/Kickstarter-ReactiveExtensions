@@ -1,23 +1,23 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   public func concatMap <U> (_ f: @escaping (Value) -> SignalProducer<U, Error>) -> Signal<U, Error> {
-    return self.signal.flatMap(.concat, transform: f)
+    return self.signal.flatMap(.concat, f)
   }
 
   public func concatMap <U> (_ f: @escaping (Value) -> Signal<U, Error>) -> Signal<U, Error> {
-    return self.signal.flatMap(.concat, transform: f)
+    return self.signal.flatMap(.concat, f)
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   public func concatMap <U> (_ f: @escaping (Value) -> SignalProducer<U, Error>) -> SignalProducer<U, Error> {
-    return self.producer.flatMap(.concat, transform: f)
+    return self.producer.flatMap(.concat, f)
   }
 
   public func concatMap <U> (_ f: @escaping (Value) -> Signal<U, Error>) -> SignalProducer<U, Error> {
-    return self.producer.flatMap(.concat, transform: f)
+    return self.producer.flatMap(.concat, f)
   }
 }

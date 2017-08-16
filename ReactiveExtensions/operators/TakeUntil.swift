@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-extension SignalProtocol {
+extension Signal {
 
   /**
    - parameter predicate: A function that determines when to terminate the signal.
@@ -22,7 +22,7 @@ extension SignalProtocol {
   }
 }
 
-extension SignalProducerProtocol {
+extension SignalProducer {
 
   /**
    - parameter predicate: A function that determines when to terminate the signal.
