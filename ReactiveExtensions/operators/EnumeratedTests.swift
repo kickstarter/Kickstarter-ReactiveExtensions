@@ -14,7 +14,7 @@ final class EnumeratedTests: XCTestCase {
     signal.enumerated().map { _, value in value }.observe(testValue.observer)
 
     testIdx.assertValues([])
-    testValue.assertValues([])
+    testValue.assertValueCount(0)
 
     observer.send(value: "hello")
 
