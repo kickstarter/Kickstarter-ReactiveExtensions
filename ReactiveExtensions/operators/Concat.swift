@@ -1,7 +1,7 @@
 // swiftlint:disable line_length
 import ReactiveSwift
 
-extension SignalProtocol {
+extension Signal {
 
   /**
    Concats a sequence of signals into a single signal.
@@ -10,28 +10,24 @@ extension SignalProtocol {
 
    - returns: A concatenated signal.
    */
-  public static func concat
-    <Seq: Sequence, S: SignalProtocol>
-    (_ signals: Seq) -> Signal<Value, Error> where S.Value == Value, S.Error == Error, Seq.Iterator.Element == S {
-
-    let producer = SignalProducer<S, Error>(signals)
-    var result: Signal<Value, Error>!
+  public static func concat<Seq: Sequence>(_ signals: Seq) -> Signal where Seq.Iterator.Element == Signal {
+    let producer = SignalProducer<Signal, Error>(signals)
+      .flatten(.concat)
+    var result: Signal!
 
     producer.startWithSignal { signal, _ in
-      result = signal.flatten(.concat)
+      result = signal
     }
 
     return result
   }
 
-  public static func concat<S: SignalProtocol>
-    (_ signals: S...) -> Signal<Value, Error> where S.Value == Value, S.Error == Error {
-
-    return Signal.concat(signals)
+  public static func concat(_ signals: Signal...) -> Signal {
+    return .concat(signals)
   }
 }
 
-extension SignalProducerProtocol {
+extension SignalProducer {
   /**
    Concats a sequence of producers into a single producer.
 
@@ -40,16 +36,13 @@ extension SignalProducerProtocol {
    - returns: A concatenated producer.
    */
 
-  public static func concat
-    <Seq: Sequence, S: SignalProducerProtocol>
-    (_ producers: Seq) -> SignalProducer<Value, Error> where S.Value == Value, S.Error == Error, Seq.Iterator.Element == S {
+  public static func concat<Seq: Sequence>(_ producers: Seq) -> SignalProducer
+    where Seq.Iterator.Element == SignalProducer {
 
-    return SignalProducer(producers).flatten(.concat)
+      return SignalProducer<SignalProducer, Error>(producers).flatten(.concat)
   }
 
-  public static func concat<S: SignalProducerProtocol>
-    (_ producers: S...) -> SignalProducer<Value, Error> where S.Value == Value, S.Error == Error {
-
-    return SignalProducer.concat(producers)
+  public static func concat(_ producers: SignalProducer...) -> SignalProducer {
+    return .concat(producers)
   }
 }

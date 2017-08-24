@@ -69,7 +69,6 @@
 		A7C5104A1C2733F600C59136 /* IgnoreValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510491C2733F600C59136 /* IgnoreValues.swift */; };
 		A7C5104C1C27343400C59136 /* WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104B1C27343400C59136 /* WithLatestFrom.swift */; };
 		A7C5104E1C27346B00C59136 /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104D1C27346B00C59136 /* TakeWhen.swift */; };
-		A7C510501C2734D100C59136 /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104F1C2734D100C59136 /* CombinePrevious.swift */; };
 		A7C510521C2734F100C59136 /* SlidingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510511C2734F100C59136 /* SlidingWindow.swift */; };
 		A7C510541C27351F00C59136 /* KsrDebounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510531C27351F00C59136 /* KsrDebounce.swift */; };
 		A7C510561C27358300C59136 /* MapConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510551C27358300C59136 /* MapConst.swift */; };
@@ -99,8 +98,6 @@
 		A7C5B8FF1E7F47D9001F9E62 /* AllValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8E71E7F47D8001F9E62 /* AllValuesTests.swift */; };
 		A7C5B9001E7F47D9001F9E62 /* SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8E81E7F47D8001F9E62 /* SortTests.swift */; };
 		A7C5B9011E7F47D9001F9E62 /* SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8E81E7F47D8001F9E62 /* SortTests.swift */; };
-		A7C5B9021E7F47D9001F9E62 /* CombinePreviousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8E91E7F47D8001F9E62 /* CombinePreviousTests.swift */; };
-		A7C5B9031E7F47D9001F9E62 /* CombinePreviousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8E91E7F47D8001F9E62 /* CombinePreviousTests.swift */; };
 		A7C5B9041E7F47D9001F9E62 /* ValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8EA1E7F47D8001F9E62 /* ValuesTests.swift */; };
 		A7C5B9051E7F47D9001F9E62 /* ValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8EA1E7F47D8001F9E62 /* ValuesTests.swift */; };
 		A7C5B9061E7F47D9001F9E62 /* TakeUntilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5B8EB1E7F47D8001F9E62 /* TakeUntilTests.swift */; };
@@ -172,7 +169,6 @@
 		A7FD089E1C81EDBD00332CCB /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510451C2720D500C59136 /* Sort.swift */; };
 		A7FD089F1C81EDBD00332CCB /* WrapInOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5105B1C27362000C59136 /* WrapInOptional.swift */; };
 		A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B621C2AF8D4003A1ABE /* UIControl.swift */; };
-		A7FD08A11C81EDBD00332CCB /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5104F1C2734D100C59136 /* CombinePrevious.swift */; };
 		A7FD08A21C81EDBD00332CCB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5C1C2AF899003A1ABE /* UIView.swift */; };
 		A7FD08A41C81EDBD00332CCB /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510591C2735F500C59136 /* ObserveForUI.swift */; };
 		A7FD08A51C81EDBD00332CCB /* SwitchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C510631C27374E00C59136 /* SwitchMap.swift */; };
@@ -286,13 +282,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = D03579A31B2B788F005D26AE;
 			remoteInfo = "Result-watchOS";
-		};
-		A79BE7831E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D03579B01B2B78A1005D26AE;
-			remoteInfo = "Result-watchOSTests";
 		};
 		A79BE7891E0709900077A9B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -410,7 +399,6 @@
 		A7C510491C2733F600C59136 /* IgnoreValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreValues.swift; sourceTree = "<group>"; };
 		A7C5104B1C27343400C59136 /* WithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithLatestFrom.swift; sourceTree = "<group>"; };
 		A7C5104D1C27346B00C59136 /* TakeWhen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeWhen.swift; sourceTree = "<group>"; };
-		A7C5104F1C2734D100C59136 /* CombinePrevious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinePrevious.swift; sourceTree = "<group>"; };
 		A7C510511C2734F100C59136 /* SlidingWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingWindow.swift; sourceTree = "<group>"; };
 		A7C510531C27351F00C59136 /* KsrDebounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KsrDebounce.swift; sourceTree = "<group>"; };
 		A7C510551C27358300C59136 /* MapConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConst.swift; sourceTree = "<group>"; };
@@ -431,7 +419,6 @@
 		A7C5B8E61E7F47D8001F9E62 /* SlidingWindowTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingWindowTest.swift; sourceTree = "<group>"; };
 		A7C5B8E71E7F47D8001F9E62 /* AllValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllValuesTests.swift; sourceTree = "<group>"; };
 		A7C5B8E81E7F47D8001F9E62 /* SortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortTests.swift; sourceTree = "<group>"; };
-		A7C5B8E91E7F47D8001F9E62 /* CombinePreviousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinePreviousTests.swift; sourceTree = "<group>"; };
 		A7C5B8EA1E7F47D8001F9E62 /* ValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesTests.swift; sourceTree = "<group>"; };
 		A7C5B8EB1E7F47D8001F9E62 /* TakeUntilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntilTests.swift; sourceTree = "<group>"; };
 		A7C5B8EC1E7F47D8001F9E62 /* MapConstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConstTests.swift; sourceTree = "<group>"; };
@@ -593,7 +580,6 @@
 				A79BE77E1E07091D0077A9B2 /* Result.framework */,
 				A79BE7801E07091D0077A9B2 /* Result-tvOSTests.xctest */,
 				A79BE7821E07091D0077A9B2 /* Result.framework */,
-				A79BE7841E07091D0077A9B2 /* Result-watchOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -603,8 +589,6 @@
 			children = (
 				A7378CC81C80975700F0A562 /* AllValues.swift */,
 				A7C5B8E71E7F47D8001F9E62 /* AllValuesTests.swift */,
-				A7C5104F1C2734D100C59136 /* CombinePrevious.swift */,
-				A7C5B8E91E7F47D8001F9E62 /* CombinePreviousTests.swift */,
 				A7180BD91CCFB0BE001711CA /* Concat.swift */,
 				A7C510671C2737C500C59136 /* ConcatMap.swift */,
 				A7C5B8E11E7F47D8001F9E62 /* ConcatTests.swift */,
@@ -1026,13 +1010,6 @@
 			remoteRef = A79BE7811E07091D0077A9B2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A79BE7841E07091D0077A9B2 /* Result-watchOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-watchOSTests.xctest";
-			remoteRef = A79BE7831E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1095,7 +1072,6 @@
 				A7C5B91D1E7F4809001F9E62 /* UIRefreshControlTests.swift in Sources */,
 				A7C5B8F11E7F47D9001F9E62 /* UncollectTests.swift in Sources */,
 				A7C5B8FB1E7F47D9001F9E62 /* WithLatestFromTests.swift in Sources */,
-				A7C5B9031E7F47D9001F9E62 /* CombinePreviousTests.swift in Sources */,
 				A7C5B9231E7F4809001F9E62 /* UITextFieldTests.swift in Sources */,
 				A7C5B90D1E7F47D9001F9E62 /* DebounceTests.swift in Sources */,
 				A7C5B8F31E7F47D9001F9E62 /* ConcatTests.swift in Sources */,
@@ -1183,7 +1159,6 @@
 				A7FD08A01C81EDBD00332CCB /* UIControl.swift in Sources */,
 				A74FFDDD1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */,
 				8096F28C1CC91C1500231D91 /* Rac.swift in Sources */,
-				A7FD08A11C81EDBD00332CCB /* CombinePrevious.swift in Sources */,
 				A7FD08A21C81EDBD00332CCB /* UIView.swift in Sources */,
 				A7180BDA1CCFB0BE001711CA /* Concat.swift in Sources */,
 				A7FD08A41C81EDBD00332CCB /* ObserveForUI.swift in Sources */,
@@ -1205,7 +1180,6 @@
 				A7C5B91C1E7F4809001F9E62 /* UIRefreshControlTests.swift in Sources */,
 				A7C5B8F01E7F47D9001F9E62 /* UncollectTests.swift in Sources */,
 				A7C5B8FA1E7F47D9001F9E62 /* WithLatestFromTests.swift in Sources */,
-				A7C5B9021E7F47D9001F9E62 /* CombinePreviousTests.swift in Sources */,
 				A7C5B9221E7F4809001F9E62 /* UITextFieldTests.swift in Sources */,
 				A7C5B90C1E7F47D9001F9E62 /* DebounceTests.swift in Sources */,
 				A7C5B8F21E7F47D9001F9E62 /* ConcatTests.swift in Sources */,
@@ -1273,7 +1247,6 @@
 				A7C5105C1C27362000C59136 /* WrapInOptional.swift in Sources */,
 				A74FFDDE1CE3DCEE00C7BCB9 /* UITextView.swift in Sources */,
 				A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */,
-				A7C510501C2734D100C59136 /* CombinePrevious.swift in Sources */,
 				A7983B5D1C2AF899003A1ABE /* UIView.swift in Sources */,
 				A7180BDB1CCFB0BE001711CA /* Concat.swift in Sources */,
 				A7C5105A1C2735F500C59136 /* ObserveForUI.swift in Sources */,
