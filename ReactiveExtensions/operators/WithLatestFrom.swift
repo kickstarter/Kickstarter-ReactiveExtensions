@@ -64,7 +64,7 @@ public extension Signal {
     Signal<(Value, U), OtherError> {
 
     return Signal<(Value, U), OtherError> { observer, _ in
-      
+
       let lock = NSLock()
       lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
 
