@@ -11,11 +11,12 @@ public extension Signal {
    - returns: A new signal.
    */
   public func scan(_ combine: @escaping (Value, Value) -> Value) -> Signal<Value, Error> {
-    return Signal { observer in
+    return Signal { observer, _ in
+
       var accumulated: Value? = nil
 
-      return self.observe { event in
-        observer.action(event.map { value in
+      self.observe { event in
+        observer.send(event.map { value in
           if let unwrapped = accumulated {
             let next = combine(unwrapped, value)
             accumulated = next

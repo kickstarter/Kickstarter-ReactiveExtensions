@@ -19,8 +19,9 @@ public extension Signal {
     let d = SerialDisposable()
     let i = interval().timeInterval
 
-    return Signal { observer in
-      return self.observe { event in
+    return Signal { observer, _ in
+
+      self.observe { event in
         switch event {
         case let .value(value):
           let date = s.currentDate.addingTimeInterval(i)
@@ -30,7 +31,7 @@ public extension Signal {
 
         case .completed, .failed, .interrupted:
           d.inner = s.schedule {
-            observer.action(event)
+            observer.send(event)
           }
         }
       }

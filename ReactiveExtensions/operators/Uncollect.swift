@@ -7,8 +7,8 @@ public extension Signal where Value: Sequence {
    - returns: A new signal.
    */
   public func uncollect() -> Signal<Value.Iterator.Element, Error> {
-    return Signal<Value.Iterator.Element, Error> { observer in
-      return self.observe { event in
+    return Signal<Value.Iterator.Element, Error> { observer, _ in
+      self.observe { event in
         switch event {
         case let .value(sequence):
           sequence.forEach(observer.send(value:))
