@@ -15,26 +15,8 @@ public extension Signal {
     _ interval: @autoclosure @escaping () -> DispatchTimeInterval,
     on scheduler: @autoclosure @escaping () -> DateScheduler) -> Signal<Value, Error> {
 
-    let s = scheduler()
-    let d = SerialDisposable()
-    let i = interval().timeInterval
-
-    return Signal { observer, _ in
-
-      self.observe { event in
-        switch event {
-        case let .value(value):
-          let date = s.currentDate.addingTimeInterval(i)
-          d.inner = s.schedule(after: date) {
-            observer.send(value: value)
-          }
-
-        case .completed, .failed, .interrupted:
-          d.inner = s.schedule {
-            observer.send(event)
-          }
-        }
-      }
+    return self.flatMap(.latest) { next in
+      SignalProducer(value: next).delay(interval().timeInterval, on: scheduler())
     }
   }
 }
