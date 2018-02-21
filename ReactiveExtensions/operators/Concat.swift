@@ -11,11 +11,10 @@ extension Signal {
    */
   public static func concat<Seq: Sequence>(_ signals: Seq) -> Signal where Seq.Iterator.Element == Signal {
     let producer = SignalProducer<Signal, Error>(signals)
-      .flatten(.concat)
     var result: Signal!
 
     producer.startWithSignal { signal, _ in
-      result = signal
+      result = signal.flatten(.concat)
     }
 
     return result
