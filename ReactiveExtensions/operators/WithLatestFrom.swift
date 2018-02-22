@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Transforms the signal into one that emits the most recent values of `self` and `other` only when `self`
@@ -13,7 +13,8 @@ public extension SignalProtocol {
   public func withLatestFrom <U, OtherError> (_ other: Signal<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
-    return Signal { observer in
+    return Signal<(Value, U), OtherError> { observer, _ in
+
       let lock = NSLock()
       lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
 
@@ -48,8 +49,6 @@ public extension SignalProtocol {
           break
         }
       }
-
-      return disposable
     }
   }
 
@@ -64,7 +63,8 @@ public extension SignalProtocol {
   public func withLatestFrom <U, OtherError> (_ other: SignalProducer<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
-    return Signal { observer in
+    return Signal<(Value, U), OtherError> { observer, _ in
+
       let lock = NSLock()
       lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
 
@@ -99,8 +99,6 @@ public extension SignalProtocol {
           break
         }
       }
-
-      return disposable
     }
   }
 }

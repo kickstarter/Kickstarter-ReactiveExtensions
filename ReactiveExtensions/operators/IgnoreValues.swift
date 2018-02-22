@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Creates a new signal that emits a void value for every emission of `self`.
@@ -12,7 +12,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Creates a new producer that emits a void value for every emission of `self`.

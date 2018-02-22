@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-extension SignalProtocol {
+extension Signal {
 
   /**
    - parameter predicate: A function that determines when to terminate the signal.
@@ -9,20 +9,20 @@ extension SignalProtocol {
               `predicate` returns false the signal is completed.
    */
   public func takeUntil(_ predicate: @escaping (Value) -> Bool) -> Signal<Value, Error> {
-    return Signal { observer in
-      return self.observe { event in
+    return Signal { observer, _ in
+      self.observe { event in
         if case let .value(value) = event, predicate(value) {
           observer.send(value: value)
           observer.sendCompleted()
         } else {
-          observer.action(event)
+          observer.send(event)
         }
       }
     }
   }
 }
 
-extension SignalProducerProtocol {
+extension SignalProducer {
 
   /**
    - parameter predicate: A function that determines when to terminate the signal.

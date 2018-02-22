@@ -1,14 +1,14 @@
 import ReactiveSwift
 
-public extension SignalProtocol where Value: Sequence {
+public extension Signal where Value: Sequence {
   /**
    Transforms a signal of sequences into a signal of elements by emitting all elements of each sequence.
 
    - returns: A new signal.
    */
   public func uncollect() -> Signal<Value.Iterator.Element, Error> {
-    return Signal<Value.Iterator.Element, Error> { observer in
-      return self.observe { event in
+    return Signal<Value.Iterator.Element, Error> { observer, _ in
+      self.observe { event in
         switch event {
         case let .value(sequence):
           sequence.forEach(observer.send(value:))
@@ -24,7 +24,7 @@ public extension SignalProtocol where Value: Sequence {
   }
 }
 
-public extension SignalProducerProtocol where Value: Sequence {
+public extension SignalProducer where Value: Sequence {
   /**
    Transforms a producer of sequences into a producer of elements by emitting all elements of each sequence.
 

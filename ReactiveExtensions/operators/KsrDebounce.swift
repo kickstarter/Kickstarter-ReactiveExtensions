@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Debounces a signal by a time interval. The resulting signal emits a value only when `interval` seconds
@@ -15,13 +15,13 @@ public extension SignalProtocol {
     _ interval: @autoclosure @escaping () -> DispatchTimeInterval,
     on scheduler: @autoclosure @escaping () -> DateScheduler) -> Signal<Value, Error> {
 
-      return self.flatMap(.latest) { next in
-        SignalProducer(value: next).delay(interval().timeInterval, on: scheduler())
-      }
+    return self.flatMap(.latest) { next in
+      SignalProducer(value: next).delay(interval().timeInterval, on: scheduler())
+    }
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Debounces a producer by a time interval. The resulting producer emits a value only when `interval` seconds

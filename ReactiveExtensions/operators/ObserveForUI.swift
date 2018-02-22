@@ -1,6 +1,6 @@
 import ReactiveSwift
 
-public extension SignalProtocol {
+public extension Signal {
 
   /**
    Transforms the signal into one that observes values on the UI thread.
@@ -23,7 +23,7 @@ public extension SignalProtocol {
   }
 }
 
-public extension SignalProducerProtocol {
+public extension SignalProducer {
 
   /**
    Transforms the producer into one that observes values on the UI thread.
