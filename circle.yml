@@ -2,7 +2,7 @@
 version: 2
 
 jobs:
-  build-and-test:
+  build:
     macos:
       xcode: "9.3.0"
     working_directory: /Users/distiller/project
@@ -24,7 +24,6 @@ jobs:
       - run:
         name: Run tests
         command: bin/test iOS 11.3
-
 
 # machine:
 #   xcode:
