@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
 
-      - run: brew install swiftlint
+      - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
       # - run: set -o pipefail && swiftlint lint --strict --reporter json | tee $CIRCLE_WORKING_DIRECTORY/output/swiftlint-report.json
       - run: bin/test iOS 11.3
 
