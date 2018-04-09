@@ -17,5 +17,5 @@ xcodebuild \
   -destination "$DESTINATION$2" \
   -scheme ReactiveExtensions-$1 \
   clean test \
-  | tee $CIRCLE_ARTIFACTS/xcode_raw.log \
+  | tee $CIRCLE_WORKING_DIRECTORY/output/xcode_raw.log \
   | xcpretty
