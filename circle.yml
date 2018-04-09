@@ -5,9 +5,9 @@ jobs:
   build:
     macos:
       xcode: "9.3.0"
-    working_directory: /Users/distiller/project
+    working_directory: ~/ReactiveExtensions
     environment:
-      FL_OUTPUT_DIR: output
+      CIRCLE_ARTIFACTS: /tmp
 
     steps:
       - checkout
@@ -15,8 +15,13 @@ jobs:
       - run: git submodule update --init --recursive
 
       - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
-      - run: set -o pipefail && swiftlint lint --strict --reporter json | tee $CIRCLE_WORKING_DIRECTORY/output/swiftlint-report.json
+      - run: set -o pipefail &&
+          swiftlint lint --strict --reporter json |
+          tee $CIRCLE_ARTIFACTS/swiftlint-report.json
       - run: bin/test iOS 11.3
+
+      - store_artifacts:
+        path: /tmp/swiftlint-report.json
 
 # machine:
 #   xcode:
