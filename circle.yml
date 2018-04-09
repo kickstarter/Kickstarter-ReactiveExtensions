@@ -13,7 +13,7 @@ jobs:
       - checkout
 
       - run: brew install swiftlint
-      - run: set -o pipefail && swiftlint lint --strict --reporter json | tee $CIRCLE_ARTIFACTS/swiftlint-report.json
+      # - run: set -o pipefail && swiftlint lint --strict --reporter json | tee $CIRCLE_WORKING_DIRECTORY/output/swiftlint-report.json
       - run: bin/test iOS 11.3
 
 # machine:
