@@ -14,7 +14,7 @@ jobs:
       - run: git submodule sync --recursive
       - run: git submodule update --init --recursive
 
-      - run: xcrun instruments -w 'iPhone 8' || true; sleep 15
+      - run: xcrun instruments -w 'iPhone 8 (11.3)' || true; sleep 15
 
       - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
       - run: set -o pipefail &&
