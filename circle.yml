@@ -21,7 +21,7 @@ jobs:
       - run: bin/test iOS 11.3
 
       - store_artifacts:
-        path: /tmp/swiftlint-report.json
+          path: /tmp/swiftlint-report.json
 
 # machine:
 #   xcode:
