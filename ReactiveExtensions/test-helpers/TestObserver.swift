@@ -143,53 +143,6 @@ extension TestObserver where Value: Equatable {
   }
 }
 
-extension TestObserver where Value: ReactiveSwift.OptionalProtocol, Value.Wrapped: Equatable {
-
-  internal func assertValue(_ value: Value, _ message: String? = nil,
-                            file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(1, self.values.count, "A single item should have been emitted.", file: file, line: line)
-    XCTAssertEqual(value.optional, self.lastValue?.optional,
-                   message ?? "A single value of \(value) should have been emitted",
-                   file: file, line: line)
-  }
-
-  internal func assertLastValue(_ value: Value, _ message: String? = nil,
-                                file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(value.optional, self.lastValue?.optional,
-                   message ?? "Last emitted value is equal to \(value).",
-                   file: file, line: line)
-  }
-
-  internal func assertValues(_ values: [Value], _ message: String = "",
-                             file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(values, self.values, message, file: file, line: line)
-  }
-}
-
-extension TestObserver where Value: Sequence, Value.Iterator.Element: Equatable {
-
-  internal func assertValue(_ value: Value, _ message: String? = nil,
-                            file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(1, self.values.count, "A single item should have been emitted.", file: file, line: line)
-    XCTAssertEqual(Array(value), self.lastValue.map(Array.init) ?? [],
-                   message ?? "A single value of \(value) should have been emitted",
-                   file: file, line: line)
-  }
-
-  internal func assertLastValue(_ value: Value, _ message: String? = nil,
-                                file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(Array(value), self.lastValue.map(Array.init) ?? [],
-                   message ?? "Last emitted value is equal to \(value).",
-                   file: file, line: line)
-  }
-
-  internal func assertValues(_ values: [[Value.Iterator.Element]], _ message: String = "",
-                             file: StaticString = #file, line: UInt = #line) {
-      XCTAssertEqual(Array(values), Array(self.values.map(Array.init)), message, file: file, line: line)
-  }
-
-}
-
 extension TestObserver where Error: Equatable {
   internal func assertFailed(_ expectedError: Error, message: String = "",
                              file: StaticString = #file, line: UInt = #line) {
