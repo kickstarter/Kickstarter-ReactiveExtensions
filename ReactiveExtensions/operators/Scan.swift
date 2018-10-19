@@ -13,7 +13,7 @@ public extension Signal {
   public func scan(_ combine: @escaping (Value, Value) -> Value) -> Signal<Value, Error> {
     return Signal { observer, _ in
 
-      var accumulated: Value? = nil
+      var accumulated: Value?
 
       self.observe { event in
         observer.send(event.map { value in

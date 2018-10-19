@@ -19,7 +19,7 @@ public extension Signal {
       lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
 
       let disposable = CompositeDisposable()
-      var latestValue: U? = nil
+      var latestValue: U?
 
       disposable += other.observe { event in
         switch event {
@@ -69,7 +69,7 @@ public extension Signal {
       lock.name = "org.reactivecocoa.ReactiveCocoa.withLatestFrom"
 
       let disposable = CompositeDisposable()
-      var latestValue: U? = nil
+      var latestValue: U?
 
       disposable += other.start { event in
         switch event {
