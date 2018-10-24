@@ -8,9 +8,9 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIStackView {
-  public var axis: Signal<UILayoutConstraintAxis, NoError> {
+  public var axis: Signal<NSLayoutConstraint.Axis, NoError> {
     nonmutating set {
-      let prop: MutableProperty<UILayoutConstraintAxis> = lazyMutableProperty(
+      let prop: MutableProperty<NSLayoutConstraint.Axis> = lazyMutableProperty(
         object, key: &Associations.axis,
         setter: { [weak object] in object?.axis = $0 },
         getter: { [weak object] in object?.axis ?? .horizontal })
@@ -22,9 +22,9 @@ public extension Rac where Object: UIStackView {
     }
   }
 
-  public var alignment: Signal<UIStackViewAlignment, NoError> {
+  public var alignment: Signal<UIStackView.Alignment, NoError> {
     nonmutating set {
-      let prop: MutableProperty<UIStackViewAlignment> = lazyMutableProperty(
+      let prop: MutableProperty<UIStackView.Alignment> = lazyMutableProperty(
         object, key: &Associations.alignment,
         setter: { [weak object] in object?.alignment = $0 },
         getter: { [weak object] in object?.alignment ?? .fill })

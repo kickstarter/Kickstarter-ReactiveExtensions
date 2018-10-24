@@ -66,7 +66,7 @@ public extension Rac where Object: NSObject {
         object,
         key: &Associations.accessibilityTraits,
         setter: { [weak object] in object?.accessibilityTraits = $0 },
-        getter: { [weak object] in object?.accessibilityTraits ?? UIAccessibilityTraitNone })
+        getter: { [weak object] in object?.accessibilityTraits ?? .none })
 
       prop <~ newValue.observeForUI()
     }
