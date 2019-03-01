@@ -1,0 +1,4 @@
+# Carthage input files
+
+$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/Result.framework

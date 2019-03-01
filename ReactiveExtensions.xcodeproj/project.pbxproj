@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,14 +52,6 @@
 		A7983B5F1C2AF8B0003A1ABE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */; };
 		A7983B631C2AF8D4003A1ABE /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7983B621C2AF8D4003A1ABE /* UIControl.swift */; };
 		A7983B8D1C2AFB1D003A1ABE /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
-		A79BE79C1E0709990077A9B2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE77A1E07091D0077A9B2 /* Result.framework */; };
-		A79BE79D1E07099D0077A9B2 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE75B1E0709020077A9B2 /* ReactiveSwift.framework */; };
-		A79BE7A61E070E700077A9B2 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE75B1E0709020077A9B2 /* ReactiveSwift.framework */; };
-		A79BE7A71E070E740077A9B2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE77A1E07091D0077A9B2 /* Result.framework */; };
-		A79BE7AA1E0711500077A9B2 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE7611E0709020077A9B2 /* ReactiveSwift.framework */; };
-		A79BE7AD1E0711570077A9B2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE77E1E07091D0077A9B2 /* Result.framework */; };
-		A79BE7B21E0711650077A9B2 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE7611E0709020077A9B2 /* ReactiveSwift.framework */; };
-		A79BE7B31E0711690077A9B2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79BE77E1E07091D0077A9B2 /* Result.framework */; };
 		A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A015D61CBDA99100C4B821 /* TakeUntil.swift */; };
 		A7A015D81CBDA99100C4B821 /* TakeUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A015D61CBDA99100C4B821 /* TakeUntil.swift */; };
 		A7B11A561D78A43D00A5036E /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B11A551D78A43D00A5036E /* Scan.swift */; };
@@ -173,6 +165,10 @@
 		A7FD08AA1C81EDBD00332CCB /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7FD08D31C81EEA100332CCB /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */; };
 		CA43C6671BB35FCF00C180DA /* ReactiveExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0086F222228B3DA00129A7A /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0086F202228B3DA00129A7A /* ReactiveSwift.framework */; };
+		D0086F232228B3DA00129A7A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0086F212228B3DA00129A7A /* Result.framework */; };
+		D0086F262228B3F400129A7A /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0086F202228B3DA00129A7A /* ReactiveSwift.framework */; };
+		D0086F272228B3F400129A7A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0086F212228B3DA00129A7A /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,160 +178,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = CA43C6621BB35FCF00C180DA;
 			remoteInfo = ReactiveExtensions;
-		};
-		A79BE7561E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D04725EA19E49ED7006002AA;
-			remoteInfo = "ReactiveSwift-macOS";
-		};
-		A79BE7581E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D04725F519E49ED7006002AA;
-			remoteInfo = "ReactiveSwift-macOSTests";
-		};
-		A79BE75A1E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D047260C19E49F82006002AA;
-			remoteInfo = "ReactiveSwift-iOS";
-		};
-		A79BE75C1E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D047261619E49F82006002AA;
-			remoteInfo = "ReactiveSwift-iOSTests";
-		};
-		A79BE75E1E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9B315541B3940610001CB9C;
-			remoteInfo = "ReactiveSwift-watchOS";
-		};
-		A79BE7601E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
-			remoteInfo = "ReactiveSwift-tvOS";
-		};
-		A79BE7621E0709020077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7DFBED031CDB8C9500EE435B;
-			remoteInfo = "ReactiveSwift-tvOSTests";
-		};
-		A79BE7751E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480571A9572F5009D7229;
-			remoteInfo = "Result-Mac";
-		};
-		A79BE7771E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480671A9572F5009D7229;
-			remoteInfo = "Result-MacTests";
-		};
-		A79BE7791E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D454807D1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		A79BE77B1E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480871A957362009D7229;
-			remoteInfo = "Result-iOSTests";
-		};
-		A79BE77D1E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
-			remoteInfo = "Result-tvOS";
-		};
-		A79BE77F1E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57FCDE541BA280E000130C48;
-			remoteInfo = "Result-tvOSTests";
-		};
-		A79BE7811E07091D0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D03579A31B2B788F005D26AE;
-			remoteInfo = "Result-watchOS";
-		};
-		A79BE7891E0709900077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D047260B19E49F82006002AA;
-			remoteInfo = "ReactiveSwift-iOS";
-		};
-		A79BE79A1E0709940077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D454807C1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		A79BE7A21E070E670077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D047260B19E49F82006002AA;
-			remoteInfo = "ReactiveSwift-iOS";
-		};
-		A79BE7A41E070E6B0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D454807C1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		A79BE7A81E07114A0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 57A4D1AF1BA13D7A00F7D4B1;
-			remoteInfo = "ReactiveSwift-tvOS";
-		};
-		A79BE7AB1E0711530077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 57FCDE3C1BA280DC00130C48;
-			remoteInfo = "Result-tvOS";
-		};
-		A79BE7AE1E07115E0077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 57A4D1AF1BA13D7A00F7D4B1;
-			remoteInfo = "ReactiveSwift-tvOS";
-		};
-		A79BE7B01E0711610077A9B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 57FCDE3C1BA280DC00130C48;
-			remoteInfo = "Result-tvOS";
 		};
 		A7DB1D441C9F4E3F008244DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -359,6 +201,18 @@
 			remoteInfo = "ReactiveExtensions-iOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0086F142228B32100129A7A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
@@ -388,8 +242,6 @@
 		A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		A7983B621C2AF8D4003A1ABE /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactiveExtensions-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveSwift.xcodeproj; path = Frameworks/ReactiveSwift/ReactiveSwift.xcodeproj; sourceTree = "<group>"; };
-		A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Frameworks/ReactiveSwift/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		A7A015D61CBDA99100C4B821 /* TakeUntil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeUntil.swift; sourceTree = "<group>"; };
 		A7B11A551D78A43D00A5036E /* Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		A7C510451C2720D500C59136 /* Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Sort.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -448,6 +300,8 @@
 		CA43C6631BB35FCF00C180DA /* ReactiveExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveExtensions.h; sourceTree = "<group>"; };
 		CA43C6681BB35FCF00C180DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0086F202228B3DA00129A7A /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		D0086F212228B3DA00129A7A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,8 +318,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79BE7A71E070E740077A9B2 /* Result.framework in Frameworks */,
-				A79BE7A61E070E700077A9B2 /* ReactiveSwift.framework in Frameworks */,
+				D0086F262228B3F400129A7A /* ReactiveSwift.framework in Frameworks */,
+				D0086F272228B3F400129A7A /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,8 +327,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79BE7B31E0711690077A9B2 /* Result.framework in Frameworks */,
-				A79BE7B21E0711650077A9B2 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,8 +334,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79BE79D1E07099D0077A9B2 /* ReactiveSwift.framework in Frameworks */,
-				A79BE79C1E0709990077A9B2 /* Result.framework in Frameworks */,
+				D0086F222228B3DA00129A7A /* ReactiveSwift.framework in Frameworks */,
+				D0086F232228B3DA00129A7A /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,8 +352,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79BE7AD1E0711570077A9B2 /* Result.framework in Frameworks */,
-				A79BE7AA1E0711500077A9B2 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,34 +401,6 @@
 				A7C5B9111E7F4809001F9E62 /* UIViewTests.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		A79BE7481E0709020077A9B2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A79BE7571E0709020077A9B2 /* ReactiveSwift.framework */,
-				A79BE7591E0709020077A9B2 /* ReactiveSwiftTests.xctest */,
-				A79BE75B1E0709020077A9B2 /* ReactiveSwift.framework */,
-				A79BE75D1E0709020077A9B2 /* ReactiveSwiftTests.xctest */,
-				A79BE75F1E0709020077A9B2 /* ReactiveSwift.framework */,
-				A79BE7611E0709020077A9B2 /* ReactiveSwift.framework */,
-				A79BE7631E0709020077A9B2 /* ReactiveSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A79BE76B1E07091D0077A9B2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A79BE7761E07091D0077A9B2 /* Result.framework */,
-				A79BE7781E07091D0077A9B2 /* Result-MacTests.xctest */,
-				A79BE77A1E07091D0077A9B2 /* Result.framework */,
-				A79BE77C1E07091D0077A9B2 /* Result-iOSTests.xctest */,
-				A79BE77E1E07091D0077A9B2 /* Result.framework */,
-				A79BE7801E07091D0077A9B2 /* Result-tvOSTests.xctest */,
-				A79BE7821E07091D0077A9B2 /* Result.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A7C510441C2720C900C59136 /* operators */ = {
@@ -643,8 +465,8 @@
 		A7FD087F1C81ED5D00332CCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */,
-				A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */,
+				D0086F202228B3DA00129A7A /* ReactiveSwift.framework */,
+				D0086F212228B3DA00129A7A /* Result.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -755,8 +577,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A79BE7A51E070E6B0077A9B2 /* PBXTargetDependency */,
-				A79BE7A31E070E670077A9B2 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-TestHelpers-iOS";
 			productName = ReactiveExtensions_TestHelpers;
@@ -775,8 +595,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A79BE7B11E0711610077A9B2 /* PBXTargetDependency */,
-				A79BE7AF1E07115E0077A9B2 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-TestHelpers-tvOS";
 			productName = ReactiveExtensions_TestHelpers;
@@ -791,12 +609,12 @@
 				A7FD08A61C81EDBD00332CCB /* Frameworks */,
 				A7FD08A91C81EDBD00332CCB /* Headers */,
 				A7FD08AB1C81EDBD00332CCB /* Resources */,
+				D0086F142228B32100129A7A /* CopyFiles */,
+				D0086F1F2228B32700129A7A /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A79BE79B1E0709940077A9B2 /* PBXTargetDependency */,
-				A79BE78A1E0709900077A9B2 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-iOS";
 			productName = ReactiveExtensions;
@@ -834,8 +652,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A79BE7AC1E0711530077A9B2 /* PBXTargetDependency */,
-				A79BE7A91E07114A0077A9B2 /* PBXTargetDependency */,
 			);
 			name = "ReactiveExtensions-tvOS";
 			productName = ReactiveExtensions;
@@ -885,16 +701,6 @@
 			mainGroup = CA43C6591BB35FCF00C180DA;
 			productRefGroup = CA43C6641BB35FCF00C180DA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A79BE7481E0709020077A9B2 /* Products */;
-					ProjectRef = A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */;
-				},
-				{
-					ProductGroup = A79BE76B1E07091D0077A9B2 /* Products */;
-					ProjectRef = A79BE76A1E07091D0077A9B2 /* Result.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */,
@@ -906,107 +712,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A79BE7571E0709020077A9B2 /* ReactiveSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveSwift.framework;
-			remoteRef = A79BE7561E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7591E0709020077A9B2 /* ReactiveSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveSwiftTests.xctest;
-			remoteRef = A79BE7581E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE75B1E0709020077A9B2 /* ReactiveSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveSwift.framework;
-			remoteRef = A79BE75A1E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE75D1E0709020077A9B2 /* ReactiveSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveSwiftTests.xctest;
-			remoteRef = A79BE75C1E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE75F1E0709020077A9B2 /* ReactiveSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveSwift.framework;
-			remoteRef = A79BE75E1E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7611E0709020077A9B2 /* ReactiveSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveSwift.framework;
-			remoteRef = A79BE7601E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7631E0709020077A9B2 /* ReactiveSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveSwiftTests.xctest;
-			remoteRef = A79BE7621E0709020077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7761E07091D0077A9B2 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = A79BE7751E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7781E07091D0077A9B2 /* Result-MacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-MacTests.xctest";
-			remoteRef = A79BE7771E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE77A1E07091D0077A9B2 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = A79BE7791E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE77C1E07091D0077A9B2 /* Result-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-iOSTests.xctest";
-			remoteRef = A79BE77B1E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE77E1E07091D0077A9B2 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = A79BE77D1E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7801E07091D0077A9B2 /* Result-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-tvOSTests.xctest";
-			remoteRef = A79BE77F1E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A79BE7821E07091D0077A9B2 /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = A79BE7811E07091D0077A9B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A7983B861C2AFB1C003A1ABE /* Resources */ = {
@@ -1052,6 +757,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D0086F1F2228B32700129A7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/carthage-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+				"$(SRCROOT)/carthage-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7983B841C2AFB1C003A1ABE /* Sources */ = {
@@ -1256,46 +983,6 @@
 			target = CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */;
 			targetProxy = A7983B8E1C2AFB1D003A1ABE /* PBXContainerItemProxy */;
 		};
-		A79BE78A1E0709900077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveSwift-iOS";
-			targetProxy = A79BE7891E0709900077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE79B1E0709940077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Result-iOS";
-			targetProxy = A79BE79A1E0709940077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE7A31E070E670077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveSwift-iOS";
-			targetProxy = A79BE7A21E070E670077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE7A51E070E6B0077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Result-iOS";
-			targetProxy = A79BE7A41E070E6B0077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE7A91E07114A0077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveSwift-tvOS";
-			targetProxy = A79BE7A81E07114A0077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE7AC1E0711530077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Result-tvOS";
-			targetProxy = A79BE7AB1E0711530077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE7AF1E07115E0077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveSwift-tvOS";
-			targetProxy = A79BE7AE1E07115E0077A9B2 /* PBXContainerItemProxy */;
-		};
-		A79BE7B11E0711610077A9B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Result-tvOS";
-			targetProxy = A79BE7B01E0711610077A9B2 /* PBXContainerItemProxy */;
-		};
 		A7DB1D451C9F4E3F008244DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers-iOS */;
@@ -1321,7 +1008,11 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1335,7 +1026,11 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1354,10 +1049,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
@@ -1384,10 +1084,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
@@ -1415,10 +1120,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
@@ -1445,10 +1156,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
@@ -1470,9 +1187,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1489,9 +1214,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1506,7 +1239,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1520,7 +1257,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1638,7 +1379,8 @@
 				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100";
 				PRODUCT_NAME = ReactiveExtensions;
 				STRIP_BITCODE_FROM_COPIED_FILES = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -1657,9 +1399,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1675,9 +1426,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
