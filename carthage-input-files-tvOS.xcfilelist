@@ -1,0 +1,4 @@
+# Carthage input files
+
+$(SRCROOT)/Carthage/Build/tvOS/ReactiveSwift.framework
+$(SRCROOT)/Carthage/Build/tvOS/Result.framework
