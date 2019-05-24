@@ -4,7 +4,7 @@ version: 2
 jobs:
   build:
     macos:
-      xcode: "10.1.0"
+      xcode: "10.2.0"
     working_directory: ~/ReactiveExtensions
     environment:
       CIRCLE_ARTIFACTS: /tmp
@@ -18,8 +18,8 @@ jobs:
       - run: set -o pipefail &&
           swiftlint lint --strict --reporter json |
           tee $CIRCLE_ARTIFACTS/swiftlint-report.json
-      - run: bin/test iOS 11.2
-      - run: bin/test iOS 12.1
+      - run: bin/test iOS 11.4
+      - run: bin/test iOS 12.2
 
       - store_artifacts:
           path: /tmp/swiftlint-report.json
