@@ -12,7 +12,6 @@ extension Signal {
 
    - returns: The enumerated signal.
    */
-  // swiftlint:disable:next valid_docs
   public func enumerated() -> Signal<(idx: Int, value: Value), Error> {
 
     let initial: (idx: Int, value: Value?) = (-1, nil)
