@@ -1,6 +1,5 @@
 #if os(iOS)
 import ReactiveSwift
-import Result
 import UIKit
 
 private enum Associations {

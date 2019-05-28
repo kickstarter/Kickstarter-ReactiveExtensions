@@ -1,5 +1,4 @@
 import ReactiveSwift
-import Result
 
 extension Signal where Value: EventProtocol, Error == Never {
   /**

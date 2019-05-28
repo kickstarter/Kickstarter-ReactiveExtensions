@@ -1,5 +1,4 @@
 import ReactiveSwift
-import Result
 
 public extension Signal {
 

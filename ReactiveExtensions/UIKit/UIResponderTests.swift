@@ -1,6 +1,5 @@
 import XCTest
 import ReactiveSwift
-import Result
 import ReactiveExtensions
 import UIKit
 @testable import ReactiveExtensions_TestHelpers
