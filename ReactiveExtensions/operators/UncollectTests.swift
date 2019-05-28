@@ -7,9 +7,9 @@ import Result
 class UncollectTests: XCTestCase {
 
   func testSignalUncollect() {
-    let (signal, observer) = Signal<[Int], NoError>.pipe()
+    let (signal, observer) = Signal<[Int], Never>.pipe()
     let uncollected = signal.uncollect()
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     uncollected.observe(test.observer)
 
     observer.send(value: [1, 2, 3])
@@ -35,9 +35,9 @@ class UncollectTests: XCTestCase {
   }
 
   func testSignalUncollectInterruption() {
-    let (signal, observer) = Signal<[Int], NoError>.pipe()
+    let (signal, observer) = Signal<[Int], Never>.pipe()
     let uncollected = signal.uncollect()
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     uncollected.observe(test.observer)
 
     observer.send(value: [1, 2, 3])
@@ -48,9 +48,9 @@ class UncollectTests: XCTestCase {
   }
 
   func testSignalProducerUncollect() {
-    let producer = SignalProducer<[Int], NoError>(value: [1, 2, 3])
+    let producer = SignalProducer<[Int], Never>(value: [1, 2, 3])
     let uncollected = producer.uncollect()
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     uncollected.start(test.observer)
 
     test.assertValues([1, 2, 3])

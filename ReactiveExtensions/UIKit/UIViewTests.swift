@@ -10,7 +10,7 @@ final class UIViewTests: XCTestCase {
   let view = UIView()
 
   func testAlpha() {
-    let (signal, observer) = Signal<CGFloat, NoError>.pipe()
+    let (signal, observer) = Signal<CGFloat, Never>.pipe()
     view.rac.alpha = signal
 
     observer.send(value: 0.0)
@@ -21,7 +21,7 @@ final class UIViewTests: XCTestCase {
   }
 
   func testBackgroundColor() {
-    let (signal, observer) = Signal<UIColor, NoError>.pipe()
+    let (signal, observer) = Signal<UIColor, Never>.pipe()
     view.rac.backgroundColor = signal
 
     observer.send(value: .red)
@@ -32,7 +32,7 @@ final class UIViewTests: XCTestCase {
   }
 
   func testEndEditing() {
-    let (signal, observer) = Signal<(), NoError>.pipe()
+    let (signal, observer) = Signal<(), Never>.pipe()
     #if os(iOS)
     let view = UITextView()
     #else
@@ -52,7 +52,7 @@ final class UIViewTests: XCTestCase {
   }
 
   func testHidden() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     view.rac.hidden = signal
 
     observer.send(value: true)
@@ -78,7 +78,7 @@ final class UIViewTests: XCTestCase {
   func testIsMainThread() {
     let view = MockView()
 
-    let (signal, observer) = Signal<CGFloat, NoError>.pipe()
+    let (signal, observer) = Signal<CGFloat, Never>.pipe()
     view.rac.alpha = signal
 
     let expectation = self.expectation(description: "isMainThread")

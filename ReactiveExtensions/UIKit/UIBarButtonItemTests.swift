@@ -9,7 +9,7 @@ final class UIBarButtonItemTests: XCTestCase {
   let barButtonItem = UIBarButtonItem()
 
   func testEnabled() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     barButtonItem.rac.enabled = signal
 
     observer.send(value: true)

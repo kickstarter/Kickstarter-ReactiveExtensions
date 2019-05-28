@@ -8,7 +8,7 @@ import ReactiveSwift
  wrapped observer. For example,
 
  ```
- let test = TestObserver<Int, NoError>()
+ let test = TestObserver<Int, Never>()
  mySignal.observer(test.observer)
 
  // ... later ...

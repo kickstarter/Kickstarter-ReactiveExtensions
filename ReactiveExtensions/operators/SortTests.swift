@@ -7,9 +7,9 @@ import Result
 final class SortTests: XCTestCase {
 
   func testSignalSort() {
-    let (signal, observer) = Signal<[Int], NoError>.pipe()
+    let (signal, observer) = Signal<[Int], Never>.pipe()
     let sort = signal.sort()
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     sort.observe(test.observer)
 
     observer.send(value: [2, 1, 3])
@@ -20,9 +20,9 @@ final class SortTests: XCTestCase {
   }
 
   func testSignalSortWithComparator() {
-    let (signal, observer) = Signal<[Int], NoError>.pipe()
+    let (signal, observer) = Signal<[Int], Never>.pipe()
     let sort = signal.sort(>)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     sort.observe(test.observer)
 
     observer.send(value: [2, 1, 3])
@@ -33,18 +33,18 @@ final class SortTests: XCTestCase {
   }
 
   func testSignalProducerSort() {
-    let producer = SignalProducer<[Int], NoError>([[2, 1, 3], [3, 2, 1], [1, 2, 3]])
+    let producer = SignalProducer<[Int], Never>([[2, 1, 3], [3, 2, 1], [1, 2, 3]])
     let sort = producer.sort()
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     sort.start(test.observer)
 
     test.assertValues([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
   }
 
   func testSignalProducerSortWithComparator() {
-    let producer = SignalProducer<[Int], NoError>([[2, 1, 3], [3, 2, 1], [1, 2, 3]])
+    let producer = SignalProducer<[Int], Never>([[2, 1, 3], [3, 2, 1], [1, 2, 3]])
     let sort = producer.sort(>)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     sort.start(test.observer)
 
     test.assertValues([[3, 2, 1], [3, 2, 1], [3, 2, 1]])

@@ -19,7 +19,7 @@ final class UIResponderTests: XCTestCase {
   }
 
   func testBecomeFirstResponder() {
-    let (signal, observer) = Signal<(), NoError>.pipe()
+    let (signal, observer) = Signal<(), Never>.pipe()
     responder.rac.becomeFirstResponder = signal
 
     eventually(XCTAssertFalse(self.responder.isFirstResponder))
@@ -30,7 +30,7 @@ final class UIResponderTests: XCTestCase {
 
   func testIsFirstResponder() {
 
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     responder.rac.isFirstResponder = signal
 
     eventually(XCTAssertFalse(self.responder.isFirstResponder))

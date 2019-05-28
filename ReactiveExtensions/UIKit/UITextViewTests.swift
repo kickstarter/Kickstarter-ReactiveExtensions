@@ -9,7 +9,7 @@ final class UITextViewTests: XCTestCase {
   let textView = UITextView()
 
   func testText() {
-    let (signal, observer) = Signal<String, NoError>.pipe()
+    let (signal, observer) = Signal<String, Never>.pipe()
     textView.rac.text = signal
 
     observer.send(value: "The future")

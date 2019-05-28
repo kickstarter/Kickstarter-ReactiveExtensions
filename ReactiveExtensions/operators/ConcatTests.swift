@@ -7,11 +7,11 @@ import Result
 final class ConcatTests: XCTestCase {
 
   func testSignal_Concat() {
-    let (s1, o1) = Signal<Int, NoError>.pipe()
-    let (s2, o2) = Signal<Int, NoError>.pipe()
+    let (s1, o1) = Signal<Int, Never>.pipe()
+    let (s2, o2) = Signal<Int, Never>.pipe()
     let concat = Signal.concat(s1, s2)
 
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     concat.observe(test.observer)
 
     o1.send(value: 1)
@@ -25,14 +25,14 @@ final class ConcatTests: XCTestCase {
   }
 
   func testProducer_Concat() {
-    let (s1, o1) = Signal<Int, NoError>.pipe()
-    let (s2, o2) = Signal<Int, NoError>.pipe()
+    let (s1, o1) = Signal<Int, Never>.pipe()
+    let (s2, o2) = Signal<Int, Never>.pipe()
     let p1 = SignalProducer(s1)
     let p2 = SignalProducer(s2)
 
     let concat = SignalProducer.concat(p1, p2)
 
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     concat.start(test.observer)
 
     o1.send(value: 1)

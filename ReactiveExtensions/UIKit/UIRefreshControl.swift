@@ -8,7 +8,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIRefreshControl {
-  public var refreshing: Signal<Bool, NoError> {
+  public var refreshing: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,

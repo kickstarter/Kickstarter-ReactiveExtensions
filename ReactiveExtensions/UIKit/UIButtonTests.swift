@@ -9,7 +9,7 @@ internal final class UIButtonTests: XCTestCase {
   private let button = UIButton()
 
   func testTitle() {
-    let (signal, observer) = Signal<String, NoError>.pipe()
+    let (signal, observer) = Signal<String, Never>.pipe()
     button.rac.title = signal
 
     observer.send(value: "Hello")

@@ -7,10 +7,10 @@ import Result
 final class TakeWhenTests: XCTestCase {
 
   func testStandard() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -63,10 +63,10 @@ final class TakeWhenTests: XCTestCase {
   }
 
   func testWithSourceInterrupted() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -93,10 +93,10 @@ final class TakeWhenTests: XCTestCase {
   }
 
   func testWithSampleInterrupted() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let takePairWhen = source.takePairWhen(sample)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     takePairWhen.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -108,10 +108,10 @@ final class TakeWhenTests: XCTestCase {
   }
 
   func testTakeWhen() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let takeWhen = source.takeWhen(sample)
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     takeWhen.observe(test.observer)
 
     sourceObserver.send(value: 1)

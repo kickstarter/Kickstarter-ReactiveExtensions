@@ -9,7 +9,7 @@ final class UITextFieldTests: XCTestCase {
   let textField = UITextField()
 
   func testAttributedPlaceHolder() {
-    let (signal, observer) = Signal<NSAttributedString, NoError>.pipe()
+    let (signal, observer) = Signal<NSAttributedString, Never>.pipe()
     textField.rac.attributedPlaceholder = signal
 
     observer.send(value: NSAttributedString(string: "The future"))
@@ -20,7 +20,7 @@ final class UITextFieldTests: XCTestCase {
   }
 
   func testText() {
-    let (signal, observer) = Signal<String, NoError>.pipe()
+    let (signal, observer) = Signal<String, Never>.pipe()
     textField.rac.text = signal
 
     observer.send(value: "The future")

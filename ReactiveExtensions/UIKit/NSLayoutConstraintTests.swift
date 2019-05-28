@@ -9,7 +9,7 @@ final class NSLayoutConstraintTests: XCTestCase {
   let constraint = NSLayoutConstraint()
 
   func testConstant() {
-    let (signal, observer) = Signal<CGFloat, NoError>.pipe()
+    let (signal, observer) = Signal<CGFloat, Never>.pipe()
     constraint.rac.constant = signal
 
     observer.send(value: 1.0)

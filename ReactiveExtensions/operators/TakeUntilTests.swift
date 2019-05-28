@@ -7,9 +7,9 @@ import Result
 final class TakeUntilTests: XCTestCase {
 
   func testStandard() {
-    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let (signal, observer) = Signal<Int, Never>.pipe()
     let takeUntil = signal.takeUntil { $0 % 2 == 0 }
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     takeUntil.observe(test.observer)
 
     observer.send(value: 1)

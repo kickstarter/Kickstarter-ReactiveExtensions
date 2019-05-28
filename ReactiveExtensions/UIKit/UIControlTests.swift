@@ -10,7 +10,7 @@ final class UIControlTests: XCTestCase {
   let control = UIControl()
 
   func testEnabled() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     control.rac.enabled = signal
 
     observer.send(value: true)
@@ -24,7 +24,7 @@ final class UIControlTests: XCTestCase {
   }
 
   func testSelected() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     control.rac.selected = signal
 
     observer.send(value: true)

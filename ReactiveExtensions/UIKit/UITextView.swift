@@ -7,7 +7,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UITextView {
-  public var text: Signal<String, NoError> {
+  public var text: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,

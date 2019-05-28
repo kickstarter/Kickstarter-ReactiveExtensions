@@ -9,7 +9,7 @@ final class UILabelTests: XCTestCase {
   let label = UILabel()
 
   func testText() {
-    let (signal, observer) = Signal<String, NoError>.pipe()
+    let (signal, observer) = Signal<String, Never>.pipe()
     label.rac.text = signal
 
     observer.send(value: "The future")
@@ -20,7 +20,7 @@ final class UILabelTests: XCTestCase {
   }
 
   func testFont() {
-    let (signal, observer) = Signal<UIFont, NoError>.pipe()
+    let (signal, observer) = Signal<UIFont, Never>.pipe()
     label.rac.font = signal
 
     let font = UIFont.systemFont(ofSize: 16.0)
@@ -30,7 +30,7 @@ final class UILabelTests: XCTestCase {
   }
 
   func testTextColor() {
-    let (signal, observer) = Signal<UIColor, NoError>.pipe()
+    let (signal, observer) = Signal<UIColor, Never>.pipe()
     label.rac.textColor = signal
 
     let color = UIColor.red
