@@ -1,16 +1,15 @@
 import XCTest
 import ReactiveSwift
-import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
 final class WithLatestFromTests: XCTestCase {
 
   func testWithLatestFromSignal() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -63,10 +62,10 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromSignal_SourceInterrupted() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -93,10 +92,10 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromSignal_SampleInterrupted() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let withLatestFrom = sample.withLatestFrom(source)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -108,11 +107,11 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromProducer() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let sourceProducer = SignalProducer(source)
     let withLatestFrom = sample.withLatestFrom(sourceProducer)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -137,11 +136,11 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromProducer_SourceCompleting() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let sourceProducer = SignalProducer(source)
     let withLatestFrom = sample.withLatestFrom(sourceProducer)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -170,11 +169,11 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromProducer_SourceInterrupted() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let sourceProducer = SignalProducer(source)
     let withLatestFrom = sample.withLatestFrom(sourceProducer)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)
@@ -203,11 +202,11 @@ final class WithLatestFromTests: XCTestCase {
   }
 
   func testWithLatestFromProducer_SampleInterrupted() {
-    let (source, sourceObserver) = Signal<Int, NoError>.pipe()
-    let (sample, sampleObserver) = Signal<Int, NoError>.pipe()
+    let (source, sourceObserver) = Signal<Int, Never>.pipe()
+    let (sample, sampleObserver) = Signal<Int, Never>.pipe()
     let sourceProducer = SignalProducer(source)
     let withLatestFrom = sample.withLatestFrom(sourceProducer)
-    let test = TestObserver<[Int], NoError>()
+    let test = TestObserver<[Int], Never>()
     withLatestFrom.map { [$0, $1] }.observe(test.observer)
 
     sourceObserver.send(value: 1)

@@ -1,6 +1,5 @@
 import XCTest
 import ReactiveSwift
-import Result
 import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
@@ -11,8 +10,8 @@ private func failOnEvens(_ idx: Int) -> SignalProducer<Int, SomeError> {
 final class ValuesTests: XCTestCase {
 
   func testSignalValues() {
-    let (signal, observer) = Signal<Int, NoError>.pipe()
-    let test = TestObserver<Int, NoError>()
+    let (signal, observer) = Signal<Int, Never>.pipe()
+    let test = TestObserver<Int, Never>()
     signal
       .flatMap { idx in failOnEvens(idx).materialize() }
       .values()
@@ -29,9 +28,9 @@ final class ValuesTests: XCTestCase {
   }
 
   func testProducerValues() {
-    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let (signal, observer) = Signal<Int, Never>.pipe()
     let producer = SignalProducer(signal)
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     producer
       .flatMap { idx in failOnEvens(idx).materialize() }
       .values()

@@ -1,5 +1,4 @@
 import ReactiveSwift
-import Result
 import UIKit
 
 private enum Associations {
@@ -8,7 +7,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIControl {
-  public var enabled: Signal<Bool, NoError> {
+  public var enabled: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(object, key: &Associations.enabled,
         setter: { [weak object] in object?.isEnabled = $0 },
@@ -22,7 +21,7 @@ public extension Rac where Object: UIControl {
     }
   }
 
-  public var selected: Signal<Bool, NoError> {
+  public var selected: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object, key: &Associations.selected,

@@ -1,20 +1,19 @@
 import ReactiveSwift
-import Result
 
-extension Signal where Value: EventProtocol, Error == NoError {
+extension Signal where Value: EventProtocol, Error == Never {
   /**
    - returns: A signal of errors of `Error` events from a materialized signal.
    */
-  public func errors() -> Signal<Value.Error, NoError> {
+  public func errors() -> Signal<Value.Error, Never> {
     return self.signal.map { $0.event.error }.skipNil()
   }
 }
 
-extension SignalProducer where Value: EventProtocol, Error == NoError {
+extension SignalProducer where Value: EventProtocol, Error == Never {
   /**
    - returns: A producer of errors of `Error` events from a materialized signal.
    */
-  public func errors() -> SignalProducer<Value.Error, NoError> {
+  public func errors() -> SignalProducer<Value.Error, Never> {
     return self.lift { $0.errors() }
   }
 }
@@ -25,8 +24,8 @@ extension SignalProducer where Value: EventProtocol, Error == NoError {
  so that all termination events are delayed if required.
  */
 extension Signal {
-  // Turn the producer from a Signal<Result<Value, Error>, NoError> into a Signal<Value, Error>.
-  public func liftSubduedError<T, E>() -> Signal<T, E> where Value == Result<T, E>, Error == NoError {
+  // Turn the producer from a Signal<Result<Value, Error>, Never> into a Signal<Value, Error>.
+  public func liftSubduedError<T, E>() -> Signal<T, E> where Value == Result<T, E>, Error == Never {
     return materialize()
       .map { event -> Signal<T, E>.Event in
         switch event {
@@ -45,10 +44,10 @@ extension Signal {
       .dematerialize()
   }
 
-  // Turn the producer from a Signal<Value, Error> into a Signal<Result<Value, Error>, NoError>.
-  public func subdueError() -> Signal<Result<Value, Error>, NoError> {
+  // Turn the producer from a Signal<Value, Error> into a Signal<Result<Value, Error>, Never>.
+  public func subdueError() -> Signal<Result<Value, Error>, Never> {
     return materialize()
-      .flatMap(.concat) { event -> SignalProducer<Signal<Result<Value, Error>, NoError>.Event, NoError> in
+      .flatMap(.concat) { event -> SignalProducer<Signal<Result<Value, Error>, Never>.Event, Never> in
         switch event {
         case let .value(value):
           return .init(value: .value(.success(value)))
@@ -65,15 +64,15 @@ extension Signal {
 }
 
 extension SignalProducer {
-  // Turn the producer from a SignalProducer<Result<Value, Error>, NoError>
+  // Turn the producer from a SignalProducer<Result<Value, Error>, Never>
   // into a SignalProducer<Value, Error>.
-  public func liftSubduedError<T, E>() -> SignalProducer<T, E> where Value == Result<T, E>, Error == NoError {
+  public func liftSubduedError<T, E>() -> SignalProducer<T, E> where Value == Result<T, E>, Error == Never {
     return lift { $0.liftSubduedError() }
   }
 
   // Turn the producer from a SignalProducer<Value, Error>
-  // into a SignalProducer<Result<Value, Error>, NoError>.
-  public func subdueError() -> SignalProducer<Result<Value, Error>, NoError> {
+  // into a SignalProducer<Result<Value, Error>, Never>.
+  public func subdueError() -> SignalProducer<Result<Value, Error>, Never> {
     return lift { $0.subdueError() }
   }
 }

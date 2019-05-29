@@ -1,6 +1,5 @@
 #if os(iOS)
 import ReactiveSwift
-import Result
 import UIKit
 
 private enum Associations {
@@ -8,7 +7,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UISwitch {
-  public var on: Signal<Bool, NoError> {
+  public var on: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object, key: &Associations.on,

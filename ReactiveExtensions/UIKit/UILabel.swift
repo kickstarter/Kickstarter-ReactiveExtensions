@@ -1,5 +1,4 @@
 import ReactiveSwift
-import Result
 import UIKit
 
 private enum Associations {
@@ -10,7 +9,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UILabel {
-  public var attributedText: Signal<NSAttributedString, NoError> {
+  public var attributedText: Signal<NSAttributedString, Never> {
     nonmutating set {
       let prop: MutableProperty<NSAttributedString> = lazyMutableProperty(
         object,
@@ -26,7 +25,7 @@ public extension Rac where Object: UILabel {
     }
   }
 
-  public var text: Signal<String, NoError> {
+  public var text: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,
@@ -42,7 +41,7 @@ public extension Rac where Object: UILabel {
     }
   }
 
-  public var font: Signal<UIFont, NoError> {
+  public var font: Signal<UIFont, Never> {
     nonmutating set {
       let prop: MutableProperty<UIFont> = lazyMutableProperty(
         object,
@@ -58,7 +57,7 @@ public extension Rac where Object: UILabel {
     }
   }
 
-  public var textColor: Signal<UIColor, NoError> {
+  public var textColor: Signal<UIColor, Never> {
     nonmutating set {
       let prop: MutableProperty<UIColor> = lazyMutableProperty(
         object,

@@ -1,5 +1,4 @@
 import ReactiveSwift
-import Result
 import UIKit
 
 private enum Associations {
@@ -12,7 +11,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: NSObject {
-  public var accessibilityElementsHidden: Signal<Bool, NoError> {
+  public var accessibilityElementsHidden: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,
@@ -28,7 +27,7 @@ public extension Rac where Object: NSObject {
     }
   }
 
-  public var accessibilityHint: Signal<String, NoError> {
+  public var accessibilityHint: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,
@@ -44,7 +43,7 @@ public extension Rac where Object: NSObject {
     }
   }
 
-  public var accessibilityLabel: Signal<String, NoError> {
+  public var accessibilityLabel: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,
@@ -60,7 +59,7 @@ public extension Rac where Object: NSObject {
     }
   }
 
-  public var accessibilityTraits: Signal<UIAccessibilityTraits, NoError> {
+  public var accessibilityTraits: Signal<UIAccessibilityTraits, Never> {
     nonmutating set {
       let prop: MutableProperty<UIAccessibilityTraits> = lazyMutableProperty(
         object,
@@ -76,7 +75,7 @@ public extension Rac where Object: NSObject {
     }
   }
 
-  public var accessibilityValue: Signal<String, NoError> {
+  public var accessibilityValue: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,
@@ -92,7 +91,7 @@ public extension Rac where Object: NSObject {
     }
   }
 
-  public var isAccessibilityElement: Signal<Bool, NoError> {
+  public var isAccessibilityElement: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,

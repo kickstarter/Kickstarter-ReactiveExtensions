@@ -1,6 +1,5 @@
 import XCTest
 import ReactiveSwift
-import Result
 import ReactiveExtensions
 import UIKit
 @testable import ReactiveExtensions_TestHelpers
@@ -9,7 +8,7 @@ final class UITextViewTests: XCTestCase {
   let textView = UITextView()
 
   func testText() {
-    let (signal, observer) = Signal<String, NoError>.pipe()
+    let (signal, observer) = Signal<String, Never>.pipe()
     textView.rac.text = signal
 
     observer.send(value: "The future")

@@ -1,7 +1,6 @@
 #if os(iOS)
 import XCTest
 import ReactiveSwift
-import Result
 import ReactiveExtensions
 import UIKit
 @testable import ReactiveExtensions_TestHelpers
@@ -10,7 +9,7 @@ final class UIRefreshControlTests: XCTestCase {
   let control = UIRefreshControl()
 
   func testRefreshing() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     control.rac.refreshing = signal
 
     observer.send(value: true)

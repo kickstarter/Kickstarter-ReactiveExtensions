@@ -1,6 +1,5 @@
 import XCTest
 import ReactiveSwift
-import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
@@ -10,7 +9,7 @@ final class DemoteErrorTests: XCTestCase {
     let (signal, observer) = Signal<Int, SomeError>.pipe()
     let testSignal = signal.demoteErrors()
 
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     testSignal.observe(test.observer)
 
     observer.send(value: 1)
@@ -27,7 +26,7 @@ final class DemoteErrorTests: XCTestCase {
     let (signal, observer) = Signal<Int, SomeError>.pipe()
     let testSignal = signal.demoteErrors(replaceErrorWith: 99)
 
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     testSignal.observe(test.observer)
 
     observer.send(value: 1)
@@ -45,7 +44,7 @@ final class DemoteErrorTests: XCTestCase {
     let producer = SignalProducer(signal)
     let testSignal = producer.demoteErrors()
 
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     testSignal.start(test.observer)
 
     observer.send(value: 1)
@@ -63,7 +62,7 @@ final class DemoteErrorTests: XCTestCase {
     let producer = SignalProducer(signal)
     let testSignal = producer.demoteErrors(replaceErrorWith: 99)
 
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     testSignal.start(test.observer)
 
     observer.send(value: 1)

@@ -1,15 +1,14 @@
 import XCTest
 import ReactiveSwift
-import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
 final class ScanTests: XCTestCase {
 
   func testScan() {
-    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let (signal, observer) = Signal<Int, Never>.pipe()
     let scan = signal.scan { $0 + $1 }
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     scan.observe(test.observer)
 
     observer.send(value: 1)

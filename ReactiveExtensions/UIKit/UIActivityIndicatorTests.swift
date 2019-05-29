@@ -1,6 +1,5 @@
 import XCTest
 import ReactiveSwift
-import Result
 import ReactiveExtensions
 import UIKit
 @testable import ReactiveExtensions_TestHelpers
@@ -9,7 +8,7 @@ final class UIActivityIndicatorTests: XCTestCase {
   let indicator = UIActivityIndicatorView()
 
   func testAnimating() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     indicator.rac.animating = signal
 
     observer.send(value: true)

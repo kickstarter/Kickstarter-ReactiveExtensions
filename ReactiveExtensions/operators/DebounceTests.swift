@@ -1,6 +1,5 @@
 import XCTest
 import ReactiveSwift
-import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
@@ -8,9 +7,9 @@ final class DebounceTests: XCTestCase {
 
   func testDebounce() {
     let scheduler = TestScheduler()
-    let (signal, observer) = Signal<Int, NoError>.pipe()
+    let (signal, observer) = Signal<Int, Never>.pipe()
     let debounced = signal.ksr_debounce(.milliseconds(500), on: scheduler)
-    let test = TestObserver<Int, NoError>()
+    let test = TestObserver<Int, Never>()
     debounced.observe(test.observer)
 
     observer.send(value: 1)

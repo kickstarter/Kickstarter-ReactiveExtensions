@@ -1,7 +1,6 @@
 #if os(iOS)
 import XCTest
 import ReactiveSwift
-import Result
 import ReactiveExtensions
 import UIKit
 @testable import ReactiveExtensions_TestHelpers
@@ -10,7 +9,7 @@ internal final class UISwitchTests: XCTestCase {
   let uiSwitch = UISwitch()
 
   func testOn() {
-    let (signal, observer) = Signal<Bool, NoError>.pipe()
+    let (signal, observer) = Signal<Bool, Never>.pipe()
     uiSwitch.rac.on = signal
 
     observer.send(value: true)

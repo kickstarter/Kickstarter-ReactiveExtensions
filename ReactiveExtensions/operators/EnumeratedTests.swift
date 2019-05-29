@@ -1,15 +1,14 @@
 import XCTest
 import ReactiveSwift
-import Result
 @testable import ReactiveExtensions
 @testable import ReactiveExtensions_TestHelpers
 
 final class EnumeratedTests: XCTestCase {
 
   func testEnumerated() {
-    let (signal, observer) = Signal<String, NoError>.pipe()
-    let testIdx = TestObserver<Int, NoError>()
-    let testValue = TestObserver<String, NoError>()
+    let (signal, observer) = Signal<String, Never>.pipe()
+    let testIdx = TestObserver<Int, Never>()
+    let testValue = TestObserver<String, Never>()
     signal.enumerated().map { idx, _ in idx }.observe(testIdx.observer)
     signal.enumerated().map { _, value in value }.observe(testValue.observer)
 

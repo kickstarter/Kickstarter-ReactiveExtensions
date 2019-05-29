@@ -1,5 +1,4 @@
 import ReactiveSwift
-import Result
 import UIKit
 
 private enum Associations {
@@ -7,7 +6,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIActivityIndicatorView {
-  public var animating: Signal<Bool, NoError> {
+  public var animating: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,
