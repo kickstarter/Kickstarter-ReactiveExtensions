@@ -1,7 +1,6 @@
 import PlaygroundSupport
 import ReactiveExtensions
 import ReactiveSwift
-import Result
 
 /*:
  # Reactive Extensions
@@ -73,7 +72,7 @@ import Result
  useful for transforming user input into a stream of actions, e.g.:
  */
 
-let incrementClicks = SignalProducer<(), NoError>([(), (), (), ()])
+let incrementClicks = SignalProducer<(), Never>([(), (), (), ()])
 incrementClicks
   .mapConst(1)
   .allValues()
@@ -82,7 +81,7 @@ incrementClicks
  This stream could be merged with a corresponding decrementing stream:
  */
 
-let decrementClicks = SignalProducer<(), NoError>([(), (), ()])
+let decrementClicks = SignalProducer<(), Never>([(), (), ()])
 incrementClicks.mapConst(1)
   .mergeWith(decrementClicks.mapConst(-1))
   .allValues()
@@ -108,7 +107,7 @@ clicksTotal.allValues()
  ### `demoteErrors`
 
  There's an operator in core RAC called `promoteErrors` that promotes a signal that is
- parameterized by the `NoError` type into one that is parameterized by some error. The signal
+ parameterized by the `Never` type into one that is parameterized by some error. The signal
  won’t actually error, but at least its type can now align with some other signal in order to
  make `flatMap`, `combineLatest`, etc. with other signals work. E.g.
  */
@@ -121,7 +120,7 @@ func fetchDataThatCouldError(_ x: Int) -> SignalProducer<Int, NSError> {
   return SignalProducer(error: NSError(domain: "", code: 1, userInfo: nil))
 }
 
-clicksTotal.promoteErrors(NSError.self)
+clicksTotal.promoteError(NSError.self)
   .flatMap(fetchDataThatCouldError)
   .allValues()
 
@@ -154,7 +153,7 @@ clicksTotal
  API request that returns an array of objects.
  */
 
-let response = SignalProducer<[Int], NoError>(value: [1, 2, 3, 4, 5, 6, 7])
+let response = SignalProducer<[Int], Never>(value: [1, 2, 3, 4, 5, 6, 7])
 response
   .uncollect()
   .filter { x in x % 2 == 0 }
@@ -173,7 +172,7 @@ response
 let scheduler = QueueScheduler(qos: .background, name: "bg", targeting: .global(qos: .background))
 
 // Returns a signal that emits `x` three times, but each staggered by .01 seconds.
-func staggeredTriple(x: Int) -> SignalProducer<Int, NoError> {
+func staggeredTriple(x: Int) -> SignalProducer<Int, Never> {
   return SignalProducer(value: x).delay(0.01, on: scheduler)
     .mergeWith(SignalProducer(value: x).delay(0.02, on: scheduler))
     .mergeWith(SignalProducer(value: x).delay(0.03, on: scheduler))
@@ -183,8 +182,8 @@ func staggeredTriple(x: Int) -> SignalProducer<Int, NoError> {
  With this function we can describe each of the `flatMap` operations. The first is the simplest:
  */
 
-SignalProducer<Int, NoError>([1, 2, 3])
-  .flatMap(.concat, transform: staggeredTriple)
+SignalProducer<Int, Never>([1, 2, 3])
+  .flatMap(.concat, staggeredTriple)
   .allValues()
 
 /*:
@@ -195,8 +194,8 @@ SignalProducer<Int, NoError>([1, 2, 3])
  The next simplest is `flatMap(.Merge)`:
  */
 
-SignalProducer<Int, NoError>([1, 2, 3])
-  .flatMap(.merge, transform: staggeredTriple)
+SignalProducer<Int, Never>([1, 2, 3])
+  .flatMap(.merge, staggeredTriple)
   .allValues()
 
 /*:
@@ -207,8 +206,8 @@ SignalProducer<Int, NoError>([1, 2, 3])
  Finally, perhaps the most complicated, but also most useful, is `flatMap(.Latest)`:
  */
 
-SignalProducer<Int, NoError>([1, 2, 3])
-  .flatMap(.latest, transform: staggeredTriple)
+SignalProducer<Int, Never>([1, 2, 3])
+  .flatMap(.latest, staggeredTriple)
   .allValues()
 
 /*:
@@ -222,21 +221,17 @@ SignalProducer<Int, NoError>([1, 2, 3])
  more descriptive names:
  */
 
-SignalProducer<Int, NoError>([1, 2, 3])
+SignalProducer<Int, Never>([1, 2, 3])
   .mergeMap(staggeredTriple)
   .allValues()
 
-SignalProducer<Int, NoError>([1, 2, 3])
+SignalProducer<Int, Never>([1, 2, 3])
   .concatMap(staggeredTriple)
   .allValues()
 
-SignalProducer<Int, NoError>([1, 2, 3])
+SignalProducer<Int, Never>([1, 2, 3])
   .switchMap(staggeredTriple)
   .allValues()
-
-
-
-
 
 // Playground configuration
 PlaygroundPage.current.needsIndefiniteExecution = true
