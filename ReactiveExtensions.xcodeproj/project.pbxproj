@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377B93DE22B9948C004143DB /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93DD22B9948C004143DB /* UIStepper.swift */; };
+		377B93E522B9949A004143DB /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
 		59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
 		59866A491CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
 		803BDFA81D11B364004A785A /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BDFA71D11B364004A785A /* UITextField.swift */; };
@@ -280,6 +282,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		377B93DD22B9948C004143DB /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
+		377B93E422B9949A004143DB /* UIStepperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperTests.swift; sourceTree = "<group>"; };
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
 		803BDFA71D11B364004A785A /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		8096F28B1CC91C1500231D91 /* Rac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rac.swift; sourceTree = "<group>"; };
@@ -455,6 +459,8 @@
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
 				A7C5B9141E7F4809001F9E62 /* UIResponderTests.swift */,
 				A747A81F1D455E1700AF199A /* UIStackView.swift */,
+				377B93DD22B9948C004143DB /* UIStepper.swift */,
+				377B93E422B9949A004143DB /* UIStepperTests.swift */,
 				59866A471CFE10000053E4C9 /* UISwitch.swift */,
 				A7C5B91A1E7F4809001F9E62 /* UISwitchTests.swift */,
 				803BDFA71D11B364004A785A /* UITextField.swift */,
@@ -959,6 +965,7 @@
 				A7FD08891C81EDBD00332CCB /* MergeWith.swift in Sources */,
 				A74FFEDB1CE520ED00C7BCB9 /* UIRefreshControl.swift in Sources */,
 				A7FD088A1C81EDBD00332CCB /* SlidingWindow.swift in Sources */,
+				377B93DE22B9948C004143DB /* UIStepper.swift in Sources */,
 				A7A015D71CBDA99100C4B821 /* TakeUntil.swift in Sources */,
 				A7FD088C1C81EDBD00332CCB /* FilterWhenLatestFrom.swift in Sources */,
 				A712EBA31E0C579700614340 /* KsrDelay.swift in Sources */,
@@ -1009,6 +1016,7 @@
 			files = (
 				A7C5B8F61E7F47D9001F9E62 /* EnumeratedTests.swift in Sources */,
 				A7C5B90A1E7F47D9001F9E62 /* ScanTests.swift in Sources */,
+				377B93E522B9949A004143DB /* UIStepperTests.swift in Sources */,
 				A7C5B8F81E7F47D9001F9E62 /* ErrorsTests.swift in Sources */,
 				A7C5B9001E7F47D9001F9E62 /* SortTests.swift in Sources */,
 				A7C5B93D1E7F485D001F9E62 /* SomeError.swift in Sources */,
