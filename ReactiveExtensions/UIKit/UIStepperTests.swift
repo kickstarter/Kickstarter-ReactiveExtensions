@@ -7,17 +7,17 @@ import UIKit
 internal final class UIStepperTests: XCTestCase {
   let uiStepper = UIStepper(frame: .zero)
 
-  func testValue() {
+  func testMaximumValue() {
     let (signal, observer) = Signal<Double, Never>.pipe()
-    uiStepper.rac.value = signal
+    uiStepper.rac.maximumValue = signal
 
-    eventually(XCTAssertEqual(0, self.uiStepper.value))
+    eventually(XCTAssertEqual(100, self.uiStepper.maximumValue))
 
     observer.send(value: 10)
-    eventually(XCTAssertEqual(10, self.uiStepper.value))
+    eventually(XCTAssertEqual(10, self.uiStepper.maximumValue))
 
     observer.send(value: 20)
-    eventually(XCTAssertEqual(20, self.uiStepper.value))
+    eventually(XCTAssertEqual(20, self.uiStepper.maximumValue))
   }
 
   func testMinimumValue() {
@@ -33,16 +33,32 @@ internal final class UIStepperTests: XCTestCase {
     eventually(XCTAssertEqual(20, self.uiStepper.minimumValue))
   }
 
-  func testMaximumValue() {
+  func testStepValue() {
     let (signal, observer) = Signal<Double, Never>.pipe()
-    uiStepper.rac.maximumValue = signal
+    uiStepper.rac.stepValue = signal
 
-    eventually(XCTAssertEqual(100, self.uiStepper.maximumValue))
-
-    observer.send(value: 10)
-    eventually(XCTAssertEqual(10, self.uiStepper.maximumValue))
+    eventually(XCTAssertEqual(1, self.uiStepper.stepValue))
 
     observer.send(value: 20)
-    eventually(XCTAssertEqual(20, self.uiStepper.maximumValue))
+    eventually(XCTAssertEqual(20, self.uiStepper.stepValue))
+
+    observer.send(value: 0)
+    eventually(XCTAssertEqual(1, self.uiStepper.stepValue))
+
+    observer.send(value: -1)
+    eventually(XCTAssertEqual(1, self.uiStepper.stepValue))
+  }
+
+  func testValue() {
+    let (signal, observer) = Signal<Double, Never>.pipe()
+    uiStepper.rac.value = signal
+
+    eventually(XCTAssertEqual(0, self.uiStepper.value))
+
+    observer.send(value: 10)
+    eventually(XCTAssertEqual(10, self.uiStepper.value))
+
+    observer.send(value: 20)
+    eventually(XCTAssertEqual(20, self.uiStepper.value))
   }
 }
