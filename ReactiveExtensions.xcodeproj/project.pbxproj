@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370FD7E823184390000B61D7 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370FD7E723184390000B61D7 /* UITableViewCell.swift */; };
+		370FD7F02318478A000B61D7 /* UITableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370FD7EF2318478A000B61D7 /* UITableViewCellTests.swift */; };
 		377B93DE22B9948C004143DB /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93DD22B9948C004143DB /* UIStepper.swift */; };
 		377B93E522B9949A004143DB /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
 		59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
@@ -282,6 +284,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370FD7E723184390000B61D7 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		370FD7EF2318478A000B61D7 /* UITableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellTests.swift; sourceTree = "<group>"; };
 		377B93DD22B9948C004143DB /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
 		377B93E422B9949A004143DB /* UIStepperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperTests.swift; sourceTree = "<group>"; };
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 				377B93E422B9949A004143DB /* UIStepperTests.swift */,
 				59866A471CFE10000053E4C9 /* UISwitch.swift */,
 				A7C5B91A1E7F4809001F9E62 /* UISwitchTests.swift */,
+				370FD7E723184390000B61D7 /* UITableViewCell.swift */,
+				370FD7EF2318478A000B61D7 /* UITableViewCellTests.swift */,
 				803BDFA71D11B364004A785A /* UITextField.swift */,
 				A7C5B9131E7F4809001F9E62 /* UITextFieldTests.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
@@ -985,6 +991,7 @@
 				A7FD08951C81EDBD00332CCB /* Uncollect.swift in Sources */,
 				A743813D1D33D6D200040A95 /* NSObject.swift in Sources */,
 				A7FD08971C81EDBD00332CCB /* FlatMap.swift in Sources */,
+				370FD7E823184390000B61D7 /* UITableViewCell.swift in Sources */,
 				A72942A81DE2459000BB3455 /* Enumerated.swift in Sources */,
 				A7FD08981C81EDBD00332CCB /* LazyAssociatedProperty.swift in Sources */,
 				A7FD08991C81EDBD00332CCB /* AllValues.swift in Sources */,
@@ -1023,6 +1030,7 @@
 				A7C5B92E1E7F4809001F9E62 /* UILabelTests.swift in Sources */,
 				A7C5B9241E7F4809001F9E62 /* UIResponderTests.swift in Sources */,
 				A7C5B91C1E7F4809001F9E62 /* UIRefreshControlTests.swift in Sources */,
+				370FD7F02318478A000B61D7 /* UITableViewCellTests.swift in Sources */,
 				A7C5B8F01E7F47D9001F9E62 /* UncollectTests.swift in Sources */,
 				A7C5B8FA1E7F47D9001F9E62 /* WithLatestFromTests.swift in Sources */,
 				A7C5B9221E7F4809001F9E62 /* UITextFieldTests.swift in Sources */,
