@@ -10,7 +10,7 @@ public extension Signal {
 
    - returns: A new signal that will never error.
    */
-  public func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, Never> {
+  func demoteErrors(replaceErrorWith value: Value? = nil) -> Signal<Value, Never> {
 
     return self.signal
       .flatMapError { _ in
@@ -31,7 +31,7 @@ public extension SignalProducer {
 
    - returns: A new producer that will never error.
    */
-  public func demoteErrors(replaceErrorWith value: Value? = nil) -> SignalProducer<Value, Never> {
+  func demoteErrors(replaceErrorWith value: Value? = nil) -> SignalProducer<Value, Never> {
     return self.lift { $0.demoteErrors(replaceErrorWith: value) }
   }
 }

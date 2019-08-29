@@ -8,7 +8,7 @@ public extension Signal where Value: Sequence, Value.Iterator.Element: Comparabl
 
    - returns: The sorted signal.
    */
-  public func sort() -> Signal<[Value.Iterator.Element], Error> {
+  func sort() -> Signal<[Value.Iterator.Element], Error> {
     return self.signal.map { x in x.sorted() }
   }
 }
@@ -22,7 +22,7 @@ public extension Signal where Value: Sequence {
 
    - returns: The sorted signal.
    */
-  public func sort(_ isOrderedBefore: @escaping (Value.Iterator.Element, Value.Iterator.Element) -> Bool) ->
+  func sort(_ isOrderedBefore: @escaping (Value.Iterator.Element, Value.Iterator.Element) -> Bool) ->
     Signal<[Value.Iterator.Element], Error> {
 
     return self.signal.map { (x: Value) in x.sorted(by: isOrderedBefore) }
@@ -37,7 +37,7 @@ public extension SignalProducer where Value: Sequence, Value.Iterator.Element: C
 
    - returns: The sorted producer.
    */
-  public func sort() -> SignalProducer<[Value.Iterator.Element], Error> {
+  func sort() -> SignalProducer<[Value.Iterator.Element], Error> {
     return self.lift { $0.sort() }
   }
 }
@@ -51,7 +51,7 @@ public extension SignalProducer where Value: Sequence {
 
    - returns: The sorted producer.
    */
-  public func sort(_ isOrderedBefore: @escaping (Value.Iterator.Element, Value.Iterator.Element) -> Bool)
+  func sort(_ isOrderedBefore: @escaping (Value.Iterator.Element, Value.Iterator.Element) -> Bool)
     -> SignalProducer<[Value.Iterator.Element], Error> {
 
       return self.lift { $0.sort(isOrderedBefore) }

@@ -1,7 +1,7 @@
 import Foundation
 
 extension DispatchTimeInterval {
-  internal var timeInterval: TimeInterval {
+  var timeInterval: TimeInterval {
     switch self {
     case let .seconds(s):
       return TimeInterval(s)

@@ -6,7 +6,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: NSLayoutConstraint {
-  public var constant: Signal<CGFloat, Never> {
+  var constant: Signal<CGFloat, Never> {
     nonmutating set {
       let prop: MutableProperty<CGFloat> = lazyMutableProperty(
         object,

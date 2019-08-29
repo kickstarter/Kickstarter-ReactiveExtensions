@@ -7,7 +7,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIButton {
-  public var title: Signal<String, Never> {
+  var title: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,
@@ -23,7 +23,7 @@ public extension Rac where Object: UIButton {
     }
   }
 
-  public var attributedTitle: Signal<NSAttributedString, Never> {
+  var attributedTitle: Signal<NSAttributedString, Never> {
     nonmutating set {
       let prop: MutableProperty<NSAttributedString> = lazyMutableProperty(
         object,

@@ -9,7 +9,7 @@ public extension Signal {
 
    - returns: A new signal.
    */
-  public func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
+  func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
     return other.withLatestFrom(self.signal).map { tuple in tuple.1 }
   }
 
@@ -20,7 +20,7 @@ public extension Signal {
 
    - returns: A new signal.
    */
-  public func takePairWhen <U> (_ other: Signal<U, Error>) -> Signal<(Value, U), Error> {
+  func takePairWhen <U> (_ other: Signal<U, Error>) -> Signal<(Value, U), Error> {
     return other.withLatestFrom(self.signal).map { ($0.1, $0.0) }
   }
 }
@@ -34,7 +34,7 @@ public extension SignalProducer {
 
    - returns: A new producer.
    */
-  public func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
+  func takeWhen <U> (_ other: Signal<U, Error>) -> Signal<Value, Error> {
     return other.withLatestFrom(self.producer).map { $0.1 }
   }
 
@@ -45,7 +45,7 @@ public extension SignalProducer {
 
    - returns: A new producer.
    */
-  public func takePairWhen <U> (_ other: Signal<U, Error>) -> Signal<(Value, U), Error> {
+  func takePairWhen <U> (_ other: Signal<U, Error>) -> Signal<(Value, U), Error> {
     return other.withLatestFrom(self.producer).map { ($0.1, $0.0) }
   }
 }

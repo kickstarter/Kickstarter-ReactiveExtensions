@@ -6,7 +6,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UIBarButtonItem {
-  public var enabled: Signal<Bool, Never> {
+  var enabled: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object,

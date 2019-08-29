@@ -6,7 +6,7 @@ public extension Signal where Value: Sequence {
 
    - returns: A new signal.
    */
-  public func uncollect() -> Signal<Value.Iterator.Element, Error> {
+  func uncollect() -> Signal<Value.Iterator.Element, Error> {
     return Signal<Value.Iterator.Element, Error> { observer, _ in
       self.observe { event in
         switch event {
@@ -30,7 +30,7 @@ public extension SignalProducer where Value: Sequence {
 
    - returns: A new producer.
    */
-  public func uncollect() -> SignalProducer<Value.Iterator.Element, Error> {
+  func uncollect() -> SignalProducer<Value.Iterator.Element, Error> {
     return lift { $0.uncollect() }
   }
 }
