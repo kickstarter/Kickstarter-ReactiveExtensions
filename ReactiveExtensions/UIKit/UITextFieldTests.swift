@@ -28,4 +28,15 @@ final class UITextFieldTests: XCTestCase {
     observer.send(value: "")
     eventually(XCTAssertEqual("", self.textField.text))
   }
+
+  func testTextColor() {
+    let (signal, observer) = Signal<UIColor?, Never>.pipe()
+    textField.rac.textColor = signal
+
+    observer.send(value: UIColor.red)
+    eventually(XCTAssertEqual(UIColor.red, self.textField.textColor))
+
+    observer.send(value: UIColor.green)
+    eventually(XCTAssertEqual(UIColor.green, self.textField.textColor))
+  }
 }
