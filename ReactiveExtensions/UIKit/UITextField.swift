@@ -3,8 +3,8 @@ import UIKit
 
 private enum Associations {
   fileprivate static var attributedPlaceholder = 0
-  fileprivate static var text = 0
-  fileprivate static var textColor = 0
+  fileprivate static var text = 1
+  fileprivate static var textColor = 2
 }
 
 public extension Rac where Object: UITextField {
