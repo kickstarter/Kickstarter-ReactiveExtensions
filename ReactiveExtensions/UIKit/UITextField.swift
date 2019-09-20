@@ -40,7 +40,7 @@ public extension Rac where Object: UITextField {
     }
   }
 
-  var textColor: Signal<UIColor?, Never> {
+  public var textColor: Signal<UIColor?, Never> {
     nonmutating set {
       let prop: MutableProperty<UIColor?> = lazyMutableProperty(
         object,
