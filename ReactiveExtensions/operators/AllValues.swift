@@ -11,7 +11,12 @@ public extension SignalProducer {
 
    - returns: All values emitted by the signal producer.
    */
-  public func allValues() -> [Value] {
-    return self.producer.collect().last()?.value ?? []
+  func allValues() -> [Value] {
+    switch self.producer.collect().last() {
+    case .success(let value):
+      return value
+    default:
+      return []
+    }
   }
 }
