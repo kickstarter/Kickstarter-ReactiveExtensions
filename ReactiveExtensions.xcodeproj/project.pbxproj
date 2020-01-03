@@ -750,7 +750,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Kickstarter;
 				TargetAttributes = {
 					A7983B871C2AFB1C003A1ABE = {
@@ -759,7 +759,7 @@
 					};
 					A7DB1D391C9F355E008244DA = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1130;
 					};
 					A7DB1D4C1C9F4FD7008244DA = {
 						LastSwiftMigration = 0800;
@@ -778,11 +778,11 @@
 			};
 			buildConfigurationList = CA43C65D1BB35FCF00C180DA /* Build configuration list for PBXProject "ReactiveExtensions" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = CA43C6591BB35FCF00C180DA;
 			productRefGroup = CA43C6641BB35FCF00C180DA /* Products */;
@@ -1198,7 +1198,7 @@
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1228,7 +1228,7 @@
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1362,6 +1362,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1425,6 +1426,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
