@@ -1192,7 +1192,7 @@
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
-					"-weak-lswiftXCTest",
+					"-weak-lXCTestSwiftSupport",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.reactiveextensions.testhelpers;
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
@@ -1222,7 +1222,7 @@
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
-					"-weak-lswiftXCTest",
+					"-weak-lXCTestSwiftSupport",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.reactiveextensions.testhelpers;
 				PRODUCT_NAME = ReactiveExtensions_TestHelpers;
