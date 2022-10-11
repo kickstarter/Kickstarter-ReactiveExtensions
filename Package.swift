@@ -18,7 +18,7 @@ let package = Package(
     .testTarget(
       name: "ReactiveExtensions-iOSTests",
       dependencies: ["ReactiveExtensions-iOS", "ReactiveExtensions-TestHelpers-iOS"],
-      path: "ReactiveExtensions/tests"
+      path: "Tests"
     ),
     .target(name: "ReactiveExtensions-TestHelpers-iOS")
   ]

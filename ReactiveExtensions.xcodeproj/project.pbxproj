@@ -428,7 +428,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19F5778728F5D7D0003BDBBE /* tests */ = {
+		194C593D28F5E4E700453249 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */,
+				CA43C6651BB35FCF00C180DA /* ReactiveExtensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		19F5778728F5D7D0003BDBBE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				A7C5B8E71E7F47D8001F9E62 /* AllValuesTests.swift */,
@@ -463,7 +472,7 @@
 				A7C5B91B1E7F4809001F9E62 /* UITextViewTests.swift */,
 				A7C5B9111E7F4809001F9E62 /* UIViewTests.swift */,
 			);
-			path = tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		A712EB931E0C468A00614340 /* helpers */ = {
@@ -546,13 +555,13 @@
 			path = operators;
 			sourceTree = "<group>";
 		};
-		A7C5B9341E7F485D001F9E62 /* test-helpers */ = {
+		A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
 				A7C5B9351E7F485D001F9E62 /* Event-Extensions.swift */,
 				A7C5B9371E7F485D001F9E62 /* TestObserver.swift */,
 			);
-			path = "test-helpers";
+			path = "ReactiveExtensions-TestHelpers";
 			sourceTree = "<group>";
 		};
 		A7FD087F1C81ED5D00332CCB /* Frameworks */ = {
@@ -570,7 +579,8 @@
 				A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */,
 				A7FD087F1C81ED5D00332CCB /* Frameworks */,
 				CA43C6641BB35FCF00C180DA /* Products */,
-				CA43C6651BB35FCF00C180DA /* ReactiveExtensions */,
+				194C593D28F5E4E700453249 /* Sources */,
+				19F5778728F5D7D0003BDBBE /* Tests */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -595,10 +605,8 @@
 			children = (
 				CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */,
 				CA43C6681BB35FCF00C180DA /* Info.plist */,
-				19F5778728F5D7D0003BDBBE /* tests */,
 				A712EB931E0C468A00614340 /* helpers */,
 				A7C510441C2720C900C59136 /* operators */,
-				A7C5B9341E7F485D001F9E62 /* test-helpers */,
 				A7983B5B1C2AF88A003A1ABE /* UIKit */,
 			);
 			path = ReactiveExtensions;
