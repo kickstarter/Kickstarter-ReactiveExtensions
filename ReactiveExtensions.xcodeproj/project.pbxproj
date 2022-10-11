@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1998BCA028F5FCD300D04077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1998BC9A28F5FCD300D04077 /* Foundation.framework */; };
 		19F5778928F5D965003BDBBE /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
 		377B93DE22B9948C004143DB /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93DD22B9948C004143DB /* UIStepper.swift */; };
 		377B93E522B9949A004143DB /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
@@ -406,7 +405,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1998BCA028F5FCD300D04077 /* Foundation.framework in Frameworks */,
 				A79BE79D1E07099D0077A9B2 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
