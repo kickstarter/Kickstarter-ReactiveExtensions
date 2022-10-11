@@ -5,11 +5,11 @@ let package = Package(
   name: "ReactiveExtensions",
   products: [
     .library(
-      name: "ReactiveExtensions-iOS",
+      name: "ReactiveExtensions",
       targets: ["ReactiveExtensions-iOS"]
     ),
     .library(
-      name: "ReactiveExtensions-TestHelpers-iOS",
+      name: "ReactiveExtensions-TestHelpers",
       targets: ["ReactiveExtensions-TestHelpers-iOS"]
     )
   ],
