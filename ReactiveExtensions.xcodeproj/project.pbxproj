@@ -283,7 +283,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19F5778028F5D51E003BDBBE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ReactiveExtensions/Package.swift; sourceTree = "<group>"; };
+		194C593C28F5E31800453249 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		377B93DD22B9948C004143DB /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
 		377B93E422B9949A004143DB /* UIStepperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperTests.swift; sourceTree = "<group>"; };
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
@@ -566,7 +566,7 @@
 		CA43C6591BB35FCF00C180DA = {
 			isa = PBXGroup;
 			children = (
-				19F5778028F5D51E003BDBBE /* Package.swift */,
+				194C593C28F5E31800453249 /* Package.swift */,
 				A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */,
 				A7FD087F1C81ED5D00332CCB /* Frameworks */,
 				CA43C6641BB35FCF00C180DA /* Products */,
