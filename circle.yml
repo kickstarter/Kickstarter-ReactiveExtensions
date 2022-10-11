@@ -4,7 +4,7 @@ version: 2
 jobs:
   build:
     macos:
-      xcode: "12.2.0"
+      xcode: "13.4.1"
     working_directory: ~/ReactiveExtensions
     environment:
       CIRCLE_ARTIFACTS: /tmp
@@ -20,6 +20,7 @@ jobs:
           tee $CIRCLE_ARTIFACTS/swiftlint-report.json
       - run: bin/test iOS 13.7
       - run: bin/test iOS 14.2
+      - run: bin/test iOS 15.4
 
       - store_artifacts:
           path: /tmp/swiftlint-report.json
