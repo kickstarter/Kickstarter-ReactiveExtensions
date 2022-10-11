@@ -17,12 +17,12 @@ let package = Package(
     .package(url: "https://github.com/ReactiveCocoa/ReactiveSwift", from: "6.5.0")
       ],
   targets: [
-    .target(name: "ReactiveExtensions-iOS"),
+    .target(name: "ReactiveExtensions-iOS", dependencies: ["ReactiveSwift"]),
     .testTarget(
       name: "ReactiveExtensions-iOSTests",
       dependencies: ["ReactiveExtensions-iOS", "ReactiveExtensions-TestHelpers-iOS"],
       path: "Tests"
     ),
-    .target(name: "ReactiveExtensions-TestHelpers-iOS")
+    .target(name: "ReactiveExtensions-TestHelpers-iOS", dependencies: ["ReactiveSwift"])
   ]
 )
