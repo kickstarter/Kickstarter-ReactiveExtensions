@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1998BCA028F5FCD300D04077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1998BC9A28F5FCD300D04077 /* Foundation.framework */; };
 		19F5778928F5D965003BDBBE /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
 		377B93DE22B9948C004143DB /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93DD22B9948C004143DB /* UIStepper.swift */; };
 		377B93E522B9949A004143DB /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
@@ -284,6 +285,7 @@
 
 /* Begin PBXFileReference section */
 		194C593C28F5E31800453249 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		1998BC9A28F5FCD300D04077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		377B93DD22B9948C004143DB /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
 		377B93E422B9949A004143DB /* UIStepperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperTests.swift; sourceTree = "<group>"; };
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1998BCA028F5FCD300D04077 /* Foundation.framework in Frameworks */,
 				A79BE79D1E07099D0077A9B2 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +570,7 @@
 		A7FD087F1C81ED5D00332CCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1998BC9A28F5FCD300D04077 /* Foundation.framework */,
 				A79BE7471E0709020077A9B2 /* ReactiveSwift.xcodeproj */,
 			);
 			name = Frameworks;
