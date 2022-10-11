@@ -431,7 +431,7 @@
 		194C593D28F5E4E700453249 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */,
+				A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers-iOS */,
 				CA43C6651BB35FCF00C180DA /* ReactiveExtensions-iOS */,
 			);
 			path = Sources;
@@ -555,13 +555,13 @@
 			path = operators;
 			sourceTree = "<group>";
 		};
-		A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */ = {
+		A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				A7C5B9351E7F485D001F9E62 /* Event-Extensions.swift */,
 				A7C5B9371E7F485D001F9E62 /* TestObserver.swift */,
 			);
-			path = "ReactiveExtensions-TestHelpers";
+			path = "ReactiveExtensions-TestHelpers-iOS";
 			sourceTree = "<group>";
 		};
 		A7FD087F1C81ED5D00332CCB /* Frameworks */ = {
