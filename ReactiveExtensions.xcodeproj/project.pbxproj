@@ -432,7 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */,
-				CA43C6651BB35FCF00C180DA /* ReactiveExtensions */,
+				CA43C6651BB35FCF00C180DA /* ReactiveExtensions-iOS */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -600,7 +600,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA43C6651BB35FCF00C180DA /* ReactiveExtensions */ = {
+		CA43C6651BB35FCF00C180DA /* ReactiveExtensions-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */,
@@ -609,7 +609,7 @@
 				A7C510441C2720C900C59136 /* operators */,
 				A7983B5B1C2AF88A003A1ABE /* UIKit */,
 			);
-			path = ReactiveExtensions;
+			path = "ReactiveExtensions-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
