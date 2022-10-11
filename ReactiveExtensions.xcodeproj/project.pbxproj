@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19F5778928F5D965003BDBBE /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
 		377B93DE22B9948C004143DB /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93DD22B9948C004143DB /* UIStepper.swift */; };
 		377B93E522B9949A004143DB /* UIStepperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B93E422B9949A004143DB /* UIStepperTests.swift */; };
 		59866A481CFE10000053E4C9 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59866A471CFE10000053E4C9 /* UISwitch.swift */; };
@@ -282,6 +283,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19F5778028F5D51E003BDBBE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ReactiveExtensions/Package.swift; sourceTree = "<group>"; };
 		377B93DD22B9948C004143DB /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
 		377B93E422B9949A004143DB /* UIStepperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperTests.swift; sourceTree = "<group>"; };
 		59866A471CFE10000053E4C9 /* UISwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
@@ -426,6 +428,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19F5778728F5D7D0003BDBBE /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				A7C5B8E71E7F47D8001F9E62 /* AllValuesTests.swift */,
+				A7C5B8E11E7F47D8001F9E62 /* ConcatTests.swift */,
+				A7C5B8EE1E7F47D9001F9E62 /* DebounceTests.swift */,
+				A7C5B8E21E7F47D8001F9E62 /* DemoteErrorsTests.swift */,
+				A7C5B8E31E7F47D8001F9E62 /* EnumeratedTests.swift */,
+				A7C5B8E41E7F47D8001F9E62 /* ErrorsTests.swift */,
+				A7C5B8EC1E7F47D8001F9E62 /* MapConstTests.swift */,
+				A7C5B8ED1E7F47D9001F9E62 /* ScanTests.swift */,
+				A7C5B8E61E7F47D8001F9E62 /* SlidingWindowTest.swift */,
+				A7C5B8E81E7F47D8001F9E62 /* SortTests.swift */,
+				A7C5B8EB1E7F47D8001F9E62 /* TakeUntilTests.swift */,
+				A7C5B8EF1E7F47D9001F9E62 /* TakeWhenTests.swift */,
+				A7C5B8E01E7F47D8001F9E62 /* UncollectTests.swift */,
+				A7C5B8EA1E7F47D8001F9E62 /* ValuesTests.swift */,
+				A7C5B8E51E7F47D8001F9E62 /* WithLatestFromTests.swift */,
+				A7C5B9361E7F485D001F9E62 /* SomeError.swift */,
+				A7C5B9381E7F485D001F9E62 /* Tuple.swift */,
+				A7C5B93A1E7F485D001F9E62 /* XCTestCase+Async.swift */,
+				A7C5B9191E7F4809001F9E62 /* UILabelTests.swift */,
+				A7C5B9161E7F4809001F9E62 /* NSLayoutConstraintTests.swift */,
+				A7C5B9181E7F4809001F9E62 /* UIActivityIndicatorTests.swift */,
+				A7C5B9171E7F4809001F9E62 /* UIBarButtonItemTests.swift */,
+				A7C5B9121E7F4809001F9E62 /* UIButtonTests.swift */,
+				A7C5B9151E7F4809001F9E62 /* UIControlTests.swift */,
+				A7C5B9101E7F4809001F9E62 /* UIRefreshControlTests.swift */,
+				A7C5B9141E7F4809001F9E62 /* UIResponderTests.swift */,
+				377B93E422B9949A004143DB /* UIStepperTests.swift */,
+				A7C5B91A1E7F4809001F9E62 /* UISwitchTests.swift */,
+				A7C5B9131E7F4809001F9E62 /* UITextFieldTests.swift */,
+				A7C5B91B1E7F4809001F9E62 /* UITextViewTests.swift */,
+				A7C5B9111E7F4809001F9E62 /* UIViewTests.swift */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 		A712EB931E0C468A00614340 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,35 +480,22 @@
 			isa = PBXGroup;
 			children = (
 				A74FFEB31CE4EB7500C7BCB9 /* NSLayoutConstraint.swift */,
-				A7C5B9161E7F4809001F9E62 /* NSLayoutConstraintTests.swift */,
 				A743813C1D33D6D200040A95 /* NSObject.swift */,
 				8096F28B1CC91C1500231D91 /* Rac.swift */,
 				A74FFECB1CE4FFD100C7BCB9 /* UIActivityIndicator.swift */,
-				A7C5B9181E7F4809001F9E62 /* UIActivityIndicatorTests.swift */,
 				A74FFDF41CE3ECBF00C7BCB9 /* UIBarButtonItem.swift */,
-				A7C5B9171E7F4809001F9E62 /* UIBarButtonItemTests.swift */,
 				A7141E881CFCE1BB00F1A9BE /* UIButton.swift */,
-				A7C5B9121E7F4809001F9E62 /* UIButtonTests.swift */,
 				A7983B621C2AF8D4003A1ABE /* UIControl.swift */,
-				A7C5B9151E7F4809001F9E62 /* UIControlTests.swift */,
 				A7983B5E1C2AF8B0003A1ABE /* UILabel.swift */,
-				A7C5B9191E7F4809001F9E62 /* UILabelTests.swift */,
 				A734A2221D217D180080BBD5 /* UINavigationItem.swift */,
 				A74FFEDA1CE520ED00C7BCB9 /* UIRefreshControl.swift */,
-				A7C5B9101E7F4809001F9E62 /* UIRefreshControlTests.swift */,
 				A74FFEC21CE4ECC900C7BCB9 /* UIResponder.swift */,
-				A7C5B9141E7F4809001F9E62 /* UIResponderTests.swift */,
 				A747A81F1D455E1700AF199A /* UIStackView.swift */,
 				377B93DD22B9948C004143DB /* UIStepper.swift */,
-				377B93E422B9949A004143DB /* UIStepperTests.swift */,
 				59866A471CFE10000053E4C9 /* UISwitch.swift */,
-				A7C5B91A1E7F4809001F9E62 /* UISwitchTests.swift */,
 				803BDFA71D11B364004A785A /* UITextField.swift */,
-				A7C5B9131E7F4809001F9E62 /* UITextFieldTests.swift */,
 				A74FFDDC1CE3DCEE00C7BCB9 /* UITextView.swift */,
-				A7C5B91B1E7F4809001F9E62 /* UITextViewTests.swift */,
 				A7983B5C1C2AF899003A1ABE /* UIView.swift */,
-				A7C5B9111E7F4809001F9E62 /* UIViewTests.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -491,44 +518,29 @@
 			isa = PBXGroup;
 			children = (
 				A7378CC81C80975700F0A562 /* AllValues.swift */,
-				A7C5B8E71E7F47D8001F9E62 /* AllValuesTests.swift */,
 				A7180BD91CCFB0BE001711CA /* Concat.swift */,
 				A7C510671C2737C500C59136 /* ConcatMap.swift */,
-				A7C5B8E11E7F47D8001F9E62 /* ConcatTests.swift */,
-				A7C5B8EE1E7F47D9001F9E62 /* DebounceTests.swift */,
 				A7C5105F1C2736D400C59136 /* DemoteErrors.swift */,
-				A7C5B8E21E7F47D8001F9E62 /* DemoteErrorsTests.swift */,
 				A72942A71DE2459000BB3455 /* Enumerated.swift */,
-				A7C5B8E31E7F47D8001F9E62 /* EnumeratedTests.swift */,
 				A72E75361CC1849B00983066 /* Errors.swift */,
-				A7C5B8E41E7F47D8001F9E62 /* ErrorsTests.swift */,
 				A7CDB0C51C2758D80013A8F3 /* FilterWhenLatestFrom.swift */,
 				A7C510651C27378A00C59136 /* FlatMap.swift */,
 				A7C510491C2733F600C59136 /* IgnoreValues.swift */,
 				A7C510531C27351F00C59136 /* KsrDebounce.swift */,
 				A712EBA21E0C579700614340 /* KsrDelay.swift */,
 				A7C510551C27358300C59136 /* MapConst.swift */,
-				A7C5B8EC1E7F47D8001F9E62 /* MapConstTests.swift */,
 				A7C510691C27380700C59136 /* MergeMap.swift */,
 				A7C510611C27371E00C59136 /* MergeWith.swift */,
 				A7C510591C2735F500C59136 /* ObserveForUI.swift */,
 				A7B11A551D78A43D00A5036E /* Scan.swift */,
-				A7C5B8ED1E7F47D9001F9E62 /* ScanTests.swift */,
 				A7C510511C2734F100C59136 /* SlidingWindow.swift */,
-				A7C5B8E61E7F47D8001F9E62 /* SlidingWindowTest.swift */,
 				A7C510451C2720D500C59136 /* Sort.swift */,
-				A7C5B8E81E7F47D8001F9E62 /* SortTests.swift */,
 				A7C510631C27374E00C59136 /* SwitchMap.swift */,
 				A7A015D61CBDA99100C4B821 /* TakeUntil.swift */,
-				A7C5B8EB1E7F47D8001F9E62 /* TakeUntilTests.swift */,
 				A7C5104D1C27346B00C59136 /* TakeWhen.swift */,
-				A7C5B8EF1E7F47D9001F9E62 /* TakeWhenTests.swift */,
 				A7C510471C2721CA00C59136 /* Uncollect.swift */,
-				A7C5B8E01E7F47D8001F9E62 /* UncollectTests.swift */,
 				A72E75271CC1849100983066 /* Values.swift */,
-				A7C5B8EA1E7F47D8001F9E62 /* ValuesTests.swift */,
 				A7C5104B1C27343400C59136 /* WithLatestFrom.swift */,
-				A7C5B8E51E7F47D8001F9E62 /* WithLatestFromTests.swift */,
 				A7C5105B1C27362000C59136 /* WrapInOptional.swift */,
 			);
 			path = operators;
@@ -538,10 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				A7C5B9351E7F485D001F9E62 /* Event-Extensions.swift */,
-				A7C5B9361E7F485D001F9E62 /* SomeError.swift */,
 				A7C5B9371E7F485D001F9E62 /* TestObserver.swift */,
-				A7C5B9381E7F485D001F9E62 /* Tuple.swift */,
-				A7C5B93A1E7F485D001F9E62 /* XCTestCase+Async.swift */,
 			);
 			path = "test-helpers";
 			sourceTree = "<group>";
@@ -557,6 +566,7 @@
 		CA43C6591BB35FCF00C180DA = {
 			isa = PBXGroup;
 			children = (
+				19F5778028F5D51E003BDBBE /* Package.swift */,
 				A7378CC71C8096F600F0A562 /* ReactiveExtensions.playground */,
 				A7FD087F1C81ED5D00332CCB /* Frameworks */,
 				CA43C6641BB35FCF00C180DA /* Products */,
@@ -585,6 +595,7 @@
 			children = (
 				CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */,
 				CA43C6681BB35FCF00C180DA /* Info.plist */,
+				19F5778728F5D7D0003BDBBE /* tests */,
 				A712EB931E0C468A00614340 /* helpers */,
 				A7C510441C2720C900C59136 /* operators */,
 				A7C5B9341E7F485D001F9E62 /* test-helpers */,
@@ -909,6 +920,7 @@
 			files = (
 				A7C5B8F71E7F47D9001F9E62 /* EnumeratedTests.swift in Sources */,
 				A7C5B90B1E7F47D9001F9E62 /* ScanTests.swift in Sources */,
+				19F5778928F5D965003BDBBE /* UIStepperTests.swift in Sources */,
 				A7C5B8F91E7F47D9001F9E62 /* ErrorsTests.swift in Sources */,
 				A7C5B9011E7F47D9001F9E62 /* SortTests.swift in Sources */,
 				A7C5B93E1E7F485D001F9E62 /* SomeError.swift in Sources */,
