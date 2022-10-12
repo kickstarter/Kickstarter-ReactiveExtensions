@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A7DB1D391C9F355E008244DA"
                BuildableName = "ReactiveExtensions_TestHelpers.framework"
-               BlueprintName = "ReactiveExtensions-TestHelpers-iOS"
+               BlueprintName = "ReactiveExtensions-TestHelpers"
                ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7DB1D391C9F355E008244DA"
             BuildableName = "ReactiveExtensions_TestHelpers.framework"
-            BlueprintName = "ReactiveExtensions-TestHelpers-iOS"
+            BlueprintName = "ReactiveExtensions-TestHelpers"
             ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,7 +61,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7DB1D391C9F355E008244DA"
             BuildableName = "ReactiveExtensions_TestHelpers.framework"
-            BlueprintName = "ReactiveExtensions-TestHelpers-iOS"
+            BlueprintName = "ReactiveExtensions-TestHelpers"
             ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

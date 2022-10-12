@@ -432,8 +432,8 @@
 		194C593D28F5E4E700453249 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers-iOS */,
-				CA43C6651BB35FCF00C180DA /* ReactiveExtensions-iOS */,
+				A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */,
+				CA43C6651BB35FCF00C180DA /* ReactiveExtensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -556,13 +556,13 @@
 			path = operators;
 			sourceTree = "<group>";
 		};
-		A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers-iOS */ = {
+		A7C5B9341E7F485D001F9E62 /* ReactiveExtensions-TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
 				A7C5B9351E7F485D001F9E62 /* Event-Extensions.swift */,
 				A7C5B9371E7F485D001F9E62 /* TestObserver.swift */,
 			);
-			path = "ReactiveExtensions-TestHelpers-iOS";
+			path = "ReactiveExtensions-TestHelpers";
 			sourceTree = "<group>";
 		};
 		A7FD087F1C81ED5D00332CCB /* Frameworks */ = {
@@ -602,7 +602,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA43C6651BB35FCF00C180DA /* ReactiveExtensions-iOS */ = {
+		CA43C6651BB35FCF00C180DA /* ReactiveExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				CA43C6661BB35FCF00C180DA /* ReactiveExtensions.h */,
@@ -611,7 +611,7 @@
 				A7C510441C2720C900C59136 /* operators */,
 				A7983B5B1C2AF88A003A1ABE /* UIKit */,
 			);
-			path = "ReactiveExtensions-iOS";
+			path = ReactiveExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,9 +669,9 @@
 			productReference = A7983B881C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers-iOS */ = {
+		A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7DB1D3F1C9F355E008244DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-TestHelpers-iOS" */;
+			buildConfigurationList = A7DB1D3F1C9F355E008244DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-TestHelpers" */;
 			buildPhases = (
 				A7DB1D351C9F355E008244DA /* Sources */,
 				A7DB1D361C9F355E008244DA /* Frameworks */,
@@ -683,7 +683,7 @@
 			dependencies = (
 				A79BE7A31E070E670077A9B2 /* PBXTargetDependency */,
 			);
-			name = "ReactiveExtensions-TestHelpers-iOS";
+			name = "ReactiveExtensions-TestHelpers";
 			productName = ReactiveExtensions_TestHelpers;
 			productReference = A7DB1D3A1C9F355E008244DA /* ReactiveExtensions_TestHelpers.framework */;
 			productType = "com.apple.product-type.framework";
@@ -707,9 +707,9 @@
 			productReference = A7DB1D5A1C9F4FD7008244DA /* ReactiveExtensions_TestHelpers.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */ = {
+		A7FD08861C81EDBD00332CCB /* ReactiveExtensions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions-iOS" */;
+			buildConfigurationList = A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions" */;
 			buildPhases = (
 				A7FD08871C81EDBD00332CCB /* Sources */,
 				A7FD08A61C81EDBD00332CCB /* Frameworks */,
@@ -721,7 +721,7 @@
 			dependencies = (
 				A79BE78A1E0709900077A9B2 /* PBXTargetDependency */,
 			);
-			name = "ReactiveExtensions-iOS";
+			name = ReactiveExtensions;
 			productName = ReactiveExtensions;
 			productReference = A7FD08B41C81EDBD00332CCB /* ReactiveExtensions.framework */;
 			productType = "com.apple.product-type.framework";
@@ -816,11 +816,11 @@
 			);
 			projectRoot = "";
 			targets = (
-				A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */,
+				A7FD08861C81EDBD00332CCB /* ReactiveExtensions */,
 				A7FD08BE1C81EEA100332CCB /* ReactiveExtensions-iOSTests */,
 				CA43C6621BB35FCF00C180DA /* ReactiveExtensions-tvOS */,
 				A7983B871C2AFB1C003A1ABE /* ReactiveExtensions-tvOSTests */,
-				A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers-iOS */,
+				A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers */,
 				A7DB1D4C1C9F4FD7008244DA /* ReactiveExtensions-TestHelpers-tvOS */,
 			);
 		};
@@ -1151,7 +1151,7 @@
 		};
 		A7DB1D451C9F4E3F008244DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers-iOS */;
+			target = A7DB1D391C9F355E008244DA /* ReactiveExtensions-TestHelpers */;
 			targetProxy = A7DB1D441C9F4E3F008244DA /* PBXContainerItemProxy */;
 		};
 		A7DB1D5D1C9F5008008244DA /* PBXTargetDependency */ = {
@@ -1161,7 +1161,7 @@
 		};
 		A7FD09DB1C84902100332CCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A7FD08861C81EDBD00332CCB /* ReactiveExtensions-iOS */;
+			target = A7FD08861C81EDBD00332CCB /* ReactiveExtensions */;
 			targetProxy = A7FD09DA1C84902100332CCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1551,7 +1551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7DB1D3F1C9F355E008244DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-TestHelpers-iOS" */ = {
+		A7DB1D3F1C9F355E008244DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-TestHelpers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7DB1D401C9F355E008244DA /* Debug */,
@@ -1569,7 +1569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions-iOS" */ = {
+		A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7FD08AF1C81EDBD00332CCB /* Debug */,
