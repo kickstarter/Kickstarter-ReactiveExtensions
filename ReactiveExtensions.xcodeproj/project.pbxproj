@@ -673,9 +673,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7DB1D3F1C9F355E008244DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-TestHelpers" */;
 			buildPhases = (
+				A7DB1D371C9F355E008244DA /* Headers */,
 				A7DB1D351C9F355E008244DA /* Sources */,
 				A7DB1D361C9F355E008244DA /* Frameworks */,
-				A7DB1D371C9F355E008244DA /* Headers */,
 				A7DB1D381C9F355E008244DA /* Resources */,
 			);
 			buildRules = (
@@ -692,9 +692,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7DB1D571C9F4FD7008244DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-TestHelpers-tvOS" */;
 			buildPhases = (
+				A7DB1D551C9F4FD7008244DA /* Headers */,
 				A7DB1D4F1C9F4FD7008244DA /* Sources */,
 				A7DB1D531C9F4FD7008244DA /* Frameworks */,
-				A7DB1D551C9F4FD7008244DA /* Headers */,
 				A7DB1D561C9F4FD7008244DA /* Resources */,
 			);
 			buildRules = (
@@ -711,9 +711,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7FD08AE1C81EDBD00332CCB /* Build configuration list for PBXNativeTarget "ReactiveExtensions" */;
 			buildPhases = (
+				A7FD08A91C81EDBD00332CCB /* Headers */,
 				A7FD08871C81EDBD00332CCB /* Sources */,
 				A7FD08A61C81EDBD00332CCB /* Frameworks */,
-				A7FD08A91C81EDBD00332CCB /* Headers */,
 				A7FD08AB1C81EDBD00332CCB /* Resources */,
 			);
 			buildRules = (
@@ -749,9 +749,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA43C6771BB35FCF00C180DA /* Build configuration list for PBXNativeTarget "ReactiveExtensions-tvOS" */;
 			buildPhases = (
+				CA43C6601BB35FCF00C180DA /* Headers */,
 				CA43C65E1BB35FCF00C180DA /* Sources */,
 				CA43C65F1BB35FCF00C180DA /* Frameworks */,
-				CA43C6601BB35FCF00C180DA /* Headers */,
 				CA43C6611BB35FCF00C180DA /* Resources */,
 			);
 			buildRules = (
@@ -1173,7 +1173,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "";
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1187,7 +1187,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "";
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1208,7 +1208,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1238,7 +1238,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1269,7 +1269,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1299,7 +1299,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1323,7 +1323,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
@@ -1341,7 +1341,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
@@ -1356,7 +1356,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1370,7 +1370,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kickstarter.ReactiveExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1512,7 +1512,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
@@ -1530,7 +1530,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ReactiveExtensions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/ReactiveExtensions/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickstarter.ReactiveExtensions;
