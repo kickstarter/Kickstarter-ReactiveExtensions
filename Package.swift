@@ -13,6 +13,9 @@ let package = Package(
       targets: ["ReactiveExtensions-TestHelpers"]
     )
   ],
+  dependencies: [
+    .package(name: "ReactiveSwift", url: "https://github.com/ReactiveCocoa/ReactiveSwift", .exact("6.5.0"))
+      ],
   targets: [
     .target(name: "ReactiveExtensions", dependencies: ["ReactiveSwift"]),
     .testTarget(
