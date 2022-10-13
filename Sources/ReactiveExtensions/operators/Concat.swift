@@ -26,6 +26,7 @@ extension Signal {
 }
 
 extension SignalProducer {
+
   /**
    Concats a sequence of producers into a single producer.
 
