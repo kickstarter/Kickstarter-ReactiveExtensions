@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "reactiveswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveCocoa/ReactiveSwift",
+      "state" : {
+        "revision" : "e03cda84105ba707de039b757e2b2de868c65a3e",
+        "version" : "6.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}
