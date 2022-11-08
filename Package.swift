@@ -14,7 +14,7 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(name: "ReactiveSwift", url: "https://github.com/ReactiveCocoa/ReactiveSwift", .exact("6.5.0")),
+    .package(name: "ReactiveSwift", url: "https://github.com/ReactiveCocoa/ReactiveSwift", .exact("7.0.0")),
   targets: [
     .target(name: "ReactiveExtensions", dependencies: ["ReactiveSwift"],
             linkerSettings: [
