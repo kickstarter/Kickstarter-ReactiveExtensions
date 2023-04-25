@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A7FD08BE1C81EEA100332CCB"
-               BuildableName = "ReactiveExtensions-Tests.xctest"
+               BuildableName = "ReactiveExtensions-iOSTests.xctest"
                BlueprintName = "ReactiveExtensions-iOSTests"
                ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A7FD08BE1C81EEA100332CCB"
-               BuildableName = "ReactiveExtensions-Tests.xctest"
+               BuildableName = "ReactiveExtensions-iOSTests.xctest"
                BlueprintName = "ReactiveExtensions-iOSTests"
                ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
             </BuildableReference>

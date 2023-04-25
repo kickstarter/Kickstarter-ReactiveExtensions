@@ -1,3 +1,4 @@
+#if os(iOS)
 import XCTest
 import ReactiveSwift
 import ReactiveExtensions
@@ -62,3 +63,4 @@ internal final class UIStepperTests: XCTestCase {
     eventually(XCTAssertEqual(20, self.uiStepper.value))
   }
 }
+#endif
