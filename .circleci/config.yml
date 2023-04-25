@@ -39,6 +39,10 @@ base_job: &base_job
 test_ios_setup_job: &test_ios_setup_job
   steps:
     - checkout
+    - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
+    - run: set -o pipefail &&
+        swiftlint lint --strict --reporter json |
+        tee $CIRCLE_ARTIFACTS/swiftlint-report.json
     - run:
         name: SPM SSH Workaround
         command: *spm_ssh_workaround
@@ -52,10 +56,6 @@ test_ios_setup_job: &test_ios_setup_job
     - run:
         name: Bootstrap SPM
         command: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
-    - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
-    - run: set -o pipefail &&
-        swiftlint lint --strict --reporter json |
-        tee $CIRCLE_ARTIFACTS/swiftlint-report.json
     - run:
         name: Pre-load iOS simulator
         command: *preload_iphone_simulator
@@ -71,6 +71,10 @@ test_ios_setup_job: &test_ios_setup_job
 test_tvos_setup_job: &test_tvos_setup_job
   steps:
     - checkout
+    - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
+    - run: set -o pipefail &&
+        swiftlint lint --strict --reporter json |
+        tee $CIRCLE_ARTIFACTS/swiftlint-report.json
     - run:
         name: SPM SSH Workaround
         command: *spm_ssh_workaround
@@ -84,10 +88,6 @@ test_tvos_setup_job: &test_tvos_setup_job
     - run:
         name: Bootstrap SPM
         command: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
-    - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
-    - run: set -o pipefail &&
-        swiftlint lint --strict --reporter json |
-        tee $CIRCLE_ARTIFACTS/swiftlint-report.json
     - run:
         name: Pre-load tvOS simulator
         command: *preload_apple_tv_simulator
