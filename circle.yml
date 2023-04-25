@@ -1,19 +1,7 @@
 # CircleCI version
 version: 2.1
 
-xcode_version: &xcode_version 14.2.0
-
-iphone_name: &iphone_name iPhone 8
-
-default_environment: &default_environment
-  CIRCLE_ARTIFACTS: /tmp
-  BUNDLE_PATH: vendor/bundle
-  FL_OUTPUT_DIR: output
-  LC_ALL: en_US.UTF-8
-  LANG: en_US.UTF-8
-  IPHONE_NAME: *iphone_name
-  XCODE_VERSION: *xcode_version
-  PLATFORM: iOS
+iphone_name: &iphone_name iPhone 13 Pro Max
 
 jobs:
   build:
@@ -21,7 +9,7 @@ jobs:
       xcode: "14.2.0"
     working_directory: ~/ReactiveExtensions
     environment:
-      - *default_environment
+      CIRCLE_ARTIFACTS: /tmp
 
     steps:
       - checkout
@@ -33,9 +21,8 @@ jobs:
       - run: set -o pipefail &&
           swiftlint lint --strict --reporter json |
           tee $CIRCLE_ARTIFACTS/swiftlint-report.json
-      - run: bin/test iOS 14.5
-      - run: bin/test iOS 15.5
-      - run: bin/test iOS 16.2
+      - run: bin/test iOS 15.5 iPhone 13
+      - run: bin/test iOS 16.2 iPhone 14 Pro Max
 
       - store_artifacts:
           path: /tmp/swiftlint-report.json
