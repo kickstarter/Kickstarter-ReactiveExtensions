@@ -61,7 +61,7 @@ test_ios_setup_job: &test_ios_setup_job
         command: *preload_iphone_simulator
     - run:
         name: Run iOS Tests
-        command: xcodebuild test -scheme ReactiveExtensions-iOS -destination platform=iOS Simulator,name=iPhone 14 Pro Max,OS=16.2
+        command: make test-ios
         no_output_timeout: "20m" # 20 minutes
     - store_artifacts:
         path: /tmp/swiftlint-report.json
@@ -93,7 +93,7 @@ test_tvos_setup_job: &test_tvos_setup_job
         command: *preload_apple_tv_simulator
     - run:
         name: Run tvOS Tests
-        command: xcodebuild test -scheme ReactiveExtensions-tvOS -destination platform=tvOS Simulator,name=Apple TV 4K (at 1080p) (2nd generation),OS=16.1
+        command: make test-tvos
         no_output_timeout: "20m" # 20 minutes
     - store_artifacts:
         path: /tmp/swiftlint-report.json
