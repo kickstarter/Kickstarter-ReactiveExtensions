@@ -52,13 +52,13 @@ test_ios_setup_job: &test_ios_setup_job
     - run:
         name: Bootstrap SPM
         command: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
-    - run:
-        name: Pre-load iOS simulator
-        command: *preload_iphone_simulator
     - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
     - run: set -o pipefail &&
         swiftlint lint --strict --reporter json |
         tee $CIRCLE_ARTIFACTS/swiftlint-report.json
+    - run:
+        name: Pre-load iOS simulator
+        command: *preload_iphone_simulator
     - run:
         name: Run iOS Tests
         command: xcodebuild test -scheme ReactiveExtensions-iOS -destination platform=iOS Simulator,name=iPhone 14 Pro Max,OS=16.2
@@ -84,13 +84,13 @@ test_tvos_setup_job: &test_tvos_setup_job
     - run:
         name: Bootstrap SPM
         command: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
-    - run:
-        name: Pre-load tvOS simulator
-        command: *preload_apple_tv_simulator
     - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install swiftlint
     - run: set -o pipefail &&
         swiftlint lint --strict --reporter json |
         tee $CIRCLE_ARTIFACTS/swiftlint-report.json
+    - run:
+        name: Pre-load tvOS simulator
+        command: *preload_apple_tv_simulator
     - run:
         name: Run tvOS Tests
         command: xcodebuild test -scheme ReactiveExtensions-tvOS -destination platform=tvOS Simulator,name=Apple TV 4K (at 1080p) (2nd generation),OS=16.1
