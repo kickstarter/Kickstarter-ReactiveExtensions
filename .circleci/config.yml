@@ -64,8 +64,10 @@ test_ios_setup_job: &test_ios_setup_job
         command: make test-ios
         no_output_timeout: "20m" # 20 minutes
     - store_artifacts:
+        name: Swiftlint Artifacts
         path: /tmp/swiftlint-report.json
     - store_artifacts:
+        name: Xcode Artifacts
         path: /tmp/xcode_raw.log
 
 test_tvos_setup_job: &test_tvos_setup_job
@@ -89,16 +91,19 @@ test_tvos_setup_job: &test_tvos_setup_job
         name: Bootstrap SPM
         command: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
     - run:
-        name: Pre-load tvOS simulator
+        name: Pre-load iOS simulator
         command: *preload_apple_tv_simulator
     - run:
         name: Run tvOS Tests
         command: make test-tvos
         no_output_timeout: "20m" # 20 minutes
     - store_artifacts:
+        name: Swiftlint Artifacts
         path: /tmp/swiftlint-report.json
     - store_artifacts:
+        name: Xcode Artifacts
         path: /tmp/xcode_raw.log
+
 
 # Jobs
 
