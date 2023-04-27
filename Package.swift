@@ -11,14 +11,6 @@ let package = Package(
     .library(
       name: "ReactiveExtensions-TestHelpers",
       targets: ["ReactiveExtensions-TestHelpers"]
-    ),
-    .library(
-      name: "ReactiveExtensions-tvOS",
-      targets: ["ReactiveExtensions-tvOS"]
-    ),
-    .library(
-      name: "ReactiveExtensions-TestHelpers-tvOS",
-      targets: ["ReactiveExtensions-TestHelpers-tvOS"]
     )
   ],
   dependencies: [
@@ -35,21 +27,6 @@ let package = Package(
       path: "Tests"
     ),
     .target(name: "ReactiveExtensions-TestHelpers", dependencies: ["ReactiveSwift"],
-            linkerSettings: [
-                .linkedFramework("Foundation")
-            ]),
-    .target(name: "ReactiveExtensions-tvOS", dependencies: ["ReactiveSwift"],
-            path: "Sources",
-            linkerSettings: [
-                .linkedFramework("Foundation")
-            ]),
-    .testTarget(
-      name: "ReactiveExtensions-tvOSTests",
-      dependencies: ["ReactiveExtensions-tvOS", "ReactiveExtensions-TestHelpers-tvOS"],
-      path: "Tests"
-    ),
-    .target(name: "ReactiveExtensions-TestHelpers-tvOS", dependencies: ["ReactiveSwift"],
-            path: "Sources",
             linkerSettings: [
                 .linkedFramework("Foundation")
             ])

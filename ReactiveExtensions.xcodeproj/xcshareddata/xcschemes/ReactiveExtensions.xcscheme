@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA43C6621BB35FCF00C180DA"
+               BlueprintIdentifier = "A7FD08861C81EDBD00332CCB"
                BuildableName = "ReactiveExtensions.framework"
-               BlueprintName = "ReactiveExtensions-tvOS"
+               BlueprintName = "ReactiveExtensions"
                ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A7983B871C2AFB1C003A1ABE"
-               BuildableName = "ReactiveExtensions-tvOSTests.xctest"
-               BlueprintName = "ReactiveExtensions-tvOSTests"
+               BlueprintIdentifier = "A7FD08BE1C81EEA100332CCB"
+               BuildableName = "ReactiveExtensions-Tests.xctest"
+               BlueprintName = "ReactiveExtensions-Tests"
                ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA43C6621BB35FCF00C180DA"
+            BlueprintIdentifier = "A7FD08861C81EDBD00332CCB"
             BuildableName = "ReactiveExtensions.framework"
-            BlueprintName = "ReactiveExtensions-tvOS"
+            BlueprintName = "ReactiveExtensions"
             ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,9 +56,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A7983B871C2AFB1C003A1ABE"
-               BuildableName = "ReactiveExtensions-tvOSTests.xctest"
-               BlueprintName = "ReactiveExtensions-tvOSTests"
+               BlueprintIdentifier = "A7FD08BE1C81EEA100332CCB"
+               BuildableName = "ReactiveExtensions-Tests.xctest"
+               BlueprintName = "ReactiveExtensions-Tests"
                ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -77,9 +77,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA43C6621BB35FCF00C180DA"
+            BlueprintIdentifier = "A7FD08861C81EDBD00332CCB"
             BuildableName = "ReactiveExtensions.framework"
-            BlueprintName = "ReactiveExtensions-tvOS"
+            BlueprintName = "ReactiveExtensions"
             ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA43C6621BB35FCF00C180DA"
+            BlueprintIdentifier = "A7FD08861C81EDBD00332CCB"
             BuildableName = "ReactiveExtensions.framework"
-            BlueprintName = "ReactiveExtensions-tvOS"
+            BlueprintName = "ReactiveExtensions"
             ReferencedContainer = "container:ReactiveExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

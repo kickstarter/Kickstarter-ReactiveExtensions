@@ -1,3 +1,4 @@
+#if os(iOS)
 import ReactiveSwift
 import UIKit
 
@@ -65,3 +66,4 @@ public extension Rac where Object: UIStepper {
     }
   }
 }
+#endif
