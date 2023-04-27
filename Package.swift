@@ -22,7 +22,7 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(name: "ReactiveSwift", url: "https://github.com/ReactiveCocoa/ReactiveSwift", .exact("7.1.1"))
+    .package(name: "ReactiveSwift", url: "https://github.com/ReactiveCocoa/ReactiveSwift", .upToNextMajor(from: "7.0.0"))
     ],
   targets: [
     .target(name: "ReactiveExtensions", dependencies: ["ReactiveSwift"],
