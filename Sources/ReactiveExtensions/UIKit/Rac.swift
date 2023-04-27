@@ -20,7 +20,7 @@ public extension RacObject {
   /**
    A collection of reactive bindings.
   */
-  public var rac: Rac<Object> {
+  var rac: Rac<Object> {
     return Rac(object: self)
   }
 }

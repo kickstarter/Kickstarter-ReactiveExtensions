@@ -11,7 +11,7 @@ public extension Signal {
 
    - returns: A new signal.
    */
-  public func withLatestFrom <U, OtherError> (_ other: Signal<U, OtherError>) ->
+  func withLatestFrom <U, OtherError> (_ other: Signal<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
     return Signal<(Value, U), OtherError> { observer, _ in
@@ -61,7 +61,7 @@ public extension Signal {
 
    - returns: A new signal.
    */
-  public func withLatestFrom <U, OtherError> (_ other: SignalProducer<U, OtherError>) ->
+  func withLatestFrom <U, OtherError> (_ other: SignalProducer<U, OtherError>) ->
     Signal<(Value, U), OtherError> {
 
     return Signal<(Value, U), OtherError> { observer, _ in

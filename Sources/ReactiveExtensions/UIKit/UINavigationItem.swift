@@ -6,7 +6,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UINavigationItem {
-  public var title: Signal<String, Never> {
+  var title: Signal<String, Never> {
     nonmutating set {
       let prop: MutableProperty<String> = lazyMutableProperty(
         object,

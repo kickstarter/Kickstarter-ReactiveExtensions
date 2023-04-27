@@ -10,7 +10,7 @@ public extension Signal {
 
    - returns: A new signal.
    */
-  public func scan(_ combine: @escaping (Value, Value) -> Value) -> Signal<Value, Error> {
+  func scan(_ combine: @escaping (Value, Value) -> Value) -> Signal<Value, Error> {
     return Signal { observer, _ in
 
       var accumulated: Value?

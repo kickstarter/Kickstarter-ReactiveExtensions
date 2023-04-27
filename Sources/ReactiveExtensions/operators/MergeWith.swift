@@ -9,7 +9,7 @@ public extension Signal {
 
    - returns: A merged signal.
    */
-  public func mergeWith (_ other: Signal<Value, Error>) -> Signal<Value, Error> {
+  func mergeWith (_ other: Signal<Value, Error>) -> Signal<Value, Error> {
     return Signal.merge([self.signal, other])
   }
 }
@@ -23,7 +23,7 @@ public extension SignalProducer {
 
    - returns: A merged producer.
    */
-  public func mergeWith (_ other: SignalProducer<Value, Error>) -> SignalProducer<Value, Error> {
+  func mergeWith (_ other: SignalProducer<Value, Error>) -> SignalProducer<Value, Error> {
     return SignalProducer<SignalProducer<Value, Error>, Error>([self.producer, other]).flatten(.merge)
   }
 }

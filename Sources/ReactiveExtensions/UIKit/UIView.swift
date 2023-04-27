@@ -11,7 +11,7 @@ private enum Associations {
 
 public extension Rac where Object: UIView {
 
-  public var alpha: Signal<CGFloat, Never> {
+  var alpha: Signal<CGFloat, Never> {
     nonmutating set {
       let prop: MutableProperty<CGFloat> = lazyMutableProperty(object, key: &Associations.alpha,
         setter: { [weak object] in object?.alpha = $0 },
@@ -25,7 +25,7 @@ public extension Rac where Object: UIView {
     }
   }
 
-  public var backgroundColor: Signal<UIColor, Never> {
+  var backgroundColor: Signal<UIColor, Never> {
     nonmutating set {
       let prop: MutableProperty<UIColor> = lazyMutableProperty(object, key: &Associations.backgroundColor,
         setter: { [weak object] in object?.backgroundColor = $0 },
@@ -39,7 +39,7 @@ public extension Rac where Object: UIView {
     }
   }
 
-  public var endEditing: Signal<(), Never> {
+  var endEditing: Signal<(), Never> {
     nonmutating set {
       let prop: MutableProperty = lazyMutableProperty(object, key: &Associations.endEditing,
         setter: { [weak object] in object?.endEditing(true) },
@@ -53,7 +53,7 @@ public extension Rac where Object: UIView {
     }
   }
 
-  public var hidden: Signal<Bool, Never> {
+  var hidden: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(object, key: &Associations.hidden,
         setter: { [weak object] in object?.isHidden = $0 },
@@ -67,7 +67,7 @@ public extension Rac where Object: UIView {
     }
   }
 
-  public var tintColor: Signal<UIColor, Never> {
+  var tintColor: Signal<UIColor, Never> {
     nonmutating set {
       let prop: MutableProperty<UIColor> = lazyMutableProperty(
         object,

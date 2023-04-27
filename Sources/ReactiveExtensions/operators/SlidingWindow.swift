@@ -10,7 +10,7 @@ public extension Signal {
 
    - returns: A new signal.
    */
-  public func slidingWindow(max: Int, min: Int) -> Signal<[Value], Error> {
+  func slidingWindow(max: Int, min: Int) -> Signal<[Value], Error> {
     return signal
       .scan([]) { (window: [Value], value: Value) -> [Value] in
         let scope = window.count >= max ? Array(window[1..<window.count]) : window
@@ -31,7 +31,7 @@ public extension SignalProducer {
 
    - returns: A new producer.
    */
-  public func slidingWindow (max: Int, min: Int) -> SignalProducer<[Value], Error> {
+  func slidingWindow (max: Int, min: Int) -> SignalProducer<[Value], Error> {
     return lift { $0.slidingWindow(max: max, min: min) }
   }
 }

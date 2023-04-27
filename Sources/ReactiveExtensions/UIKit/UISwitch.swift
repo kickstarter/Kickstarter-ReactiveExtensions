@@ -7,7 +7,7 @@ private enum Associations {
 }
 
 public extension Rac where Object: UISwitch {
-  public var on: Signal<Bool, Never> {
+  var on: Signal<Bool, Never> {
     nonmutating set {
       let prop: MutableProperty<Bool> = lazyMutableProperty(
         object, key: &Associations.on,
