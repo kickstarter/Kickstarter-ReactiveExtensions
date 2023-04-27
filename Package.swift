@@ -39,6 +39,7 @@ let package = Package(
                 .linkedFramework("Foundation")
             ]),
     .target(name: "ReactiveExtensions-tvOS", dependencies: ["ReactiveSwift"],
+            path: "Sources",
             linkerSettings: [
                 .linkedFramework("Foundation")
             ]),
@@ -48,6 +49,7 @@ let package = Package(
       path: "Tests"
     ),
     .target(name: "ReactiveExtensions-TestHelpers-tvOS", dependencies: ["ReactiveSwift"],
+            path: "Sources",
             linkerSettings: [
                 .linkedFramework("Foundation")
             ])
