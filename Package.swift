@@ -3,6 +3,10 @@ import PackageDescription
 
 let package = Package(
   name: "ReactiveExtensions",
+  platforms: [
+    .iOS(.v14),
+    .tvOS(.v14)
+  ],
   products: [
     .library(
       name: "ReactiveExtensions",
